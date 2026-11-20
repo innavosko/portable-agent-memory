@@ -1,0 +1,204 @@
+{
+  "format": "portable-memory-skill-forward-test",
+  "version": "0.5.0",
+  "passed": true,
+  "synthetic_data_only": true,
+  "execution": "Two standalone extracted skill ZIPs; repository PYTHONPATH removed.",
+  "live_cloud_actions": [],
+  "live_native_actions": [],
+  "simulated_native_success_claims": false,
+  "cli_calls": [
+    {
+      "skill": "memory-export",
+      "command": "skill-discover",
+      "label": "skill-discover",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "skill-collect",
+      "label": "skill-collect",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "skill-collect",
+      "label": "duplicate source identity and version rejected",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-quality-template",
+      "label": "profile-quality-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-create",
+      "label": "profile-create",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-view",
+      "label": "profile-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-event",
+      "label": "profile-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-result",
+      "label": "profile-result",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "review",
+      "label": "review",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "confirm",
+      "label": "confirm",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "export",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "inspect",
+      "label": "inspect",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "plan",
+      "label": "plan",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "apply",
+      "label": "apply",
+      "exit_code": 0,
+      "expected_rejection": false
+    }
+  ],
+  "checks": [
+    {
+      "check": "memory-export contains standalone existing-skill and instruction branch",
+      "passed": true
+    },
+    {
+      "check": "memory-import contains standalone existing-skill and instruction branch",
+      "passed": true
+    },
+    {
+      "check": "Discovery sees only supplied immediate skill folders and selects nothing",
+      "passed": true
+    },
+    {
+      "check": "Full, partial, unavailable and unselected are distinct inventory outcomes",
+      "passed": true
+    },
+    {
+      "check": "Selected original scripts, configuration, templates and dependency files are byte-preserved",
+      "passed": true
+    },
+    {
+      "check": "Excluded credential-style file is absent and recorded without claiming full account coverage",
+      "passed": true
+    },
+    {
+      "check": "Unselected folder has no copied assets",
+      "passed": true
+    },
+    {
+      "check": "Selected unavailable skill remains in pending portable context",
+      "passed": true
+    },
+    {
+      "check": "Disabled state, unknown versions and unverified dependencies are preserved without activation",
+      "passed": true
+    },
+    {
+      "check": "Portable inventory does not leak collection-time absolute local locator paths",
+      "passed": true
+    },
+    {
+      "check": "Agent and project instructions remain independent sources with explicit bounded target mapping",
+      "passed": true
+    },
+    {
+      "check": "Portable copy preserves selected skill context and disabled state alongside scoped instructions",
+      "passed": true
+    },
+    {
+      "check": "No skill source was executed at discovery, collection, export or import",
+      "passed": true
+    },
+    {
+      "check": "Receipt states portable-only result without false native activation",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "private_paths_in_report": false,
+  "limits": [
+    "Only supplied fictional folders, ZIP and instruction text were used; no actual account catalog was queried.",
+    "Source catalog completeness and enabled/origin/version metadata are explicitly fictional source observations.",
+    "This test verifies collection, portable scope preservation and copying; it does not verify installation or native activation."
+  ],
+  "bundle_sha256": {
+    "memory-export": "e50f004af808af85a75588edfc3bee06e458a58298b4be954678edeb0707ee03",
+    "memory-import": "22313667ff6733850a611be4dd67ffd89d64d801a544b1582b3a5ed653457984"
+  },
+  "fictional_user_request": "Перенеси оригиналы my-report, отключённого disabled-planner и предоставленный архив. Сохрани также запись о платформенном навыке без файлов. not-selected не переносить. Отключённый навык не включать; навыки сейчас только сохраняем как контекст, без установки.",
+  "target_scope_decision": "Apply the former dot instruction only to agent:fictional-receiver. Keep the project rule limited to project:fictional-project.",
+  "outcomes": {
+    "inventory_statuses": {
+      "skill-24e1f084ad1516f3e037527e": "full_snapshot",
+      "skill-9fed6b36100ba35e62b43dfa": "partial",
+      "skill-5447eaf1aa124b05798f2043": "not_selected",
+      "vendor-archive": "full_snapshot",
+      "platform-missing": "unavailable"
+    },
+    "catalog_complete": false,
+    "dependency_check": "not_verified",
+    "source_disabled_preserved": true,
+    "original_scripts_executed": false,
+    "instruction_scopes": [
+      "agent:fictional-receiver",
+      "project:fictional-project"
+    ],
+    "portable_records": 6,
+    "native_memory": "not_applied",
+    "skills": "not_installed",
+    "integrations": "not_connected"
+  },
+  "cli_calls_count": 14,
+  "expected_rejections": 1
+}

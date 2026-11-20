@@ -1,0 +1,58 @@
+{
+  "format": "portable-memory",
+  "schema_version": 1,
+  "metadata": {
+    "synthetic": true
+  },
+  "coverage": {
+    "read": [],
+    "unavailable": [],
+    "excluded": []
+  },
+  "records": [
+    {
+      "id": "tone",
+      "kind": "preference",
+      "title": "Стиль ответа",
+      "value": "Отвечать кратко",
+      "scope": "global",
+      "sources": [
+        {
+          "id": "old",
+          "locator": "Вымышленная беседа old",
+          "observed_at": null
+        }
+      ],
+      "provenance": "user_statement",
+      "currency": "current",
+      "review": {
+        "decision": "active",
+        "content_sha256": "0702e26f2702c05e1e6fd48d668b7d7754811982e7cb58c8a913ee4b909f5498",
+        "reviewed_at": "2026-11-20T11:01:35.772221+00:00"
+      },
+      "links": []
+    },
+    {
+      "id": "mail-old",
+      "kind": "account",
+      "title": "Прежняя основная рабочая почта",
+      "value": "nina-old@example.org",
+      "scope": "global",
+      "sources": [
+        {
+          "id": "old",
+          "locator": "Вымышленная беседа old",
+          "observed_at": null
+        }
+      ],
+      "provenance": "user_statement",
+      "currency": "current",
+      "review": {
+        "decision": "active",
+        "content_sha256": "eccac7a28d792f97e0614d4e9eee3a53b33e3141d7e4cc7e587b546bf0a2abcd",
+        "reviewed_at": "2026-11-20T11:01:35.772221+00:00"
+      },
+      "links": []
+    }
+  ]
+}

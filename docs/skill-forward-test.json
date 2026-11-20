@@ -1,0 +1,69 @@
+{
+  "passed": true,
+  "cli_calls": [
+    {
+      "skill": "memory-export",
+      "command": "review",
+      "code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "confirm",
+      "code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "inspect",
+      "code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "inspect",
+      "code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "plan",
+      "code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "apply",
+      "code": 2
+    },
+    {
+      "skill": "memory-import",
+      "command": "apply",
+      "code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "plan",
+      "code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "apply",
+      "code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "code": 2
+    }
+  ],
+  "exported_records": 6,
+  "applied_records": 5,
+  "active_records": 4,
+  "historical_records": 1,
+  "pending_deferred": 1,
+  "excluded_omitted": 1,
+  "repeat_import": "unchanged records",
+  "native_memory": "not applied",
+  "limitations": "Local bundled skill execution only; no live web accounts tested"
+}

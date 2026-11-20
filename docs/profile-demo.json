@@ -1,0 +1,18 @@
+{
+  "version": "0.3.0",
+  "synthetic": true,
+  "passed": true,
+  "unchanged_confirmation_reused": true,
+  "conflict_resolved_by_fictional_user": true,
+  "unsupported_inference_not_activated": true,
+  "deferred_question_not_repeated_after_resume": true,
+  "unreviewed_records": [
+    "meeting"
+  ],
+  "native_memory": "not_applied",
+  "portable_import_confirmed_records": 3,
+  "limits": [
+    "Prepared synthetic evidence and second-pass verdicts; no live model API call or SaaS account used.",
+    "This does not prove the completeness or truth of arbitrary model extraction."
+  ]
+}

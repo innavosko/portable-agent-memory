@@ -1,0 +1,67 @@
+{
+  "run": "work/agent-context-demo-20261120-02",
+  "reproduce": "python scripts/demo_agent_context.py --out work/agent-context-demo-20261120-next",
+  "scenario": "supplied_dots_duet_context_and_project_bound_skill",
+  "synthetic_only": true,
+  "network_calls": 0,
+  "confirmation": "simulated_user_decisions_over_fictional_data_only",
+  "sources": {
+    "dots": {
+      "records": 12,
+      "coverage": {
+        "provided": 12,
+        "pending": 1,
+        "unavailable": 1,
+        "excluded": 1
+      },
+      "complete_account_export": false
+    },
+    "duet": {
+      "records": 12,
+      "coverage": {
+        "provided": 12,
+        "pending": 1,
+        "unavailable": 1,
+        "excluded": 1
+      },
+      "complete_account_export": false
+    }
+  },
+  "records_pending_before_confirmation": 25,
+  "records_imported": 25,
+  "original_skill_files_copied": 3,
+  "project_instructions_bound": 2,
+  "exact_instruction_text_scope_sources_preserved": true,
+  "skill_entry_references_received_instruction_files": true,
+  "source_skill_original_unchanged": true,
+  "original_code_bytes_preserved_without_execution": true,
+  "both_source_snapshots_preserved": true,
+  "repeat_merge": {
+    "duplicate_records_skipped": 25,
+    "record_count_unchanged": true,
+    "records_unchanged": true,
+    "result_written_to_new_comparison_workspace": true
+  },
+  "native_memory": "not_applied",
+  "integrations": "not_connected",
+  "skills": "not_installed",
+  "recurring_tasks_activated": false,
+  "limitations": [
+    "No live Dots/Duet account or API was accessed.",
+    "Supplied partial snapshots do not prove account completeness or source export capabilities.",
+    "Exact preservation does not perform semantic quality assessment; user decisions here are synthetic fixtures.",
+    "Only explicitly selected project-to-skill dependencies were bound.",
+    "Skill source files were copied, not executed, installed or compatibility-tested.",
+    "Import produced portable workspaces only; native memory, connections and schedules were not changed.",
+    "The original 260-character staging-path failure passed after shortening staging names. This is not arbitrary Windows long-path support; legacy limits still have a preflight guard."
+  ],
+  "windows_path_observation": {
+    "original_failed_run": "work/agent-context-demo-20261120-01",
+    "original_failed_staging_file_path_characters": 260,
+    "retested_output_same_name_length": true,
+    "retest_passed": true,
+    "fix": "Short .pm-<8-character-id>/w staging names replace the longer import staging path.",
+    "remaining_boundary": "Legacy Windows final/staging path limits are checked before output creation; choose a shorter destination if the guard rejects it.",
+    "arbitrary_long_path_support_claimed": false
+  }
+}

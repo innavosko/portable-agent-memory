@@ -1,0 +1,894 @@
+{
+  "version": "0.7.0",
+  "packaged_at_utc": "2026-11-20T16:51:52.504146+00:00",
+  "code_and_skills_changed": false,
+  "original_files_compared": 146,
+  "embedded_core_copies_matched": 7,
+  "archives": [
+    {
+      "path": "01_Запуск/memory-export.zip",
+      "sha256": "1b94a6826136ae72acb9e2a73f8c2b71b5930e6e5a0607481654d520d19f1115",
+      "entries": 37,
+      "crc_valid": true
+    },
+    {
+      "path": "01_Запуск/memory-import.zip",
+      "sha256": "340adcb97c9e17835c0382f6c393c02d4eb48e02c6ce1e6aee5ce66c613f936f",
+      "entries": 37,
+      "crc_valid": true
+    },
+    {
+      "path": "01_Запуск/memory-web-kit.zip",
+      "sha256": "d8479fd04d5fc1181c2767341c2d87cb657cdca3302b6fcf5009c1d564705a28",
+      "entries": 126,
+      "crc_valid": true
+    },
+    {
+      "path": "01_Запуск/Дополнительно/portable-memory-plugin.zip",
+      "sha256": "dbe4933c22e96cc3909e9d278d7b3666a3ff929026bcbb391c552ede2295df38",
+      "entries": 75,
+      "crc_valid": true
+    }
+  ],
+  "smoke_checks": [
+    {
+      "path": "02_Проект_для_GitHub",
+      "cli_help_ok": true,
+      "common_profile_commands_present": true
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export",
+      "cli_help_ok": true,
+      "common_profile_commands_present": true
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import",
+      "cli_help_ok": true,
+      "common_profile_commands_present": true
+    }
+  ],
+  "docs_updated": [
+    "README.md",
+    "docs/WEB_SETUP.md"
+  ],
+  "current_diagram": "0.7",
+  "historical_presentation": "0.6",
+  "previous_test_report": "test-results.json",
+  "full_tests_rerun_for_packaging": false,
+  "live_saas_tested": false,
+  "file_checksums_exclude_this_report": true,
+  "files": [
+    {
+      "path": "00_ЧТО_КОПИРОВАТЬ.md",
+      "sha256": "b6ae81cc3a27bcebe7cf958f0257729bc53cf4938edce23aa49f2b703d6f4ecc"
+    },
+    {
+      "path": "01_Запуск/memory-export.zip",
+      "sha256": "1b94a6826136ae72acb9e2a73f8c2b71b5930e6e5a0607481654d520d19f1115"
+    },
+    {
+      "path": "01_Запуск/memory-import.zip",
+      "sha256": "340adcb97c9e17835c0382f6c393c02d4eb48e02c6ce1e6aee5ce66c613f936f"
+    },
+    {
+      "path": "01_Запуск/memory-web-kit.zip",
+      "sha256": "d8479fd04d5fc1181c2767341c2d87cb657cdca3302b6fcf5009c1d564705a28"
+    },
+    {
+      "path": "01_Запуск/Дополнительно/portable-memory-plugin.zip",
+      "sha256": "dbe4933c22e96cc3909e9d278d7b3666a3ff929026bcbb391c552ede2295df38"
+    },
+    {
+      "path": "02_Проект_для_GitHub/.github/workflows/tests.yml",
+      "sha256": "686e2f391125be057a77447c52d9c302039e17a74e62864ec5198b954c14099a"
+    },
+    {
+      "path": "02_Проект_для_GitHub/.gitignore",
+      "sha256": "70704bd725334c28caead2a40dd3d86a1769972320a2c3d698122a6b06b02647"
+    },
+    {
+      "path": "02_Проект_для_GitHub/00_Логика_навыков_веб_сначала.md",
+      "sha256": "317549898965c6d8a89ac19ed46a32783687d526b936cd32ee22394cac969eb2"
+    },
+    {
+      "path": "02_Проект_для_GitHub/01_Перенос_данных_через_архив.md",
+      "sha256": "e975f8f2d3b61ea21d7184af9fce15803dfc92da899a290f457d005d094ec963"
+    },
+    {
+      "path": "02_Проект_для_GitHub/02_Перенос_работ_и_навыков.md",
+      "sha256": "23c8e644e6e55e7dedd0453d16119d3e5ebb6f86872dc1d03e31b76ecba6d6a2"
+    },
+    {
+      "path": "02_Проект_для_GitHub/03_Структурированный_профиль_пользователя.md",
+      "sha256": "cab1a2bf381f6c27c00974bfde1361ddd319770f8eceb2a2d5024f79cf7c2bc5"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/agent-context-demo.json",
+      "sha256": "d89ff9258d1f2c58a5312573f39a6e6b6a42b7d85003680779fb99b1e26db2ba"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/AGENT_CONTEXT.md",
+      "sha256": "ad410e358f2c4dd6c41e67f8061290ce7b3ea910da25cf3f036ff767a5232c9a"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/AGGREGATE_REVIEW.md",
+      "sha256": "f6b938e5ae31bef225d158a3481e02a2e1a03b6244fb3bfa3df86dc25640e538"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/CLOUD_DELIVERY.md",
+      "sha256": "9e73b6602806445c2a5c8320522c463c6de92ebe6dd3e3f9a92ce7b63c6152b1"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/common-profile-demo.json",
+      "sha256": "fdf7b9988cc351e005ffb447c5b4e0c753f8e6941cd844ff5e70333d5ddc9130"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/delivery-demo.json",
+      "sha256": "d69391aeab705837bf064345d2793fc1d6920adf2a15e3da5cf2bde26a740719"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/diagrams/dots-duet-context.png",
+      "sha256": "a73159151152c3fdb53c3135fa651976a89fb83a9281db75fcb9e467dbb4ef39"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/diagrams/dots-duet-context.scene.json",
+      "sha256": "edcd02f9c0a6c5b4d024720a078b8837c35647990e257855abbf38f4bb3be052"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/diagrams/dots-duet-context.svg",
+      "sha256": "6b6e2a28bb3714455440608daae0369ff0b0ebabb0422872eb0b4b6fb45eb2ec"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/diagrams/presentation-check.json",
+      "sha256": "db3b6e6162e9ff82643ab0566701bed17718ad8abebe68a02fa6c3083e4724f0"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/diagrams/user-journey.png",
+      "sha256": "028bc64fa1b27df717a571735027cb17c94dc985ee353907ff939403b17e2fff"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/diagrams/user-journey.scene.json",
+      "sha256": "30d8dde42b19bd59af8ec046766eee57a71d533b7553255849eda0bbf5ecb119"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/diagrams/user-journey.svg",
+      "sha256": "24c2d118bddb77c7c50c50642af3624affe48da11663e5201743d4000d23a362"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/IMPLEMENTATION_STATUS.md",
+      "sha256": "4367a4b7724275f70983bcca0259940e97042248065948d6ea3dea2dfd13662a"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/INSTRUCTIONS_AND_SKILLS.md",
+      "sha256": "7d1ffd35bc4eda058e1e1132ef3781cd62fa9208b7345d81376addbd4fd22071"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/JOURNEY_V02.md",
+      "sha256": "b95bde90de0b537a6e9ce2c02c3681693a96bec5fba324b1c9621703c397d346"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/MANUAL_WEB.md",
+      "sha256": "894475fe6e1b7dcf196df5090613fb9b246adb55b9d48453c2101e40eac328f5"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/migration-demo-progress.md",
+      "sha256": "06cc10ad80d241fff13df2c5f73887168034ecc6237228b0dc6d9ff80ee4f454"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/migration-demo.json",
+      "sha256": "778d174a1983aeaacb434f3ddc1dc338ce6b05a3fcf4132eef660b480a2465a9"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/migration-dialogue-test.json",
+      "sha256": "725af96d7844acc1f8bd8dc1ee84b3ae56acb87a5cc3ce78df33607498dd2ec2"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/migration-skill-forward-test.json",
+      "sha256": "066928a6377c819cd4c33e2232e59802715538d008a6815a813cfa39b79d31db"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/MULTI_ENVIRONMENT.md",
+      "sha256": "358c5cfa872792c1e58acb2bff9b8ad38edb080ade95ac8dbb676281948b5635"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/PRODUCT_GOAL.md",
+      "sha256": "b78ea8413d4657cb8430c2b744d030528e28acf116a739fe2602431afe0c930b"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/profile-demo.json",
+      "sha256": "9ce5ebf65585306c989161a715712c15b5ae4cff806e15b43b629a7473d24598"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/profile-example-after.md",
+      "sha256": "eb2ab94239b8662852a2872be86031e20b29a805e56b477caeebf2cbb641a2f6"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/profile-example-before.md",
+      "sha256": "a09fb1905be4d4abeca9c8739e5bebe76b55b0b9cbcbe99900bd564ce1396866"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/profile-skill-forward-test.json",
+      "sha256": "285856c2625d57830f9d91b84a4215d3c37e70dc9d3a4ec592f4ba6844d8a271"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/PROFILE_REVIEW.md",
+      "sha256": "dde1fd26abd7df37208bfb5bd1400647a048e49c32164d72343225c77961184d"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/RECEIVING_SETUP.md",
+      "sha256": "2410cd885844163fe95eab9a059704e77076423e24d0980cc515635d11383249"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/SCENARIO_NEXT.md",
+      "sha256": "f30d09667fecf8999092365bf68bb7e4a6171bce09cba0873d5269eed11473e3"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/skill-export-demo.json",
+      "sha256": "2de773d52799fe63c63293ca23b6b2881fac88b7381ccca4cbe39ae4786ed9fe"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/skill-forward-test-v04.json",
+      "sha256": "deae625d47bfc4073912150909c0aedb5fc9c98f5829b595ce9c2c003d7d1fa9"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/skill-forward-test-v05.json",
+      "sha256": "cc5b2221413e90ae0d8bc2188ca6fba714538b38ce83989c94a2353186a90a0d"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/skill-forward-test-v06.json",
+      "sha256": "ef06c42a0de8aa098f2619aece2da2190a33d2e791f9c21cdcd27e0a64d860c9"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/skill-forward-test-v07.json",
+      "sha256": "eb18af00afacd31e15c1c5a5c926672a0dab8db65d5bc41c585ee30b989e8495"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/skill-forward-test.json",
+      "sha256": "4a6df012026de0f0f36139cb15895edeb58c62a23e11323e6c8cab49459fdde1"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/STORAGE_CHOICES.md",
+      "sha256": "11b2ceebf2c562ec08fcc3b86b9b4e81f2497da14796634a389ba198446f0c6c"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/test-results.json",
+      "sha256": "ece5b6da2619123f99fba1c183fd34d8f8b1d505429525edff35fcd858706038"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/TESTING.md",
+      "sha256": "2ed4e37b736bf2ff66978f57f2638a0782fbe6d5f083e8c9208f2fa5573ed73e"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/TRANSFER_FLOW.md",
+      "sha256": "cbd83a8d797138e803a833cab26b494049e6799bcf5d50bd073d164ca8b28794"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/WEB_SETUP.md",
+      "sha256": "fd9b68cb87bc45459f3c768296ac98596132c247f83725fa79d7869cb3c996ed"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/works-scenario-test.json",
+      "sha256": "e3959b75577b3e5803fd5b59f4e7085834cc3eac38ad426484bda031b7c4ff0c"
+    },
+    {
+      "path": "02_Проект_для_GitHub/docs/WORKS_AND_SKILLS.md",
+      "sha256": "a5542eb7e8a2ce9bb8a31b632122a4d924ccc79e2af279ff0eabe3b4b308bb33"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/chatgpt-export.json",
+      "sha256": "c4596a929d6d9501613e88b4b43233c8713689c4bf9f5dae9ea8c0cd7139ea79"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/claude-export.json",
+      "sha256": "7d55ea871759789548348f10a75f39de33378f8898c7c591c3cd0cb2f18b6de7"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/migration.json",
+      "sha256": "8fa614a531ca5592e0c3b1c0fcbbd395f80fad08cdb1745841c8e27dfdbb140a"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/profile-assessment.json",
+      "sha256": "bb42aaae1e153c04cc172ee507ee9035f48e734b739ce1a0fec6a2cf9ebd698d"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/profile-audit-memory.json",
+      "sha256": "fbc4ffc1a900bdb2164c996b7b1e98ef541348b3fb9aa0b7baddcde4bb3e9320"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/profile-previous.json",
+      "sha256": "1d7ab4185684889ed7b547e597434ce81480a510a3bd7ec61be2146bfc4989c3"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/profile-quality.json",
+      "sha256": "d006135ffee794abd31d73250fe098c569a2acc210c762e2300b2d12caf7b7c9"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/profile.json",
+      "sha256": "284eb95cc9a495e6a5ff4b8a31bda14bdde496534f19543bb4b4ad691e69f9c0"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/project/AGENTS.md",
+      "sha256": "5b3cd4b169f90a97a9e5bddbe3aa10c6f69493bd3a291f97d2f8b2ff3ba6b33c"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/project/README.md",
+      "sha256": "4e19d7065bcdd6c009f9679af0f16249492184ef5cf9f23a9634970d0407c104"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/project/weekly-review.md",
+      "sha256": "21fb20468dba03f7ef0bd202c453379bee7b018c1194541e4bb9d31f15b905a4"
+    },
+    {
+      "path": "02_Проект_для_GitHub/examples/transfer-config.json",
+      "sha256": "57bdf165f03774a60c7d905e0455e11721e1bb54e3b0297ad1d2abc5f7a77b9a"
+    },
+    {
+      "path": "02_Проект_для_GitHub/plugin.json",
+      "sha256": "9335864450c6a84c449b251749dbd3d05979f8bff88d97900b6989f1d1ec2d37"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/__init__.py",
+      "sha256": "904e73551cc8283d8a327549cfde425b103fa8b54d1d31440c1fc91a60b0d4f1"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/agent_context.py",
+      "sha256": "05adc955083a5c95991dd9389313efc8f055a5ecb15d93a36c41ee2f72a3c418"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/archives.py",
+      "sha256": "f3c4720a49fd00f625883e0981ebc8d4d6ad585e67c7fb0667c3848bb7c4431f"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/cli.py",
+      "sha256": "150b5316d631679835801635aab6cdd5fab281d76c4d360adcf898245c91c6ec"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/collection.py",
+      "sha256": "645683d5123f23ca6830428adadf14af12e1f22dd49295529472a4676011ef49"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/common_profile.py",
+      "sha256": "582daeda9cc92e1dfa029472cc0df9b8adbc800cb5498d6768f32265b0a0ebea"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/delivery.py",
+      "sha256": "bafb6a1cd0629f8710f9c10007931a38a5e96e93a8a788a75a3a1523ae477a19"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/delivery_store.py",
+      "sha256": "bb042246323c40543fd912302148f36349055fe6eb92114fbdb76caf5ea965e8"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/errors.py",
+      "sha256": "b125bd73dbc653143c9471adcd31cf85ad911e1bc2a30d2dcc5f9b8f676e3dbe"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/importing.py",
+      "sha256": "ec14d9a1da68e778625253eda431644ad7b5e4f41d214674d82243c69510b161"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/migration.py",
+      "sha256": "c1563a7b1eba451c237a6cfd43ac26908c7bdf0bf701c50222afdcc856dbe05a"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/model.py",
+      "sha256": "696f74fac377943975a7b00a223c6b35b1731f17c7ccd12f5ba5d24e71bb13b3"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/package.py",
+      "sha256": "c3e4285d8923bf5f73b896e6a77e486641b68d3f36733dcd2eb6e44398a14299"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/profile_audit.py",
+      "sha256": "132228ec6082de0e2705021361c6c265d24284faa0645ce1696aca6a3f1e09e8"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/profile_session.py",
+      "sha256": "279bc6023fcbb4be628f0a04c16e505023aaecd13f0dfa49def201bc06045cc2"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/semantic_review.py",
+      "sha256": "8a2cbd192dfa084b82f7897f821a28a1dcaf7e3ac2d5b4d6347dcc7518fde166"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/setup.py",
+      "sha256": "66c73a45433eed86d71b13a35a6f222952ca36b3022e7c57244405ccab8d9112"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/skill_context.py",
+      "sha256": "23c3325f02511e7b38ef1d0b8ab36a586b9ec07135f29394457b345c2e297074"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/skill_inventory.py",
+      "sha256": "f35a3edbd42a11c54821dce9b034ddc2a67569b0d10e9c2579db3b18c4ac4e36"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/sources.py",
+      "sha256": "e27693220991e1e5334d0eca8ff4f06ad1c519697c6e91cadb6df6b321136d87"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/storage.py",
+      "sha256": "23e2c0e6cd3b62876008519bc5be0999cd32018f1133ba69aa22984d04ac7d0b"
+    },
+    {
+      "path": "02_Проект_для_GitHub/portable_memory/transfers.py",
+      "sha256": "7aab25488f8a029d44c692cf1a1b9d7ff6a617a2a00d74aabccc66982cd3ba19"
+    },
+    {
+      "path": "02_Проект_для_GitHub/pyproject.toml",
+      "sha256": "97513ea3b8e90196e8005120c4ba273bef3f83b034011a192a355789669691a0"
+    },
+    {
+      "path": "02_Проект_для_GitHub/README.md",
+      "sha256": "ef3a644641ad47ccb0c5fa377c39d730b9f15d8ac86699eb5cad5a12f5f9f981"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/build_bundles.py",
+      "sha256": "b6cee9b5c252e40484d86252e3f6dd1c476ecab9287d0dcef461fb4ead43efab"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/build_diagram.py",
+      "sha256": "03ebd1da83bfbc1c3ad11e247127243f85502494604d56449e0b7a668565455b"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/build_journey_deck.mjs",
+      "sha256": "a9e8c46956d069f5a701495922f14137a6713a46c6689cd9b27f033ac99643aa"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/check.py",
+      "sha256": "35a85ca8335805fbc714d35b690771f4d464752f2082c221ee1f66c31943693f"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/demo.py",
+      "sha256": "ecd3be55a50e0dd53db078429be04257602d4b999bb1677e54ab6e6b89835fb2"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/demo_agent_context.py",
+      "sha256": "18fc72ce5eecb09800e669691847b3676ddc6aba5b70c0605e3078afe0062bf4"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/demo_common_profile.py",
+      "sha256": "d39f8559b8a3f3d6856c692ad28164cfcc6f1d7a3089db6aea0f52e5765b3c5a"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/demo_delivery.py",
+      "sha256": "5959265aaf3d00df5fc784425f86174ec8e272342d712a77b7958e721011fbff"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/demo_migration.py",
+      "sha256": "bea92b17a018d8d5fc1a91a08360d4cb16bbaf9a4c2702e4208d7541120ffbf4"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/demo_profile.py",
+      "sha256": "3622162c95754d9ef25491b26f764db218f45edf4d105657520a35fd19150b5c"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/demo_skill_export.py",
+      "sha256": "1c3b351579ade0cf560b3fe108133a92eae43970ae437acca0ebadf5a21f3f5d"
+    },
+    {
+      "path": "02_Проект_для_GitHub/scripts/synthetic_fixture_audit.py",
+      "sha256": "6c75a15a64df3d97255d5d578d4deab5cbdf4f2c40741ca9f218acbbc7c98ccc"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/agent-context.md",
+      "sha256": "391858c3e45b9e7dde1d0135ed15e99f73a8e65d286129baa8075d938d6b36cd"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/commands.md",
+      "sha256": "4e3053eb102905ac9269d5de1ee83aa7e93d8f7bddab84181583a41445e2317c"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/common-profile.md",
+      "sha256": "0fd808f82931e687e49ef4f273bd6751b71064b00970f935793cb16827aec8f8"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/handoff.md",
+      "sha256": "54a2eeb48afdee8dc260ab69d43d5cef1635e81a4cb9ff67c4e4f5b763ddac78"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/instructions-and-skills.md",
+      "sha256": "7c24763106f238ff45b74d728d679b1050d766a7627e99fbf8dfea9d953345f2"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/journey.md",
+      "sha256": "21d1dbcbdd672e3968cf0a1efbbfe28dd60554aa89a06dd785c210a2d6770609"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/migration.example.json",
+      "sha256": "32162369bc6a78281af2d5901f1deea1b0190cce134ef2cf487047e585710519"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/profile-assessment.example.json",
+      "sha256": "f80d392fcc92eca04cba0ff4d11985501d906d9c42653e1b7ae7543cab504f47"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/profile-memory.example.json",
+      "sha256": "8f024860f58221d4578c8a7ee393ecef8e5900ee30ceba184e49d5b7cb656ae1"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/profile-review.md",
+      "sha256": "71b8c4a9b280fac3559ee535127e371d22cc14815ede99f6cea6e1abaf657b30"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/records.md",
+      "sha256": "49806f6bbd8036a963147d9441de3f66e6841690a437e0ddb85801553f56d617"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/references/works.md",
+      "sha256": "62f4b6e8461efd4a5c6e47e9cd2a86a0266c5613be86725b7c04f211b2f222c8"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/memory_tool.py",
+      "sha256": "c90338eafa8bc5187405f9432d5e9466ab1674fc4dd4f5ef1fa8af1720a0bee7"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/__init__.py",
+      "sha256": "904e73551cc8283d8a327549cfde425b103fa8b54d1d31440c1fc91a60b0d4f1"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/agent_context.py",
+      "sha256": "05adc955083a5c95991dd9389313efc8f055a5ecb15d93a36c41ee2f72a3c418"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/archives.py",
+      "sha256": "f3c4720a49fd00f625883e0981ebc8d4d6ad585e67c7fb0667c3848bb7c4431f"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/cli.py",
+      "sha256": "150b5316d631679835801635aab6cdd5fab281d76c4d360adcf898245c91c6ec"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/collection.py",
+      "sha256": "645683d5123f23ca6830428adadf14af12e1f22dd49295529472a4676011ef49"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/common_profile.py",
+      "sha256": "582daeda9cc92e1dfa029472cc0df9b8adbc800cb5498d6768f32265b0a0ebea"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/delivery.py",
+      "sha256": "bafb6a1cd0629f8710f9c10007931a38a5e96e93a8a788a75a3a1523ae477a19"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/delivery_store.py",
+      "sha256": "bb042246323c40543fd912302148f36349055fe6eb92114fbdb76caf5ea965e8"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/errors.py",
+      "sha256": "b125bd73dbc653143c9471adcd31cf85ad911e1bc2a30d2dcc5f9b8f676e3dbe"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/importing.py",
+      "sha256": "ec14d9a1da68e778625253eda431644ad7b5e4f41d214674d82243c69510b161"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/migration.py",
+      "sha256": "c1563a7b1eba451c237a6cfd43ac26908c7bdf0bf701c50222afdcc856dbe05a"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/model.py",
+      "sha256": "696f74fac377943975a7b00a223c6b35b1731f17c7ccd12f5ba5d24e71bb13b3"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/package.py",
+      "sha256": "c3e4285d8923bf5f73b896e6a77e486641b68d3f36733dcd2eb6e44398a14299"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/profile_audit.py",
+      "sha256": "132228ec6082de0e2705021361c6c265d24284faa0645ce1696aca6a3f1e09e8"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/profile_session.py",
+      "sha256": "279bc6023fcbb4be628f0a04c16e505023aaecd13f0dfa49def201bc06045cc2"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/semantic_review.py",
+      "sha256": "8a2cbd192dfa084b82f7897f821a28a1dcaf7e3ac2d5b4d6347dcc7518fde166"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/setup.py",
+      "sha256": "66c73a45433eed86d71b13a35a6f222952ca36b3022e7c57244405ccab8d9112"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/skill_context.py",
+      "sha256": "23c3325f02511e7b38ef1d0b8ab36a586b9ec07135f29394457b345c2e297074"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/skill_inventory.py",
+      "sha256": "f35a3edbd42a11c54821dce9b034ddc2a67569b0d10e9c2579db3b18c4ac4e36"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/sources.py",
+      "sha256": "e27693220991e1e5334d0eca8ff4f06ad1c519697c6e91cadb6df6b321136d87"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/storage.py",
+      "sha256": "23e2c0e6cd3b62876008519bc5be0999cd32018f1133ba69aa22984d04ac7d0b"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/scripts/portable_memory/transfers.py",
+      "sha256": "7aab25488f8a029d44c692cf1a1b9d7ff6a617a2a00d74aabccc66982cd3ba19"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-export/SKILL.md",
+      "sha256": "c774c2820194fa67e6c7433adea37a8c3534c9f6153714a42467a02188fe2d28"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/agent-context.md",
+      "sha256": "391858c3e45b9e7dde1d0135ed15e99f73a8e65d286129baa8075d938d6b36cd"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/commands.md",
+      "sha256": "7d09c00be4c651c1f624e4e8e5a1d3bd9420221fe62c7187c20263f47e753729"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/common-profile.md",
+      "sha256": "0fd808f82931e687e49ef4f273bd6751b71064b00970f935793cb16827aec8f8"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/handoff.md",
+      "sha256": "54a2eeb48afdee8dc260ab69d43d5cef1635e81a4cb9ff67c4e4f5b763ddac78"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/instructions-and-skills.md",
+      "sha256": "7c24763106f238ff45b74d728d679b1050d766a7627e99fbf8dfea9d953345f2"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/journey.md",
+      "sha256": "1e6e84d65fda8c7d55c1008ea0dfe56e435079d03168f66e6c73ae63e85e9bc9"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/migration.example.json",
+      "sha256": "32162369bc6a78281af2d5901f1deea1b0190cce134ef2cf487047e585710519"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/profile-assessment.example.json",
+      "sha256": "f80d392fcc92eca04cba0ff4d11985501d906d9c42653e1b7ae7543cab504f47"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/profile-memory.example.json",
+      "sha256": "8f024860f58221d4578c8a7ee393ecef8e5900ee30ceba184e49d5b7cb656ae1"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/profile-review.md",
+      "sha256": "71b8c4a9b280fac3559ee535127e371d22cc14815ede99f6cea6e1abaf657b30"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/receiving-setup.md",
+      "sha256": "623c1cf7e42e16aa5bcef32405661f50c05cdf2cd958eb07e0becace2b08dceb"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/references/records.md",
+      "sha256": "49806f6bbd8036a963147d9441de3f66e6841690a437e0ddb85801553f56d617"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/memory_tool.py",
+      "sha256": "c90338eafa8bc5187405f9432d5e9466ab1674fc4dd4f5ef1fa8af1720a0bee7"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/__init__.py",
+      "sha256": "904e73551cc8283d8a327549cfde425b103fa8b54d1d31440c1fc91a60b0d4f1"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/__main__.py",
+      "sha256": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/agent_context.py",
+      "sha256": "05adc955083a5c95991dd9389313efc8f055a5ecb15d93a36c41ee2f72a3c418"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/archives.py",
+      "sha256": "f3c4720a49fd00f625883e0981ebc8d4d6ad585e67c7fb0667c3848bb7c4431f"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/cli.py",
+      "sha256": "150b5316d631679835801635aab6cdd5fab281d76c4d360adcf898245c91c6ec"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/collection.py",
+      "sha256": "645683d5123f23ca6830428adadf14af12e1f22dd49295529472a4676011ef49"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/common_profile.py",
+      "sha256": "582daeda9cc92e1dfa029472cc0df9b8adbc800cb5498d6768f32265b0a0ebea"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/delivery.py",
+      "sha256": "bafb6a1cd0629f8710f9c10007931a38a5e96e93a8a788a75a3a1523ae477a19"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/delivery_store.py",
+      "sha256": "bb042246323c40543fd912302148f36349055fe6eb92114fbdb76caf5ea965e8"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/errors.py",
+      "sha256": "b125bd73dbc653143c9471adcd31cf85ad911e1bc2a30d2dcc5f9b8f676e3dbe"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/importing.py",
+      "sha256": "ec14d9a1da68e778625253eda431644ad7b5e4f41d214674d82243c69510b161"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/migration.py",
+      "sha256": "c1563a7b1eba451c237a6cfd43ac26908c7bdf0bf701c50222afdcc856dbe05a"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/model.py",
+      "sha256": "696f74fac377943975a7b00a223c6b35b1731f17c7ccd12f5ba5d24e71bb13b3"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/package.py",
+      "sha256": "c3e4285d8923bf5f73b896e6a77e486641b68d3f36733dcd2eb6e44398a14299"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/profile_audit.py",
+      "sha256": "132228ec6082de0e2705021361c6c265d24284faa0645ce1696aca6a3f1e09e8"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/profile_session.py",
+      "sha256": "279bc6023fcbb4be628f0a04c16e505023aaecd13f0dfa49def201bc06045cc2"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/semantic_review.py",
+      "sha256": "8a2cbd192dfa084b82f7897f821a28a1dcaf7e3ac2d5b4d6347dcc7518fde166"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/setup.py",
+      "sha256": "66c73a45433eed86d71b13a35a6f222952ca36b3022e7c57244405ccab8d9112"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/skill_context.py",
+      "sha256": "23c3325f02511e7b38ef1d0b8ab36a586b9ec07135f29394457b345c2e297074"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/skill_inventory.py",
+      "sha256": "f35a3edbd42a11c54821dce9b034ddc2a67569b0d10e9c2579db3b18c4ac4e36"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/sources.py",
+      "sha256": "e27693220991e1e5334d0eca8ff4f06ad1c519697c6e91cadb6df6b321136d87"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/storage.py",
+      "sha256": "23e2c0e6cd3b62876008519bc5be0999cd32018f1133ba69aa22984d04ac7d0b"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/scripts/portable_memory/transfers.py",
+      "sha256": "7aab25488f8a029d44c692cf1a1b9d7ff6a617a2a00d74aabccc66982cd3ba19"
+    },
+    {
+      "path": "02_Проект_для_GitHub/skills/memory-import/SKILL.md",
+      "sha256": "c47b45ffe882b79abefcf822458a369be507356b6bd402ec25984b190f3dabfc"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_adversarial.py",
+      "sha256": "a625fb6dc9bb42c2864af701fff938a485ac557a2f5367d18dac945c652a2072"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_agent_context.py",
+      "sha256": "b21aca764e500b6a830694e3c730dc579ee570716756c8f1c200f915902aedd3"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_archives.py",
+      "sha256": "eaf7fb5d24a7e95a29a8faab6646d504be92883aaa43b421eb8f003495f6e2f3"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_collection.py",
+      "sha256": "afaa8dce0cf33add24d25e6cc3652d05b79381e83db67d7a7196c03c53ac6f61"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_common_cli.py",
+      "sha256": "e46db63d71010448271d3529f244a349a43eef71fe4a04a20f69cce62b8c2685"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_common_import.py",
+      "sha256": "3c37e819b04c734ed3db76b420e03213bd41790df4dd9c2828ebb2730d42f059"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_common_profile.py",
+      "sha256": "4e48cdebcdd22a43e8220eeca3fc97ee3b29ca510c50ba58307d2799869b8fb6"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_core.py",
+      "sha256": "748f1345b8a0f0b8915037da5b4450aac613c022b349a28cdfbdf2b6e4ff9225"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_delivery.py",
+      "sha256": "47f4cc5e40a50a5b0b64af30ad6b8ae7785363e582b3a8bf04af6f6a05a370f4"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_delivery_cli.py",
+      "sha256": "978b0ca5b53106186de526e89beafbcf7f4013f3d86a2949a26ea7956753e68f"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_delivery_store.py",
+      "sha256": "dac3863dc560f6f610a1f5274773190c0098851fdddaf66e1f402d9c670d99eb"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_migration.py",
+      "sha256": "f1ef8a6fdacc1a86dfcb8a22f077a59c70b2c717bbf39f7c9b81de856e215ce5"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_migration_adversarial.py",
+      "sha256": "1774a36f2bd4a09c3d3c3eab07e9351f72b5c07002a67e6bde63c3b610e9731c"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_profile_adversarial.py",
+      "sha256": "931adc264032e98ea32d8732d5ca69f8f45cd0cee46bf3a58248ef9032c07e5c"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_profile_audit.py",
+      "sha256": "17a849bb97c917fbd3f84544cf472358cce3d694825024e99470cb2d3b2d3cc6"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_profile_session.py",
+      "sha256": "adebf4c60e906996e47bef8476148212a0db631ff41298edb43d68983d86d4e0"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_semantic_review.py",
+      "sha256": "ae56e4628bab8e9456b04afb72dcbc186380e9f27b98cf7fe54c212e7f3a4573"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_setup.py",
+      "sha256": "a4de0710d3dde89c585916aa3fcf8c456798d17cecdae541173308e92b849360"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_skill_cli.py",
+      "sha256": "0dbdb1dc7cfc7662dc25376769f419b0ee6cad40a8adb9d37eb5e274fa10be34"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_skill_context.py",
+      "sha256": "6190eac82788ae2cdd0bc34b0289ec3c748df9935ef8bc17b5546d53492071fa"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_skill_inventory.py",
+      "sha256": "ace3bc5367bc27fc079adde56491b0ca5967c31da1b79ee918f0533bfcad14b3"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_sources.py",
+      "sha256": "80cafe89a34e7b8e924b2988803a078c5eebdbaeafc3a60d86d655957c363c47"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_storage.py",
+      "sha256": "809d719bf51da8aef25439b467d9a559b3eda9ad0b273eac9dbfeae31f103e34"
+    },
+    {
+      "path": "02_Проект_для_GitHub/tests/test_transfers.py",
+      "sha256": "114656655e0e2d21b48ae5fbd7c4691fd4201ea7ebc200709591ab90e9dd9f6d"
+    },
+    {
+      "path": "02_Проект_для_GitHub/Контекст Dots и Duet.png",
+      "sha256": "4c7b4ac4a1ec5ab88eb1dec94a1d15124f3651d1af6538e3f62d303b21d06ddb"
+    },
+    {
+      "path": "02_Проект_для_GitHub/Путь переноса памяти.png",
+      "sha256": "482498ddf2d311ea3c7a6734f77bfd4aaf4bacd642ca45bad48452383e835f50"
+    },
+    {
+      "path": "02_Проект_для_GitHub/Путь переноса памяти.pptx",
+      "sha256": "f333e0ac3eeac5741442c09190978f34a1733d27d7b2bc82e9b971623ee8067d"
+    },
+    {
+      "path": "03_Описание_и_схема/Краткое описание.md",
+      "sha256": "8213082600c6692853adea65f4a02cab6b55decbea99a3fc70868983ebffacb8"
+    },
+    {
+      "path": "03_Описание_и_схема/Путь пользователя.png",
+      "sha256": "028bc64fa1b27df717a571735027cb17c94dc985ee353907ff939403b17e2fff"
+    },
+    {
+      "path": "03_Описание_и_схема/Путь пользователя.svg",
+      "sha256": "24c2d118bddb77c7c50c50642af3624affe48da11663e5201743d4000d23a362"
+    }
+  ]
+}

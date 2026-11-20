@@ -1,0 +1,33 @@
+[
+  {
+    "id": "fictional-chatgpt-conversation-1",
+    "title": "ДЕМО: предпочтения Нины для рабочих документов",
+    "create_time": 1795046400,
+    "current_node": "assistant-1",
+    "mapping": {
+      "root": {"id": "root", "parent": null, "children": ["user-1"], "message": null},
+      "user-1": {
+        "id": "user-1",
+        "parent": "root",
+        "children": ["assistant-1"],
+        "message": {
+          "id": "fictional-message-1",
+          "author": {"role": "user"},
+          "content": {"content_type": "text", "parts": ["Вымышленный пример для тестирования. Меня зовут Нина. В кратких рабочих документах сначала показывай результат, затем основания. Перед отправкой рабочего письма показывай черновик."]},
+          "create_time": 1795046400
+        }
+      },
+      "assistant-1": {
+        "id": "assistant-1",
+        "parent": "user-1",
+        "children": [],
+        "message": {
+          "id": "fictional-message-2",
+          "author": {"role": "assistant"},
+          "content": {"content_type": "text", "parts": ["В демо эти сведения остаются материалом источника. Перед переносом потребуется проверить их актуальность."]},
+          "create_time": 1795046460
+        }
+      }
+    }
+  }
+]

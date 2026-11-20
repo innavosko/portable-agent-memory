@@ -1,0 +1,82 @@
+{
+  "id": "fictional-migration-demo",
+  "coordinator": "export-agent",
+  "actors": ["export-agent", "import-agent"],
+  "known_answers": {
+    "scope": ["profile", "projects", "skills", "history"],
+    "destination": {"kind": "upload", "label": "Файлом в чат получателя — вымышленный выбор для демонстрации"},
+    "delivery": "as_ready"
+  },
+  "sources": [
+    {
+      "id": "demo-chatgpt-web",
+      "label": "ChatGPT — вымышленная личная история",
+      "kind": "conversation_history",
+      "identity": {"namespace": "openai", "account_id": "fictional-personal-account", "workspace_id": "fictional-personal-space", "resource_id": "chat-history"},
+      "identity_evidence": "Вымышленное подтверждение для демо: браузер и приложение показывают один аккаунт, пространство и набор истории.",
+      "surface": {"agent_id": "export-agent", "product": "ChatGPT", "interface": "web"},
+      "selected": true,
+      "input": {"kind": "archive", "path": "chatgpt-export.json"}
+    },
+    {
+      "id": "demo-chatgpt-desktop",
+      "label": "ChatGPT — вымышленная личная история",
+      "kind": "conversation_history",
+      "identity": {"namespace": "openai", "account_id": "fictional-personal-account", "workspace_id": "fictional-personal-space", "resource_id": "chat-history"},
+      "identity_evidence": "Вымышленное подтверждение для демо: это тот же набор истории, что в браузере, а не отдельная копия для повторного переноса.",
+      "surface": {"agent_id": "export-agent", "product": "ChatGPT", "interface": "desktop"},
+      "selected": true,
+      "input": {"kind": "archive", "path": "chatgpt-export.json"}
+    },
+    {
+      "id": "demo-claude-web",
+      "label": "Claude — вымышленная рабочая история",
+      "kind": "conversation_history",
+      "identity": {"namespace": "anthropic", "account_id": "fictional-work-account", "workspace_id": "fictional-work-space", "resource_id": "chat-history"},
+      "identity_evidence": "Вымышленное подтверждение для демо: браузер и приложение открывают одно рабочее пространство; архив ещё не предоставлен.",
+      "surface": {"agent_id": "export-agent", "product": "Claude", "interface": "web"},
+      "selected": true,
+      "input": null
+    },
+    {
+      "id": "demo-claude-desktop",
+      "label": "Claude — вымышленная рабочая история",
+      "kind": "conversation_history",
+      "identity": {"namespace": "anthropic", "account_id": "fictional-work-account", "workspace_id": "fictional-work-space", "resource_id": "chat-history"},
+      "identity_evidence": "Вымышленное подтверждение для демо: то же рабочее пространство Claude, что в браузере.",
+      "surface": {"agent_id": "export-agent", "product": "Claude", "interface": "desktop"},
+      "selected": true,
+      "input": null
+    },
+    {
+      "id": "demo-project-claude-code",
+      "label": "Проект «Маяк» — вымышленная общая папка",
+      "kind": "project_files",
+      "identity": {"namespace": "filesystem", "account_id": "fictional-project-owner", "workspace_id": "fictional-device-work-space", "resource_id": "fictional-project-mayak"},
+      "identity_evidence": "Вымышленное подтверждение для демо: Claude Code и Codex используют одну выбранную папку проекта. История самих инструментов сюда не включена.",
+      "surface": {"agent_id": "export-agent", "product": "Claude Code", "interface": "cli"},
+      "selected": true,
+      "input": {"kind": "folder", "path": "project"}
+    },
+    {
+      "id": "demo-project-codex",
+      "label": "Проект «Маяк» — вымышленная общая папка",
+      "kind": "project_files",
+      "identity": {"namespace": "filesystem", "account_id": "fictional-project-owner", "workspace_id": "fictional-device-work-space", "resource_id": "fictional-project-mayak"},
+      "identity_evidence": "Вымышленное подтверждение для демо: это та же папка проекта, которую наблюдает Claude Code; повторный сбор не нужен.",
+      "surface": {"agent_id": "export-agent", "product": "Codex", "interface": "desktop"},
+      "selected": true,
+      "input": {"kind": "folder", "path": "project"}
+    },
+    {
+      "id": "demo-provided-profile",
+      "label": "Нина — вымышленный черновик профиля",
+      "kind": "user_profile",
+      "identity": {"namespace": "provided", "account_id": "fictional-personal-account", "workspace_id": "fictional-personal-space", "resource_id": "fictional-profile-draft"},
+      "identity_evidence": "Вымышленный профиль из examples/profile.json. Подтверждение принадлежности источника не подтверждает актуальность его записей.",
+      "surface": {"agent_id": "export-agent", "product": "Provided file", "interface": "upload"},
+      "selected": true,
+      "input": {"kind": "memory", "path": "profile.json"}
+    }
+  ]
+}

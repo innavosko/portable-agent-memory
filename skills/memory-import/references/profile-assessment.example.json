@@ -1,0 +1,20 @@
+{
+  "format": "portable-profile-assessment",
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "demo-source-1",
+      "locator": "Вымышленное сообщение 1",
+      "text": "ВЫМЫШЛЕННЫЙ ПРИМЕР. Во всех разговорах отвечай мне по-русски. Моя личная почта nina@example.org, рабочая — nina@work.example."
+    }
+  ],
+  "claims": [
+    {"record_id": "demo-language", "category": "communication", "subject": "user", "predicate": "preferred_language", "cardinality": "single", "evidence": [{"source_id": "demo-source-1", "quote": "Во всех разговорах отвечай мне по-русски."}]},
+    {"record_id": "demo-personal-mail", "category": "mailboxes", "subject": "user", "predicate": "email_address", "cardinality": "multiple", "evidence": [{"source_id": "demo-source-1", "quote": "Моя личная почта nina@example.org, рабочая — nina@work.example."}]},
+    {"record_id": "demo-work-mail", "category": "mailboxes", "subject": "user", "predicate": "email_address", "cardinality": "multiple", "evidence": [{"source_id": "demo-source-1", "quote": "Моя личная почта nina@example.org, рабочая — nina@work.example."}]}
+  ],
+  "coverage": [
+    {"category": "communication", "status": "checked", "source_ids": ["demo-source-1"], "note": "В демо проверено только предоставленное сообщение; все разговоры аккаунта не просматривались."},
+    {"category": "mailboxes", "status": "checked", "source_ids": ["demo-source-1"], "note": "В демо найдены два адреса. Это не утверждение о полном составе аккаунтов реального пользователя."}
+  ]
+}

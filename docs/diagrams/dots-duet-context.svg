@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2610" height="1640" viewBox="0 0 2610 1640" role="img" aria-labelledby="diagram-title diagram-desc">
+<title id="diagram-title">Путь переноса памяти и настройки другого агента</title>
+<desc id="diagram-desc">Семь смысловых этапов слева направо, четыре комбинируемые ветки сбора; готовность получателя проверяется отдельно от переноса папки.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#688381"/></marker></defs>
+<rect width="2610" height="1640" fill="#F5EFEB"/>
+<text x="40" y="28" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Dots и Duet: состав контекста и исполнение</text>
+<text x="40" y="70" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Поле в схеме данных не подтверждает доступ к сервису. Сначала проверяем, что реально можно прочитать, затем сохраняем и согласуем содержание.</text>
+<rect x="40" y="106" width="5" height="18" rx="2" fill="#1C7134"/>
+<text x="53" y="105" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#1C7134" text-anchor="start" dominant-baseline="text-before-edge">Код файлового пути</text>
+<rect x="255.0" y="106" width="5" height="18" rx="2" fill="#2C7E8D"/>
+<text x="268.0" y="105" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#2C7E8D" text-anchor="start" dominant-baseline="text-before-edge">Модель и пользователь</text>
+<rect x="498.0" y="106" width="5" height="18" rx="2" fill="#B47829"/>
+<text x="511.0" y="105" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#B47829" text-anchor="start" dominant-baseline="text-before-edge">Инструменты сервиса</text>
+<text x="48" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#1C7134" text-anchor="start" dominant-baseline="text-before-edge">Что забрать из доступного источника</text>
+<rect x="40" y="224" width="790" height="1236" rx="20" fill="#F0EAE6"/>
+<text x="918" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#1C7134" text-anchor="start" dominant-baseline="text-before-edge">Как сохранить инструкции и связи</text>
+<rect x="910" y="224" width="790" height="1236" rx="20" fill="#F0EAE6"/>
+<text x="1788" y="170" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#1C7134" text-anchor="start" dominant-baseline="text-before-edge">Что выполняет каждая часть решения</text>
+<rect x="1780" y="224" width="790" height="1236" rx="20" fill="#F0EAE6"/>
+<g id="notes"><title>Заметки и явные инструкции</title>
+<rect x="60" y="270" width="750" height="220" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="60" y="283" width="5" height="194" rx="2" fill="#2C7E8D"/>
+<text x="76" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Заметки и явные инструкции</text>
+<text x="76" y="324" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Сохранённые заметки, сведения о пользователе, предпочтения.</text>
+<text x="76" y="347" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Отдельно — дословные пользовательские инструкции.</text>
+<text x="76" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">У каждой записи есть источник, дата и область действия.</text>
+</g>
+<g id="projects"><title>Проекты, правила и обязанности</title>
+<rect x="60" y="550" width="750" height="220" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="60" y="563" width="5" height="194" rx="2" fill="#2C7E8D"/>
+<text x="76" y="566" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Проекты, правила и обязанности</text>
+<text x="76" y="604" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Описания проектов, их статус, решения и проектные инструкции.</text>
+<text x="76" y="627" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Роли пользователя и постоянные обязанности.</text>
+<text x="76" y="650" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Общие правила не подменяют правила отдельного проекта.</text>
+</g>
+<g id="tasks"><title>Текущие и регулярные задачи</title>
+<rect x="60" y="830" width="750" height="240" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="60" y="843" width="5" height="214" rx="2" fill="#2C7E8D"/>
+<text x="76" y="846" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Текущие и регулярные задачи</text>
+<text x="76" y="884" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Для текущих: состояние, срок, ответственный, следующий шаг.</text>
+<text x="76" y="907" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Для регулярных: периодичность, время, часовой пояс и условия.</text>
+<text x="76" y="930" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Сохранённое описание задачи не создаёт расписание у получателя.</text>
+</g>
+<g id="resources"><title>Подключения, каналы и артефакты</title>
+<rect x="60" y="1130" width="750" height="250" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="60" y="1143" width="5" height="224" rx="2" fill="#2C7E8D"/>
+<text x="76" y="1146" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Подключения, каналы и артефакты</text>
+<text x="76" y="1184" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Почты, календари, диски, рабочие каналы и связанные аккаунты.</text>
+<text x="76" y="1207" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Документы, результаты работы, оригиналы файлов и их связи.</text>
+<text x="76" y="1230" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Переносим описание настройки, правила работы и доступные файлы.</text>
+<text x="76" y="1253" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Пароли, токены и право доступа повторно не выдаём через пакет.</text>
+</g>
+<g id="verbatim"><title>Исходная инструкция сохраняется</title>
+<rect x="930" y="270" width="750" height="240" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="930" y="283" width="5" height="214" rx="2" fill="#2C7E8D"/>
+<text x="946" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Исходная инструкция сохраняется</text>
+<text x="946" y="324" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Пользовательская инструкция хранится отдельной записью.</text>
+<text x="946" y="347" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Исходный текст сохраняем дословно вместе с источником.</text>
+<text x="946" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Краткое описание может быть рядом, но не заменяет оригинал.</text>
+<text x="946" y="393" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Актуальность и противоречия подтверждает пользователь.</text>
+</g>
+<g id="binding"><title>Правило проекта связано с навыком</title>
+<rect x="930" y="570" width="750" height="260" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="930" y="583" width="5" height="234" rx="2" fill="#2C7E8D"/>
+<text x="946" y="586" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Правило проекта связано с навыком</text>
+<text x="946" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Фиксируем проект, навык или задачу, к которым относится правило.</text>
+<text x="946" y="647" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Сохраняем исходный текст, область действия и источник.</text>
+<text x="946" y="670" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">В новом навыке указываем эту связь и нужные зависимости.</text>
+<text x="946" y="693" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Принимающий агент видит, где применять правило и его исключения.</text>
+</g>
+<g id="example"><title>Пример сохранения области действия</title>
+<rect x="930" y="890" width="750" height="240" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="930" y="903" width="5" height="214" rx="2" fill="#2C7E8D"/>
+<text x="946" y="906" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Пример сохранения области действия</text>
+<text x="946" y="944" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">«Для проекта Альфа используй шаблон отчёта из этой папки».</text>
+<text x="946" y="967" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Это правило проекта Альфа и связанного навыка отчётности.</text>
+<text x="946" y="990" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Его нельзя автоматически сделать правилом всех проектов.</text>
+<text x="946" y="1013" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Если папка недоступна, зависимость остаётся видимым пробелом.</text>
+</g>
+<g id="gaps"><title>Неполные данные остаются видимыми</title>
+<rect x="930" y="1190" width="750" height="190" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="930" y="1203" width="5" height="164" rx="2" fill="#1C7134"/>
+<text x="946" y="1206" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Неполные данные остаются видимыми</text>
+<text x="946" y="1244" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Отмечаем прочитанное, недоступное и отложенное пользователем.</text>
+<text x="946" y="1267" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Новые противоречия уточняем точечно.</text>
+<text x="946" y="1290" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Сохраняем прошлые решения и продолжаем доступные ветки.</text>
+</g>
+<g id="code"><title>Код: работа с предоставленными файлами</title>
+<rect x="1800" y="270" width="750" height="240" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="1800" y="283" width="5" height="214" rx="2" fill="#1C7134"/>
+<text x="1816" y="286" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Код: работа с предоставленными файлами</text>
+<text x="1816" y="324" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Параллельный сбор выбранных файлов и проверка структуры.</text>
+<text x="1816" y="347" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Контроль согласований, упаковка, Markdown, вики и связи.</text>
+<text x="1816" y="370" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Проверка передачи, сравнение записей и сохранение продолжения.</text>
+<text x="1816" y="393" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Эти проверки сами не читают весь аккаунт Dots или Duet.</text>
+</g>
+<g id="model"><title>Модель и пользователь: смысл и выбор</title>
+<rect x="1800" y="570" width="750" height="240" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="1800" y="583" width="5" height="214" rx="2" fill="#2C7E8D"/>
+<text x="1816" y="586" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Модель и пользователь: смысл и выбор</text>
+<text x="1816" y="624" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Извлечение и смысловая проверка сведений по источникам.</text>
+<text x="1816" y="647" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Выбор ценных работ, подготовка новых навыков.</text>
+<text x="1816" y="670" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Согласование актуальности, конфликтов и области инструкций.</text>
+<text x="1816" y="693" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Модель не заменяет пользовательское подтверждение.</text>
+</g>
+<g id="tools"><title>Инструменты сервиса: фактические действия</title>
+<rect x="1800" y="870" width="750" height="260" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="1800" y="883" width="5" height="234" rx="2" fill="#B47829"/>
+<text x="1816" y="886" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Инструменты сервиса: фактические действия</text>
+<text x="1816" y="924" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Чтение кабинета, подключённых данных и облачных файлов.</text>
+<text x="1816" y="947" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Загрузка, установка навыков, настройка памяти и расписаний.</text>
+<text x="1816" y="970" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Выполняем только поддерживаемые и разрешённые действия.</text>
+<text x="1816" y="993" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">После применения читаем результат обратно.</text>
+<text x="1816" y="1016" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Универсальный прямой доступ к Dots/Duet пока не подтверждён.</text>
+</g>
+<g id="honest-finish"><title>Итог по каждой выбранной части</title>
+<rect x="1800" y="1190" width="750" height="190" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="1800" y="1203" width="5" height="164" rx="2" fill="#B47829"/>
+<text x="1816" y="1206" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Итог по каждой выбранной части</text>
+<text x="1816" y="1244" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Есть проверенный результат — отмечаем готовность.</text>
+<text x="1816" y="1267" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Нет доступа или подтверждения — сохраняем следующий шаг.</text>
+<text x="1816" y="1290" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Полученный архив сам по себе не означает настройку агента.</text>
+</g>
+<rect x="40" y="1500" width="2530" height="112" rx="14" fill="#E3E4E1"/>
+<text x="58" y="1514" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#40504D" text-anchor="start" dominant-baseline="text-before-edge">Серым: недоступное и отложенное явно остаётся в плане</text>
+<text x="58" y="1553" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#485652" text-anchor="start" dominant-baseline="text-before-edge">Почта и фоновое наблюдение, универсальные облачные адаптеры, нативный импорт навыков и ZIP в ГигаАгенте, MCP Obsidian и Яндекс Диска.</text>
+<text x="58" y="1582" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#485652" text-anchor="start" dominant-baseline="text-before-edge">Схема описывает целевой путь. Реальная готовность определяется доступными инструментами сервиса и проверкой результата каждой выбранной операции.</text>
+</svg>

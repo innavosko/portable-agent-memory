@@ -1,0 +1,40 @@
+{
+  "format": "portable-profile-quality",
+  "schema_version": 1,
+  "reviewer": {
+    "kind": "same_model_second_pass",
+    "label": "Вымышленный результат второго прохода для теста"
+  },
+  "checks": [
+    {
+      "record_id": "invented",
+      "claim_sha256": "cd4082ea0ee183aa38befea9682bb7ec2d32ebeac2acfb8796f2feb4b2ef4bc6",
+      "decision": "uncertain",
+      "note": "Источник требует показать черновик, но не устанавливает разрешение отправлять без согласования; политика согласования остаётся неизвестной"
+    },
+    {
+      "record_id": "mail-new",
+      "claim_sha256": "1a475a3e925ffbcd5c53647e99200456e398028a6931c7aaa3e5e9489f4d63fd",
+      "decision": "supported",
+      "note": "Вымышленная проверка: цитата подтверждает ровно указанное содержание"
+    },
+    {
+      "record_id": "mail-old",
+      "claim_sha256": "80865ff3284d652e9c1da9f58006463709e88fba023394a49c067be9696487ec",
+      "decision": "supported",
+      "note": "Вымышленная проверка: цитата подтверждает ровно указанное содержание"
+    },
+    {
+      "record_id": "meeting",
+      "claim_sha256": "59067daea0275c33cfd100224b973230c415f0e5f29f8f9ae614e65b3e123ac9",
+      "decision": "supported",
+      "note": "Вымышленная проверка: цитата подтверждает ровно указанное содержание"
+    },
+    {
+      "record_id": "tone",
+      "claim_sha256": "08a73f7b71da724d84c3932a15a5fefdc9fa2c4133580a8673ae2b700c0061ef",
+      "decision": "supported",
+      "note": "Вымышленная проверка: цитата подтверждает ровно указанное содержание"
+    }
+  ]
+}

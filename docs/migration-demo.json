@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "synthetic": true,
+  "observations": 7,
+  "canonical_sources": 4,
+  "initial_collected": 3,
+  "initial_waiting": 1,
+  "repeated_collected": 0,
+  "late_collected": 1,
+  "earlier_results_unchanged": true,
+  "resume": {
+    "jobs_collected": 0,
+    "revision_unchanged": true,
+    "questions_unchanged": true
+  },
+  "native_memory": "not_applied",
+  "background_watch": "not_started",
+  "limitations": [
+    "Only supplied fictional files were collected.",
+    "No profile decisions were automatically confirmed.",
+    "The resumed store replaces the original authority; live cloud synchronization is not demonstrated."
+  ]
+}

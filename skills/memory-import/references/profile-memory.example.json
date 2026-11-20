@@ -1,0 +1,44 @@
+{
+  "format": "portable-memory",
+  "schema_version": 1,
+  "metadata": {"synthetic": true, "description": "Вымышленный пример для проверки программы; не данные пользователя"},
+  "coverage": {"read": ["Вымышленное сообщение 1"], "unavailable": [], "excluded": []},
+  "records": [
+    {
+      "id": "demo-language",
+      "kind": "preference",
+      "title": "Язык общения",
+      "value": "Русский",
+      "scope": "global",
+      "sources": [{"id": "demo-source-1", "locator": "Вымышленное сообщение 1", "observed_at": null}],
+      "provenance": "user_statement",
+      "currency": "unknown",
+      "review": {"decision": "pending"},
+      "links": []
+    },
+    {
+      "id": "demo-personal-mail",
+      "kind": "account",
+      "title": "Личная почта",
+      "value": {"email": "nina@example.org", "purpose": "Личная"},
+      "scope": "global",
+      "sources": [{"id": "demo-source-1", "locator": "Вымышленное сообщение 1", "observed_at": null}],
+      "provenance": "user_statement",
+      "currency": "unknown",
+      "review": {"decision": "pending"},
+      "links": []
+    },
+    {
+      "id": "demo-work-mail",
+      "kind": "account",
+      "title": "Рабочая почта",
+      "value": {"email": "nina@work.example", "purpose": "Рабочая"},
+      "scope": "global",
+      "sources": [{"id": "demo-source-1", "locator": "Вымышленное сообщение 1", "observed_at": null}],
+      "provenance": "user_statement",
+      "currency": "unknown",
+      "review": {"decision": "pending"},
+      "links": []
+    }
+  ]
+}

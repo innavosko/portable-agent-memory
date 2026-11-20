@@ -1,0 +1,50 @@
+{
+  "scenario": "whole_profile_cli_review_with_late_source",
+  "synthetic_only": true,
+  "passed": true,
+  "coordinator": "fictional-codex-work-coordinator",
+  "source_labels": [
+    "Codex work",
+    "ChatGPT personal",
+    "Claude Code"
+  ],
+  "commands_executed": 27,
+  "scripted_model_and_user_attestations": true,
+  "network_calls": 0,
+  "live_model_calls": 0,
+  "live_accounts_accessed": false,
+  "unchanged_confirmation_reused": true,
+  "paraphrase_inherited_without_repeat_question": true,
+  "project_scope_preserved": true,
+  "partial_export_while_waiting": true,
+  "late_source_invalidated_old_export": true,
+  "conflict_question_record_ids": [
+    "late-work-rule",
+    "personal-wording",
+    "work-draft"
+  ],
+  "conflict_resolved_only_by_explicit_fictional_user": true,
+  "records_imported": 4,
+  "repeat_duplicate_records": 4,
+  "native_memory": "not_applied",
+  "limitations": [
+    "Source excerpts, semantic conclusions, second-pass judgments and user answers are authored fixtures.",
+    "No real model, account, cloud transport, email watcher or native agent setup was tested.",
+    "The ordinary coordinator, SQLite authority, CLI, package and portable import gates were exercised."
+  ],
+  "reproduction": {
+    "script": "scripts/demo_common_profile.py",
+    "output": "work/common-profile-demo-01",
+    "command": "python scripts/demo_common_profile.py --out work/common-profile-demo-new"
+  },
+  "cli_regressions": {
+    "tests": 4,
+    "passed": true,
+    "covers": [
+      "Late source changes the linked migration store before common-source; old export is rejected.",
+      "After sync, a changed existing input is pending and requires a new review.",
+      "Wrong coordinator and stale revision cannot mutate the shared common store.",
+      "End-to-end fictional review, partial export, targeted conflict resolution and idempotent portable import."
+    ]
+  }
+}

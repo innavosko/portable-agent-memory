@@ -1,0 +1,288 @@
+{
+  "format": "portable-memory-skill-forward-test",
+  "version": "0.6.0",
+  "passed": true,
+  "synthetic_data_only": true,
+  "execution": "Both extracted standalone skill ZIPs, short isolated local paths, no repository PYTHONPATH.",
+  "live_platform_actions": [],
+  "native_success_claims": false,
+  "cli_calls": [
+    {
+      "skill": "memory-export",
+      "command": "context-template",
+      "label": "context-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "context-template",
+      "label": "context-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "context-collect",
+      "label": "context-collect",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-quality-template",
+      "label": "profile-quality-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-create",
+      "label": "profile-create",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-view",
+      "label": "profile-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-event",
+      "label": "profile-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-result",
+      "label": "profile-result",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "skill-collect",
+      "label": "skill-collect",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "review",
+      "label": "review",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "confirm",
+      "label": "confirm",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "skill-bind-context",
+      "label": "skill-bind-context",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "review",
+      "label": "review",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "confirm",
+      "label": "confirm",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "changed actual rule reference rejected",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "changed bound subtree script rejected",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "export",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "inspect",
+      "label": "inspect",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "plan",
+      "label": "plan",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "apply",
+      "label": "apply",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "review",
+      "label": "review",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "confirm",
+      "label": "confirm",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "export",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "plan",
+      "label": "plan",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "apply",
+      "label": "retained bound skill requires actual incoming assets, not only current JSON",
+      "exit_code": 2,
+      "expected_rejection": true
+    }
+  ],
+  "checks": [
+    {
+      "check": "memory-export includes the complete context and physical binding instructions",
+      "passed": true
+    },
+    {
+      "check": "memory-import includes the complete context and physical binding instructions",
+      "passed": true
+    },
+    {
+      "check": "Both platform templates contain 15 unassessed categories, without account access",
+      "passed": true
+    },
+    {
+      "check": "Missing, inaccessible, checked-empty and user-excluded context remain distinct",
+      "passed": true
+    },
+    {
+      "check": "Collection preserves actual values and the supplied snapshot, not a fabricated full account export",
+      "passed": true
+    },
+    {
+      "check": "Raw project instructions and concrete belongs_to project links survive collection",
+      "passed": true
+    },
+    {
+      "check": "Task schedule, timezone, destination and disabled state are retained without scheduling",
+      "passed": true
+    },
+    {
+      "check": "Binding changes only exported copy, retains source SKILL and invalidates the old skill confirmation",
+      "passed": true
+    },
+    {
+      "check": "Actual SKILL links reach a file containing the verbatim project rule, exact scope and source",
+      "passed": true
+    },
+    {
+      "check": "Reviewing only the changed skill preserves previously confirmed context without whole-profile reapproval",
+      "passed": true
+    },
+    {
+      "check": "Changed reference text and other bound skill files cannot reuse the prior binding",
+      "passed": true
+    },
+    {
+      "check": "Portable import retains actual referenced instruction bytes, project scope and source disabled state",
+      "passed": true
+    },
+    {
+      "check": "Context import and binding do not execute the skill, restore schedules or claim native setup",
+      "passed": true
+    },
+    {
+      "check": "Incomplete later merge is rejected while previous workspace remains unchanged",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "private_paths_in_report": false,
+  "test_input_adjustments": [
+    "The first context-collect attempt correctly rejected an unavailable category without a check reference. Added the actual fictional materials-inventory reference; no product files changed."
+  ],
+  "limits": [
+    "Only explicitly supplied fictional Dots/Duet snapshots and one original skill folder were used.",
+    "Coverage is a supplied-source assessment, not an account scan; no native context, task, schedule, connection or skill was activated.",
+    "This focused test covers context and physical skill references; prior delivery scenarios were not broadly repeated.",
+    "A short Windows output root was used; arbitrary long-path support is not claimed."
+  ],
+  "bundle_sha256": {
+    "memory-export": "9b78956ae798e82fc58274997228a9d3d3a65ac579b1079440fbdc9290c3f062",
+    "memory-import": "84208a39d2f6561b930dcca6a386600fa9bdfef03514acbae770c7adef680b9f"
+  },
+  "fictional_user_request": "Перенеси предоставленный контекст dot и мой отключённый навык. Инструкции проекта сохрани дословно внутри экспортируемой копии. Диалоги не переносить; заметки недоступны. Данные подтверждаю как актуальный контекст, задачи не запускать и навык не устанавливать.",
+  "binding_choice": "The fictional user explicitly chose the atlas project rule for atlas-notes, then approved the added reference copy only.",
+  "outcomes": {
+    "context_records": 7,
+    "portable_records": 8,
+    "context_status_counts": {
+      "categories_total": 15,
+      "excluded": 1,
+      "not_found": 1,
+      "pending": 5,
+      "provided": 7,
+      "unavailable": 1,
+      "records": 7,
+      "user_review_pending": 7,
+      "all_categories_assessed": false,
+      "all_requested_categories_available": false,
+      "complete_account_export": false
+    },
+    "project_instruction_verbatim": true,
+    "real_reference_index_created": true,
+    "source_originals_unchanged": true,
+    "source_skill_enabled": false,
+    "bound_skill_reapproved_only": true,
+    "native_memory": "not_applied",
+    "skills": "not_installed",
+    "integrations": "not_connected"
+  },
+  "cli_calls_count": 25,
+  "expected_rejections": 3
+}

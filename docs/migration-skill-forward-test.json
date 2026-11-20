@@ -1,0 +1,172 @@
+{
+  "format": "portable-memory-migration-skill-forward-test",
+  "version": "0.2.0",
+  "synthetic_data_only": true,
+  "passed": true,
+  "cli_calls_count": 17,
+  "help_calls_before_test": 6,
+  "cli_calls": [
+    {
+      "skill": "memory-export",
+      "command": "migration-create",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-event",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-event",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-collect",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-collect",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-event",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-collect",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "migration-export-state",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "migration-resume",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "migration-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "migration-collect",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "migration-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    }
+  ],
+  "checks": [
+    {
+      "check": "seven observations deduplicate to four datasets; known scope/destination/delivery reused",
+      "passed": true
+    },
+    {
+      "check": "presented question saved; awaiting_answer suppresses repeat without blocking independent collection",
+      "passed": true
+    },
+    {
+      "check": "three supplied datasets collected while Claude waits; identical repeat schedules zero jobs",
+      "passed": true
+    },
+    {
+      "check": "late Claude file causes exactly one new collection job",
+      "passed": true
+    },
+    {
+      "check": "customer summary labels collection as awaiting content review, not completed migration",
+      "passed": true
+    },
+    {
+      "check": "exporter state resumes through standalone importer entrypoint; no duplicate collection",
+      "passed": true
+    },
+    {
+      "check": "missing collected files after handoff are explicitly reported, not assumed transferred",
+      "passed": true
+    },
+    {
+      "check": "collected memory equals the fixture; folder files retain byte hashes; both archive conversations retain all original synthetic text",
+      "passed": true
+    }
+  ],
+  "dialogue": [
+    {
+      "speaker": "agent",
+      "text": "Нашёл четыре источника; браузер и приложение не дублирую. Три материала уже доступны, их можно обработать. Архив Claude ещё готовится или файл уже есть?"
+    },
+    {
+      "speaker": "fictional_user",
+      "text": "Claude ещё готовится. Уже готовые материалы разбирай сейчас; ничего подключать пока не нужно."
+    },
+    {
+      "speaker": "fictional_user",
+      "text": "Архив Claude теперь загружен. Используй его, готовые источники повторно не собирай."
+    }
+  ],
+  "defects": [],
+  "limits": [
+    "Standalone ZIP scripts tested locally in isolated temporary directories with repository PYTHONPATH removed.",
+    "No real ChatGPT/Claude account, email, Drive, browser skill installation or native-memory write was tested.",
+    "JSON resume was tested as a separate local authority; independent SaaS snapshots do not synchronize.",
+    "Parallel collection outcome checked; this test does not benchmark speed or prove distributed coordination."
+  ],
+  "private_paths_in_report": false,
+  "observed_cli_failures": 0,
+  "harness_notes": [
+    "The supplemental file-content checker initially assumed archive output files were at the job root; corrected the checker to locate the nested conversations.json. No program or CLI change was needed."
+  ]
+}

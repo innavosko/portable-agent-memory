@@ -1,0 +1,381 @@
+{
+  "format": "portable-memory-skill-forward-test",
+  "version": "0.4.0",
+  "passed": true,
+  "synthetic_data_only": true,
+  "execution": "Extracted standalone skill ZIP entrypoints; repository PYTHONPATH removed.",
+  "live_cloud_actions": [],
+  "live_native_actions": [],
+  "simulated_native_results": true,
+  "cli_calls": [
+    {
+      "skill": "memory-export",
+      "command": "profile-quality-template",
+      "label": "profile-quality-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-create",
+      "label": "profile-create",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-view",
+      "label": "profile-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-event",
+      "label": "profile-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-result",
+      "label": "profile-result",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "export",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "inspect",
+      "label": "inspect",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "storage-options",
+      "label": "storage-options",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "delivery-prepare",
+      "label": "delivery-prepare",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "delivery-published",
+      "label": "manual route cannot claim verified cloud publication",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-check",
+      "label": "READY before ZIP is incomplete",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-check",
+      "label": "delivery-check",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-check",
+      "label": "wrong recipient rejected",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receive",
+      "label": "delivery-receive",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receive",
+      "label": "delivery-receive",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receive",
+      "label": "delivery-receive",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "setup-event",
+      "label": "setup-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "setup-event",
+      "label": "setup-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "setup-event",
+      "label": "setup-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "setup-event",
+      "label": "setup-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "setup-event",
+      "label": "setup-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-save-setup",
+      "label": "delivery-save-setup",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receipt",
+      "label": "delivery-receipt",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receive",
+      "label": "delivery-receive",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "setup-event",
+      "label": "already verified step cannot repeat",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-export",
+      "command": "delivery-prepare",
+      "label": "delivery-prepare",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receive",
+      "label": "delivery-receive",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receive",
+      "label": "delivery-receive",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receive",
+      "label": "superseded version cannot resume receiving",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receipt",
+      "label": "delivery-receipt",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "export",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "delivery-prepare",
+      "label": "changed bytes cannot overwrite version one",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receipt",
+      "label": "changed tracked original blocks reuse",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-import",
+      "command": "delivery-receipt",
+      "label": "delivery-receipt",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "delivery-prepare",
+      "label": "delivery-prepare",
+      "exit_code": 0,
+      "expected_rejection": false
+    }
+  ],
+  "checks": [
+    {
+      "check": "memory-export standalone entrypoint and delivery reference are bundled",
+      "passed": true
+    },
+    {
+      "check": "memory-import standalone entrypoint and delivery reference are bundled",
+      "passed": true
+    },
+    {
+      "check": "Prepared fictional package retains pending reminder and selected assets without executing their instructions",
+      "passed": true
+    },
+    {
+      "check": "Storage catalog offers named/local/manual choices without a Rambler alias",
+      "passed": true
+    },
+    {
+      "check": "Preparation creates exactly the standard version folder and does not claim cloud publication",
+      "passed": true
+    },
+    {
+      "check": "No false publication receipt is created for a manual/local observation",
+      "passed": true
+    },
+    {
+      "check": "READY copied first does not validate a partial folder",
+      "passed": true
+    },
+    {
+      "check": "Complete copy validates actual bytes and intended recipient",
+      "passed": true
+    },
+    {
+      "check": "Preview proposes a plan without registry or workspace writes",
+      "passed": true
+    },
+    {
+      "check": "Authorized receive prepares portable files; native steps remain unapplied",
+      "passed": true
+    },
+    {
+      "check": "Deferred reminder is retained as unresolved instead of silently applied",
+      "passed": true
+    },
+    {
+      "check": "Same version reuses one durable portable workspace",
+      "passed": true
+    },
+    {
+      "check": "Saved receiving state preserves simulated project proof, blocked profile and user skill deferral",
+      "passed": true
+    },
+    {
+      "check": "Repeat receiving resumes latest saved setup without repeating completed steps",
+      "passed": true
+    },
+    {
+      "check": "Imported asset instruction did not activate other steps or install a skill",
+      "passed": true
+    },
+    {
+      "check": "Next-version preview identifies prior portable memory, not live SaaS memory",
+      "passed": true
+    },
+    {
+      "check": "Unchanged setup results and deferrals carry into new verified version without whole-profile interview",
+      "passed": true
+    },
+    {
+      "check": "Old version receipt is explicitly historical and directs continuation to latest version",
+      "passed": true
+    },
+    {
+      "check": "Original immutable version remains intact after rejected overwrite",
+      "passed": true
+    },
+    {
+      "check": "Changed tracked originals are rejected; exact restoration permits receipt access",
+      "passed": true
+    },
+    {
+      "check": "Same-service manual handoff is allowed without asserting a shared folder or connector",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "private_paths_in_report": false,
+  "limits": [
+    "No cloud connector, account, OAuth flow, real native memory, installed skill or scheduler was used.",
+    "Native setup evidence is explicitly SIMULATED fixture data, not a claimed real service action.",
+    "Local result, integrity and state behavior was observed; this does not establish live cloud compatibility.",
+    "The delivery registry was one local authority, not synchronized cloud coordination."
+  ],
+  "bundle_sha256": {
+    "memory-export": "2799e38ca28e6bc9a2e7e3bc42aa2d06e756e89e4efa204185ee2cee453bf60f",
+    "memory-import": "b1d6f8c958be34f2bed52c6a9025f12db43aedd3faba864e578703287ed9811a"
+  },
+  "user_scenario": {
+    "fictional_user_confirmation": "Подтверждаю показанные краткий стиль, проект, процесс обзора и рабочую почту. Напоминание пока не применять. Перенести это из Google Drive в Яндекс Диск. Навык обзора у получателя пока не устанавливать — вернусь к нему позже.",
+    "route": "Google Drive to Yandex Disk via user copy; additional OneDrive to OneDrive preparation.",
+    "receipt_resume": "Latest state fetched from one local registry; unchanged facts not re-interviewed."
+  },
+  "outcomes": {
+    "portable_records": [
+      "tone",
+      "parks",
+      "weekly",
+      "mail"
+    ],
+    "pending_review": [
+      "reminder"
+    ],
+    "setup_statuses": {
+      "profile": "blocked",
+      "projects:parks": "verified",
+      "skills:weekly": "deferred",
+      "integrations:mail": "pending"
+    },
+    "native_verification_basis": "SIMULATED host attestations only; no real native changes.",
+    "cloud_publication": "not_verified; manual route used"
+  },
+  "cli_calls_count": 35,
+  "expected_rejections": 7
+}

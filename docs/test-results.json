@@ -1,0 +1,13 @@
+{
+  "version": "0.7.0",
+  "checked_at_utc": "2026-11-20T14:34:56.280148+00:00",
+  "platform": "Windows",
+  "python": "3.12.14",
+  "tests_run": 368,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 3,
+  "passed": true,
+  "live_saas_tested": false,
+  "uses_synthetic_data": true
+}

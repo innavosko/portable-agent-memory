@@ -1,0 +1,480 @@
+{
+  "format": "portable-memory-skill-forward-test",
+  "version": "0.7.0",
+  "passed": true,
+  "synthetic_data_only": true,
+  "live_platform_actions": [],
+  "native_success_claims": false,
+  "execution": "Both extracted standalone skill ZIPs; isolated short local paths; no repository PYTHONPATH.",
+  "cli_calls": [
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "export without the mandatory common review is rejected",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-create",
+      "label": "common-create",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-source",
+      "label": "common-source",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-source",
+      "label": "common-source",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-source",
+      "label": "common-source",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-input",
+      "label": "common-input",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-template",
+      "label": "common-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-quality-template",
+      "label": "profile-quality-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-quality-template",
+      "label": "common-quality-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-review",
+      "label": "common-review",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-event",
+      "label": "common-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-event",
+      "label": "common-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-event",
+      "label": "common-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-result",
+      "label": "common-result",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "export",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-source",
+      "label": "common-source",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "the previously ready result cannot bypass a changed source inventory",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-review",
+      "label": "the old semantic pass does not cover the new source records",
+      "exit_code": 2,
+      "expected_rejection": true
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-input",
+      "label": "common-input",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-template",
+      "label": "common-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-quality-template",
+      "label": "profile-quality-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-quality-template",
+      "label": "common-quality-template",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-review",
+      "label": "common-review",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-view",
+      "label": "common-view",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-event",
+      "label": "common-event",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "common-result",
+      "label": "common-result",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-export",
+      "command": "export",
+      "label": "export",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "inspect",
+      "label": "inspect",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "plan",
+      "label": "plan",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "apply",
+      "label": "apply",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "review",
+      "label": "review",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "confirm",
+      "label": "confirm",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "plan",
+      "label": "plan",
+      "exit_code": 0,
+      "expected_rejection": false
+    },
+    {
+      "skill": "memory-import",
+      "command": "apply",
+      "label": "apply",
+      "exit_code": 0,
+      "expected_rejection": false
+    }
+  ],
+  "checks": [
+    {
+      "check": "One coordinator sees three sources and does not call a source capture ready",
+      "passed": true
+    },
+    {
+      "check": "The actual semantic pass identifies paraphrases and a current-mailbox conflict",
+      "passed": true
+    },
+    {
+      "check": "A necessary focused question is available",
+      "passed": true
+    },
+    {
+      "check": "Shown questions are recorded without restarting the interview",
+      "passed": true
+    },
+    {
+      "check": "The remaining focused question concerns the deferred meeting preference",
+      "passed": true
+    },
+    {
+      "check": "One actual style confirmation covers its verified paraphrase; the mailbox choice is retained",
+      "passed": true
+    },
+    {
+      "check": "Late source material invalidates common readiness",
+      "passed": true
+    },
+    {
+      "check": "Late equivalent meaning inherits the real prior confirmation without a new user question",
+      "passed": true
+    },
+    {
+      "check": "Unchanged mailbox choices and the meeting deferral survive the new source",
+      "passed": true
+    },
+    {
+      "check": "The one new question preserves project-specific detail instead of turning it into a global conflict",
+      "passed": true
+    },
+    {
+      "check": "Final partial result retains original aliases and the intentionally pending record",
+      "passed": true
+    },
+    {
+      "check": "Receiving entrypoint applies reviewed portable records while leaving the deferred fact unapplied",
+      "passed": true
+    },
+    {
+      "check": "Receipt reports portable work only, with no native configuration claims",
+      "passed": true
+    },
+    {
+      "check": "A different receiver union keeps real choices but withholds active-profile use pending a common semantic review",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "test_input_adjustments": [],
+  "limits": [
+    "Three explicitly supplied fictional sources; no account discovery or SaaS access.",
+    "Semantic relations were judged from fictional raw statements; the program does not call a model or prove their truth.",
+    "The final partial package intentionally defers the meeting-duration question.",
+    "Native memory, installed skills, integrations and automations were not changed."
+  ],
+  "bundle_sha256": {
+    "memory-export": "1b94a6826136ae72acb9e2a73f8c2b71b5930e6e5a0607481654d520d19f1115",
+    "memory-import": "340adcb97c9e17835c0382f6c393c02d4eb48e02c6ce1e6aee5ce66c613f936f"
+  },
+  "fictional_user_request": "Объедини рабочий Codex, личный ChatGPT и проект Claude Code; не спрашивай повторно неизменённое. Частичный перенос допустим, длительность встреч уточню позднее.",
+  "actual_simulated_user_choices": [
+    "Short default replies active; old primary mailbox historical; new primary mailbox active.",
+    "Meeting duration deferred.",
+    "Later Atlas project rule active; no repeated confirmation of equivalent concise replies."
+  ],
+  "semantic_method": "Actual host-model comparison of raw fictional statements, then a same-model second pass honestly labeled; no prepared core-demo verdicts used.",
+  "outcomes": {
+    "sources": 3,
+    "combined_records": 7,
+    "portable_applied_records": 6,
+    "readiness": "partial",
+    "deferred_record": "meeting",
+    "initial_import_common_review": "checked_subset_pending_not_applied",
+    "different_receiver_union": "required_for_combined_profile",
+    "native_memory": "not_applied",
+    "skills": "not_installed",
+    "integrations": "not_connected"
+  },
+  "cli_calls_count": 54,
+  "expected_rejections": 3
+}

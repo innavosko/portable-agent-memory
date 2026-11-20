@@ -1,0 +1,19 @@
+{
+  "scenario": "standard-folder-handoff",
+  "synthetic": true,
+  "network_calls": 0,
+  "sender_choice": "google_drive",
+  "recipient_choice": "mail_cloud",
+  "cloud_publication": "not_tested",
+  "copied_files_verified": [
+    "READY",
+    "manifest.json",
+    "memory.zip"
+  ],
+  "preview_performed_no_writes": true,
+  "records_imported": 2,
+  "repeat_reused": true,
+  "setup_state_preserved": true,
+  "setup_status": "needs_setup",
+  "native_changes": "none; simulated attestations only"
+}

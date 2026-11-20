@@ -1,0 +1,127 @@
+{
+  "format": "portable-profile-assessment",
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "old",
+      "locator": "Вымышленная беседа old",
+      "text": "Отвечай кратко. Моя основная рабочая почта nina-old@example.org."
+    },
+    {
+      "id": "new",
+      "locator": "Вымышленная беседа new",
+      "text": "Моя основная рабочая почта nina@example.org. Встречи по 25 минут. Показывай черновик письма до отправки."
+    }
+  ],
+  "claims": [
+    {
+      "record_id": "tone",
+      "category": "communication",
+      "subject": "user",
+      "predicate": "response_style",
+      "cardinality": "single",
+      "evidence": [
+        {
+          "source_id": "old",
+          "quote": "Отвечай кратко."
+        }
+      ]
+    },
+    {
+      "record_id": "mail-old",
+      "category": "mailboxes",
+      "subject": "user",
+      "predicate": "primary_work_email",
+      "cardinality": "single",
+      "evidence": [
+        {
+          "source_id": "old",
+          "quote": "Моя основная рабочая почта nina-old@example.org."
+        }
+      ]
+    },
+    {
+      "record_id": "mail-new",
+      "category": "mailboxes",
+      "subject": "user",
+      "predicate": "primary_work_email",
+      "cardinality": "single",
+      "evidence": [
+        {
+          "source_id": "new",
+          "quote": "Моя основная рабочая почта nina@example.org."
+        }
+      ]
+    },
+    {
+      "record_id": "meeting",
+      "category": "calendar",
+      "subject": "user",
+      "predicate": "meeting_duration",
+      "cardinality": "single",
+      "evidence": [
+        {
+          "source_id": "new",
+          "quote": "Встречи по 25 минут."
+        }
+      ]
+    },
+    {
+      "record_id": "invented",
+      "category": "behavior",
+      "subject": "user",
+      "predicate": "send_permission",
+      "cardinality": "single",
+      "evidence": [
+        {
+          "source_id": "new",
+          "quote": "Показывай черновик письма до отправки."
+        }
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "category": "communication",
+      "status": "checked",
+      "source_ids": [
+        "old",
+        "new"
+      ],
+      "note": "Просмотрены только два вымышленных фрагмента"
+    },
+    {
+      "category": "mailboxes",
+      "status": "checked",
+      "source_ids": [
+        "old",
+        "new"
+      ],
+      "note": "Просмотрены только два вымышленных фрагмента"
+    },
+    {
+      "category": "calendar",
+      "status": "checked",
+      "source_ids": [
+        "old",
+        "new"
+      ],
+      "note": "Просмотрены только два вымышленных фрагмента"
+    },
+    {
+      "category": "behavior",
+      "status": "checked",
+      "source_ids": [
+        "old",
+        "new"
+      ],
+      "note": "Просмотрены только два вымышленных фрагмента"
+    },
+    {
+      "category": "documents",
+      "status": "unavailable",
+      "source_ids": [],
+      "note": "Вымышленный шаблон документа ещё не предоставлен"
+    }
+  ]
+}

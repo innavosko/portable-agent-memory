@@ -1,0 +1,14 @@
+{
+  "source_agent": "source-web",
+  "recipient_agent": "recipient-web",
+  "source_kind": "email",
+  "source_locator": "Вымышленное письмо о готовности экспорта, ящик nina@example.org",
+  "destination_kind": "upload",
+  "destination_locator": "Пользователь загружает подготовленный пакет в чат получателя",
+  "owner": "source-web",
+  "mode": "manual",
+  "capabilities": {
+    "source-web": {"email_read": false, "drive_read": false, "download": false, "background": false, "notify": false},
+    "recipient-web": {"email_read": false, "drive_read": false, "download": false, "background": false, "notify": false}
+  }
+}

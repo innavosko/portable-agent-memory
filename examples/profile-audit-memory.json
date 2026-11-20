@@ -1,0 +1,116 @@
+{
+  "format": "portable-memory",
+  "schema_version": 1,
+  "metadata": {
+    "synthetic": true
+  },
+  "coverage": {
+    "read": [
+      "Вымышленные беседы old и new"
+    ],
+    "unavailable": [],
+    "excluded": []
+  },
+  "records": [
+    {
+      "id": "tone",
+      "kind": "preference",
+      "title": "Стиль ответа",
+      "value": "Отвечать кратко",
+      "scope": "global",
+      "sources": [
+        {
+          "id": "old",
+          "locator": "Вымышленная беседа old",
+          "observed_at": null
+        }
+      ],
+      "provenance": "user_statement",
+      "currency": "unknown",
+      "review": {
+        "decision": "pending"
+      },
+      "links": []
+    },
+    {
+      "id": "mail-old",
+      "kind": "account",
+      "title": "Прежняя основная рабочая почта",
+      "value": "nina-old@example.org",
+      "scope": "global",
+      "sources": [
+        {
+          "id": "old",
+          "locator": "Вымышленная беседа old",
+          "observed_at": null
+        }
+      ],
+      "provenance": "user_statement",
+      "currency": "unknown",
+      "review": {
+        "decision": "pending"
+      },
+      "links": []
+    },
+    {
+      "id": "mail-new",
+      "kind": "account",
+      "title": "Новая основная рабочая почта",
+      "value": "nina@example.org",
+      "scope": "global",
+      "sources": [
+        {
+          "id": "new",
+          "locator": "Вымышленная беседа new",
+          "observed_at": null
+        }
+      ],
+      "provenance": "user_statement",
+      "currency": "unknown",
+      "review": {
+        "decision": "pending"
+      },
+      "links": []
+    },
+    {
+      "id": "meeting",
+      "kind": "preference",
+      "title": "Длительность встречи",
+      "value": "25 минут",
+      "scope": "global",
+      "sources": [
+        {
+          "id": "new",
+          "locator": "Вымышленная беседа new",
+          "observed_at": null
+        }
+      ],
+      "provenance": "user_statement",
+      "currency": "unknown",
+      "review": {
+        "decision": "pending"
+      },
+      "links": []
+    },
+    {
+      "id": "invented",
+      "kind": "rule",
+      "title": "Предположение модели об отправке",
+      "value": "Можно отправлять письма без согласования",
+      "scope": "global",
+      "sources": [
+        {
+          "id": "new",
+          "locator": "Вымышленная беседа new",
+          "observed_at": null
+        }
+      ],
+      "provenance": "model_inference",
+      "currency": "unknown",
+      "review": {
+        "decision": "pending"
+      },
+      "links": []
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+.env
+.env.*
+private/
+work/
+.codex-finalizer/
+.diagram-pptx-output/
+*.sqlite
+*.sqlite-*
+*.zip
+!tests/fixtures/*.zip

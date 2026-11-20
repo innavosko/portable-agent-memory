@@ -1,0 +1,19 @@
+{
+  "version": "0.5.0",
+  "synthetic": true,
+  "network_calls": 0,
+  "provided_skill_files_preserved": [
+    "assets/skills/skill-3315c9f3210dc086b8c6eace/SKILL.md",
+    "assets/skills/skill-3315c9f3210dc086b8c6eace/agents/openai.yaml",
+    "assets/skills/skill-3315c9f3210dc086b8c6eace/references/format.md",
+    "assets/skills/skill-3315c9f3210dc086b8c6eace/scripts/format.py"
+  ],
+  "instruction_scopes_preserved": [
+    "agent:fictional-agent",
+    "project:mayak"
+  ],
+  "unavailable_skill_retained_pending": true,
+  "code_executed": false,
+  "native_skill_activation": "not_performed",
+  "account_inventory_complete": false
+}

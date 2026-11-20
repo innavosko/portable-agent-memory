@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portable-agent-memory"
+version = "0.7.0"
+description = "Reviewable portable memory export and import for agent skills"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+memory-tool = "portable_memory.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["portable_memory*"]

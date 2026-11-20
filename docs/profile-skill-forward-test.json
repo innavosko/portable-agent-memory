@@ -1,0 +1,240 @@
+{
+  "format": "portable-profile-skill-forward-test",
+  "version": "0.3.0",
+  "passed": true,
+  "synthetic_data_only": true,
+  "reviewer": {
+    "kind": "separate_agent",
+    "label": "Codex skills_packaging subagent: independent source-to-record review of fictional fixtures; prepared quality file not read"
+  },
+  "prepared_quality_file_read": false,
+  "cli_calls_count": 16,
+  "cli_calls": [
+    {
+      "skill": "memory-export",
+      "command": "profile-quality-template",
+      "exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-create",
+      "exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-view",
+      "exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-event",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-event",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-event",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-export",
+      "command": "profile-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "profile-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "profile-result",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "export",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "inspect",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "plan",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "apply",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    },
+    {
+      "skill": "memory-import",
+      "command": "profile-view",
+      "exit_code": 0,
+      "expected_exit_code": 0
+    }
+  ],
+  "quality_verdicts": [
+    {
+      "record_id": "invented",
+      "decision": "uncertain",
+      "note": "The quote requires showing a draft before sending. It does not grant authorization to send without agreement. The inferred permission is unsupported; the fragment alone is not an explicit statement about approval, so I do not label the opposite proposition proven either."
+    },
+    {
+      "record_id": "mail-new",
+      "decision": "supported",
+      "note": "The new source explicitly identifies this address as the primary work mailbox. It supports the assertion but does not by itself establish that the other previously confirmed address is obsolete."
+    },
+    {
+      "record_id": "mail-old",
+      "decision": "supported",
+      "note": "The old source explicitly identifies this address as the primary work mailbox. Its present currency cannot be inferred from a title or source ID; a competing primary address needs user resolution."
+    },
+    {
+      "record_id": "meeting",
+      "decision": "supported",
+      "note": "The provided fragment explicitly gives meetings a duration of 25 minutes and shows no narrower scope. Whether this remains the desired current rule needs user review."
+    },
+    {
+      "record_id": "tone",
+      "decision": "supported",
+      "note": "The quoted source explicitly asks for brief answers; the same content and scope already have a valid prior user confirmation."
+    }
+  ],
+  "initial_question": {
+    "kind": "conflict",
+    "record_ids": [
+      "mail-new",
+      "mail-old"
+    ],
+    "user_facing_question": "Краткий стиль ответа уже подтверждён и сохранён. Для основной рабочей почты есть два адреса: nina-old@example.org и nina@example.org. Какой сейчас основной, а какой оставить историей? Отдельно: источник требует показывать черновик письма, но не содержит разрешения отправлять без согласования — такой вывод не активирую. В источнике также есть длительность встреч 25 минут; актуальность этого нового правила пока не подтверждена."
+  },
+  "initial_agent_tasks": [
+    {
+      "kind": "quality",
+      "record_ids": [
+        "invented"
+      ],
+      "categories": []
+    },
+    {
+      "kind": "coverage",
+      "record_ids": [],
+      "categories": [
+        "identity",
+        "goals",
+        "integrations",
+        "projects",
+        "workflows",
+        "resources",
+        "automations"
+      ]
+    }
+  ],
+  "coverage": {
+    "not_checked_categories": 7,
+    "unavailable_categories": [
+      "documents"
+    ],
+    "full_account_access": false
+  },
+  "dialogue": [
+    {
+      "speaker": "fictional_user",
+      "text": "Вот подготовленная выгрузка и ранее согласованный профиль. Проверь, что описание и правила верны по источникам, не спрашивай заново неизменённое. Покажи существенные противоречия и только необходимые уточнения. Память хочу потом перенести другому агенту."
+    },
+    {
+      "speaker": "agent",
+      "text": "Краткий стиль ответа уже подтверждён и сохранён. Для основной рабочей почты есть два адреса: nina-old@example.org и nina@example.org. Какой сейчас основной, а какой оставить историей? Отдельно: источник требует показывать черновик письма, но не содержит разрешения отправлять без согласования — такой вывод не активирую. В источнике также есть длительность встреч 25 минут; актуальность этого нового правила пока не подтверждена."
+    },
+    {
+      "speaker": "fictional_user",
+      "text": "Старую основную рабочую почту оставь историей, новую сделай действующей. Вывод про разрешение отправлять письма исключи. Длительность встреч посмотрю позже."
+    }
+  ],
+  "checks": [
+    {
+      "check": "independent source review reuses unchanged tone and identifies primary-mail conflict and unsupported permission",
+      "passed": true
+    },
+    {
+      "check": "shown question is retained as awaiting_answer rather than asked repeatedly",
+      "passed": true
+    },
+    {
+      "check": "one user reply resolves mail currency, excludes unsupported permission and saves meeting deferral without re-interview",
+      "passed": true
+    },
+    {
+      "check": "sequential profile-state handoff preserves confirmations and deferrals in standalone importer",
+      "passed": true
+    },
+    {
+      "check": "export omits excluded permission; portable import keeps old mail historical, new mail active and meeting deferred",
+      "passed": true
+    },
+    {
+      "check": "receipt distinguishes portable workspace from untouched native memory, integrations and skills",
+      "passed": true
+    },
+    {
+      "check": "reopening unchanged receiving review does not repeat old confirmations or deferred questions",
+      "passed": true
+    }
+  ],
+  "profile_result": {
+    "tone": "active",
+    "mail-old": "historical",
+    "mail-new": "active",
+    "meeting": "pending",
+    "invented": "exclude"
+  },
+  "portable_workspace_result": {
+    "tone": "active",
+    "mail-old": "historical",
+    "mail-new": "active"
+  },
+  "native_result": {
+    "native_memory": "not_applied",
+    "integrations": "not_connected",
+    "skills": "not_installed"
+  },
+  "failures": [],
+  "limits": [
+    "Standalone ZIPs executed locally in isolated directories with repository PYTHONPATH removed.",
+    "Independent semantic judgments cover only the supplied fictional excerpts; literal evidence and hashes are not truth guarantees.",
+    "No real web account, native memory, cloud drive, email connection or installed-skill behavior tested.",
+    "Profile state was handed over sequentially; copies are not a synchronized distributed authority."
+  ],
+  "private_paths_in_report": false
+}

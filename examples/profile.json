@@ -1,0 +1,15 @@
+{
+  "format": "portable-memory",
+  "schema_version": 1,
+  "metadata": {"synthetic": true, "description": "Вымышленный пример; не профиль реального пользователя"},
+  "coverage": {"read": ["Вымышленная беседа demo-1"], "unavailable": ["Полная история аккаунта"], "excluded": []},
+  "records": [
+    {"id":"profile-1","kind":"profile","title":"Обращение","value":"Обращаться: Нина","scope":"global","sources":[{"id":"demo-1","locator":"Вымышленная беседа demo-1, сообщение 1","observed_at":null}],"provenance":"user_statement","currency":"unknown","review":{"decision":"pending"},"links":[]},
+    {"id":"mail-1","kind":"account","title":"Рабочая почта","value":{"email":"nina@example.org","purpose":"Рабочие письма","status":"requires_verification"},"scope":"global","sources":[{"id":"demo-1","locator":"Вымышленная беседа demo-1, сообщение 2","observed_at":null}],"provenance":"user_statement","currency":"unknown","review":{"decision":"pending"},"links":[]},
+    {"id":"rule-1","kind":"rule","title":"Отправка рабочих писем","value":{"condition":"Письмо от рабочего аккаунта","action":"Показать черновик перед отправкой","exceptions":[],"requires_confirmation":true},"scope":"account:mail-1","sources":[{"id":"demo-1","locator":"Вымышленная беседа demo-1, сообщение 3","observed_at":null}],"provenance":"user_statement","currency":"unknown","review":{"decision":"pending"},"links":[{"target":"mail-1","relation":"governs","basis":"source"}]},
+    {"id":"calendar-1","kind":"preference","title":"Календарь","value":{"timezone":"Europe/Moscow","meeting_minutes":25,"buffer_minutes":5,"invitations":"После согласования"},"scope":"work","sources":[{"id":"demo-1","locator":"Вымышленная беседа demo-1, сообщение 4","observed_at":null}],"provenance":"user_statement","currency":"unknown","review":{"decision":"pending"},"links":[]},
+    {"id":"project-1","kind":"project","title":"Завершённый проект","value":{"result":"Вымышленный обзор","status":"completed"},"scope":"project:demo","sources":[{"id":"demo-1","locator":"Вымышленная беседа demo-1, сообщение 5","observed_at":null}],"provenance":"source","currency":"historical","review":{"decision":"pending"},"links":[]},
+    {"id":"idea-1","kind":"idea","title":"Предположение агента","value":"Возможно, пользователю интересны длинные обзоры","scope":"global","sources":[{"id":"demo-1","locator":"Вымышленное наблюдение по demo-1","observed_at":null}],"provenance":"model_inference","currency":"unknown","review":{"decision":"pending"},"links":[]},
+    {"id":"old-1","kind":"preference","title":"Разовая просьба","value":"Один раз ответить одним словом","scope":"task:demo-1","sources":[{"id":"demo-1","locator":"Вымышленная беседа demo-1, сообщение 6","observed_at":null}],"provenance":"user_statement","currency":"historical","review":{"decision":"pending"},"links":[]}
+  ]
+}

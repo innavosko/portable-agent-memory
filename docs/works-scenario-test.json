@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-20",
+  "type": "independent_agent_behavioral_trial",
+  "synthetic_data": true,
+  "live_accounts_used": false,
+  "input": "Five fictional conversation fragments; user asked for a shortlist only",
+  "observed": {
+    "same_work_across_two_chats_grouped": true,
+    "unrelated_same_name_projects_separated": true,
+    "missing_original_file_disclosed": true,
+    "one_off_formatting_kept_local": true,
+    "unfinished_idea_preserved_as_context": true,
+    "repeated_process_proposed_as_skill_candidate": true,
+    "unknown_business_rule_left_unresolved": true,
+    "no_files_created_for_shortlist_request": true,
+    "limited_source_coverage_disclosed": true
+  },
+  "follow_up_changes": [
+    "Explicitly prohibit inventing missing artifact URLs",
+    "Avoid asking for delivery and connector setup during a shortlist-only request"
+  ],
+  "limitations": "One controlled semantic scenario; does not prove exhaustive discovery or SaaS integration"
+}
