@@ -4,7 +4,7 @@
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#688381"/></marker></defs>
 <rect width="3560" height="2260" fill="#F5EFEB"/>
 <text x="40" y="26" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Перенос контекста и настройка нового агента под ключ</text>
-<text x="40" y="65" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Версия 0.8.4 · Актуально на 25.11.2026 · Полный пакет для пользователя + формат получателя · Прежние решения сохраняются.</text>
+<text x="40" y="65" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Версия 0.8.4 · Актуально на 25.11.2026 · Полный пакет для пользователя + формат получателя · Прежние решения сохраняются. Здесь — этапы работы агентов; в инструкции — шаги пользователя.</text>
 <rect x="40" y="100" width="5" height="18" rx="2" fill="#1C7134"/>
 <text x="53" y="99" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#1C7134" text-anchor="start" dominant-baseline="text-before-edge">Код: проверки и файлы</text>
 <rect x="282.0" y="100" width="5" height="18" rx="2" fill="#2C7E8D"/>
@@ -105,13 +105,13 @@
 <polyline points="1120.0,1915 1120.0,2002 1365,2002" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6"/>
 <polyline points="2696,1375.0 2685,1375.0 2685,2038 1365,2038 1365,462.5 1376,462.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
 <circle cx="1365" cy="2002" r="4" fill="#688381" stroke="#688381" stroke-width="2"/>
-<g id="request"><title>Запрос пользователя</title>
+<g id="request"><title>Запустить экспорт</title>
 <rect x="56" y="315" width="368" height="140" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
 <rect x="56" y="328" width="5" height="114" rx="2" fill="#2C7E8D"/>
-<text x="72" y="331" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Запрос пользователя</text>
-<text x="72" y="369" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Пользователь просит перенос.</text>
-<text x="72" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Агент начинает работу и объясняет</text>
-<text x="72" y="415" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">следующие действия.</text>
+<text x="72" y="331" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Запустить экспорт</text>
+<text x="72" y="369" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Подключить или передать агенту</text>
+<text x="72" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">полный комплект memory-export.</text>
+<text x="72" y="415" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Попросить начать перенос.</text>
 </g>
 <g id="offer"><title>Предложение переноса</title>
 <rect x="56" y="500" width="368" height="170" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
@@ -302,31 +302,31 @@
 <text x="2000.0" y="395.5" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="middle" dominant-baseline="text-before-edge">получатель?</text>
 <text x="2000.0" y="430.5" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="middle" dominant-baseline="text-before-edge">Выбран на старте</text>
 </g>
-<g id="giga-format"><title>ГигаАгент: адаптировать профиль</title>
+<g id="giga-format"><title>ГигаАгент: подготовить MD</title>
 <rect x="1816" y="580" width="368" height="340" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
 <rect x="1816" y="593" width="5" height="314" rx="2" fill="#2C7E8D"/>
-<text x="1832" y="596" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент: адаптировать</text>
-<text x="1832" y="625" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">профиль</text>
-<text x="1832" y="663" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Разделить смешанные записи.</text>
-<text x="1832" y="686" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Показать: войдёт / не войдёт /</text>
-<text x="1832" y="709" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">нужно уточнить — и причины.</text>
-<text x="1832" y="732" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">user ≤ 20 · feedback ≤ 30</text>
-<text x="1832" y="755" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">project ≤ 100 · reference ≤ 40</text>
-<text x="1832" y="778" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Описание ≤ 200, факт ≤ 450 знаков.</text>
-<text x="1832" y="801" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Временное, спорное и избыток</text>
-<text x="1832" y="824" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">остаются в полном ZIP пользователя.</text>
-<text x="1832" y="847" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Исключённое самим пользователем</text>
-<text x="1832" y="870" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">в пакет не возвращаем.</text>
+<text x="1832" y="596" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент: подготовить MD</text>
+<text x="1832" y="634" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Разделить смешанные записи.</text>
+<text x="1832" y="657" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Показать: войдёт / не войдёт /</text>
+<text x="1832" y="680" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">нужно уточнить — и причины.</text>
+<text x="1832" y="703" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">user ≤ 20 · feedback ≤ 30</text>
+<text x="1832" y="726" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">project ≤ 100 · reference ≤ 40</text>
+<text x="1832" y="749" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Описание ≤ 200, факт ≤ 450 знаков.</text>
+<text x="1832" y="772" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Временное, спорное и избыток</text>
+<text x="1832" y="795" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">остаются в полном ZIP пользователя.</text>
+<text x="1832" y="818" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Исключённые записи убираем.</text>
+<text x="1832" y="841" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Состав исходников проверяем</text>
+<text x="1832" y="864" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">отдельно.</text>
 </g>
 <g id="pro-format"><title>ГигаАгент Про (Ouroboros)</title>
 <rect x="1816" y="950" width="368" height="215" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
 <rect x="1816" y="963" width="5" height="189" rx="2" fill="#B47829"/>
 <text x="1832" y="966" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент Про (Ouroboros)</text>
-<text x="1832" y="1004" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Выбранные файлы выгрузки.</text>
-<text x="1832" y="1027" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Меню → Amberkeep carry memory:</text>
-<text x="1832" y="1050" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">включить и запросить импорт.</text>
-<text x="1832" y="1073" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Маршрут указан пользователем;</text>
-<text x="1832" y="1096" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">в живом аккаунте не проверен.</text>
+<text x="1832" y="1004" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Ouroboros → Skills →</text>
+<text x="1832" y="1027" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Amberkeep: carry memory.</text>
+<text x="1832" y="1050" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Установить и включить навык,</text>
+<text x="1832" y="1073" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">приложить выгрузку и начать импорт.</text>
+<text x="1832" y="1096" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">В живом аккаунте не проверено.</text>
 </g>
 <g id="other-format"><title>Другие получатели</title>
 <rect x="1816" y="1200" width="368" height="195" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
@@ -406,8 +406,8 @@ Obsidian?</title>
 <rect x="2256" y="1723" width="5" height="219" rx="2" fill="#2C7E8D"/>
 <text x="2272" y="1726" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Передать и запустить</text>
 <text x="2272" y="1755" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">приём</text>
-<text x="2272" y="1793" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Нет общей папки — пользователь</text>
-<text x="2272" y="1816" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">копирует комплект в своё облако.</text>
+<text x="2272" y="1793" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Передать: вложения в чат,</text>
+<text x="2272" y="1816" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">локальные файлы или облако.</text>
 <text x="2272" y="1839" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгенту — только два MD:</text>
 <text x="2272" y="1862" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">client-memory-export.md</text>
 <text x="2272" y="1885" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">и import-instruction.md; ZIP себе.</text>
@@ -566,7 +566,7 @@ Obsidian?</title>
 <rect x="1491" y="2006" width="902.0" height="26" rx="3" fill="#F5EFEB"/>
 <text x="1495" y="2008" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Новые данные или новое объединение → общая проверка; прежние действительные решения сохраняются</text>
 <rect x="40" y="2080" width="3480" height="85" rx="14" fill="#E3E4E1"/>
-<text x="58" y="2094" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#40504D" text-anchor="start" dominant-baseline="text-before-edge">Серым — сейчас недоступно</text>
+<text x="58" y="2094" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#40504D" text-anchor="start" dominant-baseline="text-before-edge">Ограничения текущего сценария</text>
 <text x="58" y="2131" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#485652" text-anchor="start" dominant-baseline="text-before-edge">Почта и фоновый мониторинг · Самостоятельные уведомления между агентами · Нативный импорт ZIP и навыков в обычном ГигаАгенте · MCP Obsidian и Яндекс Диска</text>
 <text x="58" y="2180" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#697675" text-anchor="start" dominant-baseline="text-before-edge">Пакетный импорт всегда сохраняет IMPORT_REPORT.md и NEXT_STEPS.md. Сохранённые файлы не означают, что память получателя настроена.</text>
 <text x="58" y="2212" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#697675" text-anchor="start" dominant-baseline="text-before-edge">Код проверен на предоставленных файлах и готовит результаты. Файлы в чат выдаёт агент доступными инструментами; выдача и нативный SaaS-импорт в реальном аккаунте ещё не проверены.</text>

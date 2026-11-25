@@ -18,9 +18,18 @@
   "text_within_canvas": true,
   "internal_svg_references_valid": true,
   "source_reproduced_previous_svg_before_edit": true,
-  "previous_svg_sha256": "03f06f27b1d9ce58fe071582e37eff83079f5052c01bd7210185ed453e3c1725",
-  "svg_sha256": "b172fbd755ffcefcc09ff47f06c02f1519b51edb6dabb40a96a8d00dd95e7d60",
-  "visual_review": "Main PNG inspected at 3560 x 2260; eight columns, decision diamonds, no clipped text; mandatory chat handoff precedes both delivery routes.",
+  "previous_svg_sha256": "bde13bf10d318d4041047a05c566d61220deaf0593b00b471b9e9a2ed87aa44a",
+  "svg_sha256": "629712aa80a98024621648f512a72bc141f007755b7c2e55894d305f0048ce4c",
+  "visual_review": "PNG inspected after dashboard alignment. Eight columns and decision diamonds retained; text fits shapes and canvas; external footer wording preserved.",
+  "review_dashboard": "../04_Интерактивная_инструкция/Инструкция по переносу памяти.html",
+  "review_dashboard_sha256": "7e6c8b8c6efe02bda270e5a3c8627c2aaa4399f5f2758baf3179a95f81bdaf39",
+  "dashboard_alignment": [
+    "Start explicitly requires the complete memory-export skill.",
+    "Ouroboros route: Skills > Amberkeep: carry memory; live-account import remains unverified.",
+    "Transfer supports chat attachments, local files or cloud; GigaAgent receives only two Markdown files.",
+    "Excluded structured records are removed; raw assets require a separate review.",
+    "Agent stages and user instruction steps remain distinct numbering levels."
+  ],
   "scope": "Main diagram only. Separate Dots/Duet image, presentations, executive decks and skill archives were not modified by this diagram update.",
   "checks_reflect": "Dual export and portable import behavior in 0.8.4; live chat delivery and native SaaS import remain unverified."
 }
