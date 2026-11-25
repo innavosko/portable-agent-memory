@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="148" viewBox="0 0 960 148" role="img" aria-labelledby="title desc">
+  <title id="title">Начать перенос — скачать навык экспорта</title>
+  <desc id="desc">Скачать memory-export.zip. Для ChatGPT и Claude комплект также содержит установщик навыка импорта.</desc>
+  <rect width="960" height="148" rx="18" fill="#073c3e"/>
+  <rect x="28" y="38" width="72" height="72" rx="18" fill="#b9f4bf"/>
+  <path d="M64 53v29m-12-11 12 12 12-12M48 89v8h32v-8" fill="none" stroke="#073c3e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="126" y="66" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700" fill="#ffffff">Начать перенос</text>
+  <text x="126" y="103" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#b9f4bf">Скачать навык экспорта · memory-export.zip</text>
+  <path d="m879 59 15 15-15 15m-27-15h40" fill="none" stroke="#b9f4bf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
