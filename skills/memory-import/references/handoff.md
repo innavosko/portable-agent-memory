@@ -97,7 +97,7 @@ Read the actual returned `workspace` and `setup_path` instead of guessing names.
 
 Keep the delivery registry on local storage outside synchronized folders. The same transfer/version/recipient and hashes reuse its durable result rather than applying again; changed bytes under the same version are rejected. A new version needs a fresh check and plan. This local registry does not coordinate independent cloud copies.
 
-On a later version, an omitted `--current` can reuse the prior portable workspace from this registry. The preview identifies this as `current_source: previous_portable_workspace`; it is not a live read of native SaaS memory. Supply a freshly obtained supported snapshot when comparing actual receiving memory, and describe its coverage. For the saved result of one accepted version:
+On a later version, an omitted `--current` can reuse the prior portable workspace from this registry. The preview identifies this as `current_source: previous_portable_workspace`; it is not a live read of native SaaS memory. Missing or previous-only receiving memory sets `recipient_memory_required`, withholding active profile use and native verified setup even when file receipt succeeds. Supply a freshly obtained supported snapshot when comparing actual receiving memory, and describe its coverage. For the saved result of one accepted version:
 
 ```text
 python scripts/memory_tool.py delivery-receipt --store receiving-state/delivery.sqlite --transfer-id demo-transfer --version 1 --recipient recipient.json

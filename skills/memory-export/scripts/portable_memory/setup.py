@@ -111,10 +111,33 @@ def _workspace(memory, delivery):
             and receipt.get("target") == "portable_workspace"
             and receipt.get("package_sha256") == delivery["package_sha256"],
             "Portable workspace receipt does not match this package")
+    source = receipt.get("current_source", "not_provided")
+    require(source in {"provided_snapshot", "previous_portable_workspace", "not_provided"},
+            "Invalid current memory source in workspace receipt")
+    snapshot_hash = receipt.get("current_sha256")
+    if source != "not_provided":
+        _hash(snapshot_hash, "current memory snapshot hash")
+    required = source != "provided_snapshot"
+    if "recipient_memory_required" in receipt:
+        require(type(receipt["recipient_memory_required"]) is bool and receipt["recipient_memory_required"] == required,
+                "Workspace receipt changed its current-memory requirement")
+    if required:
+        require(memory.get("metadata", {}).get("recipient_memory_required") is True
+                or "current_source" not in receipt, "Workspace removed its current-memory requirement")
+    else:
+        require(memory.get("metadata", {}).get("recipient_memory_required") is not True,
+                "Workspace current-memory check is inconsistent")
     return {"status": "verified", "target": "portable_workspace", "path": str(path),
             "memory_sha256": digest(memory), "receipt_sha256": digest(receipt),
             "package_sha256": delivery["package_sha256"], "verified_at": now(),
-            "verification": "local_files_read_back"}
+            "verification": "local_files_read_back",
+            "recipient_memory_check": {"source": source, "snapshot_sha256": snapshot_hash,
+                                       "required": required, "verification": "supplied_snapshot_not_live_api_verification"}}
+
+
+def _recipient_memory_required(state):
+    check = state["portable_workspace"].get("recipient_memory_check")
+    return check is None or check["required"] or state["memory"].get("metadata", {}).get("recipient_memory_required") is True
 
 
 def _context(recipient, name, capability):
@@ -175,8 +198,10 @@ def create_setup(memory, delivery, previous=None):
                     continue
                 context = state["capabilities"][item["capability"]]["context_sha256"]
                 if old["status"] == "verified":
-                    if context and old["result"]["capability_context_sha256"] == context:
+                    if not _recipient_memory_required(state) and not memory.get("metadata", {}).get("common_review_required") and context and old["result"]["capability_context_sha256"] == context:
                         item.update({key: copy.deepcopy(old[key]) for key in ("status", "result", "last_verification")})
+                    else:
+                        item["last_verification"] = copy.deepcopy(old["result"])
                 else:
                     item.update({key: copy.deepcopy(old[key]) for key in ("status", "result", "last_verification")})
     validate_setup(state)
@@ -217,7 +242,17 @@ def validate_setup(state):
     validate_memory(state["memory"])
     workspace = state["portable_workspace"]
     _fields(workspace, {"status", "target", "path", "memory_sha256", "receipt_sha256", "package_sha256",
-                        "verified_at", "verification"})
+                        "verified_at", "verification"}, {"recipient_memory_check"})
+    if "recipient_memory_check" in workspace:
+        check = workspace["recipient_memory_check"]
+        _fields(check, {"source", "snapshot_sha256", "required", "verification"})
+        require(check["source"] in {"provided_snapshot", "previous_portable_workspace", "not_provided"}
+                and type(check["required"]) is bool and check["required"] == (check["source"] != "provided_snapshot")
+                and check["verification"] == "supplied_snapshot_not_live_api_verification", "Invalid recipient memory check")
+        if check["snapshot_sha256"] is not None:
+            _hash(check["snapshot_sha256"], "recipient memory snapshot hash")
+        require(check["source"] == "not_provided" or check["snapshot_sha256"] is not None,
+                "Recipient memory snapshot is missing")
     require(workspace["status"] == "verified" and workspace["target"] == "portable_workspace"
             and workspace["verification"] == "local_files_read_back"
             and workspace["memory_sha256"] == digest(state["memory"])
@@ -323,6 +358,12 @@ def apply_setup_event(state, event, *, expected_revision):
             _text(data["evidence"], "step evidence")
             require(status != "deferred" or event["actor"] == "user", "Only the user defers setup")
             if status == "verified":
+                observed_workspace = _workspace(result["memory"], result["delivery"])
+                require(observed_workspace["receipt_sha256"] == result["portable_workspace"]["receipt_sha256"]
+                        and observed_workspace["recipient_memory_check"] == result["portable_workspace"].get("recipient_memory_check"),
+                        "Workspace or recipient-memory check changed; prepare a fresh setup state")
+                require(not _recipient_memory_required(result),
+                        "Read and compare the recipient's current memory before verifying native setup; a previous portable workspace is insufficient")
                 require(not result["memory"].get("metadata", {}).get("common_review_required"),
                         "Review the combined existing and incoming profile before applying native setup")
                 require(result["capabilities"][item["capability"]]["available"], "Required host capability is unavailable")
@@ -347,9 +388,12 @@ def setup_view(state):
     unreviewed = sorted(set(_unreviewed(state["memory"], state["delivery"]["setup_scope"]))
                         | set(state["delivery"].get("pending_record_ids", [])))
     common_review_required = state["memory"].get("metadata", {}).get("common_review_required") is True
+    recipient_memory_required = _recipient_memory_required(state)
     items = state["items"]
     if unreviewed or common_review_required:
         status = "needs_review"
+    elif recipient_memory_required and state["delivery"]["setup_scope"]:
+        status = "needs_current_memory"
     elif not state["delivery"]["setup_scope"]:
         status = "portable_workspace_only"
     elif not items:
@@ -365,6 +409,7 @@ def setup_view(state):
             "capabilities": copy.deepcopy(state["capabilities"]), "items": copy.deepcopy(items),
             "unreviewed_record_ids": unreviewed,
             "common_review_required": common_review_required,
+            "recipient_memory_required": recipient_memory_required,
             "summary": {"total": len(items), **{s: sum(i["status"] == s for i in items) for s in sorted(STATUSES)}},
             "verification": "host_attestation_for_native_steps",
             "limitations": [
@@ -377,6 +422,7 @@ def setup_view(state):
 
 def render_setup_view(view):
     statuses = {"portable_workspace_only": "Получена переносимая папка. Дополнительная настройка не запрошена.",
+                "needs_current_memory": "Файлы получены. Сначала нужно прочитать и сопоставить текущую память получателя.",
                 "needs_review": "Часть данных ещё ждёт проверки пользователем.",
                 "no_configuration_items": "В выбранном объёме нет подтверждённых записей для настройки.",
                 "completed_within_requested_scope": "Все запрошенные шаги подтверждены принимающим агентом.",
@@ -398,6 +444,8 @@ def render_setup_view(view):
         lines += ["", "Ожидают проверки: " + ", ".join(view["unreviewed_record_ids"]) + ". Автоматически не применены."]
     if view.get("common_review_required"):
         lines += ["", "Объединённый профиль требует общей проверки входящих сведений вместе с прежней памятью получателя."]
+    if view.get("recipient_memory_required"):
+        lines += ["", "Текущая память получателя не предоставлена. Прежняя переносимая папка не заменяет чтение памяти аккаунта; нативное завершение заблокировано."]
     lines += ["", "Установка навыка не запускает содержащиеся в нём инструкции. "
               "Права доступа проверяются у получателя; данные для входа не переносятся.", ""]
     return "\n".join(lines)

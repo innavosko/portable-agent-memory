@@ -1,0 +1,356 @@
+{
+  "run": "memory-import v0.8.4 realistic offline receiver run",
+  "language": "ru",
+  "fixture_only": true,
+  "runtime": "Python 3.12, Windows, primary repository runtime",
+  "runtime_route": "primary repository python -B -m portable_memory; bundled copies not used",
+  "recipient": {
+    "agent_id": "receiver-demo",
+    "workspace_id": "personal-demo"
+  },
+  "setup_scope": [
+    "profile",
+    "projects",
+    "skills"
+  ],
+  "role_statement": "Я принимающий агент: проверю переносимые данные, сопоставлю их с моей доступной памятью и сохраню подходящее поддерживаемым способом.",
+  "authorization_basis": "Явный запрос на приём профиля, Atlas и выбранного навыка; календарь отложен. --accept использован как технический шлюз исполнения, новые согласия не выдумывались.",
+  "commands_count": 11,
+  "command_count_basis": "Количество вызовов portable_memory; чтение документации, локальных файлов и контрольные скрипты сюда не включены.",
+  "commands": [
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "inspect",
+        "fixture\\selected-context.zip"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "plan",
+        "fixture\\selected-context.zip",
+        "--current",
+        "fixture\\previous-workspace.json",
+        "--current-source",
+        "previous_portable_workspace",
+        "--out",
+        "fixture\\import-plan.json"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "apply",
+        "fixture\\selected-context.zip",
+        "--plan",
+        "fixture\\import-plan.json",
+        "--out",
+        "fixture\\prepared-workspace",
+        "--accept",
+        "--setup-delivery",
+        "fixture\\setup-delivery.json"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "setup-view",
+        "fixture\\prepared-workspace\\setup.json",
+        "--format",
+        "json"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "setup-event",
+        "fixture\\prepared-workspace\\setup.json",
+        "--event",
+        "fixture\\setup-events\\offline-native-memory-1.json",
+        "--revision",
+        "0",
+        "--out",
+        "fixture\\setup-state-1.json"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "setup-event",
+        "fixture\\setup-state-1.json",
+        "--event",
+        "fixture\\setup-events\\offline-project-files-1.json",
+        "--revision",
+        "1",
+        "--out",
+        "fixture\\setup-state-2.json"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "setup-event",
+        "fixture\\setup-state-2.json",
+        "--event",
+        "fixture\\setup-events\\offline-install-skill-1.json",
+        "--revision",
+        "2",
+        "--out",
+        "fixture\\setup-state-3.json"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "setup-event",
+        "fixture\\setup-state-3.json",
+        "--event",
+        "fixture\\setup-events\\offline-profile-blocked-1.json",
+        "--revision",
+        "3",
+        "--out",
+        "fixture\\setup-state-4.json"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "setup-event",
+        "fixture\\setup-state-4.json",
+        "--event",
+        "fixture\\setup-events\\offline-project-blocked-1.json",
+        "--revision",
+        "4",
+        "--out",
+        "fixture\\setup-state-5.json"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "setup-event",
+        "fixture\\setup-state-5.json",
+        "--event",
+        "fixture\\setup-events\\offline-skill-blocked-1.json",
+        "--revision",
+        "5",
+        "--out",
+        "fixture\\setup-state-6.json"
+      ]
+    },
+    {
+      "exit_code": 0,
+      "arguments": [
+        "-B",
+        "-m",
+        "portable_memory",
+        "setup-view",
+        "fixture\\setup-state-6.json",
+        "--format",
+        "json"
+      ]
+    }
+  ],
+  "file_operations": [
+    "Прочитаны SKILL.md и профильные references.",
+    "ZIP прочитан без исполнения вложений.",
+    "Записаны setup-delivery.json, import-plan.json, prepared-workspace, 6 файлов событий и 6 последовательных снимков состояния.",
+    "Прочитаны IMPORT_REPORT.md, NEXT_STEPS.md, ACTIVE_PROFILE.md, память, контекст Atlas и исходник навыка.",
+    "Побайтово проверены все 11 входящих файлов и неизменность 4 записей; сохранены artifact-readback.json и setup-view-final.json."
+  ],
+  "observed": {
+    "inspect_valid": true,
+    "package_sha256": "adfe46595318b09988093fd8fe8fb58ac6be1dca75bcdd3bdea94ca0281265be",
+    "plan_statuses": [
+      {
+        "id": "short-replies",
+        "status": "duplicate",
+        "action": "skip"
+      },
+      {
+        "id": "atlas-project",
+        "status": "duplicate",
+        "action": "skip"
+      },
+      {
+        "id": "atlas-summary",
+        "status": "duplicate",
+        "action": "skip"
+      },
+      {
+        "id": "calendar-choice",
+        "status": "unreviewed",
+        "action": "defer"
+      }
+    ],
+    "import_receipt": {
+      "format": "portable-memory-import-receipt",
+      "created_at": "2026-11-25T15:56:06.150213+03:00",
+      "package_sha256": "adfe46595318b09988093fd8fe8fb58ac6be1dca75bcdd3bdea94ca0281265be",
+      "target": "portable_workspace",
+      "records": [
+        {
+          "id": "short-replies",
+          "action": "skip",
+          "result": "skip"
+        },
+        {
+          "id": "atlas-project",
+          "action": "skip",
+          "result": "skip"
+        },
+        {
+          "id": "atlas-summary",
+          "action": "skip",
+          "result": "skip"
+        },
+        {
+          "id": "calendar-choice",
+          "action": "defer",
+          "result": "defer"
+        }
+      ],
+      "native_memory": "not_applied",
+      "integrations": "not_connected",
+      "skills": "not_installed",
+      "common_review": "checked_for_combined_profile",
+      "current_source": "previous_portable_workspace",
+      "current_sha256": "6fa0de4e43c5613510e57cc7d2daa2e6e5ae2c88209a07b3ba484de940a68a90",
+      "recipient_memory_required": true,
+      "limitations": [
+        "Native memory, skills installation, accounts and authorizations are not changed.",
+        "Current host memory was not provided; host conflicts are unknown."
+      ],
+      "setup_required": true,
+      "setup_status": "pending",
+      "available_categories": [
+        "profile",
+        "projects",
+        "skills",
+        "integrations"
+      ],
+      "requested_categories": [
+        "profile",
+        "projects",
+        "skills"
+      ],
+      "pending_categories": [
+        "profile",
+        "projects",
+        "skills"
+      ],
+      "setup_state": "setup.json",
+      "next_actions": [
+        {
+          "id": "read_recipient_memory",
+          "status": "required",
+          "reason": "Read the receiver's actual current memory and prepare a fresh plan. A previous portable folder is not a current native-memory read."
+        },
+        {
+          "id": "resolve_pending_records",
+          "status": "required",
+          "record_ids": [
+            "calendar-choice"
+          ],
+          "reason": "Resolve only outstanding decisions or preserve the user's actual deferral. Do not repeat the entire profile interview."
+        },
+        {
+          "id": "continue_receiving_setup",
+          "status": "pending",
+          "setup_state": "setup.json",
+          "reason": "Use setup-view and setup-event; perform supported host actions and read back each result. Do not execute imported skill instructions automatically."
+        }
+      ]
+    },
+    "final_setup_status": "needs_review",
+    "final_setup_revision": 6,
+    "final_setup_summary": {
+      "total": 3,
+      "blocked": 3,
+      "deferred": 0,
+      "failed": 0,
+      "pending": 0,
+      "verified": 0
+    },
+    "recipient_memory_required": true,
+    "common_review_required": false,
+    "calendar_choice": "deferred_by_explicit_user_request; outside setup_scope; original pending record and plan defer preserved"
+  },
+  "outputs": {
+    "workspace": "fixture\\prepared-workspace",
+    "latest_setup_state": "fixture\\setup-state-6.json",
+    "final_setup_view": "fixture\\setup-view-final.json",
+    "readback": "fixture\\artifact-readback.json",
+    "skill_original": "fixture\\prepared-workspace\\incoming\\assets\\atlas-summary\\SKILL.md",
+    "project_context": "fixture\\prepared-workspace\\incoming\\wiki\\atlas-project.md"
+  },
+  "errors": [
+    {
+      "kind": "nonfatal_operator_path_error",
+      "detail": "Первое чтение навыка ошибочно использовало prepared-workspace/assets; отчёт указывает incoming/. Путь исправлен, исходник прочитан и сверен побайтово."
+    },
+    {
+      "kind": "console_encoding_only",
+      "detail": "Первый Python print кириллицы отображался с заменами из-за кодировки вывода Windows. UTF-8 файлы проверены через PowerShell и повторный UTF-8 вывод; повреждения данных нет."
+    }
+  ],
+  "genuine_blockers": [
+    "Текущую память получателя прочитать нельзя; старый перенос не считается снимком текущей памяти.",
+    "В офлайн-прогоне нет действительного канала записи профиля/создания проекта/установки навыка в receiver-demo.",
+    "Для навыка не указаны версия и enabled-state; совместимость и фактическую установку ещё требуется проверить в получателе."
+  ],
+  "usability_evaluation": {
+    "result": "Успешно выполнен доступный офлайн-объём без повторного интервью и выдуманного нативного завершения.",
+    "strengths": [
+      "Путь для отдельного ZIP и old-workspace указан однозначно.",
+      "Границы active profile и native verified работают: флаг recipient_memory_required удерживает активный профиль.",
+      "setup-delivery создаёт полезное продолжение с реальными получателем и выбранным объёмом.",
+      "При duplicate/skip прежние записи и подтверждения остаются в новой папке."
+    ],
+    "friction": [
+      "Чтение SKILL плюс нескольких больших references заметно объёмнее самого переноса четырёх записей.",
+      "Общий status needs_review и unreviewed_record_ids включают отложенный календарь вне выбранного setup_scope; агенту нужно отдельно объяснить, что это не повод для повторного интервью.",
+      "После setup-event с новым --out исходный setup.json сохраняет старую ревизию; финальный ответ должен явно указать последний файл состояния."
+    ],
+    "implementation_changes_made": false
+  },
+  "user_facing_final_report": "Подготовка файлов завершена для receiver-demo / personal-demo. Профиль, контекст Atlas и оригинал выбранного навыка сохранены в prepared-workspace; прежние решения сохранены, три совпадения не создали дублей. Календарь остаётся отложенным. Постоянная память получателя не изменена, проект в самом агенте не создан, навык не установлен и не запускался. Причина: доступен только JSON прежнего переноса, текущая память и средства настройки получателя недоступны. Для продолжения нужен фактический снимок текущей памяти receiver-demo / personal-demo; затем новый план с этим снимком, проверка только обнаруженных изменений и завершение поддерживаемой настройки. Текущее состояние продолжения — setup-state-6.json; повторное интервью по уже подтверждённым данным не требуется.",
+  "local_fixture_paths": "Replaced with fixture/ for publication; only authored fictional data was used.",
+  "follow_up": {
+    "issue": "Deferred calendar outside selected setup scope appeared in global needs_review.",
+    "status": "fixed_after_observed_run",
+    "verification": "Two new direct/folder regression tests plus 60 targeted tests passed; original run observations retained.",
+    "behavior": "Deferred records remain in report/originals; only pending selected-scope or unknown-kind records block selected setup. Current-memory and common-profile review gates remain."
+  }
+}

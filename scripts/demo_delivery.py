@@ -44,8 +44,10 @@ def demo(output):
     shutil.copytree(prepared["folder"], copied)
     checked = verify_delivery(copied, prepared["ticket"], recipient)
     args = (copied, prepared["ticket"], recipient, output / "local-ledger.sqlite", output / "local-results")
-    preview = receive_delivery(*args)
-    received = receive_delivery(*args, plan=preview["plan"], accepted=True)
+    # Explicit fictional native snapshot; a missing snapshot is not empty.
+    current = empty_memory()
+    preview = receive_delivery(*args, current=current)
+    received = receive_delivery(*args, current=current, plan=preview["plan"], accepted=True)
     state = received["setup"]
     events = [
         {"id": "demo-capability", "actor": "agent", "type": "capability", "data": {

@@ -160,10 +160,12 @@ def receive_delivery(folder, ticket, recipient, store_path, root, current=None, 
         with tempfile.TemporaryDirectory(prefix="portable-receive-") as temp:
             snapshot = Path(temp) / "memory.zip"
             snapshot.write_bytes(checked["raw_package"])
-            default_plan = plan_import(snapshot, memory)
+            current_source = "provided_snapshot" if current is not None else "previous_portable_workspace" if latest else "not_provided"
+            default_plan = plan_import(snapshot, memory, current_source=current_source)
             if plan is not None:
                 require(isinstance(plan, dict) and plan.get("current_sha256") == default_plan["current_sha256"]
                         and plan.get("current_was_provided") == default_plan["current_was_provided"]
+                        and plan.get("current_source") == default_plan["current_source"]
                         and plan.get("package_sha256") == ticket["package_sha256"],
                         "Plan was prepared for other data; preview this delivery again")
             selected_plan = plan if plan is not None else default_plan
@@ -190,15 +192,17 @@ def receive_delivery(folder, ticket, recipient, store_path, root, current=None, 
                 connection.commit()
                 return _public(receipt, reused=True)
             require(not workspace.exists(), "An interrupted import needs recovery; use a new empty result folder, without deleting existing data")
-            apply_import(snapshot, selected_plan, workspace, accepted=True)
+            setup_path = destination / "setup-r0000.json"
+            apply_import(snapshot, selected_plan, workspace, accepted=True,
+                         setup_delivery={"recipient": recipient, "setup_scope": checked["manifest"]["setup_scope"]},
+                         setup_state_path=setup_path)
             imported = decode_json(bounded_read(workspace / "memory.json", 50_000_000, root), "imported memory")
             portable = decode_json(bounded_read(workspace / "receipt.json", MAX_HEADER, root), "import receipt")
             setup_delivery = {"transfer_id": ticket["transfer_id"], "version": ticket["version"],
                               "package_sha256": ticket["package_sha256"], "recipient": recipient,
                               "workspace": str(workspace), "setup_scope": checked["manifest"]["setup_scope"],
-                              "pending_record_ids": [item["id"] for item in selected_plan["items"] if item["action"] == "defer"]}
+                              "pending_record_ids": portable["pending_setup_record_ids"]}
             setup = create_setup(imported, setup_delivery, latest["setup"] if latest else None)
-            setup_path = destination / "setup-r0000.json"
             write_new(setup_path, json_bytes(setup))
             receipt = {"format": "portable-memory-delivery-receipt", "schema_version": 1,
                        "ticket": copy.deepcopy(ticket), "recipient": recipient, "received_at": now(),

@@ -74,6 +74,8 @@ class CompletionTests(unittest.TestCase):
         self.assertEqual((self.out / source.name).read_bytes(), before)
         self.assertEqual((self.out / "import-instruction.md").read_bytes(), self.instruction.read_bytes())
         self.assertEqual(report["native_memory"], "not_written")
+        self.assertEqual(report["delivery_scope"], "gigaagent_upload_only")
+        self.assertFalse(report["full_export_complete"])
         self.assertEqual(report["skill_installation"], "not_performed")
         self.assertEqual(report["gigaagent_counts"], {"feedback": 1})
         guide = Path(report["guide"]).read_text(encoding="utf-8")

@@ -73,7 +73,7 @@ class DeliveryStoreTests(unittest.TestCase):
         self.assertFalse(first["reused"])
         self.assertTrue(again["reused"])
         self.assertEqual(first["workspace"], again["workspace"])
-        self.assertEqual("needs_setup", first["setup_view"]["status"])
+        self.assertEqual("needs_current_memory", first["setup_view"]["status"])
         self.assertEqual(1, len(list(self.results.rglob("workspace/memory.json"))))
         self.assertEqual(1, len(load_json(Path(first["workspace"]) / "memory.json")["records"]))
 
@@ -130,21 +130,60 @@ class DeliveryStoreTests(unittest.TestCase):
         return save_setup(self.db, state)
 
     def test_saved_setup_survives_repeat_and_new_version(self):
-        completed = self.complete_profile(self.receive(accepted=True))
+        completed = self.complete_profile(self.receive(current=empty_memory(), accepted=True))
         self.assertEqual("completed_within_requested_scope", completed["setup_view"]["status"])
         self.assertEqual(completed["setup"], self.receive(accepted=True)["setup"])
         second = self.make_delivery(self.memory, version=2)
-        continued = self.receive(second, accepted=True)
+        # Fictional fresh native read, intentionally matching the prior result.
+        continued = self.receive(second, current=completed["setup"]["memory"], accepted=True)
         self.assertEqual("verified", continued["setup"]["items"][0]["status"])
         self.assertEqual(1, len(continued["setup"]["memory"]["records"]))
 
+    def test_folder_report_points_to_single_registry_setup_and_keeps_agreed_scope(self):
+        result = self.receive(current=empty_memory(), accepted=True)
+        workspace = Path(result["workspace"])
+        report = load_json(workspace / "receipt.json")
+        self.assertEqual(report["requested_categories"], ["profile"])
+        self.assertEqual(report["setup_status"], "pending")
+        self.assertNotIn("select_receiving_setup", {item["id"] for item in report["next_actions"]})
+        self.assertEqual((workspace / report["setup_state"]).resolve(), Path(result["setup_path"]).resolve())
+        self.assertTrue((workspace / report["setup_state"]).is_file())
+        self.assertFalse((workspace / "setup.json").exists())
+        self.assertIn(report["setup_state"], (workspace / "NEXT_STEPS.md").read_text(encoding="utf-8"))
+
+    def test_new_delivery_without_current_native_snapshot_cannot_reuse_old_verified_setup(self):
+        completed = self.complete_profile(self.receive(current=empty_memory(), accepted=True))
+        second = self.make_delivery(self.memory, version=2)
+        continued = self.receive(second, accepted=True)
+        self.assertEqual(continued["setup_view"]["status"], "needs_current_memory")
+        item = continued["setup"]["items"][0]
+        self.assertEqual(item["status"], "pending")
+        self.assertEqual(item["last_verification"], completed["setup"]["items"][0]["result"])
+        self.assertEqual(continued["setup"]["portable_workspace"]["recipient_memory_check"]["source"], "previous_portable_workspace")
+
+    def test_folder_scope_excludes_deferred_integration_without_losing_it_or_blocking_profile(self):
+        memory = copy.deepcopy(self.memory)
+        pending = copy.deepcopy(memory["records"][0])
+        pending.update(id="calendar", kind="integration", title="Fictional deferred calendar",
+                       value="Fictional calendar connection deferred by the user", review={"decision": "pending"})
+        memory["records"].append(pending)
+        delivery = self.make_delivery(memory, version=2)
+        result = self.receive(delivery, current=empty_memory(), accepted=True)
+        report = load_json(Path(result["workspace"]) / "receipt.json")
+        self.assertEqual(result["setup"]["delivery"]["pending_record_ids"], [])
+        self.assertEqual(report["deferred_outside_setup_scope_ids"], ["calendar"])
+        self.assertNotIn("resolve_pending_records", {a["id"] for a in report["next_actions"]})
+        self.assertIn({"id": "calendar", "action": "defer", "result": "defer"}, report["records"])
+        completed = self.complete_profile(result)
+        self.assertEqual(completed["setup_view"]["status"], "completed_within_requested_scope")
+
     def test_changed_profile_does_not_inherit_verification(self):
-        self.complete_profile(self.receive(accepted=True))
+        self.complete_profile(self.receive(current=empty_memory(), accepted=True))
         second = self.make_delivery(memory_fixture("Подробные ответы"), version=2)
-        plan = self.receive(second)["plan"]
+        plan = self.receive(second, current=self.memory)["plan"]
         self.assertEqual("conflict", plan["items"][0]["status"])
         plan["items"][0]["action"] = "replace"
-        result = self.receive(second, plan=plan, accepted=True)
+        result = self.receive(second, current=self.memory, plan=plan, accepted=True)
         self.assertEqual("pending", result["setup"]["items"][0]["status"])
         self.assertEqual("needs_setup", result["setup_view"]["status"])
 
@@ -201,7 +240,7 @@ class DeliveryStoreTests(unittest.TestCase):
         self.assertEqual(1, len(list(self.results.rglob("workspace/memory.json"))))
 
     def test_saved_revision_cannot_be_reverted(self):
-        first = self.receive(accepted=True)
+        first = self.receive(current=empty_memory(), accepted=True)
         self.complete_profile(first)
         with self.assertRaises(ValidationError):
             save_setup(self.db, first["setup"])

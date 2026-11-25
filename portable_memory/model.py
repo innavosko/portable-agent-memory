@@ -152,6 +152,8 @@ def confirm(memory, decisions):
 
 def render_profile(memory, *, active_only=False):
     lines = ["# Профиль и контекст", "", "Материалы для проверки; записи не предоставляют доступ к сервисам.", ""]
+    if active_only and memory.get("metadata", {}).get("recipient_memory_required") is True:
+        return "\n".join(lines + ["Текущая память получателя не предоставлена. Активный профиль удержан до её чтения и сопоставления с входящими сведениями.", ""])
     if active_only and memory.get("metadata", {}).get("common_review_required") is True:
         return "\n".join(lines + ["Объединённый профиль ещё не проверен. Ведущий агент должен сверить текущие и входящие сведения перед применением.", ""])
     aliases = memory.get("metadata", {}).get("common_profile", {}).get("aliases", {})

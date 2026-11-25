@@ -7,7 +7,7 @@ import tempfile
 import unittest
 
 from portable_memory.errors import ValidationError
-from portable_memory.model import confirm, empty_memory, record_digest
+from portable_memory.model import confirm, digest, empty_memory, record_digest
 from portable_memory.setup import (
     apply_setup_event, create_setup, render_setup_view, setup_view, validate_setup,
 )
@@ -44,6 +44,8 @@ class SetupTests(unittest.TestCase):
         (workspace / "receipt.json").write_text(json.dumps({
             "format": "portable-memory-import-receipt", "target": "portable_workspace",
             "package_sha256": package_hash, "records": [], "native_memory": "not_applied",
+            "current_source": "provided_snapshot", "current_sha256": digest(empty_memory()),
+            "recipient_memory_required": False,
         }), encoding="utf-8")
         return {"transfer_id": "fictional-transfer", "version": version, "package_sha256": package_hash,
                 "recipient": recipient or {"agent_id": "receiving-agent", "workspace_id": "personal-space"},

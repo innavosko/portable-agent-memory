@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "portable-memory",
-  "version": "0.8.3",
+  "version": "0.8.4",
   "description": "Prepare reviewed portable memory and import it into another agent workspace."
 }

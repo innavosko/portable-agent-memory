@@ -1,9 +1,9 @@
 {
-  "version": "0.8.3",
-  "checked_at_utc": "2026-11-24T19:39:57.820037+00:00",
+  "version": "0.8.4",
+  "checked_at_utc": "2026-11-25T13:02:48.470919+00:00",
   "platform": "Windows",
   "python": "3.12.14",
-  "tests_run": 453,
+  "tests_run": 481,
   "failures": 0,
   "errors": 0,
   "skipped": 3,

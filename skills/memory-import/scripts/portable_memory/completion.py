@@ -312,6 +312,10 @@ def prepare_handoff(target, files, out, *, import_skill=None, instruction=None):
     # GigaAgent accepts only the native Markdown profile and its plain instruction.
     # Keep the technical report in the command result, out of its delivery folder.
     report["upload_files"] = [INSTRUCTION, *names] if target == "gigaagent" else names
+    if target == "gigaagent":
+        # This utility only prepares receiver attachments. The dual-export
+        # orchestrator separately verifies and delivers the user's full package.
+        report.update(delivery_scope="gigaagent_upload_only", full_export_complete=False)
     if target != "gigaagent":
         payload[MANIFEST] = json_bytes(report)
         require(len(payload[MANIFEST]) <= MAX_GENERATED_FILE, "Handoff manifest is too large; split the input")

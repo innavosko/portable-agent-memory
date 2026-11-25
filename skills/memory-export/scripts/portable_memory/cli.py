@@ -81,6 +81,10 @@ def parser():
             p.add_argument("--report", required=True)
             p.add_argument("--preview", help="Required current giga-preview JSON; show its Markdown to the user before final export")
             p.add_argument("--handoff-out", help="New folder for actual profile files, import instruction and next steps")
+            p.add_argument("--full-out", help="Full selected portable package; defaults to <profile-stem>-full.zip outside the GigaAgent folder")
+            p.add_argument("--assets", help="Explicitly selected originals, projects and skill files to preserve in the full package")
+            p.add_argument("--no-assets", action="store_true", help="Declare that no original files are supplied; requires --asset-scope-note")
+            p.add_argument("--asset-scope-note", help="Actual chosen file scope or unavailable originals; required with --no-assets")
     p = sub.add_parser("giga-quality-template", help="Prepare the unapproved target-projection review")
     p.add_argument("--projection", required=True); p.add_argument("--out", required=True)
     p = sub.add_parser("giga-plan", help="Plan GigaAgent native writes from Markdown and current memory, without applying them")
@@ -148,9 +152,12 @@ def parser():
     p.add_argument("package")
     p = sub.add_parser("plan", help="Prepare a merge plan, without writing host memory")
     p.add_argument("package"); p.add_argument("--current"); p.add_argument("--out", required=True)
+    p.add_argument("--current-source", choices=["provided_snapshot", "previous_portable_workspace"],
+                   help="Origin of supplied current data; a previous portable workspace is not a fresh host-memory snapshot")
     p = sub.add_parser("apply", help="Apply an accepted plan to a NEW portable workspace only")
     p.add_argument("package"); p.add_argument("--plan", required=True); p.add_argument("--out", required=True)
     p.add_argument("--accept", action="store_true")
+    p.add_argument("--setup-delivery", help="Actual recipient identity and selected setup scope JSON; creates setup.json and explicit next steps")
     p = sub.add_parser("transfer-create", help="Create one shared transfer card")
     p.add_argument("--config", required=True); p.add_argument("--out", required=True)
     p = sub.add_parser("transfer-event", help="Record an observed action against an expected revision")
@@ -267,21 +274,13 @@ def run(args):
             preview = build_giga_preview(memory, checked["review"], load_json(args.projection))
             write_new(args.out, json_bytes(preview))
             return {"output": args.out, "preview": preview, "native_memory_applied": False}
-        if Path(args.out).resolve() == Path(args.report).resolve() or Path(args.out).exists() or Path(args.report).exists():
-            raise ValidationError("Choose two distinct new paths for GigaAgent Markdown and report")
-        projection = load_json(args.projection)
-        result = build_giga_export(memory, checked["review"], projection)
-        if not args.preview:
-            raise ValidationError("Prepare giga-preview, show its Markdown to the user, then supply the current preview JSON with --preview")
-        validate_giga_preview(load_json(args.preview), memory, checked["review"], projection)
-        if not parse_giga_export(result["markdown"])["records"]:
-            raise ValidationError("No reviewed GigaAgent facts are ready to import; resolve the profile review first")
-        destination, options = export_handoff_options(args, "gigaagent", args.report)
-        write_new(args.out, result["markdown"])
-        write_new(args.report, json_bytes(result["report"]))
-        from .completion import prepare_handoff
-        handoff = prepare_handoff("gigaagent", [args.out], destination, **options)
-        return {"output": args.out, "report": args.report, "handoff": handoff, "native_memory_applied": False}
+        from .dual_export import export_giga_bundle
+        return export_giga_bundle(memory, checked["review"], load_json(args.projection),
+                                  load_json(args.preview) if args.preview else None,
+                                  output=args.out, report=args.report, full_output=args.full_out,
+                                  handoff_output=args.handoff_out, assets=args.assets,
+                                  no_assets=args.no_assets, asset_scope_note=args.asset_scope_note,
+                                  instruction=handoff_assets("gigaagent")["instruction"])
     if command.startswith("common-"):
         from .common_profile import (CommonStore, add_source, common_event, common_input, common_template,
                                      common_view, create_common, review_common)
@@ -497,10 +496,16 @@ def run(args):
         data = read_package(args.package)
         return {"valid": True, "sha256": data["sha256"], "manifest": data["manifest"]}
     if command == "plan":
-        result = plan_import(args.package, load_json(args.current) if args.current else None)
-        write_new(args.out, json_bytes(result)); return {"plan": args.out, "items": result["items"]}
+        result = plan_import(args.package, load_json(args.current) if args.current else None,
+                             current_source=args.current_source)
+        write_new(args.out, json_bytes(result))
+        return {"plan": args.out, "items": result["items"],
+                "current_source": result["current_source"],
+                "recipient_memory_required": result["recipient_memory_required"],
+                "limitations": result["limitations"]}
     if command == "apply":
-        return apply_import(args.package, load_json(args.plan), args.out, accepted=args.accept)
+        return apply_import(args.package, load_json(args.plan), args.out, accepted=args.accept,
+                            setup_delivery=load_json(args.setup_delivery) if args.setup_delivery else None)
     if command == "transfer-create":
         result = create_transfer(**load_json(args.config))
     elif command == "transfer-event":

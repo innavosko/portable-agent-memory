@@ -40,7 +40,8 @@ class CoreTests(unittest.TestCase):
         archive = self.package()
         data = read_package(archive)
         self.assertEqual(len(data["memory"]["records"]), 6)
-        plan = plan_import(archive)
+        # Explicit fictional empty recipient snapshot; absence is not empty.
+        plan = plan_import(archive, empty_memory())
         report = apply_import(archive, plan, self.path / "received", accepted=True)
         result = load_json(self.path / "received" / "memory.json")
         self.assertEqual(len(result["records"]), 5)

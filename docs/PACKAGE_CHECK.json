@@ -1,16 +1,16 @@
 {
-  "version": "0.8.3",
+  "version": "0.8.4",
   "skills": [
     {
       "file": "01_Запуск/Экспорт/memory-export.zip",
-      "sha256": "702676af5f552541c7202442bad5421c5739782bd4902fb9832e121800b650f7",
+      "sha256": "fd7c3f868068931909aafc3e0a3b24ea4fdaaad05307e4d26074e57e16ef028e",
       "standalone_cli_passed": true,
       "core_matches_source": true,
       "provided_contracts_preserved": true
     },
     {
       "file": "01_Запуск/Импорт/memory-import.zip",
-      "sha256": "aa91a05aa9ee814750349fdca7faa88da4f8ab70bab36d28e0dd54311fd0ec5a",
+      "sha256": "ab2ce19ad09f829f37c400195084c6ef9cfeb3774cab2ccf440dfd37dc1968cb",
       "standalone_cli_passed": true,
       "core_matches_source": true,
       "provided_contracts_preserved": true
@@ -19,6 +19,8 @@
   "embedded_importer_matches_standalone": true,
   "standard_skill_validator": "passed_both",
   "giga_preview_and_export_isolated": true,
+  "dual_full_and_giga_delivery_isolated": true,
+  "receiver_snapshot_gate_isolated": true,
   "isolated_handoff_routes_passed": [
     "chatgpt",
     "claude",

@@ -323,6 +323,7 @@ def export_review(state):
     require(not partial or state["allow_partial"], "Resolve the remaining review tasks or record the user's explicit partial scope; no unchecked fact becomes active")
     sources = _sources(state, memory)
     memory.setdefault("metadata", {}).pop("common_review_required", None)
+    memory["metadata"].pop("recipient_memory_required", None)
     memory.setdefault("metadata", {})["common_profile"] = {"coordinator": state["coordinator"], "sources": sources,
         "aliases": copy.deepcopy(analysis["aliases"]), "readiness": "partial" if partial else "complete_within_supplied_sources",
         "semantic_review_sha256": digest(state["semantic"])}

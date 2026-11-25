@@ -43,7 +43,10 @@ class RecipientCLITests(unittest.TestCase):
         path.write_bytes(json_bytes(value))
         return path
 
-    def cli(self, *args, expected=0):
+    def cli(self, *args, expected=0, default_asset_scope=True):
+        if (default_asset_scope and args and args[0] == "giga-export" and
+                "--assets" not in args and "--no-assets" not in args):
+            args = (*args, "--no-assets", "--asset-scope-note", "Fictional fixture selects reviewed records only.")
         result = subprocess.run([sys.executable, "-B", "-m", "portable_memory", *map(str, args)],
                                 cwd=ROOT, capture_output=True, text=True, encoding="utf-8", timeout=30)
         self.assertEqual(expected, result.returncode, result.stderr or result.stdout)
@@ -109,6 +112,9 @@ class RecipientCLITests(unittest.TestCase):
         self.assertEqual({".md"}, {path.suffix for path in delivered.iterdir()})
         self.assertEqual(["import-instruction.md", markdown_path.name], handoff["upload_files"])
         self.assertIsNone(handoff["manifest"])
+        self.assertTrue(Path(result["full_package"]["path"]).is_file())
+        self.assertEqual(3, len(result["user_delivery_files"]))
+        self.assertNotIn(result["full_package"]["path"], result["gigaagent_upload_files"])
         return markdown_path, report_path
 
     def comparisons(self, document_path, snapshot_path):
@@ -168,6 +174,24 @@ class RecipientCLITests(unittest.TestCase):
         self.assertIn("check", result["error"].lower())
         self.assertFalse(target.exists())
         self.assertFalse(report.exists())
+
+    def test_giga_export_requires_explicit_original_file_scope_before_either_output(self):
+        memory, projection = self.reviewed_projection()
+        preview = self.preview(memory, projection)
+        target, report = self.path("scope-profile", ".md"), self.path("scope-report")
+        args = ("giga-export", "--memory", memory, "--common-store", self.store_path,
+                "--projection", projection, "--preview", preview, "--out", target, "--report", report)
+        for scope in ((), ("--no-assets",), ("--assets", self.root, "--no-assets", "--asset-scope-note", "Conflicting fixture.")):
+            with self.subTest(scope=scope):
+                result = self.cli(*args, *scope, expected=2, default_asset_scope=False)
+                self.assertIn("asset", result["error"].lower())
+                self.assertFalse(target.exists())
+                self.assertFalse(report.exists())
+                self.assertFalse(target.with_name(target.stem + "-full.zip").exists())
+        result = self.cli(*args, "--no-assets", "--asset-scope-note", "Only fictional reviewed records were selected.",
+                          default_asset_scope=False)
+        self.assertTrue(result["full_package_verified"])
+        self.assertEqual(3, len(result["user_delivery_files"]))
 
     def test_new_source_invalidates_common_store_and_blocks_prepared_target_export(self):
         memory_path, projection_path = self.reviewed_projection()
