@@ -1,16 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="3560" height="2260" viewBox="0 0 3560 2260" role="img" aria-labelledby="diagram-title diagram-desc">
 <title id="diagram-title">Путь переноса памяти и настройки другого агента</title>
-<desc id="diagram-desc">Путь слева направо: экспорт и импорт отдельными навыками. Среда агента, место хранения данных и доступ различаются. Один ведущий сводит несколько источников, предлагает полезные работы и навыки. Формат зависит от получателя. Новые данные и непроверенное объединение требуют общей проверки с сохранением прежних решений.</desc>
+<desc id="diagram-desc">Версия 0.8.4. Один ведущий объединяет источники, сохраняет выбранные данные и проверяет общий профиль. Для ГигаАгента пользователь получает полный ZIP и отдельно два Markdown-файла; в ГигаАгент загружаются только два Markdown-файла. Экспортёр выдаёт файлы в чате. Пакетный импорт сохраняет отчёты, сверяет текущую память и проверяет настройку в выбранном объёме. Неизвестная память блокирует активацию, но не сохранение файлов.</desc>
 <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="#688381"/></marker></defs>
 <rect width="3560" height="2260" fill="#F5EFEB"/>
 <text x="40" y="26" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Перенос контекста и настройка нового агента под ключ</text>
-<text x="40" y="65" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Версия 0.8.3 · Актуально на 24.11.2026 · Известные ответы сохраняются; изменившиеся данные и доступ проверяются заново.</text>
+<text x="40" y="65" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Версия 0.8.4 · Актуально на 25.11.2026 · Полный пакет для пользователя + формат получателя · Прежние решения сохраняются.</text>
 <rect x="40" y="100" width="5" height="18" rx="2" fill="#1C7134"/>
 <text x="53" y="99" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#1C7134" text-anchor="start" dominant-baseline="text-before-edge">Код: проверки и файлы</text>
 <rect x="282.0" y="100" width="5" height="18" rx="2" fill="#2C7E8D"/>
 <text x="295.0" y="99" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#2C7E8D" text-anchor="start" dominant-baseline="text-before-edge">Модель и пользователь</text>
 <rect x="525.0" y="100" width="5" height="18" rx="2" fill="#B47829"/>
-<text x="538.0" y="99" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#B47829" text-anchor="start" dominant-baseline="text-before-edge">Инструменты сервиса</text>
+<text x="538.0" y="99" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#B47829" text-anchor="start" dominant-baseline="text-before-edge">Инструменты текущего агента</text>
 <rect x="40" y="136" width="2600" height="42" rx="10" fill="#073F42"/>
 <text x="58" y="144" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#A5E8AF" text-anchor="start" dominant-baseline="text-before-edge">НАВЫК ЭКСПОРТА · memory-export · собирает, проверяет и готовит передачу</text>
 <rect x="2680" y="136" width="840" height="42" rx="10" fill="#073F42"/>
@@ -72,36 +72,36 @@
 <polyline points="1560.0,1465 1560.0,1555.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="1722.0,1670.0 1780.0,1670.0 1780.0,410.0 1838.0,410.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="1560.0,1785.0 1560.0,1968 1754,1968 1754,462.5 1744,462.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
-<polyline points="2000.0,515.0 2000.0,545 1805,545 1805,1285.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2000.0,515.0 2000.0,545 1805,545 1805,1297.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="1805,750.0 1816,750.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="2184,750.0 2194,750.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="1805,1057.5 1816,1057.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="2184,1057.5 2194,1057.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="1805,1285.0 1816,1285.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="2184,1285.0 2194,1285.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1805,1297.5 1816,1297.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2184,1297.5 2194,1297.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
 <polyline points="2194,750.0 2194,1400 2000.0,1400 2000.0,1435.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="2000.0,1645.0 2000.0,1740" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="2162.0,1540.0 2218,1540.0 2218,445.0 2256,445.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="2184,1840.0 2225,1840.0 2225,445.0 2256,445.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="2440.0,575 2440.0,640.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2162.0,1540.0 2218,1540.0 2218,460.0 2256,460.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2184,1840.0 2225,1840.0 2225,460.0 2256,460.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2440.0,605 2440.0,640.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="2440.0,860.0 2440.0,930" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="2278.0,750.0 2245,750.0 2245,1257.5 2256,1257.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="2624,1035.0 2634,1035.0 2634,1375 2440.0,1375" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<polyline points="2440.0,1345 2440.0,1375" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-<circle cx="2440.0" cy="1375" r="4" fill="#688381" stroke="#688381" stroke-width="2"/>
-<polyline points="2440.0,1375 2440.0,1400.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2278.0,750.0 2245,750.0 2245,1270.0 2256,1270.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2440.0,1120 2440.0,1160" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2440.0,1380 2440.0,1400.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="2440.0,1620.0 2440.0,1710" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="2602.0,1510.0 2653,1510.0 2653,452.5 2696,452.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="2624,1832.5 2665,1832.5 2665,452.5 2696,452.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="2880.0,590 2880.0,630" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="2880.0,865 2880.0,920.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="2880.0,900 2880.0,920.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="2880.0,1160.0 2880.0,1260" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="3042.0,1040.0 3096,1040.0 3096,777.5 3136,777.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="3042.0,1040.0 3096,1040.0 3096,452.5 3136,452.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="3064,1742.5 3105,1742.5 3105,777.5 3136,777.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
+<polyline points="3320.0,590 3320.0,630" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="3320.0,925 3320.0,1010" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="3320.0,1235 3320.0,1285.0" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="3320.0,1515.0 3320.0,1615" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
-<polyline points="3158.0,1400.0 3125,1400.0 3125,1887.5 3136,1887.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="3320.0,1515.0 3320.0,1595" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="3158.0,1400.0 3125,1400.0 3125,1862.5 3136,1862.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<polyline points="3320.0,1745 3320.0,1770" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
 <polyline points="1120.0,1915 1120.0,2002 1365,2002" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6"/>
 <polyline points="2696,1375.0 2685,1375.0 2685,2038 1365,2038 1365,462.5 1376,462.5" fill="none" stroke="#688381" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 6" marker-end="url(#arrow)"/>
 <circle cx="1365" cy="2002" r="4" fill="#688381" stroke="#688381" stroke-width="2"/>
@@ -127,8 +127,8 @@
 <rect x="56" y="778" width="5" height="194" rx="2" fill="#2C7E8D"/>
 <text x="72" y="781" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Уточнить получателя</text>
 <text x="72" y="819" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент; ГигаАгент Про</text>
-<text x="72" y="842" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">(ex-Ouroboros); другой агент.</text>
-<text x="72" y="865" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Сразу учитываем допустимые</text>
+<text x="72" y="842" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">(Ouroboros); ChatGPT; Claude;</text>
+<text x="72" y="865" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">другой агент. Учитываем допустимые</text>
 <text x="72" y="888" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">файлы и способы записи памяти.</text>
 <text x="72" y="911" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Известный выбор не повторяем.</text>
 </g>
@@ -307,36 +307,36 @@
 <rect x="1816" y="593" width="5" height="314" rx="2" fill="#2C7E8D"/>
 <text x="1832" y="596" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент: адаптировать</text>
 <text x="1832" y="625" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">профиль</text>
-<text x="1832" y="663" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Разделить независимые факты.</text>
-<text x="1832" y="686" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Проверить смысл, условия, источник.</text>
-<text x="1832" y="709" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Показать: войдёт / не войдёт /</text>
-<text x="1832" y="732" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">нужно уточнить; причины исключения.</text>
-<text x="1832" y="755" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Указать место сохранения резерва.</text>
-<text x="1832" y="778" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">user ≤ 20 · feedback ≤ 30</text>
-<text x="1832" y="801" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">project ≤ 100 · reference ≤ 40</text>
-<text x="1832" y="824" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Описание ≤ 200, факт ≤ 450 знаков.</text>
-<text x="1832" y="847" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Временное, спорное и избыток</text>
-<text x="1832" y="870" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">не импортировать автоматически.</text>
+<text x="1832" y="663" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Разделить смешанные записи.</text>
+<text x="1832" y="686" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Показать: войдёт / не войдёт /</text>
+<text x="1832" y="709" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">нужно уточнить — и причины.</text>
+<text x="1832" y="732" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">user ≤ 20 · feedback ≤ 30</text>
+<text x="1832" y="755" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">project ≤ 100 · reference ≤ 40</text>
+<text x="1832" y="778" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Описание ≤ 200, факт ≤ 450 знаков.</text>
+<text x="1832" y="801" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Временное, спорное и избыток</text>
+<text x="1832" y="824" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">остаются в полном ZIP пользователя.</text>
+<text x="1832" y="847" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Исключённое самим пользователем</text>
+<text x="1832" y="870" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">в пакет не возвращаем.</text>
 </g>
-<g id="pro-format"><title>ГигаАгент Про (ex-Ouroboros)</title>
+<g id="pro-format"><title>ГигаАгент Про (Ouroboros)</title>
 <rect x="1816" y="950" width="368" height="215" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
-<rect x="1816" y="963" width="5" height="189" rx="2" fill="#1C7134"/>
-<text x="1832" y="966" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент Про</text>
-<text x="1832" y="995" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">(ex-Ouroboros)</text>
-<text x="1832" y="1033" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Выбранные файлы выгрузки.</text>
-<text x="1832" y="1056" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Меню → Amberkeep carry memory:</text>
-<text x="1832" y="1079" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">включить и запросить импорт.</text>
-<text x="1832" y="1102" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Маршрут указан пользователем;</text>
-<text x="1832" y="1125" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">в живом аккаунте не проверен.</text>
+<rect x="1816" y="963" width="5" height="189" rx="2" fill="#B47829"/>
+<text x="1832" y="966" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент Про (Ouroboros)</text>
+<text x="1832" y="1004" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Выбранные файлы выгрузки.</text>
+<text x="1832" y="1027" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Меню → Amberkeep carry memory:</text>
+<text x="1832" y="1050" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">включить и запросить импорт.</text>
+<text x="1832" y="1073" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Маршрут указан пользователем;</text>
+<text x="1832" y="1096" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">в живом аккаунте не проверен.</text>
 </g>
 <g id="other-format"><title>Другие получатели</title>
-<rect x="1816" y="1200" width="368" height="170" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
-<rect x="1816" y="1213" width="5" height="144" rx="2" fill="#2C7E8D"/>
+<rect x="1816" y="1200" width="368" height="195" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="1816" y="1213" width="5" height="169" rx="2" fill="#1C7134"/>
 <text x="1832" y="1216" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Другие получатели</text>
-<text x="1832" y="1254" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ChatGPT / Claude: выгрузка</text>
-<text x="1832" y="1277" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">и memory-import.zip при наличии</text>
-<text x="1832" y="1300" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">поддерживаемого канала установки.</text>
-<text x="1832" y="1323" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Иначе — доступный файловый путь.</text>
+<text x="1832" y="1254" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Для выбранного ChatGPT / Claude</text>
+<text x="1832" y="1277" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">прилагается memory-import.zip.</text>
+<text x="1832" y="1300" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Без него сборка не завершится.</text>
+<text x="1832" y="1323" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Другим — подходящие файлы.</text>
+<text x="1832" y="1346" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Установка зависит от получателя.</text>
 </g>
 <g id="obsidian"><title>Нужен
 Obsidian?</title>
@@ -357,15 +357,17 @@ Obsidian?</title>
 <text x="1832" y="1892" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">синхронизация не требуется.</text>
 </g>
 <g id="save-choice"><title>Согласовать сохранение</title>
-<rect x="2256" y="315" width="368" height="260" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
-<rect x="2256" y="328" width="5" height="234" rx="2" fill="#2C7E8D"/>
+<rect x="2256" y="315" width="368" height="290" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="2256" y="328" width="5" height="264" rx="2" fill="#2C7E8D"/>
 <text x="2272" y="331" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Согласовать сохранение</text>
 <text x="2272" y="369" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Предложить папку «Перенос памяти».</text>
-<text x="2272" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Компьютер, скачивание в чате,</text>
-<text x="2272" y="415" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Google Диск, Яндекс Диск,</text>
-<text x="2272" y="438" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Облако Mail, OneDrive или другое.</text>
-<text x="2272" y="461" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Формат для получателя и полный</text>
-<text x="2272" y="484" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">резерв — отдельные результаты.</text>
+<text x="2272" y="392" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Компьютер, скачивание в чате;</text>
+<text x="2272" y="415" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Google, Яндекс, Mail, OneDrive</text>
+<text x="2272" y="438" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">или другое облако. Полный ZIP:</text>
+<text x="2272" y="461" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">профиль, правила, проекты,</text>
+<text x="2272" y="484" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">материалы и навыки. Для ГигаАгента</text>
+<text x="2272" y="507" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ещё два MD. Лимиты его памяти</text>
+<text x="2272" y="530" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">не сокращают полный пакет.</text>
 </g>
 <g id="write-access"><title>Есть доступ
 для записи?</title>
@@ -375,22 +377,23 @@ Obsidian?</title>
 <text x="2440.0" y="770.5" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="middle" dominant-baseline="text-before-edge">Проверен инструментом</text>
 </g>
 <g id="save-tool"><title>Сохранить инструментом</title>
-<rect x="2256" y="930" width="368" height="210" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
-<rect x="2256" y="943" width="5" height="184" rx="2" fill="#B47829"/>
+<rect x="2256" y="930" width="368" height="190" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="2256" y="943" width="5" height="164" rx="2" fill="#B47829"/>
 <text x="2272" y="946" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Сохранить инструментом</text>
-<text x="2272" y="984" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Записать выбранные файлы</text>
-<text x="2272" y="1007" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">и проверить результат.</text>
-<text x="2272" y="1030" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Локальный файл в папке синхронизации</text>
-<text x="2272" y="1053" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ещё не доказывает загрузку в облако.</text>
+<text x="2272" y="984" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Записать файлы и проверить их.</text>
+<text x="2272" y="1007" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Файл в папке синхронизации</text>
+<text x="2272" y="1030" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ещё не доказывает загрузку в облако.</text>
 </g>
-<g id="save-user"><title>Выдать комплект</title>
-<rect x="2256" y="1170" width="368" height="175" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
-<rect x="2256" y="1183" width="5" height="149" rx="2" fill="#2C7E8D"/>
-<text x="2272" y="1186" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Выдать комплект</text>
-<text x="2272" y="1224" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент: два вложения .md</text>
-<text x="2272" y="1247" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">(профиль и инструкция) + сообщение.</text>
-<text x="2272" y="1270" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Остальным — комплект получателя.</text>
-<text x="2272" y="1293" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Проверить ссылки скачивания.</text>
+<g id="save-user"><title>Выдать файлы в чате</title>
+<rect x="2256" y="1160" width="368" height="220" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="2256" y="1173" width="5" height="194" rx="2" fill="#B47829"/>
+<text x="2272" y="1176" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Выдать файлы в чате</text>
+<text x="2272" y="1214" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент: полный ZIP пользователю</text>
+<text x="2272" y="1237" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">+ два отдельных MD для загрузки.</text>
+<text x="2272" y="1260" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Остальным — комплект получателя.</text>
+<text x="2272" y="1283" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Вложить файлы или рабочие ссылки</text>
+<text x="2272" y="1306" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">и сообщение запуска импорта.</text>
+<text x="2272" y="1329" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Код готовит; агент выдаёт в чате.</text>
 </g>
 <g id="shared-folder"><title>Общая папка
 доступна обоим?</title>
@@ -403,12 +406,12 @@ Obsidian?</title>
 <rect x="2256" y="1723" width="5" height="219" rx="2" fill="#2C7E8D"/>
 <text x="2272" y="1726" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Передать и запустить</text>
 <text x="2272" y="1755" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">приём</text>
-<text x="2272" y="1793" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгенту: client-memory-export.md</text>
-<text x="2272" y="1816" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">и import-instruction.md.</text>
-<text x="2272" y="1839" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Остальным — комплект получателя.</text>
-<text x="2272" y="1862" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Передать файлы и отправить</text>
-<text x="2272" y="1885" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">готовое сообщение запуска импорта.</text>
-<text x="2272" y="1908" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">NEXT_STEPS.md читает пользователь.</text>
+<text x="2272" y="1793" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Нет общей папки — пользователь</text>
+<text x="2272" y="1816" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">копирует комплект в своё облако.</text>
+<text x="2272" y="1839" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгенту — только два MD:</text>
+<text x="2272" y="1862" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">client-memory-export.md</text>
+<text x="2272" y="1885" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">и import-instruction.md; ZIP себе.</text>
+<text x="2272" y="1908" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Затем отправить сообщение импорта.</text>
 </g>
 <g id="inspect"><title>Проверить входные материалы</title>
 <rect x="2696" y="315" width="368" height="275" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
@@ -416,23 +419,25 @@ Obsidian?</title>
 <text x="2712" y="331" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Проверить входные</text>
 <text x="2712" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">материалы</text>
 <text x="2712" y="398" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Приём по сообщению пользователя.</text>
-<text x="2712" y="421" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент читает инструкцию</text>
-<text x="2712" y="444" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">и весь профиль Markdown.</text>
-<text x="2712" y="467" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ZIP и навыки он не принимает.</text>
-<text x="2712" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Для других пакетов: состав,</text>
-<text x="2712" y="513" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">целостность, версия и получатель.</text>
-<text x="2712" y="536" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Неполное исправить до применения.</text>
+<text x="2712" y="421" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент: прочитать оба MD целиком;</text>
+<text x="2712" y="444" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">применить штатные инструменты</text>
+<text x="2712" y="467" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">памяти, без Python-импортера.</text>
+<text x="2712" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ZIP и навыки он не принимает.</text>
+<text x="2712" y="513" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Пакетный импорт: проверить состав,</text>
+<text x="2712" y="536" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">целостность, версию и получателя.</text>
 </g>
 <g id="compare"><title>Прочитать текущую память</title>
-<rect x="2696" y="630" width="368" height="235" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
-<rect x="2696" y="643" width="5" height="209" rx="2" fill="#2C7E8D"/>
+<rect x="2696" y="630" width="368" height="270" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="2696" y="643" width="5" height="244" rx="2" fill="#2C7E8D"/>
 <text x="2712" y="646" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Прочитать текущую память</text>
-<text x="2712" y="684" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Сопоставить смысл, имена и область.</text>
-<text x="2712" y="707" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Дубли пропустить, совместимое</text>
-<text x="2712" y="730" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">дополнить, конфликт отложить.</text>
-<text x="2712" y="753" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Невидимую память не считать пустой.</text>
-<text x="2712" y="776" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Новое объединение — проверить</text>
-<text x="2712" y="799" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">перед применением.</text>
+<text x="2712" y="684" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Нужен снимок памяти получателя.</text>
+<text x="2712" y="707" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Старая рабочая папка его не заменяет.</text>
+<text x="2712" y="730" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Без снимка сохраняем файлы,</text>
+<text x="2712" y="753" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">но блокируем активный профиль</text>
+<text x="2712" y="776" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">и подтверждение нативной памяти.</text>
+<text x="2712" y="799" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Со снимком: сверить дубли,</text>
+<text x="2712" y="822" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">дополнения, конфликты и смысл</text>
+<text x="2712" y="845" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">нового объединённого профиля.</text>
 </g>
 <g id="can-apply"><title>Можно
 применять?</title>
@@ -442,16 +447,16 @@ Obsidian?</title>
 <text x="2880.0" y="1049.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="middle" dominant-baseline="text-before-edge">Сверка и изменения</text>
 <text x="2880.0" y="1072.0" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="middle" dominant-baseline="text-before-edge">согласованы</text>
 </g>
-<g id="resolve"><title>Разрешить новые противоречия</title>
+<g id="resolve"><title>Устранить препятствия</title>
 <rect x="2696" y="1260" width="368" height="230" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
 <rect x="2696" y="1273" width="5" height="204" rx="2" fill="#2C7E8D"/>
-<text x="2712" y="1276" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Разрешить новые</text>
-<text x="2712" y="1305" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">противоречия</text>
-<text x="2712" y="1343" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Уточнить изменившееся, сохранив</text>
-<text x="2712" y="1366" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">прежние действительные ответы.</text>
-<text x="2712" y="1389" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Объединение всех источников</text>
-<text x="2712" y="1412" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">возвращается ведущему на проверку.</text>
-<text x="2712" y="1435" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Спорные записи не активируются.</text>
+<text x="2712" y="1276" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Устранить препятствия</text>
+<text x="2712" y="1314" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Память неизвестна — получить снимок.</text>
+<text x="2712" y="1337" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Новый конфликт — точечный вопрос.</text>
+<text x="2712" y="1360" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Проверить объединённый профиль.</text>
+<text x="2712" y="1383" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Прежние ответы и отложенные шаги</text>
+<text x="2712" y="1406" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">сохранить; интервью не повторять.</text>
+<text x="2712" y="1429" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Спорные записи не активировать.</text>
 </g>
 <g id="giga-import"><title>Правила записи ГигаАгента</title>
 <rect x="2696" y="1570" width="368" height="345" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
@@ -466,6 +471,19 @@ Obsidian?</title>
 <text x="2712" y="1762" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">≤ 500 знаков с переводом строки.</text>
 <text x="2712" y="1785" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">При замене — точная версия записи.</text>
 <text x="2712" y="1808" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Процедуры не объявлять knowledge.</text>
+</g>
+<g id="setup-scope"><title>Зафиксировать объём настройки</title>
+<rect x="3136" y="315" width="368" height="275" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="3136" y="328" width="5" height="249" rx="2" fill="#1C7134"/>
+<text x="3152" y="331" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Зафиксировать объём</text>
+<text x="3152" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">настройки</text>
+<text x="3152" y="398" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Для пакетного импорта фиксируем</text>
+<text x="3152" y="421" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">получателя и выбранные разделы.</text>
+<text x="3152" y="444" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Явно отложенное вне этого объёма</text>
+<text x="3152" y="467" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">не мешает завершению выбранного.</text>
+<text x="3152" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Повторное интервью не требуется.</text>
+<text x="3152" y="513" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Нерешённое внутри объёма</text>
+<text x="3152" y="536" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">остаётся задачей, а не успехом.</text>
 </g>
 <g id="configure"><title>Выполнить доступную настройку</title>
 <rect x="3136" y="630" width="368" height="295" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
@@ -498,18 +516,20 @@ Obsidian?</title>
 <text x="3320.0" y="1400.0" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="middle" dominant-baseline="text-before-edge">проверено?</text>
 </g>
 <g id="done"><title>Готово в выбранном объёме</title>
-<rect x="3136" y="1615" width="368" height="150" rx="16" fill="#073F42"/>
-<text x="3152" y="1631" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#A5E8AF" text-anchor="start" dominant-baseline="text-before-edge">Готово в выбранном</text>
-<text x="3152" y="1660" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#A5E8AF" text-anchor="start" dominant-baseline="text-before-edge">объёме</text>
-<text x="3152" y="1698" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#C9E7D9" text-anchor="start" dominant-baseline="text-before-edge">Новый агент использует</text>
-<text x="3152" y="1721" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#C9E7D9" text-anchor="start" dominant-baseline="text-before-edge">проверенный перенесённый контекст.</text>
+<rect x="3136" y="1595" width="368" height="150" rx="16" fill="#073F42"/>
+<text x="3152" y="1611" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#A5E8AF" text-anchor="start" dominant-baseline="text-before-edge">Готово в выбранном</text>
+<text x="3152" y="1640" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#A5E8AF" text-anchor="start" dominant-baseline="text-before-edge">объёме</text>
+<text x="3152" y="1678" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#C9E7D9" text-anchor="start" dominant-baseline="text-before-edge">Новый агент использует</text>
+<text x="3152" y="1701" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#C9E7D9" text-anchor="start" dominant-baseline="text-before-edge">проверенный перенесённый контекст.</text>
 </g>
-<g id="remaining"><title>Что осталось</title>
-<rect x="3136" y="1820" width="368" height="135" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
-<rect x="3136" y="1833" width="5" height="109" rx="2" fill="#1C7134"/>
-<text x="3152" y="1836" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Что осталось</text>
-<text x="3152" y="1874" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Указать неподдерживаемые шаги,</text>
-<text x="3152" y="1897" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">сбои и следующее действие.</text>
+<g id="remaining"><title>Выдать итог и план</title>
+<rect x="3136" y="1770" width="368" height="185" rx="16" fill="#FFFFFF" stroke="#DCDAD4" stroke-width="1.5"/>
+<rect x="3136" y="1783" width="5" height="159" rx="2" fill="#1C7134"/>
+<text x="3152" y="1786" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Выдать итог и план</text>
+<text x="3152" y="1824" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">При пакетном импорте обязательны</text>
+<text x="3152" y="1847" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">IMPORT_REPORT.md и NEXT_STEPS.md.</text>
+<text x="3152" y="1870" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">ГигаАгент: результат в чате.</text>
+<text x="3152" y="1893" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Ошибки и остаток — явным списком.</text>
 </g>
 <rect x="686.0" y="1150" width="52.0" height="26" rx="3" fill="#F5EFEB"/>
 <text x="690.0" y="1152" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Один</text>
@@ -545,9 +565,9 @@ Obsidian?</title>
 <text x="3128" y="1550" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Нет</text>
 <rect x="1491" y="2006" width="902.0" height="26" rx="3" fill="#F5EFEB"/>
 <text x="1495" y="2008" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#123638" text-anchor="start" dominant-baseline="text-before-edge">Новые данные или новое объединение → общая проверка; прежние действительные решения сохраняются</text>
-<rect x="40" y="2080" width="3480" height="145" rx="14" fill="#E3E4E1"/>
-<text x="58" y="2094" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#40504D" text-anchor="start" dominant-baseline="text-before-edge">Ограничения текущего сценария</text>
+<rect x="40" y="2080" width="3480" height="85" rx="14" fill="#E3E4E1"/>
+<text x="58" y="2094" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700" fill="#40504D" text-anchor="start" dominant-baseline="text-before-edge">Серым — сейчас недоступно</text>
 <text x="58" y="2131" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#485652" text-anchor="start" dominant-baseline="text-before-edge">Почта и фоновый мониторинг · Самостоятельные уведомления между агентами · Нативный импорт ZIP и навыков в обычном ГигаАгенте · MCP Obsidian и Яндекс Диска</text>
-<text x="58" y="2160" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#485652" text-anchor="start" dominant-baseline="text-before-edge">Экспорт: показать адаптацию профиля, затем выдать реальные файлы и сообщение запуска. Обычному ГигаАгенту — только профиль и инструкция Markdown; резерв и отчёты остаются у пользователя.</text>
-<text x="58" y="2189" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#485652" text-anchor="start" dominant-baseline="text-before-edge">Код проверен на предоставленных файлах. Смысл оценивает модель; чтение облака, запись памяти и установка выполняются только доступными инструментами. Реальный SaaS-импорт ещё не проверен.</text>
+<text x="58" y="2180" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#697675" text-anchor="start" dominant-baseline="text-before-edge">Пакетный импорт всегда сохраняет IMPORT_REPORT.md и NEXT_STEPS.md. Сохранённые файлы не означают, что память получателя настроена.</text>
+<text x="58" y="2212" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="400" fill="#697675" text-anchor="start" dominant-baseline="text-before-edge">Код проверен на предоставленных файлах и готовит результаты. Файлы в чат выдаёт агент доступными инструментами; выдача и нативный SaaS-импорт в реальном аккаунте ещё не проверены.</text>
 </svg>

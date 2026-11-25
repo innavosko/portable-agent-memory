@@ -1,14 +1,26 @@
 {
-  "version": "0.8.3",
+  "version": "0.8.4",
   "format": "editable_svg",
   "font_sizes": [
     24,
     18
   ],
-  "text_elements": 284,
+  "text_elements": 300,
+  "nodes": 43,
   "width": "3560",
   "height": "2260",
   "embedded_raster": false,
   "same_svg_in_user_folder": true,
-  "skill_archives_unchanged_by_diagram_update": true
+  "same_png_in_user_folder": true,
+  "scene_text_matches_svg": true,
+  "png_dimensions_match_svg": true,
+  "node_text_within_shapes": true,
+  "text_within_canvas": true,
+  "internal_svg_references_valid": true,
+  "source_reproduced_previous_svg_before_edit": true,
+  "previous_svg_sha256": "03f06f27b1d9ce58fe071582e37eff83079f5052c01bd7210185ed453e3c1725",
+  "svg_sha256": "b172fbd755ffcefcc09ff47f06c02f1519b51edb6dabb40a96a8d00dd95e7d60",
+  "visual_review": "Main PNG inspected at 3560 x 2260; eight columns, decision diamonds, no clipped text; mandatory chat handoff precedes both delivery routes.",
+  "scope": "Main diagram only. Separate Dots/Duet image, presentations, executive decks and skill archives were not modified by this diagram update.",
+  "checks_reflect": "Dual export and portable import behavior in 0.8.4; live chat delivery and native SaaS import remain unverified."
 }
