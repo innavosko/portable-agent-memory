@@ -1,6 +1,6 @@
 {
-  "width": 2610,
-  "height": 1760,
+  "width": 3560,
+  "height": 2260,
   "background": "#F5EFEB",
   "font_family": "Segoe UI",
   "font_sizes": [
@@ -11,9 +11,9 @@
     {
       "type": "text",
       "x": 40,
-      "y": 28,
-      "w": 612.0,
-      "text": "Путь переноса памяти и настройки другого агента",
+      "y": 26,
+      "w": 679.0,
+      "text": "Перенос контекста и настройка нового агента под ключ",
       "size": 24,
       "color": "#123638",
       "group": null
@@ -21,9 +21,9 @@
     {
       "type": "text",
       "x": 40,
-      "y": 70,
-      "w": 1297.96875,
-      "text": "Версия 0.7 · Ведущий агент проводит общую смысловую проверку. Код проверяет полноту и актуальность её отчёта. Настройка сервиса — отдельный шаг.",
+      "y": 65,
+      "w": 1052.0,
+      "text": "Версия 0.8.3 · Актуально на 24.11.2026 · Известные ответы сохраняются; изменившиеся данные и доступ проверяются заново.",
       "size": 18,
       "color": "#123638",
       "group": null
@@ -95,9 +95,53 @@
       "group": null
     },
     {
+      "type": "rect",
+      "x": 40,
+      "y": 136,
+      "w": 2600,
+      "h": 42,
+      "fill": "#073F42",
+      "stroke": null,
+      "radius": 10,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 58,
+      "y": 144,
+      "w": 940.984375,
+      "text": "НАВЫК ЭКСПОРТА · memory-export · собирает, проверяет и готовит передачу",
+      "size": 24,
+      "color": "#A5E8AF",
+      "group": null
+    },
+    {
+      "type": "rect",
+      "x": 2680,
+      "y": 136,
+      "w": 840,
+      "h": 42,
+      "fill": "#073F42",
+      "stroke": null,
+      "radius": 10,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 2698,
+      "y": 144,
+      "w": 553.0,
+      "text": "ИМПОРТ · навык или инструкция получателя",
+      "size": 24,
+      "color": "#A5E8AF",
+      "group": null
+    },
+    {
       "type": "text",
       "x": 48,
-      "y": 126,
+      "y": 202,
       "w": 120.0,
       "text": "1. Начать",
       "size": 24,
@@ -107,9 +151,9 @@
     {
       "type": "text",
       "x": 48,
-      "y": 164,
-      "w": 327.0,
-      "text": "Один ведущий, несколько источников",
+      "y": 242,
+      "w": 321.0,
+      "text": "Явный старт, подходящий получатель",
       "size": 18,
       "color": "#697675",
       "group": null
@@ -117,9 +161,9 @@
     {
       "type": "rect",
       "x": 40,
-      "y": 214,
-      "w": 340,
-      "h": 1260,
+      "y": 282,
+      "w": 400,
+      "h": 1678,
       "fill": "#F0EAE6",
       "stroke": null,
       "radius": 20,
@@ -128,30 +172,62 @@
     },
     {
       "type": "text",
-      "x": 413,
-      "y": 126,
+      "x": 488,
+      "y": 202,
+      "w": 291.984375,
+      "text": "2. Разобрать источники",
+      "size": 24,
+      "color": "#1C7134",
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 488,
+      "y": 242,
+      "w": 254.0,
+      "text": "Среда, данные, доступ и роль",
+      "size": 18,
+      "color": "#697675",
+      "group": null
+    },
+    {
+      "type": "rect",
+      "x": 480,
+      "y": 282,
+      "w": 400,
+      "h": 1678,
+      "fill": "#F0EAE6",
+      "stroke": null,
+      "radius": 20,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 928,
+      "y": 202,
       "w": 263.0,
-      "text": "2. Выбрать и собрать",
+      "text": "3. Выбрать и собрать",
       "size": 24,
       "color": "#1C7134",
       "group": null
     },
     {
       "type": "text",
-      "x": 413,
-      "y": 164,
-      "w": 237.0,
-      "text": "Четыре совместимые ветки",
+      "x": 928,
+      "y": 242,
+      "w": 306.0,
+      "text": "Выбранные ветки идут параллельно",
       "size": 18,
       "color": "#697675",
       "group": null
     },
     {
       "type": "rect",
-      "x": 405,
-      "y": 214,
-      "w": 340,
-      "h": 1260,
+      "x": 920,
+      "y": 282,
+      "w": 400,
+      "h": 1678,
       "fill": "#F0EAE6",
       "stroke": null,
       "radius": 20,
@@ -160,30 +236,30 @@
     },
     {
       "type": "text",
-      "x": 778,
-      "y": 126,
-      "w": 167.0,
-      "text": "3. Проверить",
+      "x": 1368,
+      "y": 202,
+      "w": 280.0,
+      "text": "4. Проверить профиль",
       "size": 24,
       "color": "#1C7134",
       "group": null
     },
     {
       "type": "text",
-      "x": 778,
-      "y": 164,
-      "w": 290.0,
-      "text": "Единый профиль всех источников",
+      "x": 1368,
+      "y": 242,
+      "w": 288.0,
+      "text": "Все выбранные источники вместе",
       "size": 18,
       "color": "#697675",
       "group": null
     },
     {
       "type": "rect",
-      "x": 770,
-      "y": 214,
-      "w": 340,
-      "h": 1260,
+      "x": 1360,
+      "y": 282,
+      "w": 400,
+      "h": 1678,
       "fill": "#F0EAE6",
       "stroke": null,
       "radius": 20,
@@ -192,30 +268,30 @@
     },
     {
       "type": "text",
-      "x": 1143,
-      "y": 126,
-      "w": 159.984375,
-      "text": "4. Упаковать",
+      "x": 1808,
+      "y": 202,
+      "w": 289.0,
+      "text": "5. Подготовить формат",
       "size": 24,
       "color": "#1C7134",
       "group": null
     },
     {
       "type": "text",
-      "x": 1143,
-      "y": 164,
-      "w": 243.984375,
-      "text": "Только проверенная версия",
+      "x": 1808,
+      "y": 242,
+      "w": 260.0,
+      "text": "По возможностям получателя",
       "size": 18,
       "color": "#697675",
       "group": null
     },
     {
       "type": "rect",
-      "x": 1135,
-      "y": 214,
-      "w": 340,
-      "h": 1260,
+      "x": 1800,
+      "y": 282,
+      "w": 400,
+      "h": 1678,
       "fill": "#F0EAE6",
       "stroke": null,
       "radius": 20,
@@ -224,30 +300,62 @@
     },
     {
       "type": "text",
-      "x": 1508,
-      "y": 126,
-      "w": 149.0,
-      "text": "5. Передать",
+      "x": 2248,
+      "y": 202,
+      "w": 300.0,
+      "text": "6. Сохранить и передать",
       "size": 24,
       "color": "#1C7134",
       "group": null
     },
     {
       "type": "text",
-      "x": 1508,
-      "y": 164,
+      "x": 2248,
+      "y": 242,
+      "w": 235.0,
+      "text": "Конкретные файлы и папки",
+      "size": 18,
+      "color": "#697675",
+      "group": null
+    },
+    {
+      "type": "rect",
+      "x": 2240,
+      "y": 282,
+      "w": 400,
+      "h": 1678,
+      "fill": "#F0EAE6",
+      "stroke": null,
+      "radius": 20,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 2688,
+      "y": 202,
+      "w": 276.0,
+      "text": "7. Принять и сравнить",
+      "size": 24,
+      "color": "#1C7134",
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 2688,
+      "y": 242,
       "w": 262.0,
-      "text": "Доступ и ручное копирование",
+      "text": "Пакет и существующая память",
       "size": 18,
       "color": "#697675",
       "group": null
     },
     {
       "type": "rect",
-      "x": 1500,
-      "y": 214,
-      "w": 340,
-      "h": 1260,
+      "x": 2680,
+      "y": 282,
+      "w": 400,
+      "h": 1678,
       "fill": "#F0EAE6",
       "stroke": null,
       "radius": 20,
@@ -256,62 +364,30 @@
     },
     {
       "type": "text",
-      "x": 1873,
-      "y": 126,
-      "w": 139.0,
-      "text": "6. Принять",
+      "x": 3128,
+      "y": 202,
+      "w": 316.0,
+      "text": "8. Настроить и проверить",
       "size": 24,
       "color": "#1C7134",
       "group": null
     },
     {
       "type": "text",
-      "x": 1873,
-      "y": 164,
-      "w": 240.0,
-      "text": "Пакет и собственная память",
+      "x": 3128,
+      "y": 242,
+      "w": 298.953125,
+      "text": "Только подтверждённый результат",
       "size": 18,
       "color": "#697675",
       "group": null
     },
     {
       "type": "rect",
-      "x": 1865,
-      "y": 214,
-      "w": 340,
-      "h": 1260,
-      "fill": "#F0EAE6",
-      "stroke": null,
-      "radius": 20,
-      "width": 1.5,
-      "group": null
-    },
-    {
-      "type": "text",
-      "x": 2238,
-      "y": 126,
-      "w": 161.0,
-      "text": "7. Настроить",
-      "size": 24,
-      "color": "#1C7134",
-      "group": null
-    },
-    {
-      "type": "text",
-      "x": 2238,
-      "y": 164,
-      "w": 190.0,
-      "text": "В выбранном объёме",
-      "size": 18,
-      "color": "#697675",
-      "group": null
-    },
-    {
-      "type": "rect",
-      "x": 2230,
-      "y": 214,
-      "w": 340,
-      "h": 1260,
+      "x": 3120,
+      "y": 282,
+      "w": 400,
+      "h": 1678,
       "fill": "#F0EAE6",
       "stroke": null,
       "radius": 20,
@@ -322,20 +398,20 @@
       "type": "path",
       "points": [
         [
-          364,
-          325.0
+          424,
+          385.0
         ],
         [
-          374,
-          325.0
+          434,
+          385.0
         ],
         [
-          374,
-          590
+          434,
+          715
         ],
         [
-          210.0,
-          590
+          240.0,
+          715
         ]
       ],
       "arrow": false,
@@ -348,12 +424,12 @@
       "type": "path",
       "points": [
         [
-          210.0,
-          575
+          240.0,
+          670
         ],
         [
-          210.0,
-          590
+          240.0,
+          715
         ]
       ],
       "arrow": false,
@@ -364,8 +440,8 @@
     },
     {
       "type": "circle",
-      "x": 210.0,
-      "y": 590,
+      "x": 240.0,
+      "y": 715,
       "radius": 4,
       "fill": "#688381",
       "stroke": "#688381",
@@ -376,644 +452,12 @@
       "type": "path",
       "points": [
         [
-          210.0,
-          590
+          240.0,
+          715
         ],
         [
-          210.0,
-          620
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          210.0,
-          840
-        ],
-        [
-          210.0,
-          880
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          364,
-          995.0
-        ],
-        [
-          400.5,
-          995.0
-        ],
-        [
-          400.5,
-          300.0
-        ],
-        [
-          437.0,
-          300.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          210.0,
-          1110
-        ],
-        [
-          210.0,
-          1140
-        ]
-      ],
-      "arrow": false,
-      "dashed": true,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          575.0,
-          387.0
-        ],
-        [
-          575.0,
-          410
-        ],
-        [
-          411,
-          410
-        ],
-        [
-          411,
-          1165.0
-        ]
-      ],
-      "arrow": false,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          411,
-          527.0
-        ],
-        [
-          421,
-          527.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          729,
-          527.0
-        ],
-        [
-          739,
-          527.0
-        ]
-      ],
-      "arrow": false,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          411,
-          750.0
-        ],
-        [
-          421,
-          750.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          729,
-          750.0
-        ],
-        [
-          739,
-          750.0
-        ]
-      ],
-      "arrow": false,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          411,
-          947.0
-        ],
-        [
-          421,
-          947.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          729,
-          947.0
-        ],
-        [
-          739,
-          947.0
-        ]
-      ],
-      "arrow": false,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          411,
-          1165.0
-        ],
-        [
-          421,
-          1165.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          729,
-          1165.0
-        ],
-        [
-          739,
-          1165.0
-        ]
-      ],
-      "arrow": false,
-      "dashed": true,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          739,
-          437.5
-        ],
-        [
-          739,
-          947.0
-        ]
-      ],
-      "arrow": false,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          739,
-          947.0
-        ],
-        [
-          739,
-          1165.0
-        ]
-      ],
-      "arrow": false,
-      "dashed": true,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          739,
-          437.5
-        ],
-        [
-          750,
-          437.5
-        ]
-      ],
-      "arrow": false,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "circle",
-      "x": 758,
-      "y": 437.5,
-      "radius": 8,
-      "fill": "#F5EFEB",
-      "stroke": "#1C7134",
-      "width": 2,
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          766,
-          437.5
-        ],
-        [
-          786,
-          437.5
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          940.0,
-          610
-        ],
-        [
-          940.0,
-          655.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          940.0,
-          845.0
-        ],
-        [
-          940.0,
-          900
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          813.0,
-          750.0
-        ],
-        [
-          775,
-          750.0
-        ],
-        [
-          775,
-          1270.0
-        ],
-        [
-          786,
-          1270.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          940.0,
-          1090
-        ],
-        [
-          940.0,
-          1120
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1094,
-          1270.0
-        ],
-        [
-          1122.5,
-          1270.0
-        ],
-        [
-          1122.5,
-          355.5
-        ],
-        [
-          1151,
-          355.5
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1305.0,
-          431
-        ],
-        [
-          1305.0,
-          470.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1305.0,
-          720.0
-        ],
-        [
-          1305.0,
-          770
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1143.0,
-          595.0
-        ],
-        [
-          1105,
-          595.0
-        ],
-        [
-          1105,
-          234
-        ],
-        [
-          940.0,
-          234
-        ],
-        [
-          940.0,
-          265
-        ]
-      ],
-      "arrow": true,
-      "dashed": true,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1305.0,
-          1050
-        ],
-        [
-          1305.0,
-          1112.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1446.0,
-          1210.0
-        ],
-        [
-          1482,
-          1210.0
-        ],
-        [
-          1482,
-          495.0
-        ],
-        [
-          1516,
-          495.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1305.0,
-          1308.0
-        ],
-        [
-          1305.0,
-          1360
-        ],
-        [
-          1492,
-          1360
-        ],
-        [
-          1492,
-          692.5
-        ],
-        [
-          1516,
-          692.5
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1824,
-          495.0
-        ],
-        [
-          1834,
-          495.0
-        ],
-        [
-          1834,
-          800
-        ],
-        [
-          1670.0,
-          800
-        ]
-      ],
-      "arrow": false,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1670.0,
+          240.0,
           765
-        ],
-        [
-          1670.0,
-          800
-        ]
-      ],
-      "arrow": false,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "circle",
-      "x": 1670.0,
-      "y": 800,
-      "radius": 4,
-      "fill": "#688381",
-      "stroke": "#688381",
-      "width": 2,
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1670.0,
-          800
-        ],
-        [
-          1670.0,
-          830
         ]
       ],
       "arrow": true,
@@ -1026,12 +470,12 @@
       "type": "path",
       "points": [
         [
-          1670.0,
-          1000
+          240.0,
+          985
         ],
         [
-          1670.0,
-          1015.0
+          240.0,
+          1060
         ]
       ],
       "arrow": true,
@@ -1044,12 +488,20 @@
       "type": "path",
       "points": [
         [
-          1670.0,
-          1205.0
+          424,
+          1180.0
         ],
         [
-          1670.0,
-          1240
+          460.0,
+          1180.0
+        ],
+        [
+          460.0,
+          430.0
+        ],
+        [
+          496,
+          430.0
         ]
       ],
       "arrow": true,
@@ -1062,20 +514,12 @@
       "type": "path",
       "points": [
         [
-          1815.0,
-          1110.0
+          680.0,
+          545
         ],
         [
-          1834,
-          1110.0
-        ],
-        [
-          1834,
-          1430.0
-        ],
-        [
-          1824,
-          1430.0
+          680.0,
+          590
         ]
       ],
       "arrow": true,
@@ -1088,12 +532,12 @@
       "type": "path",
       "points": [
         [
-          1670.0,
-          1365
+          680.0,
+          870
         ],
         [
-          1670.0,
-          1380
+          680.0,
+          920.0
         ]
       ],
       "arrow": true,
@@ -1106,249 +550,11 @@
       "type": "path",
       "points": [
         [
-          1824,
-          1430.0
+          680.0,
+          1140.0
         ],
         [
-          1852.5,
-          1430.0
-        ],
-        [
-          1852.5,
-          437.0
-        ],
-        [
-          1881,
-          437.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          2035.0,
-          524
-        ],
-        [
-          2035.0,
-          625.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          2035.0,
-          795.0
-        ],
-        [
-          2035.0,
-          875
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          1881,
-          935.0
-        ],
-        [
-          1870,
-          935.0
-        ],
-        [
-          1870,
-          437.0
-        ],
-        [
-          1881,
-          437.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          2162.0,
-          710.0
-        ],
-        [
-          2199,
-          710.0
-        ],
-        [
-          2199,
-          1005.0
-        ],
-        [
-          2035.0,
-          1005.0
-        ],
-        [
-          2035.0,
-          1015.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          2035.0,
-          1255.0
-        ],
-        [
-          2035.0,
-          1300
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          2197.0,
-          1135.0
-        ],
-        [
-          2214,
-          1135.0
-        ],
-        [
-          2214,
-          665.5
-        ],
-        [
-          2246,
-          665.5
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          575.0,
-          1474
-        ],
-        [
-          575.0,
-          1510
-        ],
-        [
-          758,
-          1510
-        ]
-      ],
-      "arrow": false,
-      "dashed": true,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          2035.0,
-          1474
-        ],
-        [
-          2035.0,
-          1550
-        ],
-        [
-          758,
-          1550
-        ],
-        [
-          758,
-          445.5
-        ]
-      ],
-      "arrow": true,
-      "dashed": true,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "circle",
-      "x": 758,
-      "y": 1510,
-      "radius": 4,
-      "fill": "#688381",
-      "stroke": "#688381",
-      "width": 2,
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          2400.0,
-          791
-        ],
-        [
-          2400.0,
-          915.0
-        ]
-      ],
-      "arrow": true,
-      "dashed": false,
-      "width": 2.4,
-      "color": "#688381",
-      "group": null
-    },
-    {
-      "type": "path",
-      "points": [
-        [
-          2400.0,
-          1125.0
-        ],
-        [
-          2400.0,
+          680.0,
           1200
         ]
       ],
@@ -1362,20 +568,20 @@
       "type": "path",
       "points": [
         [
-          2250.0,
-          1020.0
+          518.0,
+          1030.0
         ],
         [
-          2235,
-          1020.0
+          485,
+          1030.0
         ],
         [
-          2235,
-          1420.0
+          485,
+          1562.5
         ],
         [
-          2246,
-          1420.0
+          496,
+          1562.5
         ]
       ],
       "arrow": true,
@@ -1385,222 +591,1464 @@
       "group": null
     },
     {
-      "type": "rect",
-      "x": 56,
-      "y": 265,
-      "w": 308,
-      "h": 120,
-      "fill": "#FFFFFF",
-      "stroke": "#DCDAD4",
-      "radius": 16,
-      "width": 1.5,
-      "group": "start-user"
+      "type": "path",
+      "points": [
+        [
+          864,
+          1285.0
+        ],
+        [
+          895,
+          1285.0
+        ],
+        [
+          895,
+          410.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          864,
+          1562.5
+        ],
+        [
+          895,
+          1562.5
+        ],
+        [
+          895,
+          410.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "circle",
+      "x": 895,
+      "y": 410.0,
+      "radius": 4,
+      "fill": "#688381",
+      "stroke": "#688381",
+      "width": 2,
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          895,
+          410.0
+        ],
+        [
+          958.0,
+          410.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1120.0,
+          515.0
+        ],
+        [
+          1120.0,
+          546
+        ],
+        [
+          925,
+          546
+        ],
+        [
+          925,
+          1525.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          925,
+          685.0
+        ],
+        [
+          936,
+          685.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1304,
+          685.0
+        ],
+        [
+          1313,
+          685.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          925,
+          970.0
+        ],
+        [
+          936,
+          970.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1304,
+          970.0
+        ],
+        [
+          1313,
+          970.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          925,
+          1255.0
+        ],
+        [
+          936,
+          1255.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1304,
+          1255.0
+        ],
+        [
+          1313,
+          1255.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          925,
+          1525.0
+        ],
+        [
+          936,
+          1525.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1304,
+          1525.0
+        ],
+        [
+          1313,
+          1525.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1313,
+          462.5
+        ],
+        [
+          1313,
+          1525.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "circle",
+      "x": 1313,
+      "y": 462.5,
+      "radius": 5,
+      "fill": "#688381",
+      "stroke": "#688381",
+      "width": 2,
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1313,
+          462.5
+        ],
+        [
+          1376,
+          462.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1560.0,
+          610
+        ],
+        [
+          1560.0,
+          665.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1560.0,
+          885.0
+        ],
+        [
+          1560.0,
+          955
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1398.0,
+          775.0
+        ],
+        [
+          1365,
+          775.0
+        ],
+        [
+          1365,
+          1347.5
+        ],
+        [
+          1376,
+          1347.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1560.0,
+          1145
+        ],
+        [
+          1560.0,
+          1230
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1560.0,
+          1465
+        ],
+        [
+          1560.0,
+          1555.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1722.0,
+          1670.0
+        ],
+        [
+          1780.0,
+          1670.0
+        ],
+        [
+          1780.0,
+          410.0
+        ],
+        [
+          1838.0,
+          410.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1560.0,
+          1785.0
+        ],
+        [
+          1560.0,
+          1968
+        ],
+        [
+          1754,
+          1968
+        ],
+        [
+          1754,
+          462.5
+        ],
+        [
+          1744,
+          462.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": true,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2000.0,
+          515.0
+        ],
+        [
+          2000.0,
+          545
+        ],
+        [
+          1805,
+          545
+        ],
+        [
+          1805,
+          1285.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1805,
+          750.0
+        ],
+        [
+          1816,
+          750.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2184,
+          750.0
+        ],
+        [
+          2194,
+          750.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1805,
+          1057.5
+        ],
+        [
+          1816,
+          1057.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2184,
+          1057.5
+        ],
+        [
+          2194,
+          1057.5
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1805,
+          1285.0
+        ],
+        [
+          1816,
+          1285.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2184,
+          1285.0
+        ],
+        [
+          2194,
+          1285.0
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2194,
+          750.0
+        ],
+        [
+          2194,
+          1400
+        ],
+        [
+          2000.0,
+          1400
+        ],
+        [
+          2000.0,
+          1435.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2000.0,
+          1645.0
+        ],
+        [
+          2000.0,
+          1740
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2162.0,
+          1540.0
+        ],
+        [
+          2218,
+          1540.0
+        ],
+        [
+          2218,
+          445.0
+        ],
+        [
+          2256,
+          445.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2184,
+          1840.0
+        ],
+        [
+          2225,
+          1840.0
+        ],
+        [
+          2225,
+          445.0
+        ],
+        [
+          2256,
+          445.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2440.0,
+          575
+        ],
+        [
+          2440.0,
+          640.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2440.0,
+          860.0
+        ],
+        [
+          2440.0,
+          930
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2278.0,
+          750.0
+        ],
+        [
+          2245,
+          750.0
+        ],
+        [
+          2245,
+          1257.5
+        ],
+        [
+          2256,
+          1257.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2624,
+          1035.0
+        ],
+        [
+          2634,
+          1035.0
+        ],
+        [
+          2634,
+          1375
+        ],
+        [
+          2440.0,
+          1375
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2440.0,
+          1345
+        ],
+        [
+          2440.0,
+          1375
+        ]
+      ],
+      "arrow": false,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "circle",
+      "x": 2440.0,
+      "y": 1375,
+      "radius": 4,
+      "fill": "#688381",
+      "stroke": "#688381",
+      "width": 2,
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2440.0,
+          1375
+        ],
+        [
+          2440.0,
+          1400.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2440.0,
+          1620.0
+        ],
+        [
+          2440.0,
+          1710
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2602.0,
+          1510.0
+        ],
+        [
+          2653,
+          1510.0
+        ],
+        [
+          2653,
+          452.5
+        ],
+        [
+          2696,
+          452.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2624,
+          1832.5
+        ],
+        [
+          2665,
+          1832.5
+        ],
+        [
+          2665,
+          452.5
+        ],
+        [
+          2696,
+          452.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2880.0,
+          590
+        ],
+        [
+          2880.0,
+          630
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2880.0,
+          865
+        ],
+        [
+          2880.0,
+          920.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2880.0,
+          1160.0
+        ],
+        [
+          2880.0,
+          1260
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          3042.0,
+          1040.0
+        ],
+        [
+          3096,
+          1040.0
+        ],
+        [
+          3096,
+          777.5
+        ],
+        [
+          3136,
+          777.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          3064,
+          1742.5
+        ],
+        [
+          3105,
+          1742.5
+        ],
+        [
+          3105,
+          777.5
+        ],
+        [
+          3136,
+          777.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": true,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          3320.0,
+          925
+        ],
+        [
+          3320.0,
+          1010
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          3320.0,
+          1235
+        ],
+        [
+          3320.0,
+          1285.0
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          3320.0,
+          1515.0
+        ],
+        [
+          3320.0,
+          1615
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          3158.0,
+          1400.0
+        ],
+        [
+          3125,
+          1400.0
+        ],
+        [
+          3125,
+          1887.5
+        ],
+        [
+          3136,
+          1887.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": false,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          1120.0,
+          1915
+        ],
+        [
+          1120.0,
+          2002
+        ],
+        [
+          1365,
+          2002
+        ]
+      ],
+      "arrow": false,
+      "dashed": true,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "path",
+      "points": [
+        [
+          2696,
+          1375.0
+        ],
+        [
+          2685,
+          1375.0
+        ],
+        [
+          2685,
+          2038
+        ],
+        [
+          1365,
+          2038
+        ],
+        [
+          1365,
+          462.5
+        ],
+        [
+          1376,
+          462.5
+        ]
+      ],
+      "arrow": true,
+      "dashed": true,
+      "width": 2.4,
+      "color": "#688381",
+      "group": null
+    },
+    {
+      "type": "circle",
+      "x": 1365,
+      "y": 2002,
+      "radius": 4,
+      "fill": "#688381",
+      "stroke": "#688381",
+      "width": 2,
+      "group": null
     },
     {
       "type": "rect",
       "x": 56,
-      "y": 278,
+      "y": 315,
+      "w": 368,
+      "h": 140,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "request"
+    },
+    {
+      "type": "rect",
+      "x": 56,
+      "y": 328,
       "w": 5,
-      "h": 94,
+      "h": 114,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "start-user"
+      "group": "request"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 281,
+      "y": 331,
       "w": 263.0,
       "text": "Запрос пользователя",
       "size": 24,
       "color": "#123638",
-      "group": "start-user"
+      "group": "request"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 319,
-      "w": 201.0,
-      "text": "Хочу перенести память",
+      "y": 369,
+      "w": 263.0,
+      "text": "Пользователь просит перенос.",
       "size": 18,
       "color": "#123638",
-      "group": "start-user"
+      "group": "request"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 342,
-      "w": 159.0,
-      "text": "из другого агента.",
+      "y": 392,
+      "w": 300.0,
+      "text": "Агент начинает работу и объясняет",
       "size": 18,
       "color": "#123638",
-      "group": "start-user"
+      "group": "request"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 415,
+      "w": 186.0,
+      "text": "следующие действия.",
+      "size": 18,
+      "color": "#123638",
+      "group": "request"
     },
     {
       "type": "rect",
       "x": 56,
-      "y": 430,
-      "w": 308,
-      "h": 145,
+      "y": 500,
+      "w": 368,
+      "h": 170,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "start-cross"
+      "group": "offer"
     },
     {
       "type": "rect",
       "x": 56,
-      "y": 443,
+      "y": 513,
       "w": 5,
-      "h": 119,
-      "fill": "#B47829",
+      "h": 144,
+      "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "start-cross"
+      "group": "offer"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 446,
-      "w": 266.0,
-      "text": "Предложение Кросса",
+      "y": 516,
+      "w": 294.0,
+      "text": "Предложение переноса",
       "size": 24,
       "color": "#123638",
-      "group": "start-cross"
+      "group": "offer"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 484,
-      "w": 235.0,
-      "text": "Внешний триггер продукта.",
+      "y": 554,
+      "w": 299.0,
+      "text": "В подходящем текущем разговоре",
       "size": 18,
       "color": "#123638",
-      "group": "start-cross"
+      "group": "offer"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 507,
-      "w": 219.0,
-      "text": "Навык сам новый диалог",
+      "y": 577,
+      "w": 254.0,
+      "text": "навык сам предлагает начать.",
       "size": 18,
       "color": "#123638",
-      "group": "start-cross"
+      "group": "offer"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 530,
-      "w": 111.984375,
-      "text": "не начинает.",
+      "y": 600,
+      "w": 246.0,
+      "text": "Новый чат или уведомление",
       "size": 18,
       "color": "#123638",
-      "group": "start-cross"
+      "group": "offer"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 623,
+      "w": 235.984375,
+      "text": "самостоятельно не создаёт.",
+      "size": 18,
+      "color": "#123638",
+      "group": "offer"
     },
     {
       "type": "rect",
       "x": 56,
-      "y": 620,
-      "w": 308,
+      "y": 765,
+      "w": 368,
       "h": 220,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "coordinator"
+      "group": "recipient"
     },
     {
       "type": "rect",
       "x": 56,
-      "y": 633,
+      "y": 778,
       "w": 5,
       "h": 194,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "coordinator"
+      "group": "recipient"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 636,
-      "w": 234.0,
-      "text": "Выбрать ведущего",
-      "size": 24,
-      "color": "#123638",
-      "group": "coordinator"
-    },
-    {
-      "type": "text",
-      "x": 72,
-      "y": 665,
-      "w": 85.0,
-      "text": "агента",
-      "size": 24,
-      "color": "#123638",
-      "group": "coordinator"
-    },
-    {
-      "type": "text",
-      "x": 72,
-      "y": 703,
-      "w": 256.0,
-      "text": "Он собирает общий профиль,",
-      "size": 18,
-      "color": "#123638",
-      "group": "coordinator"
-    },
-    {
-      "type": "text",
-      "x": 72,
-      "y": 726,
-      "w": 272.0,
-      "text": "ведёт диалог и хранит решения.",
-      "size": 18,
-      "color": "#123638",
-      "group": "coordinator"
-    },
-    {
-      "type": "text",
-      "x": 72,
-      "y": 749,
+      "y": 781,
       "w": 262.0,
-      "text": "В остальных источниках навык",
-      "size": 18,
+      "text": "Уточнить получателя",
+      "size": 24,
       "color": "#123638",
-      "group": "coordinator"
+      "group": "recipient"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 772,
-      "w": 271.0,
-      "text": "не обязателен: можно передать",
+      "y": 819,
+      "w": 216.96875,
+      "text": "ГигаАгент; ГигаАгент Про",
       "size": 18,
       "color": "#123638",
-      "group": "coordinator"
+      "group": "recipient"
     },
     {
       "type": "text",
       "x": 72,
-      "y": 795,
-      "w": 140.0,
-      "text": "готовые файлы.",
+      "y": 842,
+      "w": 249.984375,
+      "text": "(ex-Ouroboros); другой агент.",
       "size": 18,
       "color": "#123638",
-      "group": "coordinator"
+      "group": "recipient"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 865,
+      "w": 258.0,
+      "text": "Сразу учитываем допустимые",
+      "size": 18,
+      "color": "#123638",
+      "group": "recipient"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 888,
+      "w": 281.0,
+      "text": "файлы и способы записи памяти.",
+      "size": 18,
+      "color": "#123638",
+      "group": "recipient"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 911,
+      "w": 282.0,
+      "text": "Известный выбор не повторяем.",
+      "size": 18,
+      "color": "#123638",
+      "group": "recipient"
     },
     {
       "type": "rect",
       "x": 56,
-      "y": 880,
-      "w": 308,
+      "y": 1060,
+      "w": 368,
+      "h": 240,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "resume"
+    },
+    {
+      "type": "rect",
+      "x": 56,
+      "y": 1073,
+      "w": 5,
+      "h": 214,
+      "fill": "#2C7E8D",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "resume"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 1076,
+      "w": 272.0,
+      "text": "Продолжить с учётом",
+      "size": 24,
+      "color": "#123638",
+      "group": "resume"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 1105,
+      "w": 117.0,
+      "text": "решений",
+      "size": 24,
+      "color": "#123638",
+      "group": "resume"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 1143,
+      "w": 252.0,
+      "text": "Используем прежние ответы,",
+      "size": 18,
+      "color": "#123638",
+      "group": "resume"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 1166,
+      "w": 276.0,
+      "text": "выбранные источники и отказы.",
+      "size": 18,
+      "color": "#123638",
+      "group": "resume"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 1189,
+      "w": 271.0,
+      "text": "Не начинаем интервью заново.",
+      "size": 18,
+      "color": "#123638",
+      "group": "resume"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 1212,
+      "w": 289.0,
+      "text": "Новые факты, изменённые файлы",
+      "size": 18,
+      "color": "#123638",
+      "group": "resume"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 1235,
+      "w": 256.0,
+      "text": "и текущий доступ проверяем.",
+      "size": 18,
+      "color": "#123638",
+      "group": "resume"
+    },
+    {
+      "type": "text",
+      "x": 72,
+      "y": 1258,
+      "w": 229.0,
+      "text": "Решения можно изменить.",
+      "size": 18,
+      "color": "#123638",
+      "group": "resume"
+    },
+    {
+      "type": "rect",
+      "x": 496,
+      "y": 315,
+      "w": 368,
       "h": 230,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
@@ -1610,8 +2058,8 @@
     },
     {
       "type": "rect",
-      "x": 56,
-      "y": 893,
+      "x": 496,
+      "y": 328,
       "w": 5,
       "h": 204,
       "fill": "#2C7E8D",
@@ -1622,18 +2070,18 @@
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 896,
-      "w": 224.0,
-      "text": "Карта источников",
+      "x": 512,
+      "y": 331,
+      "w": 336.0,
+      "text": "Показать карту источников",
       "size": 24,
       "color": "#123638",
       "group": "source-map"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 934,
+      "x": 512,
+      "y": 369,
       "w": 249.0,
       "text": "ChatGPT · Claude · Dots · Duet",
       "size": 18,
@@ -1642,1032 +2090,1147 @@
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 957,
+      "x": 512,
+      "y": 392,
       "w": 175.0,
-      "text": "Claude Code · Codex",
+      "text": "Codex · Claude Code",
       "size": 18,
       "color": "#123638",
       "group": "source-map"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 980,
-      "w": 257.0,
-      "text": "Один аккаунт и набор данных",
-      "size": 18,
-      "color": "#123638",
-      "group": "source-map"
-    },
-    {
-      "type": "text",
-      "x": 72,
-      "y": 1003,
-      "w": 222.0,
-      "text": "в разных приложениях —",
-      "size": 18,
-      "color": "#123638",
-      "group": "source-map"
-    },
-    {
-      "type": "text",
-      "x": 72,
-      "y": 1026,
-      "w": 232.015625,
-      "text": "один источник. Проектные",
-      "size": 18,
-      "color": "#123638",
-      "group": "source-map"
-    },
-    {
-      "type": "text",
-      "x": 72,
-      "y": 1049,
+      "x": 512,
+      "y": 415,
       "w": 238.0,
-      "text": "папки учитываем отдельно.",
+      "text": "Среда: веб, десктоп или CLI.",
+      "size": 18,
+      "color": "#123638",
+      "group": "source-map"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 438,
+      "w": 238.0,
+      "text": "Отдельно: аккаунт, рабочее",
+      "size": 18,
+      "color": "#123638",
+      "group": "source-map"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 461,
+      "w": 263.0,
+      "text": "пространство и набор данных.",
       "size": 18,
       "color": "#123638",
       "group": "source-map"
     },
     {
       "type": "rect",
-      "x": 56,
-      "y": 1140,
-      "w": 308,
-      "h": 320,
+      "x": 496,
+      "y": 590,
+      "w": 368,
+      "h": 280,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "rect",
-      "x": 56,
-      "y": 1153,
+      "x": 496,
+      "y": 603,
       "w": 5,
-      "h": 294,
+      "h": 254,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 1156,
-      "w": 256.0,
-      "text": "Контекст Dots / Duet",
+      "x": 512,
+      "y": 606,
+      "w": 327.0,
+      "text": "Уточнить данные и доступ",
       "size": 24,
       "color": "#123638",
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 1194,
-      "w": 252.0,
-      "text": "Заметки и явные инструкции;",
+      "x": 512,
+      "y": 644,
+      "w": 298.0,
+      "text": "История аккаунта; файлы в облаке;",
       "size": 18,
       "color": "#123638",
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 1217,
-      "w": 255.0,
-      "text": "проекты и правила проектов;",
+      "x": 512,
+      "y": 667,
+      "w": 287.0,
+      "text": "локальные папки на компьютере.",
       "size": 18,
       "color": "#123638",
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 1240,
-      "w": 190.0,
-      "text": "обязанности, текущие",
+      "x": 512,
+      "y": 690,
+      "w": 295.0,
+      "text": "Десктоп может работать со всеми.",
       "size": 18,
       "color": "#123638",
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 1263,
-      "w": 186.984375,
-      "text": "и регулярные задачи;",
+      "x": 512,
+      "y": 713,
+      "w": 290.0,
+      "text": "Общая история учитывается один",
       "size": 18,
       "color": "#123638",
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 1286,
-      "w": 194.0,
-      "text": "подключения, каналы,",
+      "x": 512,
+      "y": 736,
+      "w": 265.0,
+      "text": "раз, дополнительные файлы —",
       "size": 18,
       "color": "#123638",
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 1309,
-      "w": 100.0,
-      "text": "артефакты.",
+      "x": 512,
+      "y": 759,
+      "w": 275.0,
+      "text": "отдельно. Проверяем, что агент",
       "size": 18,
       "color": "#123638",
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "text",
-      "x": 72,
-      "y": 1332,
-      "w": 263.0,
-      "text": "Сохраняем доступные данные,",
+      "x": 512,
+      "y": 782,
+      "w": 280.0,
+      "text": "действительно может прочитать.",
       "size": 18,
       "color": "#123638",
-      "group": "dots-duet-context"
-    },
-    {
-      "type": "text",
-      "x": 72,
-      "y": 1355,
-      "w": 281.0,
-      "text": "исходные инструкции и их связи.",
-      "size": 18,
-      "color": "#123638",
-      "group": "dots-duet-context"
-    },
-    {
-      "type": "text",
-      "x": 72,
-      "y": 1378,
-      "w": 263.0,
-      "text": "Пробелы остаются видимыми.",
-      "size": 18,
-      "color": "#123638",
-      "group": "dots-duet-context"
+      "group": "source-locations"
     },
     {
       "type": "diamond",
-      "x": 437.0,
-      "y": 213.0,
-      "w": 276,
-      "h": 174,
+      "x": 518.0,
+      "y": 920.0,
+      "w": 324,
+      "h": 220,
       "fill": "#EBF3E9",
       "stroke": "#2C7E8D",
       "width": 2,
-      "group": "scope-choice"
+      "group": "source-count"
     },
     {
       "type": "text",
-      "x": 478.5,
-      "y": 267.0,
+      "x": 608.5,
+      "y": 986.5,
+      "w": 153.0,
+      "text": "Источников",
+      "size": 24,
+      "color": "#123638",
+      "group": "source-count"
+    },
+    {
+      "type": "text",
+      "x": 613.0,
+      "y": 1015.5,
+      "w": 144.0,
+      "text": "несколько?",
+      "size": 24,
+      "color": "#123638",
+      "group": "source-count"
+    },
+    {
+      "type": "text",
+      "x": 578.5,
+      "y": 1050.5,
+      "w": 213.0,
+      "text": "После проверки состава",
+      "size": 18,
+      "color": "#123638",
+      "group": "source-count"
+    },
+    {
+      "type": "rect",
+      "x": 496,
+      "y": 1200,
+      "w": 368,
+      "h": 170,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "single-source"
+    },
+    {
+      "type": "rect",
+      "x": 496,
+      "y": 1213,
+      "w": 5,
+      "h": 144,
+      "fill": "#2C7E8D",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "single-source"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1216,
+      "w": 291.0,
+      "text": "Собрать один источник",
+      "size": 24,
+      "color": "#123638",
+      "group": "single-source"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1254,
+      "w": 250.0,
+      "text": "Агент сообщает: подготовлю",
+      "size": 18,
+      "color": "#123638",
+      "group": "single-source"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1277,
+      "w": 261.0,
+      "text": "экспорт здесь за один проход.",
+      "size": 18,
+      "color": "#123638",
+      "group": "single-source"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1300,
+      "w": 312.0,
+      "text": "Проверка и уточнения сохраняются.",
+      "size": 18,
+      "color": "#123638",
+      "group": "single-source"
+    },
+    {
+      "type": "rect",
+      "x": 496,
+      "y": 1440,
+      "w": 368,
+      "h": 245,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "coordinator"
+    },
+    {
+      "type": "rect",
+      "x": 496,
+      "y": 1453,
+      "w": 5,
+      "h": 219,
+      "fill": "#2C7E8D",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "coordinator"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1456,
+      "w": 256.0,
+      "text": "Назначить ведущего",
+      "size": 24,
+      "color": "#123638",
+      "group": "coordinator"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1494,
+      "w": 243.0,
+      "text": "Агент объявляет свою роль:",
+      "size": 18,
+      "color": "#123638",
+      "group": "coordinator"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1517,
+      "w": 294.0,
+      "text": "свести источники, убрать повторы",
+      "size": 18,
+      "color": "#123638",
+      "group": "coordinator"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1540,
+      "w": 241.0,
+      "text": "и проверить противоречия.",
+      "size": 18,
+      "color": "#123638",
+      "group": "coordinator"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1563,
+      "w": 282.0,
+      "text": "Остальные передают материалы;",
+      "size": 18,
+      "color": "#123638",
+      "group": "coordinator"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1586,
+      "w": 235.0,
+      "text": "навык в каждом источнике",
+      "size": 18,
+      "color": "#123638",
+      "group": "coordinator"
+    },
+    {
+      "type": "text",
+      "x": 512,
+      "y": 1609,
+      "w": 256.0,
+      "text": "устанавливать необязательно.",
+      "size": 18,
+      "color": "#123638",
+      "group": "coordinator"
+    },
+    {
+      "type": "diamond",
+      "x": 958.0,
+      "y": 305.0,
+      "w": 324,
+      "h": 210,
+      "fill": "#EBF3E9",
+      "stroke": "#2C7E8D",
+      "width": 2,
+      "group": "scope"
+    },
+    {
+      "type": "text",
+      "x": 1023.5,
+      "y": 377.0,
       "w": 203.0,
       "text": "Что переносим?",
       "size": 24,
       "color": "#123638",
-      "group": "scope-choice"
+      "group": "scope"
     },
     {
       "type": "text",
-      "x": 507.0,
-      "y": 302.0,
+      "x": 1052.0,
+      "y": 412.0,
       "w": 146.0,
       "text": "Можно сочетать",
       "size": 18,
       "color": "#123638",
-      "group": "scope-choice"
+      "group": "scope"
     },
     {
       "type": "circle",
-      "x": 575.0,
-      "y": 365.0,
+      "x": 1120.0,
+      "y": 493.0,
       "radius": 8,
       "fill": "#EBF3E9",
       "stroke": "#1C7134",
       "width": 2,
-      "group": "scope-choice"
+      "group": "scope"
     },
     {
       "type": "rect",
-      "x": 421,
-      "y": 440,
-      "w": 308,
-      "h": 174,
+      "x": 936,
+      "y": 580,
+      "w": 368,
+      "h": 210,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "collect-profile"
+      "group": "profile"
     },
     {
       "type": "rect",
-      "x": 421,
-      "y": 453,
+      "x": 936,
+      "y": 593,
       "w": 5,
-      "h": 148,
+      "h": 184,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "collect-profile"
+      "group": "profile"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 456,
-      "w": 141.0,
-      "text": "Профиль и",
+      "x": 952,
+      "y": 596,
+      "w": 288.0,
+      "text": "Профиль и инструкции",
       "size": 24,
       "color": "#123638",
-      "group": "collect-profile"
+      "group": "profile"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 485,
-      "w": 150.0,
-      "text": "инструкции",
-      "size": 24,
-      "color": "#123638",
-      "group": "collect-profile"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 523,
-      "w": 266.0,
-      "text": "Заметки, почты, предпочтения.",
+      "x": 952,
+      "y": 634,
+      "w": 270.0,
+      "text": "Почты, предпочтения, правила.",
       "size": 18,
       "color": "#123638",
-      "group": "collect-profile"
+      "group": "profile"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 546,
-      "w": 197.0,
-      "text": "Инструкции дословно,",
+      "x": 952,
+      "y": 657,
+      "w": 260.0,
+      "text": "Пользовательские инструкции",
       "size": 18,
       "color": "#123638",
-      "group": "collect-profile"
+      "group": "profile"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 569,
-      "w": 224.0,
-      "text": "с источником и областью.",
+      "x": 952,
+      "y": 680,
+      "w": 276.0,
+      "text": "и контекст Dots / Duet: проекты,",
       "size": 18,
       "color": "#123638",
-      "group": "collect-profile"
+      "group": "profile"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 703,
+      "w": 303.0,
+      "text": "обязанности, задачи, подключения.",
+      "size": 18,
+      "color": "#123638",
+      "group": "profile"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 726,
+      "w": 278.0,
+      "text": "Сохраняем источники и область.",
+      "size": 18,
+      "color": "#123638",
+      "group": "profile"
     },
     {
       "type": "rect",
-      "x": 421,
-      "y": 650,
-      "w": 308,
-      "h": 200,
+      "x": 936,
+      "y": 845,
+      "w": 368,
+      "h": 250,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "collect-works"
+      "group": "works"
     },
     {
       "type": "rect",
-      "x": 421,
-      "y": 663,
+      "x": 936,
+      "y": 858,
       "w": 5,
-      "h": 174,
+      "h": 224,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "collect-works"
+      "group": "works"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 666,
-      "w": 204.984375,
-      "text": "Работы и новые",
+      "x": 952,
+      "y": 861,
+      "w": 283.0,
+      "text": "Предложить работы →",
       "size": 24,
       "color": "#123638",
-      "group": "collect-works"
+      "group": "works"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 695,
+      "x": 952,
+      "y": 890,
       "w": 100.0,
       "text": "навыки",
       "size": 24,
       "color": "#123638",
-      "group": "collect-works"
+      "group": "works"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 733,
-      "w": 246.0,
-      "text": "Правила проекта связываем",
+      "x": 952,
+      "y": 928,
+      "w": 244.0,
+      "text": "Агент сам находит полезные",
       "size": 18,
       "color": "#123638",
-      "group": "collect-works"
+      "group": "works"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 756,
-      "w": 236.0,
-      "text": "с навыком: исходный текст,",
+      "x": 952,
+      "y": 951,
+      "w": 274.96875,
+      "text": "результаты в доступных беседах",
       "size": 18,
       "color": "#123638",
-      "group": "collect-works"
+      "group": "works"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 779,
-      "w": 250.015625,
-      "text": "область действия и источник.",
+      "x": 952,
+      "y": 974,
+      "w": 224.0,
+      "text": "и показывает кандидатов.",
       "size": 18,
       "color": "#123638",
-      "group": "collect-works"
+      "group": "works"
     },
     {
       "type": "text",
-      "x": 437,
-      "y": 802,
-      "w": 279.96875,
-      "text": "Отбираем значимые результаты.",
+      "x": 952,
+      "y": 997,
+      "w": 307.984375,
+      "text": "Пользователь выбирает. Избранное",
       "size": 18,
       "color": "#123638",
-      "group": "collect-works"
+      "group": "works"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1020,
+      "w": 259.0,
+      "text": "сохраняем как материалы или",
+      "size": 18,
+      "color": "#123638",
+      "group": "works"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1043,
+      "w": 310.015625,
+      "text": "создаём и проверяем новый навык.",
+      "size": 18,
+      "color": "#123638",
+      "group": "works"
     },
     {
       "type": "rect",
-      "x": 421,
-      "y": 860,
-      "w": 308,
-      "h": 174,
+      "x": 936,
+      "y": 1150,
+      "w": 368,
+      "h": 210,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "collect-skills"
+      "group": "skills"
     },
     {
       "type": "rect",
-      "x": 421,
-      "y": 873,
+      "x": 936,
+      "y": 1163,
       "w": 5,
-      "h": 148,
-      "fill": "#1C7134",
-      "stroke": null,
-      "radius": 2,
-      "width": 1.5,
-      "group": "collect-skills"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 876,
-      "w": 206.96875,
-      "text": "Готовые навыки",
-      "size": 24,
-      "color": "#123638",
-      "group": "collect-skills"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 914,
-      "w": 217.0,
-      "text": "В том числе самописные.",
-      "size": 18,
-      "color": "#123638",
-      "group": "collect-skills"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 937,
-      "w": 190.0,
-      "text": "Оригиналы с кодом и",
-      "size": 18,
-      "color": "#123638",
-      "group": "collect-skills"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 960,
-      "w": 109.0,
-      "text": "шаблонами.",
-      "size": 18,
-      "color": "#123638",
-      "group": "collect-skills"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 983,
-      "w": 191.0,
-      "text": "Список зависимостей.",
-      "size": 18,
-      "color": "#123638",
-      "group": "collect-skills"
-    },
-    {
-      "type": "rect",
-      "x": 421,
-      "y": 1070,
-      "w": 308,
-      "h": 190,
-      "fill": "#FFFFFF",
-      "stroke": "#DCDAD4",
-      "radius": 16,
-      "width": 1.5,
-      "group": "collect-history"
-    },
-    {
-      "type": "rect",
-      "x": 421,
-      "y": 1083,
-      "w": 5,
-      "h": 164,
-      "fill": "#1C7134",
-      "stroke": null,
-      "radius": 2,
-      "width": 1.5,
-      "group": "collect-history"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1086,
-      "w": 202.0,
-      "text": "Полные архивы",
-      "size": 24,
-      "color": "#123638",
-      "group": "collect-history"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1124,
-      "w": 258.96875,
-      "text": "Готовые обрабатываем сразу.",
-      "size": 18,
-      "color": "#123638",
-      "group": "collect-history"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1147,
-      "w": 192.0,
-      "text": "Ожидаемые приносит",
-      "size": 18,
-      "color": "#123638",
-      "group": "collect-history"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1170,
-      "w": 238.0,
-      "text": "пользователь. Другие ветки",
-      "size": 18,
-      "color": "#123638",
-      "group": "collect-history"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1193,
-      "w": 196.0,
-      "text": "продолжаются сейчас.",
-      "size": 18,
-      "color": "#123638",
-      "group": "collect-history"
-    },
-    {
-      "type": "rect",
-      "x": 421,
-      "y": 1300,
-      "w": 308,
-      "h": 174,
-      "fill": "#FFFFFF",
-      "stroke": "#DCDAD4",
-      "radius": 16,
-      "width": 1.5,
-      "group": "new-source"
-    },
-    {
-      "type": "rect",
-      "x": 421,
-      "y": 1313,
-      "w": 5,
-      "h": 148,
-      "fill": "#1C7134",
-      "stroke": null,
-      "radius": 2,
-      "width": 1.5,
-      "group": "new-source"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1316,
-      "w": 258.0,
-      "text": "Добавился источник",
-      "size": 24,
-      "color": "#123638",
-      "group": "new-source"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1354,
-      "w": 245.0,
-      "text": "Или изменились его данные.",
-      "size": 18,
-      "color": "#123638",
-      "group": "new-source"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1377,
-      "w": 249.0,
-      "text": "Прежняя проверка устарела.",
-      "size": 18,
-      "color": "#123638",
-      "group": "new-source"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1400,
-      "w": 243.0,
-      "text": "Обновляем общий профиль",
-      "size": 18,
-      "color": "#123638",
-      "group": "new-source"
-    },
-    {
-      "type": "text",
-      "x": 437,
-      "y": 1423,
-      "w": 186.0,
-      "text": "и проверяем заново.",
-      "size": 18,
-      "color": "#123638",
-      "group": "new-source"
-    },
-    {
-      "type": "rect",
-      "x": 786,
-      "y": 265,
-      "w": 308,
-      "h": 345,
-      "fill": "#FFFFFF",
-      "stroke": "#DCDAD4",
-      "radius": 16,
-      "width": 1.5,
-      "group": "quality-check"
-    },
-    {
-      "type": "rect",
-      "x": 786,
-      "y": 278,
-      "w": 5,
-      "h": 319,
+      "h": 184,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "quality-check"
+      "group": "skills"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 281,
-      "w": 228.0,
-      "text": "Проверить общий",
+      "x": 952,
+      "y": 1166,
+      "w": 337.0,
+      "text": "Сохранить готовые навыки",
       "size": 24,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "skills"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 310,
-      "w": 116.0,
-      "text": "профиль",
+      "x": 952,
+      "y": 1204,
+      "w": 242.0,
+      "text": "Оригиналы, код и шаблоны,",
+      "size": 18,
+      "color": "#123638",
+      "group": "skills"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1227,
+      "w": 217.0,
+      "text": "в том числе самописные.",
+      "size": 18,
+      "color": "#123638",
+      "group": "skills"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1250,
+      "w": 241.0,
+      "text": "Правила проекта включаем",
+      "size": 18,
+      "color": "#123638",
+      "group": "skills"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1273,
+      "w": 242.0,
+      "text": "в связанную копию навыка.",
+      "size": 18,
+      "color": "#123638",
+      "group": "skills"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1296,
+      "w": 287.0,
+      "text": "Зависимости отмечаем отдельно.",
+      "size": 18,
+      "color": "#123638",
+      "group": "skills"
+    },
+    {
+      "type": "rect",
+      "x": 936,
+      "y": 1415,
+      "w": 368,
+      "h": 220,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "history"
+    },
+    {
+      "type": "rect",
+      "x": 936,
+      "y": 1428,
+      "w": 5,
+      "h": 194,
+      "fill": "#2C7E8D",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "history"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1431,
+      "w": 270.0,
+      "text": "Получить выбранные",
       "size": 24,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "history"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 348,
-      "w": 213.0,
-      "text": "Ведущий сравнивает все",
-      "size": 18,
+      "x": 952,
+      "y": 1460,
+      "w": 100.0,
+      "text": "архивы",
+      "size": 24,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "history"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 371,
-      "w": 249.0,
-      "text": "предоставленные источники:",
+      "x": 952,
+      "y": 1498,
+      "w": 256.96875,
+      "text": "Готовое обрабатываем сразу.",
       "size": 18,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "history"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 394,
-      "w": 161.0,
-      "text": "смысловые дубли,",
+      "x": 952,
+      "y": 1521,
+      "w": 230.0,
+      "text": "Пользователь передаёт то,",
       "size": 18,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "history"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 417,
-      "w": 133.0,
-      "text": "противоречия,",
+      "x": 952,
+      "y": 1544,
+      "w": 262.0,
+      "text": "к чему агент не имеет доступа.",
       "size": 18,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "history"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 440,
-      "w": 281.0,
-      "text": "актуальность и исходные цитаты.",
+      "x": 952,
+      "y": 1567,
+      "w": 303.0,
+      "text": "Ожидание не останавливает другие",
       "size": 18,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "history"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 463,
-      "w": 257.0,
-      "text": "Личное, рабочее и проектное",
+      "x": 952,
+      "y": 1590,
+      "w": 59.0,
+      "text": "ветки.",
       "size": 18,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "history"
+    },
+    {
+      "type": "rect",
+      "x": 936,
+      "y": 1720,
+      "w": 368,
+      "h": 195,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "new-source"
+    },
+    {
+      "type": "rect",
+      "x": 936,
+      "y": 1733,
+      "w": 5,
+      "h": 169,
+      "fill": "#1C7134",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "new-source"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 486,
-      "w": 269.0,
-      "text": "различает по области действия.",
-      "size": 18,
+      "x": 952,
+      "y": 1736,
+      "w": 322.0,
+      "text": "Появились новые данные",
+      "size": 24,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "new-source"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 509,
-      "w": 228.0,
-      "text": "Второй проход проверяет",
+      "x": 952,
+      "y": 1774,
+      "w": 295.0,
+      "text": "Добавлен источник или изменился",
       "size": 18,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "new-source"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 532,
-      "w": 81.0,
-      "text": "выводы.",
+      "x": 952,
+      "y": 1797,
+      "w": 260.0,
+      "text": "его состав. Обновляем общий",
       "size": 18,
       "color": "#123638",
-      "group": "quality-check"
+      "group": "new-source"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1820,
+      "w": 281.984375,
+      "text": "профиль и повторяем проверку.",
+      "size": 18,
+      "color": "#123638",
+      "group": "new-source"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1843,
+      "w": 297.0,
+      "text": "Прежние действительные решения",
+      "size": 18,
+      "color": "#123638",
+      "group": "new-source"
+    },
+    {
+      "type": "text",
+      "x": 952,
+      "y": 1866,
+      "w": 119.0,
+      "text": "сохраняются.",
+      "size": 18,
+      "color": "#123638",
+      "group": "new-source"
+    },
+    {
+      "type": "rect",
+      "x": 1376,
+      "y": 315,
+      "w": 368,
+      "h": 295,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "common-review"
+    },
+    {
+      "type": "rect",
+      "x": 1376,
+      "y": 328,
+      "w": 5,
+      "h": 269,
+      "fill": "#2C7E8D",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "common-review"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 331,
+      "w": 308.0,
+      "text": "Сверить общий профиль",
+      "size": 24,
+      "color": "#123638",
+      "group": "common-review"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 369,
+      "w": 231.0,
+      "text": "Модель сравнивает факты,",
+      "size": 18,
+      "color": "#123638",
+      "group": "common-review"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 392,
+      "w": 285.0,
+      "text": "смысловые дубли, противоречия",
+      "size": 18,
+      "color": "#123638",
+      "group": "common-review"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 415,
+      "w": 263.0,
+      "text": "и актуальность по источникам.",
+      "size": 18,
+      "color": "#123638",
+      "group": "common-review"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 438,
+      "w": 282.984375,
+      "text": "Личное и рабочее не смешивает.",
+      "size": 18,
+      "color": "#123638",
+      "group": "common-review"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 461,
+      "w": 304.0,
+      "text": "Второй проход проверяет выводы.",
+      "size": 18,
+      "color": "#123638",
+      "group": "common-review"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 484,
+      "w": 275.0,
+      "text": "Код проверяет охват, состояние",
+      "size": 18,
+      "color": "#123638",
+      "group": "common-review"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 507,
+      "w": 193.0,
+      "text": "и актуальность отчёта.",
+      "size": 18,
+      "color": "#123638",
+      "group": "common-review"
     },
     {
       "type": "diamond",
-      "x": 813.0,
-      "y": 655.0,
-      "w": 254,
-      "h": 190,
+      "x": 1398.0,
+      "y": 665.0,
+      "w": 324,
+      "h": 220,
       "fill": "#EBF3E9",
       "stroke": "#2C7E8D",
       "width": 2,
-      "group": "quality-decision"
+      "group": "disputed"
     },
     {
       "type": "text",
-      "x": 856.5,
-      "y": 721.0,
+      "x": 1476.5,
+      "y": 746.0,
       "w": 177.0,
       "text": "Есть спорное?",
       "size": 24,
       "color": "#123638",
-      "group": "quality-decision"
+      "group": "disputed"
     },
     {
       "type": "text",
-      "x": 874.0,
-      "y": 756.0,
-      "w": 142.0,
-      "text": "Или устаревшее",
+      "x": 1458.5,
+      "y": 781.0,
+      "w": 213.0,
+      "text": "Неясное или устаревшее",
       "size": 18,
       "color": "#123638",
-      "group": "quality-decision"
+      "group": "disputed"
     },
     {
       "type": "rect",
-      "x": 786,
-      "y": 900,
-      "w": 308,
+      "x": 1376,
+      "y": 955,
+      "w": 368,
       "h": 190,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "quality-clarify"
+      "group": "clarify"
     },
     {
       "type": "rect",
-      "x": 786,
-      "y": 913,
+      "x": 1376,
+      "y": 968,
       "w": 5,
       "h": 164,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "quality-clarify"
+      "group": "clarify"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 916,
-      "w": 226.0,
-      "text": "Уточнить спорное",
+      "x": 1392,
+      "y": 971,
+      "w": 314.0,
+      "text": "Уточнить только спорное",
       "size": 24,
       "color": "#123638",
-      "group": "quality-clarify"
+      "group": "clarify"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 954,
-      "w": 266.984375,
-      "text": "Только новое и изменившееся.",
+      "x": 1392,
+      "y": 1009,
+      "w": 319.0,
+      "text": "Показываем найденное и основания.",
       "size": 18,
       "color": "#123638",
-      "group": "quality-clarify"
+      "group": "clarify"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 977,
-      "w": 189.0,
-      "text": "Более поздняя запись",
+      "x": 1392,
+      "y": 1032,
+      "w": 225.0,
+      "text": "Задаём точечный вопрос.",
       "size": 18,
       "color": "#123638",
-      "group": "quality-clarify"
+      "group": "clarify"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 1000,
-      "w": 202.984375,
-      "text": "не получает приоритет.",
+      "x": 1392,
+      "y": 1055,
+      "w": 265.0,
+      "text": "Дата импорта не делает старое",
       "size": 18,
       "color": "#123638",
-      "group": "quality-clarify"
+      "group": "clarify"
     },
     {
       "type": "text",
-      "x": 802,
-      "y": 1023,
-      "w": 283.0,
-      "text": "Полное интервью не повторяем.",
+      "x": 1392,
+      "y": 1078,
+      "w": 191.0,
+      "text": "сведение актуальным.",
       "size": 18,
       "color": "#123638",
-      "group": "quality-clarify"
+      "group": "clarify"
     },
     {
       "type": "rect",
-      "x": 786,
-      "y": 1120,
-      "w": 308,
-      "h": 300,
+      "x": 1376,
+      "y": 1230,
+      "w": 368,
+      "h": 235,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "quality-confirm"
+      "group": "decisions"
     },
     {
       "type": "rect",
-      "x": 786,
-      "y": 1133,
-      "w": 5,
-      "h": 274,
-      "fill": "#2C7E8D",
-      "stroke": null,
-      "radius": 2,
-      "width": 1.5,
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
-      "y": 1136,
-      "w": 248.0,
-      "text": "Сохранить решения",
-      "size": 24,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
-      "y": 1174,
-      "w": 185.0,
-      "text": "Новое подтверждает",
-      "size": 18,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
-      "y": 1197,
-      "w": 125.0,
-      "text": "пользователь.",
-      "size": 18,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
-      "y": 1220,
-      "w": 245.0,
-      "text": "Прежние актуальные ответы",
-      "size": 18,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
+      "x": 1376,
       "y": 1243,
-      "w": 228.0,
-      "text": "и отложения сохраняются.",
-      "size": 18,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
-      "y": 1266,
-      "w": 275.0,
-      "text": "Повторы показываем один раз;",
-      "size": 18,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
-      "y": 1289,
-      "w": 205.0,
-      "text": "оригиналы и источники",
-      "size": 18,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
-      "y": 1312,
-      "w": 88.0,
-      "text": "остаются.",
-      "size": 18,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
-      "y": 1335,
-      "w": 262.0,
-      "text": "Спорное и неподтверждённое",
-      "size": 18,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "text",
-      "x": 802,
-      "y": 1358,
-      "w": 135.0,
-      "text": "не активируем.",
-      "size": 18,
-      "color": "#123638",
-      "group": "quality-confirm"
-    },
-    {
-      "type": "rect",
-      "x": 1151,
-      "y": 280,
-      "w": 308,
-      "h": 151,
-      "fill": "#FFFFFF",
-      "stroke": "#DCDAD4",
-      "radius": 16,
-      "width": 1.5,
-      "group": "choose-storage"
-    },
-    {
-      "type": "rect",
-      "x": 1151,
-      "y": 293,
       "w": 5,
-      "h": 125,
-      "fill": "#2C7E8D",
+      "h": 209,
+      "fill": "#1C7134",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "choose-storage"
+      "group": "decisions"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 296,
-      "w": 254.0,
-      "text": "Выбрать хранилище",
+      "x": 1392,
+      "y": 1246,
+      "w": 304.0,
+      "text": "Зафиксировать решения",
       "size": 24,
       "color": "#123638",
-      "group": "choose-storage"
+      "group": "decisions"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 334,
-      "w": 222.015625,
-      "text": "Google Диск, Яндекс Диск",
+      "x": 1392,
+      "y": 1284,
+      "w": 287.0,
+      "text": "Сохраняем согласованный смысл",
       "size": 18,
       "color": "#123638",
-      "group": "choose-storage"
+      "group": "decisions"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 357,
-      "w": 248.0,
-      "text": "или другое доступное место.",
+      "x": 1392,
+      "y": 1307,
+      "w": 170.0,
+      "text": "и область действия.",
       "size": 18,
       "color": "#123638",
-      "group": "choose-storage"
+      "group": "decisions"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 380,
-      "w": 285.0,
-      "text": "У получателя может быть другое.",
+      "x": 1392,
+      "y": 1330,
+      "w": 275.0,
+      "text": "Повторы показываем один раз,",
       "size": 18,
       "color": "#123638",
-      "group": "choose-storage"
+      "group": "decisions"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 1353,
+      "w": 288.0,
+      "text": "источники и оригиналы остаются.",
+      "size": 18,
+      "color": "#123638",
+      "group": "decisions"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 1376,
+      "w": 210.0,
+      "text": "Неуточнённое отделяем",
+      "size": 18,
+      "color": "#123638",
+      "group": "decisions"
+    },
+    {
+      "type": "text",
+      "x": 1392,
+      "y": 1399,
+      "w": 176.0,
+      "text": "от активной памяти.",
+      "size": 18,
+      "color": "#123638",
+      "group": "decisions"
     },
     {
       "type": "diamond",
-      "x": 1143.0,
-      "y": 470.0,
+      "x": 1398.0,
+      "y": 1555.0,
       "w": 324,
-      "h": 250,
+      "h": 230,
       "fill": "#EBF3E9",
       "stroke": "#1C7134",
       "width": 2,
@@ -2675,8 +3238,8 @@
     },
     {
       "type": "text",
-      "x": 1247.0,
-      "y": 551.5,
+      "x": 1502.0,
+      "y": 1626.5,
       "w": 126.0,
       "text": "Проверка",
       "size": 24,
@@ -2685,8 +3248,8 @@
     },
     {
       "type": "text",
-      "x": 1240.5,
-      "y": 580.5,
+      "x": 1495.5,
+      "y": 1655.5,
       "w": 139.0,
       "text": "актуальна?",
       "size": 24,
@@ -2695,124 +3258,602 @@
     },
     {
       "type": "text",
-      "x": 1219.5,
-      "y": 615.5,
-      "w": 181.0,
-      "text": "Для всех источников",
+      "x": 1455.5,
+      "y": 1690.5,
+      "w": 219.0,
+      "text": "Общий состав и решения",
       "size": 18,
       "color": "#123638",
       "group": "export-gate"
     },
     {
+      "type": "diamond",
+      "x": 1838.0,
+      "y": 305.0,
+      "w": 324,
+      "h": 210,
+      "fill": "#EBF3E9",
+      "stroke": "#2C7E8D",
+      "width": 2,
+      "group": "target"
+    },
+    {
+      "type": "text",
+      "x": 1964.0,
+      "y": 366.5,
+      "w": 82.0,
+      "text": "Какой",
+      "size": 24,
+      "color": "#123638",
+      "group": "target"
+    },
+    {
+      "type": "text",
+      "x": 1927.0,
+      "y": 395.5,
+      "w": 156.0,
+      "text": "получатель?",
+      "size": 24,
+      "color": "#123638",
+      "group": "target"
+    },
+    {
+      "type": "text",
+      "x": 1928.5,
+      "y": 430.5,
+      "w": 153.0,
+      "text": "Выбран на старте",
+      "size": 18,
+      "color": "#123638",
+      "group": "target"
+    },
+    {
       "type": "rect",
-      "x": 1151,
-      "y": 770,
-      "w": 308,
-      "h": 280,
+      "x": 1816,
+      "y": 580,
+      "w": 368,
+      "h": 340,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "portable-package"
+      "group": "giga-format"
     },
     {
       "type": "rect",
-      "x": 1151,
-      "y": 783,
+      "x": 1816,
+      "y": 593,
       "w": 5,
-      "h": 254,
+      "h": 314,
+      "fill": "#2C7E8D",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 596,
+      "w": 302.953125,
+      "text": "ГигаАгент: адаптировать",
+      "size": 24,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 625,
+      "w": 116.0,
+      "text": "профиль",
+      "size": 24,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 663,
+      "w": 264.0,
+      "text": "Разделить независимые факты.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 686,
+      "w": 320.015625,
+      "text": "Проверить смысл, условия, источник.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 709,
+      "w": 261.0,
+      "text": "Показать: войдёт / не войдёт /",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 732,
+      "w": 332.0,
+      "text": "нужно уточнить; причины исключения.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 755,
+      "w": 300.0,
+      "text": "Указать место сохранения резерва.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 778,
+      "w": 213.0,
+      "text": "user ≤ 20 · feedback ≤ 30",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 801,
+      "w": 245.0,
+      "text": "project ≤ 100 · reference ≤ 40",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 824,
+      "w": 306.0,
+      "text": "Описание ≤ 200, факт ≤ 450 знаков.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 847,
+      "w": 269.0,
+      "text": "Временное, спорное и избыток",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 870,
+      "w": 294.0,
+      "text": "не импортировать автоматически.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-format"
+    },
+    {
+      "type": "rect",
+      "x": 1816,
+      "y": 950,
+      "w": 368,
+      "h": 215,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "pro-format"
+    },
+    {
+      "type": "rect",
+      "x": 1816,
+      "y": 963,
+      "w": 5,
+      "h": 189,
       "fill": "#1C7134",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "portable-package"
+      "group": "pro-format"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 786,
-      "w": 234.0,
-      "text": "Подготовить пакет",
+      "x": 1832,
+      "y": 966,
+      "w": 180.953125,
+      "text": "ГигаАгент Про",
       "size": 24,
       "color": "#123638",
-      "group": "portable-package"
+      "group": "pro-format"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 824,
-      "w": 189.0,
-      "text": "Код допускает только",
-      "size": 18,
+      "x": 1832,
+      "y": 995,
+      "w": 188.0,
+      "text": "(ex-Ouroboros)",
+      "size": 24,
       "color": "#123638",
-      "group": "portable-package"
+      "group": "pro-format"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 847,
-      "w": 197.0,
-      "text": "проверенную версию.",
+      "x": 1832,
+      "y": 1033,
+      "w": 249.0,
+      "text": "Выбранные файлы выгрузки.",
       "size": 18,
       "color": "#123638",
-      "group": "portable-package"
+      "group": "pro-format"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 870,
-      "w": 230.0,
-      "text": "Папка, карточка переноса,",
+      "x": 1832,
+      "y": 1056,
+      "w": 297.03125,
+      "text": "Меню → Amberkeep carry memory:",
       "size": 18,
       "color": "#123638",
-      "group": "portable-package"
+      "group": "pro-format"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 893,
-      "w": 238.0,
-      "text": "отчёт проверки, MD / вики,",
+      "x": 1832,
+      "y": 1079,
+      "w": 262.984375,
+      "text": "включить и запросить импорт.",
       "size": 18,
       "color": "#123638",
-      "group": "portable-package"
+      "group": "pro-format"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 916,
-      "w": 259.0,
-      "text": "оригиналы и связи. Неполный",
+      "x": 1832,
+      "y": 1102,
+      "w": 279.0,
+      "text": "Маршрут указан пользователем;",
       "size": 18,
       "color": "#123638",
-      "group": "portable-package"
+      "group": "pro-format"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 939,
-      "w": 247.0,
-      "text": "перенос — в согласованном",
+      "x": 1832,
+      "y": 1125,
+      "w": 272.0,
+      "text": "в живом аккаунте не проверен.",
       "size": 18,
       "color": "#123638",
-      "group": "portable-package"
+      "group": "pro-format"
+    },
+    {
+      "type": "rect",
+      "x": 1816,
+      "y": 1200,
+      "w": 368,
+      "h": 170,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "other-format"
+    },
+    {
+      "type": "rect",
+      "x": 1816,
+      "y": 1213,
+      "w": 5,
+      "h": 144,
+      "fill": "#2C7E8D",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "other-format"
     },
     {
       "type": "text",
-      "x": 1167,
-      "y": 962,
-      "w": 219.0,
-      "text": "с пользователем объёме.",
+      "x": 1832,
+      "y": 1216,
+      "w": 239.0,
+      "text": "Другие получатели",
+      "size": 24,
+      "color": "#123638",
+      "group": "other-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1254,
+      "w": 233.0,
+      "text": "ChatGPT / Claude: выгрузка",
       "size": 18,
       "color": "#123638",
-      "group": "portable-package"
+      "group": "other-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1277,
+      "w": 289.015625,
+      "text": "и memory-import.zip при наличии",
+      "size": 18,
+      "color": "#123638",
+      "group": "other-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1300,
+      "w": 316.0,
+      "text": "поддерживаемого канала установки.",
+      "size": 18,
+      "color": "#123638",
+      "group": "other-format"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1323,
+      "w": 310.0,
+      "text": "Иначе — доступный файловый путь.",
+      "size": 18,
+      "color": "#123638",
+      "group": "other-format"
     },
     {
       "type": "diamond",
-      "x": 1164.0,
-      "y": 1112.0,
-      "w": 282,
-      "h": 196,
+      "x": 1838.0,
+      "y": 1435.0,
+      "w": 324,
+      "h": 210,
+      "fill": "#EBF3E9",
+      "stroke": "#2C7E8D",
+      "width": 2,
+      "group": "obsidian"
+    },
+    {
+      "type": "text",
+      "x": 1960.5,
+      "y": 1485.0,
+      "w": 89.0,
+      "text": "Нужен",
+      "size": 24,
+      "color": "#123638",
+      "group": "obsidian"
+    },
+    {
+      "type": "text",
+      "x": 1944.0,
+      "y": 1514.0,
+      "w": 122.0,
+      "text": "Obsidian?",
+      "size": 24,
+      "color": "#123638",
+      "group": "obsidian"
+    },
+    {
+      "type": "text",
+      "x": 1939.0,
+      "y": 1549.0,
+      "w": 132.0,
+      "text": "Спросить, если",
+      "size": 18,
+      "color": "#123638",
+      "group": "obsidian"
+    },
+    {
+      "type": "text",
+      "x": 1954.0,
+      "y": 1572.0,
+      "w": 102.0,
+      "text": "неизвестно",
+      "size": 18,
+      "color": "#123638",
+      "group": "obsidian"
+    },
+    {
+      "type": "rect",
+      "x": 1816,
+      "y": 1740,
+      "w": 368,
+      "h": 200,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "vault"
+    },
+    {
+      "type": "rect",
+      "x": 1816,
+      "y": 1753,
+      "w": 5,
+      "h": 174,
+      "fill": "#1C7134",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "vault"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1756,
+      "w": 272.0,
+      "text": "Подготовить папку со",
+      "size": 24,
+      "color": "#123638",
+      "group": "vault"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1785,
+      "w": 110.0,
+      "text": "связями",
+      "size": 24,
+      "color": "#123638",
+      "group": "vault"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1823,
+      "w": 273.0,
+      "text": "Для существующего хранилища",
+      "size": 18,
+      "color": "#123638",
+      "group": "vault"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1846,
+      "w": 263.0,
+      "text": "или нового набора Markdown.",
+      "size": 18,
+      "color": "#123638",
+      "group": "vault"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1869,
+      "w": 268.0,
+      "text": "Obsidian необязателен; платная",
+      "size": 18,
+      "color": "#123638",
+      "group": "vault"
+    },
+    {
+      "type": "text",
+      "x": 1832,
+      "y": 1892,
+      "w": 247.0,
+      "text": "синхронизация не требуется.",
+      "size": 18,
+      "color": "#123638",
+      "group": "vault"
+    },
+    {
+      "type": "rect",
+      "x": 2256,
+      "y": 315,
+      "w": 368,
+      "h": 260,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "save-choice"
+    },
+    {
+      "type": "rect",
+      "x": 2256,
+      "y": 328,
+      "w": 5,
+      "h": 234,
+      "fill": "#2C7E8D",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "save-choice"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 331,
+      "w": 300.984375,
+      "text": "Согласовать сохранение",
+      "size": 24,
+      "color": "#123638",
+      "group": "save-choice"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 369,
+      "w": 325.0,
+      "text": "Предложить папку «Перенос памяти».",
+      "size": 18,
+      "color": "#123638",
+      "group": "save-choice"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 392,
+      "w": 267.0,
+      "text": "Компьютер, скачивание в чате,",
+      "size": 18,
+      "color": "#123638",
+      "group": "save-choice"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 415,
+      "w": 226.03125,
+      "text": "Google Диск, Яндекс Диск,",
+      "size": 18,
+      "color": "#123638",
+      "group": "save-choice"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 438,
+      "w": 293.0,
+      "text": "Облако Mail, OneDrive или другое.",
+      "size": 18,
+      "color": "#123638",
+      "group": "save-choice"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 461,
+      "w": 287.0,
+      "text": "Формат для получателя и полный",
+      "size": 18,
+      "color": "#123638",
+      "group": "save-choice"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 484,
+      "w": 282.96875,
+      "text": "резерв — отдельные результаты.",
+      "size": 18,
+      "color": "#123638",
+      "group": "save-choice"
+    },
+    {
+      "type": "diamond",
+      "x": 2278.0,
+      "y": 640.0,
+      "w": 324,
+      "h": 220,
       "fill": "#EBF3E9",
       "stroke": "#B47829",
       "width": 2,
@@ -2820,8 +3861,8 @@
     },
     {
       "type": "text",
-      "x": 1236.5,
-      "y": 1166.5,
+      "x": 2371.5,
+      "y": 706.5,
       "w": 147.0,
       "text": "Есть доступ",
       "size": 24,
@@ -2830,802 +3871,1081 @@
     },
     {
       "type": "text",
-      "x": 1242.0,
-      "y": 1195.5,
-      "w": 136.0,
-      "text": "на запись?",
+      "x": 2368.5,
+      "y": 735.5,
+      "w": 153.0,
+      "text": "для записи?",
       "size": 24,
       "color": "#123638",
       "group": "write-access"
     },
     {
       "type": "text",
-      "x": 1246.5,
-      "y": 1230.5,
-      "w": 127.0,
-      "text": "У отправителя",
+      "x": 2336.5,
+      "y": 770.5,
+      "w": 217.0,
+      "text": "Проверен инструментом",
       "size": 18,
       "color": "#123638",
       "group": "write-access"
     },
     {
       "type": "rect",
-      "x": 1516,
-      "y": 435,
-      "w": 308,
-      "h": 120,
+      "x": 2256,
+      "y": 930,
+      "w": 368,
+      "h": 210,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "host-upload"
+      "group": "save-tool"
     },
     {
       "type": "rect",
-      "x": 1516,
-      "y": 448,
+      "x": 2256,
+      "y": 943,
       "w": 5,
-      "h": 94,
+      "h": 184,
       "fill": "#B47829",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "host-upload"
+      "group": "save-tool"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 451,
-      "w": 200.0,
-      "text": "Загружает агент",
+      "x": 2272,
+      "y": 946,
+      "w": 315.0,
+      "text": "Сохранить инструментом",
       "size": 24,
       "color": "#123638",
-      "group": "host-upload"
+      "group": "save-tool"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 489,
-      "w": 183.0,
-      "text": "Через действительно",
+      "x": 2272,
+      "y": 984,
+      "w": 240.0,
+      "text": "Записать выбранные файлы",
       "size": 18,
       "color": "#123638",
-      "group": "host-upload"
+      "group": "save-tool"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 512,
-      "w": 200.984375,
-      "text": "доступный инструмент.",
+      "x": 2272,
+      "y": 1007,
+      "w": 199.953125,
+      "text": "и проверить результат.",
       "size": 18,
       "color": "#123638",
-      "group": "host-upload"
+      "group": "save-tool"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 1030,
+      "w": 345.0,
+      "text": "Локальный файл в папке синхронизации",
+      "size": 18,
+      "color": "#123638",
+      "group": "save-tool"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 1053,
+      "w": 325.0,
+      "text": "ещё не доказывает загрузку в облако.",
+      "size": 18,
+      "color": "#123638",
+      "group": "save-tool"
     },
     {
       "type": "rect",
-      "x": 1516,
-      "y": 620,
-      "w": 308,
-      "h": 145,
+      "x": 2256,
+      "y": 1170,
+      "w": 368,
+      "h": 175,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "user-upload"
+      "group": "save-user"
     },
     {
       "type": "rect",
-      "x": 1516,
-      "y": 633,
+      "x": 2256,
+      "y": 1183,
       "w": 5,
-      "h": 119,
+      "h": 149,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "user-upload"
+      "group": "save-user"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 636,
-      "w": 131.0,
-      "text": "Загружает",
+      "x": 2272,
+      "y": 1186,
+      "w": 217.0,
+      "text": "Выдать комплект",
       "size": 24,
       "color": "#123638",
-      "group": "user-upload"
+      "group": "save-user"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 665,
-      "w": 172.0,
-      "text": "пользователь",
-      "size": 24,
-      "color": "#123638",
-      "group": "user-upload"
-    },
-    {
-      "type": "text",
-      "x": 1532,
-      "y": 703,
-      "w": 214.0,
-      "text": "Получает готовую папку",
+      "x": 2272,
+      "y": 1224,
+      "w": 248.984375,
+      "text": "ГигаАгент: два вложения .md",
       "size": 18,
       "color": "#123638",
-      "group": "user-upload"
+      "group": "save-user"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 726,
-      "w": 216.0,
-      "text": "и короткую инструкцию.",
+      "x": 2272,
+      "y": 1247,
+      "w": 325.0,
+      "text": "(профиль и инструкция) + сообщение.",
       "size": 18,
       "color": "#123638",
-      "group": "user-upload"
-    },
-    {
-      "type": "rect",
-      "x": 1516,
-      "y": 830,
-      "w": 308,
-      "h": 170,
-      "fill": "#FFFFFF",
-      "stroke": "#DCDAD4",
-      "radius": 16,
-      "width": 1.5,
-      "group": "version-folder"
-    },
-    {
-      "type": "rect",
-      "x": 1516,
-      "y": 843,
-      "w": 5,
-      "h": 144,
-      "fill": "#B47829",
-      "stroke": null,
-      "radius": 2,
-      "width": 1.5,
-      "group": "version-folder"
+      "group": "save-user"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 846,
-      "w": 207.0,
-      "text": "Пакет размещён",
-      "size": 24,
-      "color": "#123638",
-      "group": "version-folder"
-    },
-    {
-      "type": "text",
-      "x": 1532,
-      "y": 884,
-      "w": 205.0,
-      "text": "Комплект в выбранном",
+      "x": 2272,
+      "y": 1270,
+      "w": 308.0,
+      "text": "Остальным — комплект получателя.",
       "size": 18,
       "color": "#123638",
-      "group": "version-folder"
+      "group": "save-user"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 907,
-      "w": 212.0,
-      "text": "хранилище отправителя.",
+      "x": 2272,
+      "y": 1293,
+      "w": 266.0,
+      "text": "Проверить ссылки скачивания.",
       "size": 18,
       "color": "#123638",
-      "group": "version-folder"
-    },
-    {
-      "type": "text",
-      "x": 1532,
-      "y": 930,
-      "w": 242.0,
-      "text": "Далее — доступ получателя.",
-      "size": 18,
-      "color": "#123638",
-      "group": "version-folder"
+      "group": "save-user"
     },
     {
       "type": "diamond",
-      "x": 1525.0,
-      "y": 1015.0,
-      "w": 290,
-      "h": 190,
+      "x": 2278.0,
+      "y": 1400.0,
+      "w": 324,
+      "h": 220,
       "fill": "#EBF3E9",
       "stroke": "#B47829",
       "width": 2,
-      "group": "shared-access"
+      "group": "shared-folder"
     },
     {
       "type": "text",
-      "x": 1585.5,
-      "y": 1081.0,
-      "w": 179.0,
-      "text": "Общая папка?",
+      "x": 2361.0,
+      "y": 1481.0,
+      "w": 168.0,
+      "text": "Общая папка",
       "size": 24,
       "color": "#123638",
-      "group": "shared-access"
+      "group": "shared-folder"
     },
     {
       "type": "text",
-      "x": 1598.5,
-      "y": 1116.0,
-      "w": 153.0,
-      "text": "Доступ проверен",
-      "size": 18,
+      "x": 2337.0,
+      "y": 1510.0,
+      "w": 216.0,
+      "text": "доступна обоим?",
+      "size": 24,
       "color": "#123638",
-      "group": "shared-access"
+      "group": "shared-folder"
     },
     {
       "type": "rect",
-      "x": 1516,
-      "y": 1240,
-      "w": 308,
-      "h": 125,
+      "x": 2256,
+      "y": 1710,
+      "w": 368,
+      "h": 245,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "user-copy"
+      "group": "copy"
     },
     {
       "type": "rect",
-      "x": 1516,
-      "y": 1253,
+      "x": 2256,
+      "y": 1723,
       "w": 5,
-      "h": 99,
+      "h": 219,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "user-copy"
+      "group": "copy"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 1256,
-      "w": 175.0,
-      "text": "Пользователь",
+      "x": 2272,
+      "y": 1726,
+      "w": 265.0,
+      "text": "Передать и запустить",
       "size": 24,
       "color": "#123638",
-      "group": "user-copy"
+      "group": "copy"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 1285,
-      "w": 120.0,
-      "text": "копирует",
+      "x": 2272,
+      "y": 1755,
+      "w": 87.0,
+      "text": "приём",
       "size": 24,
       "color": "#123638",
-      "group": "user-copy"
+      "group": "copy"
     },
     {
       "type": "text",
-      "x": 1532,
-      "y": 1323,
-      "w": 280.0,
-      "text": "В папку выбранного получателя.",
+      "x": 2272,
+      "y": 1793,
+      "w": 310.984375,
+      "text": "ГигаАгенту: client-memory-export.md",
       "size": 18,
       "color": "#123638",
-      "group": "user-copy"
+      "group": "copy"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 1816,
+      "w": 203.984375,
+      "text": "и import-instruction.md.",
+      "size": 18,
+      "color": "#123638",
+      "group": "copy"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 1839,
+      "w": 308.0,
+      "text": "Остальным — комплект получателя.",
+      "size": 18,
+      "color": "#123638",
+      "group": "copy"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 1862,
+      "w": 249.0,
+      "text": "Передать файлы и отправить",
+      "size": 18,
+      "color": "#123638",
+      "group": "copy"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 1885,
+      "w": 321.0,
+      "text": "готовое сообщение запуска импорта.",
+      "size": 18,
+      "color": "#123638",
+      "group": "copy"
+    },
+    {
+      "type": "text",
+      "x": 2272,
+      "y": 1908,
+      "w": 315.0,
+      "text": "NEXT_STEPS.md читает пользователь.",
+      "size": 18,
+      "color": "#123638",
+      "group": "copy"
     },
     {
       "type": "rect",
-      "x": 1516,
-      "y": 1380,
-      "w": 308,
-      "h": 100,
+      "x": 2696,
+      "y": 315,
+      "w": 368,
+      "h": 275,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "recipient-open"
+      "group": "inspect"
     },
     {
       "type": "rect",
-      "x": 1516,
-      "y": 1393,
+      "x": 2696,
+      "y": 328,
       "w": 5,
-      "h": 74,
-      "fill": "#B47829",
-      "stroke": null,
-      "radius": 2,
-      "width": 1.5,
-      "group": "recipient-open"
-    },
-    {
-      "type": "text",
-      "x": 1532,
-      "y": 1396,
-      "w": 280.0,
-      "text": "Получатель открывает",
-      "size": 24,
-      "color": "#123638",
-      "group": "recipient-open"
-    },
-    {
-      "type": "text",
-      "x": 1532,
-      "y": 1434,
-      "w": 278.0,
-      "text": "После сообщения пользователя.",
-      "size": 18,
-      "color": "#123638",
-      "group": "recipient-open"
-    },
-    {
-      "type": "rect",
-      "x": 1881,
-      "y": 350,
-      "w": 308,
-      "h": 174,
-      "fill": "#FFFFFF",
-      "stroke": "#DCDAD4",
-      "radius": 16,
-      "width": 1.5,
-      "group": "verify-delivery"
-    },
-    {
-      "type": "rect",
-      "x": 1881,
-      "y": 363,
-      "w": 5,
-      "h": 148,
+      "h": 249,
       "fill": "#1C7134",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "verify-delivery"
+      "group": "inspect"
     },
     {
       "type": "text",
-      "x": 1897,
-      "y": 366,
-      "w": 259.0,
-      "text": "Проверить комплект",
+      "x": 2712,
+      "y": 331,
+      "w": 251.0,
+      "text": "Проверить входные",
       "size": 24,
       "color": "#123638",
-      "group": "verify-delivery"
+      "group": "inspect"
     },
     {
       "type": "text",
-      "x": 1897,
-      "y": 404,
-      "w": 258.0,
-      "text": "Файлы и контрольные суммы.",
-      "size": 18,
-      "color": "#123638",
-      "group": "verify-delivery"
-    },
-    {
-      "type": "text",
-      "x": 1897,
-      "y": 427,
-      "w": 249.0,
-      "text": "Версия и карточка передачи.",
-      "size": 18,
-      "color": "#123638",
-      "group": "verify-delivery"
-    },
-    {
-      "type": "text",
-      "x": 1897,
-      "y": 450,
-      "w": 172.0,
-      "text": "Нужный агент и его",
-      "size": 18,
-      "color": "#123638",
-      "group": "verify-delivery"
-    },
-    {
-      "type": "text",
-      "x": 1897,
-      "y": 473,
-      "w": 127.0,
-      "text": "пространство.",
-      "size": 18,
-      "color": "#123638",
-      "group": "verify-delivery"
-    },
-    {
-      "type": "diamond",
-      "x": 1908.0,
-      "y": 625.0,
-      "w": 254,
-      "h": 170,
-      "fill": "#EBF3E9",
-      "stroke": "#1C7134",
-      "width": 2,
-      "group": "copy-ok"
-    },
-    {
-      "type": "text",
-      "x": 1953.5,
-      "y": 681.0,
-      "w": 173.0,
-      "text": "Копия целая?",
+      "x": 2712,
+      "y": 360,
+      "w": 143.0,
+      "text": "материалы",
       "size": 24,
       "color": "#123638",
-      "group": "copy-ok"
+      "group": "inspect"
     },
     {
       "type": "text",
-      "x": 1985.0,
-      "y": 716.0,
-      "w": 110.0,
-      "text": "Всё совпало",
+      "x": 2712,
+      "y": 398,
+      "w": 316.0,
+      "text": "Приём по сообщению пользователя.",
       "size": 18,
       "color": "#123638",
-      "group": "copy-ok"
+      "group": "inspect"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 421,
+      "w": 250.984375,
+      "text": "ГигаАгент читает инструкцию",
+      "size": 18,
+      "color": "#123638",
+      "group": "inspect"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 444,
+      "w": 232.0,
+      "text": "и весь профиль Markdown.",
+      "size": 18,
+      "color": "#123638",
+      "group": "inspect"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 467,
+      "w": 263.984375,
+      "text": "ZIP и навыки он не принимает.",
+      "size": 18,
+      "color": "#123638",
+      "group": "inspect"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 490,
+      "w": 236.0,
+      "text": "Для других пакетов: состав,",
+      "size": 18,
+      "color": "#123638",
+      "group": "inspect"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 513,
+      "w": 292.0,
+      "text": "целостность, версия и получатель.",
+      "size": 18,
+      "color": "#123638",
+      "group": "inspect"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 536,
+      "w": 317.0,
+      "text": "Неполное исправить до применения.",
+      "size": 18,
+      "color": "#123638",
+      "group": "inspect"
     },
     {
       "type": "rect",
-      "x": 1881,
-      "y": 875,
-      "w": 308,
-      "h": 120,
+      "x": 2696,
+      "y": 630,
+      "w": 368,
+      "h": 235,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
       "width": 1.5,
-      "group": "repair-copy"
+      "group": "compare"
     },
     {
       "type": "rect",
-      "x": 1881,
-      "y": 888,
+      "x": 2696,
+      "y": 643,
       "w": 5,
-      "h": 94,
+      "h": 209,
       "fill": "#2C7E8D",
       "stroke": null,
       "radius": 2,
       "width": 1.5,
-      "group": "repair-copy"
+      "group": "compare"
     },
     {
       "type": "text",
-      "x": 1897,
-      "y": 891,
-      "w": 223.0,
-      "text": "Исправить копию",
+      "x": 2712,
+      "y": 646,
+      "w": 340.0,
+      "text": "Прочитать текущую память",
       "size": 24,
       "color": "#123638",
-      "group": "repair-copy"
+      "group": "compare"
     },
     {
       "type": "text",
-      "x": 1897,
-      "y": 929,
-      "w": 243.0,
-      "text": "Докопировать или передать",
+      "x": 2712,
+      "y": 684,
+      "w": 316.0,
+      "text": "Сопоставить смысл, имена и область.",
       "size": 18,
       "color": "#123638",
-      "group": "repair-copy"
+      "group": "compare"
     },
     {
       "type": "text",
-      "x": 1897,
-      "y": 952,
-      "w": 281.0,
-      "text": "неизменённый комплект заново.",
+      "x": 2712,
+      "y": 707,
+      "w": 275.0,
+      "text": "Дубли пропустить, совместимое",
       "size": 18,
       "color": "#123638",
-      "group": "repair-copy"
+      "group": "compare"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 730,
+      "w": 269.0,
+      "text": "дополнить, конфликт отложить.",
+      "size": 18,
+      "color": "#123638",
+      "group": "compare"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 753,
+      "w": 324.0,
+      "text": "Невидимую память не считать пустой.",
+      "size": 18,
+      "color": "#123638",
+      "group": "compare"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 776,
+      "w": 294.0,
+      "text": "Новое объединение — проверить",
+      "size": 18,
+      "color": "#123638",
+      "group": "compare"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 799,
+      "w": 182.0,
+      "text": "перед применением.",
+      "size": 18,
+      "color": "#123638",
+      "group": "compare"
     },
     {
       "type": "diamond",
-      "x": 1873.0,
-      "y": 1015.0,
+      "x": 2718.0,
+      "y": 920.0,
       "w": 324,
       "h": 240,
       "fill": "#EBF3E9",
-      "stroke": "#1C7134",
+      "stroke": "#2C7E8D",
       "width": 2,
-      "group": "memory-conflict"
+      "group": "can-apply"
     },
     {
       "type": "text",
-      "x": 1953.5,
-      "y": 1091.5,
-      "w": 173.0,
-      "text": "Объединение",
+      "x": 2836.0,
+      "y": 985.0,
+      "w": 98.0,
+      "text": "Можно",
       "size": 24,
       "color": "#123638",
-      "group": "memory-conflict"
+      "group": "can-apply"
     },
     {
       "type": "text",
-      "x": 1964.5,
-      "y": 1120.5,
+      "x": 2809.5,
+      "y": 1014.0,
+      "w": 151.0,
+      "text": "применять?",
+      "size": 24,
+      "color": "#123638",
+      "group": "can-apply"
+    },
+    {
+      "type": "text",
+      "x": 2796.5,
+      "y": 1049.0,
+      "w": 177.0,
+      "text": "Сверка и изменения",
+      "size": 18,
+      "color": "#123638",
+      "group": "can-apply"
+    },
+    {
+      "type": "text",
+      "x": 2827.5,
+      "y": 1072.0,
+      "w": 115.0,
+      "text": "согласованы",
+      "size": 18,
+      "color": "#123638",
+      "group": "can-apply"
+    },
+    {
+      "type": "rect",
+      "x": 2696,
+      "y": 1260,
+      "w": 368,
+      "h": 230,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "resolve"
+    },
+    {
+      "type": "rect",
+      "x": 2696,
+      "y": 1273,
+      "w": 5,
+      "h": 204,
+      "fill": "#2C7E8D",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "resolve"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1276,
+      "w": 221.984375,
+      "text": "Разрешить новые",
+      "size": 24,
+      "color": "#123638",
+      "group": "resolve"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1305,
+      "w": 181.0,
+      "text": "противоречия",
+      "size": 24,
+      "color": "#123638",
+      "group": "resolve"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1343,
+      "w": 294.0,
+      "text": "Уточнить изменившееся, сохранив",
+      "size": 18,
+      "color": "#123638",
+      "group": "resolve"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1366,
+      "w": 283.0,
+      "text": "прежние действительные ответы.",
+      "size": 18,
+      "color": "#123638",
+      "group": "resolve"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1389,
+      "w": 263.0,
+      "text": "Объединение всех источников",
+      "size": 18,
+      "color": "#123638",
+      "group": "resolve"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1412,
+      "w": 327.984375,
+      "text": "возвращается ведущему на проверку.",
+      "size": 18,
+      "color": "#123638",
+      "group": "resolve"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1435,
+      "w": 292.0,
+      "text": "Спорные записи не активируются.",
+      "size": 18,
+      "color": "#123638",
+      "group": "resolve"
+    },
+    {
+      "type": "rect",
+      "x": 2696,
+      "y": 1570,
+      "w": 368,
+      "h": 345,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "giga-import"
+    },
+    {
+      "type": "rect",
+      "x": 2696,
+      "y": 1583,
+      "w": 5,
+      "h": 319,
+      "fill": "#B47829",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1586,
+      "w": 336.953125,
+      "text": "Правила записи ГигаАгента",
+      "size": 24,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1624,
+      "w": 242.96875,
+      "text": "Только «Готово к импорту».",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1647,
+      "w": 304.015625,
+      "text": "memory_list с архивными записями;",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1670,
+      "w": 313.015625,
+      "text": "совпадения прочитать memory_read.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1693,
+      "w": 288.0,
+      "text": "Лимиты с учётом занятой памяти:",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1716,
+      "w": 308.0,
+      "text": "без вытеснения и обхода категорий.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1739,
+      "w": 311.015625,
+      "text": "memory_save — отдельно для факта,",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1762,
+      "w": 296.0,
+      "text": "≤ 500 знаков с переводом строки.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1785,
+      "w": 317.0,
+      "text": "При замене — точная версия записи.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "text",
+      "x": 2712,
+      "y": 1808,
+      "w": 318.0,
+      "text": "Процедуры не объявлять knowledge.",
+      "size": 18,
+      "color": "#123638",
+      "group": "giga-import"
+    },
+    {
+      "type": "rect",
+      "x": 3136,
+      "y": 630,
+      "w": 368,
+      "h": 295,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "configure"
+    },
+    {
+      "type": "rect",
+      "x": 3136,
+      "y": 643,
+      "w": 5,
+      "h": 269,
+      "fill": "#B47829",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "configure"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 646,
+      "w": 280.0,
+      "text": "Выполнить доступную",
+      "size": 24,
+      "color": "#123638",
+      "group": "configure"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 675,
+      "w": 132.0,
+      "text": "настройку",
+      "size": 24,
+      "color": "#123638",
+      "group": "configure"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 713,
+      "w": 309.0,
+      "text": "Сохранить согласованные сведения,",
+      "size": 18,
+      "color": "#123638",
+      "group": "configure"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 736,
+      "w": 293.984375,
+      "text": "инструкции и проектный контекст.",
+      "size": 18,
+      "color": "#123638",
+      "group": "configure"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 759,
+      "w": 270.984375,
+      "text": "Установить выбранные навыки,",
+      "size": 18,
+      "color": "#123638",
+      "group": "configure"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 782,
+      "w": 253.0,
+      "text": "подключить нужные ресурсы",
+      "size": 18,
+      "color": "#123638",
+      "group": "configure"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 805,
+      "w": 244.0,
+      "text": "и расписания — только если",
+      "size": 18,
+      "color": "#123638",
+      "group": "configure"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 828,
+      "w": 260.984375,
+      "text": "получатель это поддерживает.",
+      "size": 18,
+      "color": "#123638",
+      "group": "configure"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 851,
+      "w": 314.0,
+      "text": "Имя продукта не даёт инструментов.",
+      "size": 18,
+      "color": "#123638",
+      "group": "configure"
+    },
+    {
+      "type": "rect",
+      "x": 3136,
+      "y": 1010,
+      "w": 368,
+      "h": 225,
+      "fill": "#FFFFFF",
+      "stroke": "#DCDAD4",
+      "radius": 16,
+      "width": 1.5,
+      "group": "readback"
+    },
+    {
+      "type": "rect",
+      "x": 3136,
+      "y": 1023,
+      "w": 5,
+      "h": 199,
+      "fill": "#B47829",
+      "stroke": null,
+      "radius": 2,
+      "width": 1.5,
+      "group": "readback"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 1026,
+      "w": 299.0,
+      "text": "Проверить фактический",
+      "size": 24,
+      "color": "#123638",
+      "group": "readback"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 1055,
+      "w": 124.96875,
+      "text": "результат",
+      "size": 24,
+      "color": "#123638",
+      "group": "readback"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 1093,
+      "w": 266.0,
+      "text": "Прочитать записанную память,",
+      "size": 18,
+      "color": "#123638",
+      "group": "readback"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 1116,
+      "w": 290.0,
+      "text": "проверить файлы и выполненные",
+      "size": 18,
+      "color": "#123638",
+      "group": "readback"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 1139,
+      "w": 237.0,
+      "text": "настройки. Частичный сбой",
+      "size": 18,
+      "color": "#123638",
+      "group": "readback"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 1162,
+      "w": 311.0,
+      "text": "повторять с учётом уже сделанного,",
+      "size": 18,
+      "color": "#123638",
+      "group": "readback"
+    },
+    {
+      "type": "text",
+      "x": 3152,
+      "y": 1185,
+      "w": 291.0,
+      "text": "без слепого повторного импорта.",
+      "size": 18,
+      "color": "#123638",
+      "group": "readback"
+    },
+    {
+      "type": "diamond",
+      "x": 3158.0,
+      "y": 1285.0,
+      "w": 324,
+      "h": 230,
+      "fill": "#EBF3E9",
+      "stroke": "#B47829",
+      "width": 2,
+      "group": "done-check"
+    },
+    {
+      "type": "text",
+      "x": 3229.0,
+      "y": 1371.0,
+      "w": 192.0,
+      "text": "Всё выбранное",
+      "size": 24,
+      "color": "#123638",
+      "group": "done-check"
+    },
+    {
+      "type": "text",
+      "x": 3249.5,
+      "y": 1400.0,
       "w": 151.0,
       "text": "проверено?",
       "size": 24,
       "color": "#123638",
-      "group": "memory-conflict"
-    },
-    {
-      "type": "text",
-      "x": 1950.5,
-      "y": 1155.5,
-      "w": 179.0,
-      "text": "Пакет + своя память",
-      "size": 18,
-      "color": "#123638",
-      "group": "memory-conflict"
+      "group": "done-check"
     },
     {
       "type": "rect",
-      "x": 1881,
-      "y": 1300,
-      "w": 308,
-      "h": 174,
-      "fill": "#FFFFFF",
-      "stroke": "#DCDAD4",
-      "radius": 16,
-      "width": 1.5,
-      "group": "resolve-conflict"
-    },
-    {
-      "type": "rect",
-      "x": 1881,
-      "y": 1313,
-      "w": 5,
-      "h": 148,
-      "fill": "#2C7E8D",
-      "stroke": null,
-      "radius": 2,
-      "width": 1.5,
-      "group": "resolve-conflict"
-    },
-    {
-      "type": "text",
-      "x": 1897,
-      "y": 1316,
-      "w": 234.0,
-      "text": "Вернуть ведущему",
-      "size": 24,
-      "color": "#123638",
-      "group": "resolve-conflict"
-    },
-    {
-      "type": "text",
-      "x": 1897,
-      "y": 1354,
-      "w": 236.0,
-      "text": "Объединённый профиль —",
-      "size": 18,
-      "color": "#123638",
-      "group": "resolve-conflict"
-    },
-    {
-      "type": "text",
-      "x": 1897,
-      "y": 1377,
-      "w": 182.984375,
-      "text": "на общую проверку.",
-      "size": 18,
-      "color": "#123638",
-      "group": "resolve-conflict"
-    },
-    {
-      "type": "text",
-      "x": 1897,
-      "y": 1400,
-      "w": 266.0,
-      "text": "До её завершения применение",
-      "size": 18,
-      "color": "#123638",
-      "group": "resolve-conflict"
-    },
-    {
-      "type": "text",
-      "x": 1897,
-      "y": 1423,
-      "w": 248.0,
-      "text": "и настройка заблокированы.",
-      "size": 18,
-      "color": "#123638",
-      "group": "resolve-conflict"
-    },
-    {
-      "type": "rect",
-      "x": 2246,
-      "y": 540,
-      "w": 308,
-      "h": 251,
-      "fill": "#FFFFFF",
-      "stroke": "#DCDAD4",
-      "radius": 16,
-      "width": 1.5,
-      "group": "apply-selected"
-    },
-    {
-      "type": "rect",
-      "x": 2246,
-      "y": 553,
-      "w": 5,
-      "h": 225,
-      "fill": "#B47829",
-      "stroke": null,
-      "radius": 2,
-      "width": 1.5,
-      "group": "apply-selected"
-    },
-    {
-      "type": "text",
-      "x": 2262,
-      "y": 556,
-      "w": 276.0,
-      "text": "Настроить получателя",
-      "size": 24,
-      "color": "#123638",
-      "group": "apply-selected"
-    },
-    {
-      "type": "text",
-      "x": 2262,
-      "y": 594,
-      "w": 179.0,
-      "text": "Профиль и проекты.",
-      "size": 18,
-      "color": "#123638",
-      "group": "apply-selected"
-    },
-    {
-      "type": "text",
-      "x": 2262,
-      "y": 617,
-      "w": 210.0,
-      "text": "Навыки и подключения.",
-      "size": 18,
-      "color": "#123638",
-      "group": "apply-selected"
-    },
-    {
-      "type": "text",
-      "x": 2262,
-      "y": 640,
-      "w": 261.0,
-      "text": "При необходимости — задачи",
-      "size": 18,
-      "color": "#123638",
-      "group": "apply-selected"
-    },
-    {
-      "type": "text",
-      "x": 2262,
-      "y": 663,
-      "w": 140.0,
-      "text": "по расписанию.",
-      "size": 18,
-      "color": "#123638",
-      "group": "apply-selected"
-    },
-    {
-      "type": "text",
-      "x": 2262,
-      "y": 686,
-      "w": 211.984375,
-      "text": "Только через доступные",
-      "size": 18,
-      "color": "#123638",
-      "group": "apply-selected"
-    },
-    {
-      "type": "text",
-      "x": 2262,
-      "y": 709,
-      "w": 252.0,
-      "text": "инструменты принимающего",
-      "size": 18,
-      "color": "#123638",
-      "group": "apply-selected"
-    },
-    {
-      "type": "text",
-      "x": 2262,
-      "y": 732,
-      "w": 65.0,
-      "text": "агента.",
-      "size": 18,
-      "color": "#123638",
-      "group": "apply-selected"
-    },
-    {
-      "type": "diamond",
-      "x": 2250.0,
-      "y": 915.0,
-      "w": 300,
-      "h": 210,
-      "fill": "#EBF3E9",
-      "stroke": "#B47829",
-      "width": 2,
-      "group": "setup-verified"
-    },
-    {
-      "type": "text",
-      "x": 2306.5,
-      "y": 991.0,
-      "w": 197.0,
-      "text": "Все выбранные",
-      "size": 24,
-      "color": "#123638",
-      "group": "setup-verified"
-    },
-    {
-      "type": "text",
-      "x": 2294.0,
-      "y": 1020.0,
-      "w": 222.0,
-      "text": "шаги проверены?",
-      "size": 24,
-      "color": "#123638",
-      "group": "setup-verified"
-    },
-    {
-      "type": "rect",
-      "x": 2246,
-      "y": 1200,
-      "w": 308,
-      "h": 145,
+      "x": 3136,
+      "y": 1615,
+      "w": 368,
+      "h": 150,
       "fill": "#073F42",
       "stroke": null,
       "radius": 16,
       "width": 1.5,
-      "group": "ready"
+      "group": "done"
     },
     {
       "type": "text",
-      "x": 2262,
-      "y": 1216,
+      "x": 3152,
+      "y": 1631,
       "w": 260.96875,
       "text": "Готово в выбранном",
       "size": 24,
       "color": "#A5E8AF",
-      "group": "ready"
+      "group": "done"
     },
     {
       "type": "text",
-      "x": 2262,
-      "y": 1245,
+      "x": 3152,
+      "y": 1660,
       "w": 101.0,
       "text": "объёме",
       "size": 24,
       "color": "#A5E8AF",
-      "group": "ready"
+      "group": "done"
     },
     {
       "type": "text",
-      "x": 2262,
-      "y": 1283,
-      "w": 216.0,
-      "text": "Проверенные настройки",
+      "x": 3152,
+      "y": 1698,
+      "w": 209.0,
+      "text": "Новый агент использует",
       "size": 18,
       "color": "#C9E7D9",
-      "group": "ready"
+      "group": "done"
     },
     {
       "type": "text",
-      "x": 2262,
-      "y": 1306,
-      "w": 149.0,
-      "text": "готовы к работе.",
+      "x": 3152,
+      "y": 1721,
+      "w": 325.984375,
+      "text": "проверенный перенесённый контекст.",
       "size": 18,
       "color": "#C9E7D9",
-      "group": "ready"
+      "group": "done"
     },
     {
       "type": "rect",
-      "x": 2246,
-      "y": 1360,
-      "w": 308,
-      "h": 120,
+      "x": 3136,
+      "y": 1820,
+      "w": 368,
+      "h": 135,
       "fill": "#FFFFFF",
       "stroke": "#DCDAD4",
       "radius": 16,
@@ -3634,10 +4954,10 @@
     },
     {
       "type": "rect",
-      "x": 2246,
-      "y": 1373,
+      "x": 3136,
+      "y": 1833,
       "w": 5,
-      "h": 94,
+      "h": 109,
       "fill": "#1C7134",
       "stroke": null,
       "radius": 2,
@@ -3646,38 +4966,82 @@
     },
     {
       "type": "text",
-      "x": 2262,
-      "y": 1376,
-      "w": 263.0,
-      "text": "Что осталось сделать",
+      "x": 3152,
+      "y": 1836,
+      "w": 165.0,
+      "text": "Что осталось",
       "size": 24,
       "color": "#123638",
       "group": "remaining"
     },
     {
       "type": "text",
-      "x": 2262,
-      "y": 1414,
-      "w": 194.0,
-      "text": "Непроверенные шаги.",
+      "x": 3152,
+      "y": 1874,
+      "w": 291.0,
+      "text": "Указать неподдерживаемые шаги,",
       "size": 18,
       "color": "#123638",
       "group": "remaining"
     },
     {
       "type": "text",
-      "x": 2262,
-      "y": 1437,
-      "w": 233.0,
-      "text": "Что нужно сделать дальше.",
+      "x": 3152,
+      "y": 1897,
+      "w": 244.0,
+      "text": "сбои и следующее действие.",
       "size": 18,
       "color": "#123638",
       "group": "remaining"
     },
     {
       "type": "rect",
-      "x": 945.0,
-      "y": 860.0,
+      "x": 686.0,
+      "y": 1150,
+      "w": 52.0,
+      "h": 26,
+      "fill": "#F5EFEB",
+      "stroke": null,
+      "radius": 3,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 690.0,
+      "y": 1152,
+      "w": 54.0,
+      "text": "Один",
+      "size": 18,
+      "color": "#123638",
+      "group": null
+    },
+    {
+      "type": "rect",
+      "x": 484,
+      "y": 1148,
+      "w": 96.0,
+      "h": 26,
+      "fill": "#F5EFEB",
+      "stroke": null,
+      "radius": 3,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 488,
+      "y": 1150,
+      "w": 98.0,
+      "text": "Несколько",
+      "size": 18,
+      "color": "#123638",
+      "group": null
+    },
+    {
+      "type": "rect",
+      "x": 1566.0,
+      "y": 897,
       "w": 29.0,
       "h": 26,
       "fill": "#F5EFEB",
@@ -3688,8 +5052,8 @@
     },
     {
       "type": "text",
-      "x": 949.0,
-      "y": 862.0,
+      "x": 1570.0,
+      "y": 899,
       "w": 31.0,
       "text": "Да",
       "size": 18,
@@ -3698,8 +5062,8 @@
     },
     {
       "type": "rect",
-      "x": 774,
-      "y": 715.0,
+      "x": 1364,
+      "y": 903,
       "w": 37.0,
       "h": 26,
       "fill": "#F5EFEB",
@@ -3710,8 +5074,8 @@
     },
     {
       "type": "text",
-      "x": 778,
-      "y": 717.0,
+      "x": 1368,
+      "y": 905,
       "w": 39.0,
       "text": "Нет",
       "size": 18,
@@ -3720,8 +5084,8 @@
     },
     {
       "type": "rect",
-      "x": 1310.0,
-      "y": 730.0,
+      "x": 1726.0,
+      "y": 1637.0,
       "w": 29.0,
       "h": 26,
       "fill": "#F5EFEB",
@@ -3732,8 +5096,8 @@
     },
     {
       "type": "text",
-      "x": 1314.0,
-      "y": 732.0,
+      "x": 1730.0,
+      "y": 1639.0,
       "w": 31.0,
       "text": "Да",
       "size": 18,
@@ -3742,9 +5106,9 @@
     },
     {
       "type": "rect",
-      "x": 1101.0,
-      "y": 562.0,
-      "w": 37.0,
+      "x": 1566.0,
+      "y": 1798,
+      "w": 110.0,
       "h": 26,
       "fill": "#F5EFEB",
       "stroke": null,
@@ -3754,18 +5118,18 @@
     },
     {
       "type": "text",
-      "x": 1105.0,
-      "y": 564.0,
-      "w": 39.0,
-      "text": "Нет",
+      "x": 1570.0,
+      "y": 1800,
+      "w": 112.0,
+      "text": "Нет: сверить",
       "size": 18,
       "color": "#123638",
       "group": null
     },
     {
       "type": "rect",
-      "x": 1448.0,
-      "y": 1178.0,
+      "x": 2006.0,
+      "y": 1660,
       "w": 29.0,
       "h": 26,
       "fill": "#F5EFEB",
@@ -3776,8 +5140,8 @@
     },
     {
       "type": "text",
-      "x": 1452.0,
-      "y": 1180.0,
+      "x": 2010.0,
+      "y": 1662,
       "w": 31.0,
       "text": "Да",
       "size": 18,
@@ -3786,9 +5150,9 @@
     },
     {
       "type": "rect",
-      "x": 1310.0,
-      "y": 1321.0,
-      "w": 37.0,
+      "x": 2166.0,
+      "y": 1509.0,
+      "w": 105.0,
       "h": 26,
       "fill": "#F5EFEB",
       "stroke": null,
@@ -3798,40 +5162,18 @@
     },
     {
       "type": "text",
-      "x": 1314.0,
-      "y": 1323.0,
-      "w": 39.0,
-      "text": "Нет",
+      "x": 2170.0,
+      "y": 1511.0,
+      "w": 107.0,
+      "text": "Нет / позже",
       "size": 18,
       "color": "#123638",
       "group": null
     },
     {
       "type": "rect",
-      "x": 1675.0,
-      "y": 1218.0,
-      "w": 37.0,
-      "h": 26,
-      "fill": "#F5EFEB",
-      "stroke": null,
-      "radius": 3,
-      "width": 1.5,
-      "group": null
-    },
-    {
-      "type": "text",
-      "x": 1679.0,
-      "y": 1220.0,
-      "w": 39.0,
-      "text": "Нет",
-      "size": 18,
-      "color": "#123638",
-      "group": null
-    },
-    {
-      "type": "rect",
-      "x": 1817.0,
-      "y": 1077.0,
+      "x": 2446.0,
+      "y": 870,
       "w": 29.0,
       "h": 26,
       "fill": "#F5EFEB",
@@ -3842,8 +5184,8 @@
     },
     {
       "type": "text",
-      "x": 1821.0,
-      "y": 1079.0,
+      "x": 2450.0,
+      "y": 872,
       "w": 31.0,
       "text": "Да",
       "size": 18,
@@ -3852,8 +5194,8 @@
     },
     {
       "type": "rect",
-      "x": 2040.0,
-      "y": 810.0,
+      "x": 2244,
+      "y": 876,
       "w": 37.0,
       "h": 26,
       "fill": "#F5EFEB",
@@ -3864,8 +5206,8 @@
     },
     {
       "type": "text",
-      "x": 2044.0,
-      "y": 812.0,
+      "x": 2248,
+      "y": 878,
       "w": 39.0,
       "text": "Нет",
       "size": 18,
@@ -3874,30 +5216,8 @@
     },
     {
       "type": "rect",
-      "x": 2164.0,
-      "y": 677.0,
-      "w": 29.0,
-      "h": 26,
-      "fill": "#F5EFEB",
-      "stroke": null,
-      "radius": 3,
-      "width": 1.5,
-      "group": null
-    },
-    {
-      "type": "text",
-      "x": 2168.0,
-      "y": 679.0,
-      "w": 31.0,
-      "text": "Да",
-      "size": 18,
-      "color": "#123638",
-      "group": null
-    },
-    {
-      "type": "rect",
-      "x": 2040.0,
-      "y": 1268.0,
+      "x": 2446.0,
+      "y": 1632,
       "w": 37.0,
       "h": 26,
       "fill": "#F5EFEB",
@@ -3908,8 +5228,8 @@
     },
     {
       "type": "text",
-      "x": 2044.0,
-      "y": 1270.0,
+      "x": 2450.0,
+      "y": 1634,
       "w": 39.0,
       "text": "Нет",
       "size": 18,
@@ -3918,8 +5238,8 @@
     },
     {
       "type": "rect",
-      "x": 2198.0,
-      "y": 1102.0,
+      "x": 2606.0,
+      "y": 1479.0,
       "w": 29.0,
       "h": 26,
       "fill": "#F5EFEB",
@@ -3930,8 +5250,8 @@
     },
     {
       "type": "text",
-      "x": 2202.0,
-      "y": 1104.0,
+      "x": 2610.0,
+      "y": 1481.0,
       "w": 31.0,
       "text": "Да",
       "size": 18,
@@ -3940,52 +5260,8 @@
     },
     {
       "type": "rect",
-      "x": 1016,
-      "y": 1514,
-      "w": 573.0,
-      "h": 26,
-      "fill": "#F5EFEB",
-      "stroke": null,
-      "radius": 3,
-      "width": 1.5,
-      "group": null
-    },
-    {
-      "type": "text",
-      "x": 1020,
-      "y": 1516,
-      "w": 575.0,
-      "text": "Общая проверка объединения → новая проверенная версия пакета",
-      "size": 18,
-      "color": "#123638",
-      "group": null
-    },
-    {
-      "type": "rect",
-      "x": 2405.0,
-      "y": 1141.0,
-      "w": 29.0,
-      "h": 26,
-      "fill": "#F5EFEB",
-      "stroke": null,
-      "radius": 3,
-      "width": 1.5,
-      "group": null
-    },
-    {
-      "type": "text",
-      "x": 2409.0,
-      "y": 1143.0,
-      "w": 31.0,
-      "text": "Да",
-      "size": 18,
-      "color": "#123638",
-      "group": null
-    },
-    {
-      "type": "rect",
-      "x": 2234,
-      "y": 986.0,
+      "x": 2886.0,
+      "y": 1171,
       "w": 37.0,
       "h": 26,
       "fill": "#F5EFEB",
@@ -3996,10 +5272,98 @@
     },
     {
       "type": "text",
-      "x": 2238,
-      "y": 988.0,
+      "x": 2890.0,
+      "y": 1173,
       "w": 39.0,
       "text": "Нет",
+      "size": 18,
+      "color": "#123638",
+      "group": null
+    },
+    {
+      "type": "rect",
+      "x": 3046.0,
+      "y": 1009.0,
+      "w": 29.0,
+      "h": 26,
+      "fill": "#F5EFEB",
+      "stroke": null,
+      "radius": 3,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 3050.0,
+      "y": 1011.0,
+      "w": 31.0,
+      "text": "Да",
+      "size": 18,
+      "color": "#123638",
+      "group": null
+    },
+    {
+      "type": "rect",
+      "x": 3326.0,
+      "y": 1536,
+      "w": 29.0,
+      "h": 26,
+      "fill": "#F5EFEB",
+      "stroke": null,
+      "radius": 3,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 3330.0,
+      "y": 1538,
+      "w": 31.0,
+      "text": "Да",
+      "size": 18,
+      "color": "#123638",
+      "group": null
+    },
+    {
+      "type": "rect",
+      "x": 3124,
+      "y": 1548,
+      "w": 37.0,
+      "h": 26,
+      "fill": "#F5EFEB",
+      "stroke": null,
+      "radius": 3,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 3128,
+      "y": 1550,
+      "w": 39.0,
+      "text": "Нет",
+      "size": 18,
+      "color": "#123638",
+      "group": null
+    },
+    {
+      "type": "rect",
+      "x": 1491,
+      "y": 2006,
+      "w": 902.0,
+      "h": 26,
+      "fill": "#F5EFEB",
+      "stroke": null,
+      "radius": 3,
+      "width": 1.5,
+      "group": null
+    },
+    {
+      "type": "text",
+      "x": 1495,
+      "y": 2008,
+      "w": 904.0,
+      "text": "Новые данные или новое объединение → общая проверка; прежние действительные решения сохраняются",
       "size": 18,
       "color": "#123638",
       "group": null
@@ -4007,9 +5371,9 @@
     {
       "type": "rect",
       "x": 40,
-      "y": 1595,
-      "w": 2530,
-      "h": 135,
+      "y": 2080,
+      "w": 3480,
+      "h": 145,
       "fill": "#E3E4E1",
       "stroke": null,
       "radius": 14,
@@ -4019,9 +5383,9 @@
     {
       "type": "text",
       "x": 58,
-      "y": 1609,
-      "w": 674.0,
-      "text": "Серым: недоступно или отложено в текущем сценарии",
+      "y": 2094,
+      "w": 404.0,
+      "text": "Ограничения текущего сценария",
       "size": 24,
       "color": "#40504D",
       "group": null
@@ -4029,9 +5393,9 @@
     {
       "type": "text",
       "x": 58,
-      "y": 1648,
-      "w": 911.984375,
-      "text": "Почта и фоновый мониторинг · Нативный импорт навыков и ZIP в ГигаАгенте · MCP Obsidian и Яндекс Диска",
+      "y": 2131,
+      "w": 1405.984375,
+      "text": "Почта и фоновый мониторинг · Самостоятельные уведомления между агентами · Нативный импорт ZIP и навыков в обычном ГигаАгенте · MCP Obsidian и Яндекс Диска",
       "size": 18,
       "color": "#485652",
       "group": null
@@ -4039,9 +5403,9 @@
     {
       "type": "text",
       "x": 58,
-      "y": 1677,
-      "w": 1226.0,
-      "text": "Код работает с предоставленными файлами. Доступ к сервисам и облакам требует реальных инструментов. ○ Выбранные ветки идут параллельно.",
+      "y": 2160,
+      "w": 1683.984375,
+      "text": "Экспорт: показать адаптацию профиля, затем выдать реальные файлы и сообщение запуска. Обычному ГигаАгенту — только профиль и инструкция Markdown; резерв и отчёты остаются у пользователя.",
       "size": 18,
       "color": "#485652",
       "group": null
@@ -4049,9 +5413,9 @@
     {
       "type": "text",
       "x": 58,
-      "y": 1706,
-      "w": 1343.984375,
-      "text": "Ведущий агент и получатель могут быть одним агентом. Готовая папка сама по себе не означает настройку сервиса. Пунктир — возврат или ожидаемые данные.",
+      "y": 2189,
+      "w": 1702.0,
+      "text": "Код проверен на предоставленных файлах. Смысл оценивает модель; чтение облака, запись памяти и установка выполняются только доступными инструментами. Реальный SaaS-импорт ещё не проверен.",
       "size": 18,
       "color": "#485652",
       "group": null

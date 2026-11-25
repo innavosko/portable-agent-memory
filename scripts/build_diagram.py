@@ -98,17 +98,18 @@ class Node:
 
 
 class Canvas:
-    def __init__(self, height=HEIGHT):
+    def __init__(self, height=HEIGHT, width=WIDTH):
         self.height = height
-        self.image = Image.new("RGB", (WIDTH, height), BACKGROUND)
+        self.width = width
+        self.image = Image.new("RGB", (width, height), BACKGROUND)
         self.draw = ImageDraw.Draw(self.image)
         self.primitives = []
         self.group = None
-        self.parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{WIDTH}" height="{height}" viewBox="0 0 {WIDTH} {height}" role="img" aria-labelledby="diagram-title diagram-desc">',
+        self.parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="{height}" viewBox="0 0 {width} {height}" role="img" aria-labelledby="diagram-title diagram-desc">',
                       '<title id="diagram-title">Путь переноса памяти и настройки другого агента</title>',
-                      '<desc id="diagram-desc">Семь этапов слева направо. Один ведущий агент собирает общий профиль из выбранных источников. Перед экспортом обязательна общая смысловая проверка и второй проход. Новые данные и непроверенное объединение с памятью получателя возвращаются на общую проверку, с сохранением решений пользователя.</desc>',
+                      '<desc id="diagram-desc">Путь слева направо: экспорт и импорт отдельными навыками. Среда агента, место хранения данных и доступ различаются. Один ведущий сводит несколько источников, предлагает полезные работы и навыки. Формат зависит от получателя. Новые данные и непроверенное объединение требуют общей проверки с сохранением прежних решений.</desc>',
                       '<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,4 L0,8 Z" fill="' + LINE + '"/></marker></defs>',
-                      f'<rect width="{WIDTH}" height="{height}" fill="{BACKGROUND}"/>']
+                      f'<rect width="{width}" height="{height}" fill="{BACKGROUND}"/>']
 
     def rect(self, x, y, w, h, *, fill, stroke=None, radius=16, width=1.5):
         self.primitives.append({"type": "rect", "x": x, "y": y, "w": w, "h": h,
@@ -208,201 +209,223 @@ class Canvas:
         self.group = None
 
     def save(self, out, stem):
-        (out / (stem + ".svg")).write_text("\n".join(self.parts + ['</svg>'])+"\n", encoding="utf-8")
+        (out / (stem + ".svg")).write_text("\n".join(self.parts + ['</svg>'])+"\n", encoding="utf-8", newline="\n")
         self.image.save(out / (stem + ".png"))
-        (out / (stem + ".scene.json")).write_text(json.dumps({"width": WIDTH, "height": self.height,
+        (out / (stem + ".scene.json")).write_text(json.dumps({"width": self.width, "height": self.height,
             "background": BACKGROUND, "font_family": "Segoe UI", "font_sizes": [TITLE_SIZE, BODY_SIZE],
-            "primitives": self.primitives}, ensure_ascii=False, indent=2), encoding="utf-8")
+            "primitives": self.primitives}, ensure_ascii=False, indent=2), encoding="utf-8", newline="\n")
 
 
 def build(out, *, main_only=False):
+    """Eight visible stages, two independent skills, optional branches explicit."""
     out.mkdir(parents=True, exist_ok=True)
-    canvas = Canvas(height=1760)
-    columns = [40+i*365 for i in range(7)]
-    stages = ["1. Начать", "2. Выбрать и собрать", "3. Проверить", "4. Упаковать", "5. Передать", "6. Принять", "7. Настроить"]
-    subtitles = ["Один ведущий, несколько источников", "Четыре совместимые ветки", "Единый профиль всех источников", "Только проверенная версия", "Доступ и ручное копирование", "Пакет и собственная память", "В выбранном объёме"]
-    canvas.text(40, 28, "Путь переноса памяти и настройки другого агента", size=TITLE_SIZE)
-    canvas.text(40, 70, "Версия 0.7 · Ведущий агент проводит общую смысловую проверку. Код проверяет полноту и актуальность её отчёта. Настройка сервиса — отдельный шаг.")
+    canvas = Canvas(height=2260, width=3560)
+    columns = [40 + i * 440 for i in range(8)]
+    canvas.text(40, 26, "Перенос контекста и настройка нового агента под ключ", size=TITLE_SIZE)
+    canvas.text(40, 65, "Версия 0.8.3 · Актуально на 24.11.2026 · Известные ответы сохраняются; изменившиеся данные и доступ проверяются заново.")
     execution_legend(canvas, 40, 99)
-    for x, title, subtitle in zip(columns, stages, subtitles):
-        canvas.text(x+8, 126, title, size=TITLE_SIZE, color=GREEN)
-        for line_no, line in enumerate(wrap(subtitle, 324, BODY_SIZE)):
-            canvas.text(x+8, 164+line_no*23, line, color=MUTED)
-        canvas.rect(x, 214, 340, 1260, fill="#F0EAE6", radius=20)
+    canvas.rect(40, 136, 2600, 42, fill=TEAL, radius=10)
+    canvas.text(58, 144, "НАВЫК ЭКСПОРТА · memory-export · собирает, проверяет и готовит передачу", size=TITLE_SIZE, color="#A5E8AF")
+    canvas.rect(2680, 136, 840, 42, fill=TEAL, radius=10)
+    canvas.text(2698, 144, "ИМПОРТ · навык или инструкция получателя", size=TITLE_SIZE, color="#A5E8AF")
+    titles = ["1. Начать", "2. Разобрать источники", "3. Выбрать и собрать", "4. Проверить профиль",
+              "5. Подготовить формат", "6. Сохранить и передать", "7. Принять и сравнить", "8. Настроить и проверить"]
+    subtitles = ["Явный старт, подходящий получатель", "Среда, данные, доступ и роль", "Выбранные ветки идут параллельно", "Все выбранные источники вместе",
+                 "По возможностям получателя", "Конкретные файлы и папки", "Пакет и существующая память", "Только подтверждённый результат"]
+    for x, title, subtitle in zip(columns, titles, subtitles):
+        canvas.text(x + 8, 202, title, size=TITLE_SIZE, color=GREEN)
+        canvas.text(x + 8, 242, subtitle, color=MUTED)
+        canvas.rect(x, 282, 400, 1678, fill="#F0EAE6", radius=20)
 
     nodes = {}
-    def box(key, col, y, h, title, body="", style="normal"):
-        nodes[key] = Node(key, columns[col]+16, y, 308, h, title, body, style=style)
-    def diamond(key, col, cy, h, title, body="", width=276, inclusive=False):
-        nodes[key] = Node(key, columns[col]+(340-width)/2, cy-h/2, width, h, title, body, "diamond", inclusive=inclusive)
+    def box(key, col, y, h, title, body="", execution="model", style="normal"):
+        nodes[key] = Node(key, columns[col]+16, y, 368, h, title, body, execution=execution, style=style)
+    def diamond(key, col, cy, h, title, body="", width=324, inclusive=False, execution="model"):
+        nodes[key] = Node(key, columns[col]+(400-width)/2, cy-h/2, width, h, title, body,
+                          "diamond", inclusive=inclusive, execution=execution)
 
-    box("start-user", 0, 265, 120, "Запрос пользователя", "Хочу перенести память\nиз другого агента.")
-    box("start-cross", 0, 430, 145, "Предложение Кросса", "Внешний триггер продукта.\nНавык сам новый диалог\nне начинает.")
-    box("coordinator", 0, 620, 220, "Выбрать ведущего агента", "Он собирает общий профиль,\nведёт диалог и хранит решения.\nВ остальных источниках навык\nне обязателен: можно передать\nготовые файлы.")
-    box("source-map", 0, 880, 230, "Карта источников", "ChatGPT · Claude · Dots · Duet\nClaude Code · Codex\nОдин аккаунт и набор данных\nв разных приложениях —\nодин источник. Проектные\nпапки учитываем отдельно.")
-    box("dots-duet-context", 0, 1140, 320, "Контекст Dots / Duet", "Заметки и явные инструкции;\nпроекты и правила проектов;\nобязанности, текущие\nи регулярные задачи;\nподключения, каналы, артефакты.\nСохраняем доступные данные,\nисходные инструкции и их связи.\nПробелы остаются видимыми.")
+    box("request", 0, 315, 140, "Запрос пользователя", "Пользователь просит перенос.\nАгент начинает работу и объясняет\nследующие действия.")
+    box("offer", 0, 500, 170, "Предложение переноса", "В подходящем текущем разговоре\nнавык сам предлагает начать.\nНовый чат или уведомление\nсамостоятельно не создаёт.")
+    box("recipient", 0, 765, 220, "Уточнить получателя", "ГигаАгент; ГигаАгент Про\n(ex-Ouroboros); другой агент.\nСразу учитываем допустимые\nфайлы и способы записи памяти.\nИзвестный выбор не повторяем.")
+    box("resume", 0, 1060, 240, "Продолжить с учётом решений", "Используем прежние ответы,\nвыбранные источники и отказы.\nНе начинаем интервью заново.\nНовые факты, изменённые файлы\nи текущий доступ проверяем.\nРешения можно изменить.")
 
-    diamond("scope-choice", 1, 300, 174, "Что переносим?", "Можно сочетать", inclusive=True)
-    box("collect-profile", 1, 440, 174, "Профиль и инструкции", "Заметки, почты, предпочтения.\nИнструкции дословно,\nс источником и областью.")
-    box("collect-works", 1, 650, 200, "Работы и новые навыки", "Правила проекта связываем\nс навыком: исходный текст,\nобласть действия и источник.\nОтбираем значимые результаты.")
-    box("collect-skills", 1, 860, 174, "Готовые навыки", "В том числе самописные.\nОригиналы с кодом и шаблонами.\nСписок зависимостей.")
-    box("collect-history", 1, 1070, 190, "Полные архивы", "Готовые обрабатываем сразу.\nОжидаемые приносит\nпользователь. Другие ветки\nпродолжаются сейчас.")
+    box("source-map", 1, 315, 230, "Показать карту источников", "ChatGPT · Claude · Dots · Duet\nCodex · Claude Code\nСреда: веб, десктоп или CLI.\nОтдельно: аккаунт, рабочее\nпространство и набор данных.")
+    box("source-locations", 1, 590, 280, "Уточнить данные и доступ", "История аккаунта; файлы в облаке;\nлокальные папки на компьютере.\nДесктоп может работать со всеми.\nОбщая история учитывается один\nраз, дополнительные файлы —\nотдельно. Проверяем, что агент\nдействительно может прочитать.")
+    diamond("source-count", 1, 1030, 220, "Источников\nнесколько?", "После проверки состава")
+    box("single-source", 1, 1200, 170, "Собрать один источник", "Агент сообщает: подготовлю\nэкспорт здесь за один проход.\nПроверка и уточнения сохраняются.")
+    box("coordinator", 1, 1440, 245, "Назначить ведущего", "Агент объявляет свою роль:\nсвести источники, убрать повторы\nи проверить противоречия.\nОстальные передают материалы;\nнавык в каждом источнике\nустанавливать необязательно.")
 
-    box("new-source", 1, 1300, 174, "Добавился источник", "Или изменились его данные.\nПрежняя проверка устарела.\nОбновляем общий профиль\nи проверяем заново.")
+    diamond("scope", 2, 410, 210, "Что переносим?", "Можно сочетать", inclusive=True)
+    box("profile", 2, 580, 210, "Профиль и инструкции", "Почты, предпочтения, правила.\nПользовательские инструкции\nи контекст Dots / Duet: проекты,\nобязанности, задачи, подключения.\nСохраняем источники и область.")
+    box("works", 2, 845, 250, "Предложить работы → навыки", "Агент сам находит полезные\nрезультаты в доступных беседах\nи показывает кандидатов.\nПользователь выбирает. Избранное\nсохраняем как материалы или\nсоздаём и проверяем новый навык.")
+    box("skills", 2, 1150, 210, "Сохранить готовые навыки", "Оригиналы, код и шаблоны,\nв том числе самописные.\nПравила проекта включаем\nв связанную копию навыка.\nЗависимости отмечаем отдельно.")
+    box("history", 2, 1415, 220, "Получить выбранные архивы", "Готовое обрабатываем сразу.\nПользователь передаёт то,\nк чему агент не имеет доступа.\nОжидание не останавливает другие ветки.")
+    box("new-source", 2, 1720, 195, "Появились новые данные", "Добавлен источник или изменился\nего состав. Обновляем общий\nпрофиль и повторяем проверку.\nПрежние действительные решения\nсохраняются.", execution="code")
 
-    box("quality-check", 2, 265, 345, "Проверить общий профиль", "Ведущий сравнивает все\nпредоставленные источники:\nсмысловые дубли, противоречия,\nактуальность и исходные цитаты.\nЛичное, рабочее и проектное\nразличает по области действия.\nВторой проход проверяет выводы.")
-    diamond("quality-decision", 2, 750, 190, "Есть спорное?", "Или устаревшее", width=254)
-    box("quality-clarify", 2, 900, 190, "Уточнить спорное", "Только новое и изменившееся.\nБолее поздняя запись\nне получает приоритет.\nПолное интервью не повторяем.")
-    box("quality-confirm", 2, 1120, 300, "Сохранить решения", "Новое подтверждает пользователь.\nПрежние актуальные ответы\nи отложения сохраняются.\nПовторы показываем один раз;\nоригиналы и источники остаются.\nСпорное и неподтверждённое\nне активируем.")
+    box("common-review", 3, 315, 295, "Сверить общий профиль", "Модель сравнивает факты,\nсмысловые дубли, противоречия\nи актуальность по источникам.\nЛичное и рабочее не смешивает.\nВторой проход проверяет выводы.\nКод проверяет охват, состояние\nи актуальность отчёта.")
+    diamond("disputed", 3, 775, 220, "Есть спорное?", "Неясное или устаревшее")
+    box("clarify", 3, 955, 190, "Уточнить только спорное", "Показываем найденное и основания.\nЗадаём точечный вопрос.\nДата импорта не делает старое\nсведение актуальным.")
+    box("decisions", 3, 1230, 235, "Зафиксировать решения", "Сохраняем согласованный смысл\nи область действия.\nПовторы показываем один раз,\nисточники и оригиналы остаются.\nНеуточнённое отделяем\nот активной памяти.", execution="code")
+    diamond("export-gate", 3, 1670, 230, "Проверка\nактуальна?", "Общий состав и решения", execution="code")
 
-    box("choose-storage", 3, 280, 151, "Выбрать хранилище", "Google Диск, Яндекс Диск\nили другое доступное место.\nУ получателя может быть другое.")
-    diamond("export-gate", 3, 595, 250, "Проверка\nактуальна?", "Для всех источников", width=324)
-    box("portable-package", 3, 770, 280, "Подготовить пакет", "Код допускает только\nпроверенную версию.\nПапка, карточка переноса,\nотчёт проверки, MD / вики,\nоригиналы и связи. Неполный\nперенос — в согласованном\nс пользователем объёме.")
-    diamond("write-access", 3, 1210, 196, "Есть доступ\nна запись?", "У отправителя", width=282)
+    diamond("target", 4, 410, 210, "Какой\nполучатель?", "Выбран на старте")
+    box("giga-format", 4, 580, 340, "ГигаАгент: адаптировать профиль", "Разделить независимые факты.\nПроверить смысл, условия, источник.\nПоказать: войдёт / не войдёт /\nнужно уточнить; причины исключения.\nУказать место сохранения резерва.\nuser ≤ 20 · feedback ≤ 30\nproject ≤ 100 · reference ≤ 40\nОписание ≤ 200, факт ≤ 450 знаков.\nВременное, спорное и избыток\nне импортировать автоматически.")
+    box("pro-format", 4, 950, 215, "ГигаАгент Про (ex-Ouroboros)", "Выбранные файлы выгрузки.\nМеню → Amberkeep carry memory:\nвключить и запросить импорт.\nМаршрут указан пользователем;\nв живом аккаунте не проверен.", execution="code")
+    box("other-format", 4, 1200, 170, "Другие получатели", "ChatGPT / Claude: выгрузка\nи memory-import.zip при наличии\nподдерживаемого канала установки.\nИначе — доступный файловый путь.")
+    diamond("obsidian", 4, 1540, 210, "Нужен\nObsidian?", "Спросить, если неизвестно")
+    box("vault", 4, 1740, 200, "Подготовить папку со связями", "Для существующего хранилища\nили нового набора Markdown.\nObsidian необязателен; платная\nсинхронизация не требуется.", execution="code")
 
-    box("host-upload", 4, 435, 120, "Загружает агент", "Через действительно\nдоступный инструмент.")
-    box("user-upload", 4, 620, 145, "Загружает пользователь", "Получает готовую папку\nи короткую инструкцию.")
-    box("version-folder", 4, 830, 170, "Пакет размещён", "Комплект в выбранном\nхранилище отправителя.\nДалее — доступ получателя.")
-    diamond("shared-access", 4, 1110, 190, "Общая папка?", "Доступ проверен", width=290)
-    box("user-copy", 4, 1240, 125, "Пользователь копирует", "В папку выбранного получателя.")
-    box("recipient-open", 4, 1380, 100, "Получатель открывает", "После сообщения пользователя.")
+    box("save-choice", 5, 315, 260, "Согласовать сохранение", "Предложить папку «Перенос памяти».\nКомпьютер, скачивание в чате,\nGoogle Диск, Яндекс Диск,\nОблако Mail, OneDrive или другое.\nФормат для получателя и полный\nрезерв — отдельные результаты.")
+    diamond("write-access", 5, 750, 220, "Есть доступ\nдля записи?", "Проверен инструментом", execution="tools")
+    box("save-tool", 5, 930, 210, "Сохранить инструментом", "Записать выбранные файлы\nи проверить результат.\nЛокальный файл в папке синхронизации\nещё не доказывает загрузку в облако.", execution="tools")
+    box("save-user", 5, 1170, 175, "Выдать комплект", "ГигаАгент: два вложения .md\n(профиль и инструкция) + сообщение.\nОстальным — комплект получателя.\nПроверить ссылки скачивания.")
+    diamond("shared-folder", 5, 1510, 220, "Общая папка\nдоступна обоим?", execution="tools")
+    box("copy", 5, 1710, 245, "Передать и запустить приём", "ГигаАгенту: client-memory-export.md\nи import-instruction.md.\nОстальным — комплект получателя.\nПередать файлы и отправить\nготовое сообщение запуска импорта.\nNEXT_STEPS.md читает пользователь.")
 
-    box("verify-delivery", 5, 350, 174, "Проверить комплект", "Файлы и контрольные суммы.\nВерсия и карточка передачи.\nНужный агент и его пространство.")
-    diamond("copy-ok", 5, 710, 170, "Копия целая?", "Всё совпало", width=254)
-    box("repair-copy", 5, 875, 120, "Исправить копию", "Докопировать или передать\nнеизменённый комплект заново.")
-    diamond("memory-conflict", 5, 1135, 240, "Объединение\nпроверено?", "Пакет + своя память", width=324)
-    box("resolve-conflict", 5, 1300, 174, "Вернуть ведущему", "Объединённый профиль —\nна общую проверку.\nДо её завершения применение\nи настройка заблокированы.")
+    box("inspect", 6, 315, 275, "Проверить входные материалы", "Приём по сообщению пользователя.\nГигаАгент читает инструкцию\nи весь профиль Markdown.\nZIP и навыки он не принимает.\nДля других пакетов: состав,\nцелостность, версия и получатель.\nНеполное исправить до применения.", execution="code")
+    box("compare", 6, 630, 235, "Прочитать текущую память", "Сопоставить смысл, имена и область.\nДубли пропустить, совместимое\nдополнить, конфликт отложить.\nНевидимую память не считать пустой.\nНовое объединение — проверить\nперед применением.")
+    diamond("can-apply", 6, 1040, 240, "Можно\nприменять?", "Сверка и изменения согласованы")
+    box("resolve", 6, 1260, 230, "Разрешить новые противоречия", "Уточнить изменившееся, сохранив\nпрежние действительные ответы.\nОбъединение всех источников\nвозвращается ведущему на проверку.\nСпорные записи не активируются.")
+    box("giga-import", 6, 1570, 345, "Правила записи ГигаАгента", "Только «Готово к импорту».\nmemory_list с архивными записями;\nсовпадения прочитать memory_read.\nЛимиты с учётом занятой памяти:\nбез вытеснения и обхода категорий.\nmemory_save — отдельно для факта,\n≤ 500 знаков с переводом строки.\nПри замене — точная версия записи.\nПроцедуры не объявлять knowledge.", execution="tools")
 
-    box("apply-selected", 6, 540, 251, "Настроить получателя", "Профиль и проекты.\nНавыки и подключения.\nПри необходимости — задачи\nпо расписанию.\nТолько через доступные\nинструменты принимающего агента.")
-    diamond("setup-verified", 6, 1020, 210, "Все выбранные\nшаги проверены?", width=300)
-    box("ready", 6, 1200, 145, "Готово в выбранном объёме", "Проверенные настройки\nготовы к работе.", style="done")
-    box("remaining", 6, 1360, 120, "Что осталось сделать", "Непроверенные шаги.\nЧто нужно сделать дальше.")
-    for key in ("collect-skills", "collect-history", "new-source", "export-gate", "portable-package", "verify-delivery", "copy-ok", "memory-conflict", "remaining"):
-        nodes[key].execution = "code"
-    for key in ("start-cross", "write-access", "host-upload", "version-folder", "shared-access", "recipient-open", "apply-selected", "setup-verified", "ready"):
-        nodes[key].execution = "tools"
+    box("configure", 7, 630, 295, "Выполнить доступную настройку", "Сохранить согласованные сведения,\nинструкции и проектный контекст.\nУстановить выбранные навыки,\nподключить нужные ресурсы\nи расписания — только если\nполучатель это поддерживает.\nИмя продукта не даёт инструментов.", execution="tools")
+    box("readback", 7, 1010, 225, "Проверить фактический результат", "Прочитать записанную память,\nпроверить файлы и выполненные\nнастройки. Частичный сбой\nповторять с учётом уже сделанного,\nбез слепого повторного импорта.", execution="tools")
+    diamond("done-check", 7, 1400, 230, "Всё выбранное\nпроверено?", execution="tools")
+    box("done", 7, 1615, 150, "Готово в выбранном объёме", "Новый агент использует\nпроверенный перенесённый контекст.", execution="tools", style="done")
+    box("remaining", 7, 1820, 135, "Что осталось", "Указать неподдерживаемые шаги,\nсбои и следующее действие.", execution="code")
 
     labels = []
-    def link(a, b, *, channel=None, dashed=False):
-        start, end = nodes[a].right, nodes[b].left
-        middle = channel if channel is not None else (start[0]+end[0])/2
-        canvas.path([start, (middle, start[1]), (middle, end[1]), end], dashed=dashed)
-    def down(a, b):
-        start, end = nodes[a].bottom, nodes[b].top
-        canvas.path([start, (start[0], end[1])])
-    def bypass(a, b, x, *, side="left"):
-        start = nodes[a].left if side == "left" else nodes[a].right
-        end = nodes[b].left if side == "left" else nodes[b].right
-        canvas.path([start, (x, start[1]), (x, end[1]), end])
     def label(x, y, value):
         labels.append((x, y, value))
+    def down(a, b, dashed=False):
+        canvas.path([nodes[a].bottom, nodes[b].top], dashed=dashed)
+    def side(a, b, x, *, left=True, dashed=False):
+        start, end = (nodes[a].left, nodes[b].left) if left else (nodes[a].right, nodes[b].right)
+        canvas.path([start, (x,start[1]), (x,end[1]), end], dashed=dashed)
+    def across(a, b, *, channel=None, dashed=False):
+        start, end = nodes[a].right, nodes[b].left
+        middle = channel if channel is not None else (start[0]+end[0])/2
+        canvas.path([start, (middle,start[1]), (middle,end[1]), end], dashed=dashed)
+    def merge_right(keys, b, x):
+        endpoint = nodes[b].left
+        for key in keys:
+            start = nodes[key].right
+            canvas.path([start, (x,start[1]), (x,endpoint[1])], arrow=False)
+        canvas.circle(x, endpoint[1], 4, fill=LINE)
+        canvas.path([(x,endpoint[1]), endpoint])
 
-    # Two actual entry points; the skill itself creates no proactive session.
-    start = nodes["start-user"].right
-    x = columns[0]+334
-    merge_y = 590
-    canvas.path([start, (x,start[1]), (x,merge_y), (nodes["coordinator"].top[0],merge_y)], arrow=False)
-    canvas.path([nodes["start-cross"].bottom, (nodes["coordinator"].top[0],merge_y)], arrow=False)
-    canvas.circle(nodes["coordinator"].top[0], merge_y, 4, fill=LINE)
-    canvas.path([(nodes["coordinator"].top[0],merge_y), nodes["coordinator"].top])
-    down("coordinator", "source-map")
-    link("source-map", "scope-choice")
-    canvas.path([nodes["source-map"].bottom, nodes["dots-duet-context"].top], dashed=True, arrow=False)
+    # Alternative current-session entry points.
+    merge_y = 715
+    canvas.path([nodes["request"].right, (columns[0]+394,nodes["request"].right[1]),
+                 (columns[0]+394,merge_y), (nodes["recipient"].top[0],merge_y)], arrow=False)
+    canvas.path([nodes["offer"].bottom, (nodes["recipient"].top[0],merge_y)], arrow=False)
+    canvas.circle(nodes["recipient"].top[0], merge_y, 4, fill=LINE)
+    canvas.path([(nodes["recipient"].top[0],merge_y), nodes["recipient"].top])
+    down("recipient", "resume")
+    across("resume", "source-map")
+    down("source-map", "source-locations")
+    down("source-locations", "source-count")
+    down("source-count", "single-source")
+    label(nodes["source-count"].bottom[0]+10, 1152, "Один")
+    side("source-count", "coordinator", columns[1]+5)
+    label(columns[1]+8, 1150, "Несколько")
+    merge_right(["single-source", "coordinator"], "scope", columns[1]+415)
 
-    # Inclusive choice: selected, already available sources proceed independently.
-    fork_x, bus_x = columns[1]+6, columns[1]+334
-    canvas.path([nodes["scope-choice"].bottom, (nodes["scope-choice"].bottom[0],410), (fork_x,410), (fork_x,nodes["collect-history"].left[1])], arrow=False)
-    for key in ("collect-profile", "collect-works", "collect-skills", "collect-history"):
+    # Inclusive collection: selected branches, not four mandatory interviews.
+    fork_x, bus_x = columns[2]+5, columns[2]+393
+    canvas.path([nodes["scope"].bottom, (nodes["scope"].bottom[0],546), (fork_x,546),
+                 (fork_x,nodes["history"].left[1])], arrow=False)
+    for key in ("profile", "works", "skills", "history"):
         canvas.path([(fork_x,nodes[key].left[1]), nodes[key].left])
-        canvas.path([nodes[key].right, (bus_x,nodes[key].right[1])], arrow=False, dashed=key=="collect-history")
-    canvas.path([(bus_x,nodes["quality-check"].left[1]), (bus_x,nodes["collect-skills"].right[1])], arrow=False)
-    canvas.path([(bus_x,nodes["collect-skills"].right[1]), (bus_x,nodes["collect-history"].right[1])], arrow=False, dashed=True)
-    join_x, join_y = columns[1]+353, nodes["quality-check"].left[1]
-    canvas.path([(bus_x,join_y), (join_x-8,join_y)], arrow=False)
-    canvas.circle(join_x, join_y, 8, stroke=GREEN)
-    canvas.path([(join_x+8,join_y), nodes["quality-check"].left])
+        canvas.path([nodes[key].right, (bus_x,nodes[key].right[1])], arrow=False)
+    join_y = nodes["common-review"].left[1]
+    canvas.path([(bus_x,join_y), (bus_x,nodes["history"].right[1])], arrow=False)
+    canvas.circle(bus_x, join_y, 5, fill=LINE)
+    canvas.path([(bus_x,join_y), nodes["common-review"].left])
+    down("common-review", "disputed")
+    down("disputed", "clarify")
+    label(nodes["disputed"].bottom[0]+10, 899, "Да")
+    side("disputed", "decisions", columns[3]+5)
+    label(columns[3]+8, 905, "Нет")
+    down("clarify", "decisions")
+    down("decisions", "export-gate")
+    across("export-gate", "target")
+    label(nodes["export-gate"].right[0]+8, nodes["export-gate"].right[1]-31, "Да")
+    canvas.path([nodes["export-gate"].bottom, (nodes["export-gate"].bottom[0],1968),
+                 (columns[3]+394,1968), (columns[3]+394,nodes["common-review"].right[1]),
+                 nodes["common-review"].right], dashed=True)
+    label(nodes["export-gate"].bottom[0]+10, 1800, "Нет: сверить")
 
-    down("quality-check", "quality-decision")
-    down("quality-decision", "quality-clarify")
-    label(nodes["quality-decision"].bottom[0]+9, nodes["quality-decision"].bottom[1]+17, "Да")
-    bypass("quality-decision", "quality-confirm", columns[2]+5)
-    label(columns[2]+8, nodes["quality-decision"].left[1]-33, "Нет")
-    down("quality-clarify", "quality-confirm")
-    link("quality-confirm", "choose-storage")
+    # Target is already known; this decision selects its correct output.
+    target_x, merge_x = columns[4]+5, columns[4]+394
+    canvas.path([nodes["target"].bottom, (nodes["target"].bottom[0],545), (target_x,545),
+                 (target_x,nodes["other-format"].left[1])], arrow=False)
+    for key in ("giga-format", "pro-format", "other-format"):
+        canvas.path([(target_x,nodes[key].left[1]), nodes[key].left])
+        canvas.path([nodes[key].right, (merge_x,nodes[key].right[1])], arrow=False)
+    canvas.path([(merge_x,nodes["giga-format"].right[1]), (merge_x,1400), (nodes["obsidian"].top[0],1400), nodes["obsidian"].top])
+    down("obsidian", "vault")
+    label(nodes["obsidian"].bottom[0]+10, 1662, "Да")
+    across("obsidian", "save-choice", channel=columns[4]+418)
+    label(nodes["obsidian"].right[0]+8, nodes["obsidian"].right[1]-29, "Нет / позже")
+    across("vault", "save-choice", channel=columns[4]+425)
+    down("save-choice", "write-access")
+    down("write-access", "save-tool")
+    label(nodes["write-access"].bottom[0]+10, 872, "Да")
+    side("write-access", "save-user", columns[5]+5)
+    label(columns[5]+8, 878, "Нет")
+    merge_y = 1375
+    canvas.path([nodes["save-tool"].right, (columns[5]+394,nodes["save-tool"].right[1]),
+                 (columns[5]+394,merge_y), (nodes["shared-folder"].top[0],merge_y)], arrow=False)
+    canvas.path([nodes["save-user"].bottom, (nodes["shared-folder"].top[0],merge_y)], arrow=False)
+    canvas.circle(nodes["shared-folder"].top[0], merge_y, 4, fill=LINE)
+    canvas.path([(nodes["shared-folder"].top[0],merge_y), nodes["shared-folder"].top])
+    down("shared-folder", "copy")
+    label(nodes["shared-folder"].bottom[0]+10, 1634, "Нет")
+    across("shared-folder", "inspect", channel=columns[5]+413)
+    label(nodes["shared-folder"].right[0]+8, nodes["shared-folder"].right[1]-29, "Да")
+    across("copy", "inspect", channel=columns[5]+425)
 
-    down("choose-storage", "export-gate")
-    down("export-gate", "portable-package")
-    label(nodes["export-gate"].bottom[0]+9, nodes["export-gate"].bottom[1]+12, "Да")
-    start, end = nodes["export-gate"].left, nodes["quality-check"].top
-    canvas.path([start, (columns[2]+335,start[1]), (columns[2]+335,234), (end[0],234),end], dashed=True)
-    label(nodes["export-gate"].left[0]-38, nodes["export-gate"].left[1]-31, "Нет")
-    down("portable-package", "write-access")
-    link("write-access", "host-upload", channel=columns[3]+347)
-    label(nodes["write-access"].right[0]+6, nodes["write-access"].right[1]-30, "Да")
-    canvas.path([nodes["write-access"].bottom, (nodes["write-access"].bottom[0],1360),
-                 (columns[3]+357,1360), (columns[3]+357,nodes["user-upload"].left[1]), nodes["user-upload"].left])
-    label(nodes["write-access"].bottom[0]+9, nodes["write-access"].bottom[1]+15, "Нет")
-    # Both publication branches meet visibly BEFORE the shared-access choice.
-    # Separate this bus from the later common-folder/copy branch on the right.
-    upload_merge = (nodes["version-folder"].top[0], 800)
-    start = nodes["host-upload"].right
-    canvas.path([start, (columns[4]+334,start[1]), (columns[4]+334,upload_merge[1]), upload_merge], arrow=False)
-    canvas.path([nodes["user-upload"].bottom, upload_merge], arrow=False)
-    canvas.circle(*upload_merge, 4, fill=LINE)
-    canvas.path([upload_merge, nodes["version-folder"].top])
-    down("version-folder", "shared-access")
-    down("shared-access", "user-copy")
-    label(nodes["shared-access"].bottom[0]+9, nodes["shared-access"].bottom[1]+15, "Нет")
-    bypass("shared-access", "recipient-open", columns[4]+334, side="right")
-    label(nodes["shared-access"].right[0]+6, nodes["shared-access"].right[1]-31, "Да")
-    down("user-copy", "recipient-open")
-    link("recipient-open", "verify-delivery")
+    down("inspect", "compare")
+    down("compare", "can-apply")
+    down("can-apply", "resolve")
+    label(nodes["can-apply"].bottom[0]+10, 1173, "Нет")
+    across("can-apply", "configure", channel=columns[6]+416)
+    label(nodes["can-apply"].right[0]+8, nodes["can-apply"].right[1]-29, "Да")
+    # Native Giga contract is a callout attached to the permitted application route.
+    canvas.path([nodes["giga-import"].right, (columns[6]+425,nodes["giga-import"].right[1]),
+                 (columns[6]+425,nodes["configure"].left[1]), nodes["configure"].left], dashed=True)
+    down("configure", "readback")
+    down("readback", "done-check")
+    down("done-check", "done")
+    label(nodes["done-check"].bottom[0]+10, 1538, "Да")
+    side("done-check", "remaining", columns[7]+5)
+    label(columns[7]+8, 1550, "Нет")
 
-    down("verify-delivery", "copy-ok")
-    down("copy-ok", "repair-copy")
-    label(nodes["copy-ok"].bottom[0]+9, nodes["copy-ok"].bottom[1]+17, "Нет")
-    bypass("repair-copy", "verify-delivery", columns[5]+5)
-    start = nodes["copy-ok"].right
-    end = nodes["memory-conflict"].top
-    canvas.path([start, (columns[5]+334,start[1]), (columns[5]+334,end[1]-10), (end[0],end[1]-10),end])
-    label(nodes["copy-ok"].right[0]+6, nodes["copy-ok"].right[1]-31, "Да")
-    down("memory-conflict", "resolve-conflict")
-    label(nodes["memory-conflict"].bottom[0]+9, nodes["memory-conflict"].bottom[1]+15, "Нет")
-    link("memory-conflict", "apply-selected", channel=columns[5]+349)
-    label(nodes["memory-conflict"].right[0]+5, nodes["memory-conflict"].right[1]-31, "Да")
-
-    # Both new input and an unreviewed recipient union re-enter the same review.
-    # Existing confirmations remain valid where content and scope are unchanged.
-    return_x, new_y, union_y = join_x, 1510, 1550
-    canvas.path([nodes["new-source"].bottom, (nodes["new-source"].bottom[0],new_y),
-                 (return_x,new_y)], arrow=False, dashed=True)
-    canvas.path([nodes["resolve-conflict"].bottom, (nodes["resolve-conflict"].bottom[0],union_y),
-                 (return_x,union_y), (return_x,join_y+8)], dashed=True)
-    canvas.circle(return_x, new_y, 4, fill=LINE)
-    label(1020, 1516, "Общая проверка объединения → новая проверенная версия пакета")
-
-    down("apply-selected", "setup-verified")
-    down("setup-verified", "ready")
-    label(nodes["setup-verified"].bottom[0]+9, nodes["setup-verified"].bottom[1]+18, "Да")
-    bypass("setup-verified", "remaining", columns[6]+5)
-    label(columns[6]+8, nodes["setup-verified"].left[1]-32, "Нет")
+    # Both changed source data and an unchecked receiving union return to one review.
+    return_x = columns[3]+5
+    canvas.path([nodes["new-source"].bottom, (nodes["new-source"].bottom[0],2002),
+                 (return_x,2002)], arrow=False, dashed=True)
+    canvas.path([nodes["resolve"].left, (columns[6]+5,nodes["resolve"].left[1]),
+                 (columns[6]+5,2038), (return_x,2038), (return_x,join_y), nodes["common-review"].left], dashed=True)
+    canvas.circle(return_x, 2002, 4, fill=LINE)
+    label(1495, 2008, "Новые данные или новое объединение → общая проверка; прежние действительные решения сохраняются")
 
     for node in nodes.values():
         canvas.node(node)
-    for x, y, value in labels:
-        canvas.text(x, y, value, backing=True)
-
-    # The gray legend describes genuinely unavailable/deferred product steps.
-    canvas.rect(40, 1595, WIDTH-80, 135, fill=GRAY, radius=14)
-    canvas.text(58, 1609, "Серым: недоступно или отложено в текущем сценарии", size=TITLE_SIZE, color="#40504D")
-    canvas.text(58, 1648, "Почта и фоновый мониторинг · Нативный импорт навыков и ZIP в ГигаАгенте · MCP Obsidian и Яндекс Диска", color="#485652")
-    canvas.text(58, 1677, "Код работает с предоставленными файлами. Доступ к сервисам и облакам требует реальных инструментов. ○ Выбранные ветки идут параллельно.", color="#485652")
-    canvas.text(58, 1706, "Ведущий агент и получатель могут быть одним агентом. Готовая папка сама по себе не означает настройку сервиса. Пунктир — возврат или ожидаемые данные.", color="#485652")
+    for x, y, text in labels:
+        canvas.text(x, y, text, backing=True)
+    canvas.rect(40, 2080, 3480, 145, fill=GRAY, radius=14)
+    canvas.text(58, 2094, "Ограничения текущего сценария", size=TITLE_SIZE, color="#40504D")
+    canvas.text(58, 2131, "Почта и фоновый мониторинг · Самостоятельные уведомления между агентами · Нативный импорт ZIP и навыков в обычном ГигаАгенте · MCP Obsidian и Яндекс Диска", color="#485652")
+    canvas.text(58, 2160, "Экспорт: показать адаптацию профиля, затем выдать реальные файлы и сообщение запуска. Обычному ГигаАгенту — только профиль и инструкция Markdown; резерв и отчёты остаются у пользователя.", color="#485652")
+    canvas.text(58, 2189, "Код проверен на предоставленных файлах. Смысл оценивает модель; чтение облака, запись памяти и установка выполняются только доступными инструментами. Реальный SaaS-импорт ещё не проверен.", color="#485652")
     canvas.save(out, "user-journey")
     if not main_only:
         build_context_detail(out)
     print(json.dumps({"svg": str((out / 'user-journey.svg').resolve()), "preview": str((out / 'user-journey.png').resolve()),
-                      "nodes": len(nodes), "font_sizes": [TITLE_SIZE, BODY_SIZE], "dimensions": [WIDTH, canvas.height]}, ensure_ascii=False))
+                      "version": "0.8.3", "nodes": len(nodes), "font_sizes": [TITLE_SIZE, BODY_SIZE],
+                      "dimensions": [canvas.width, canvas.height]}, ensure_ascii=False))
 
 
 def execution_legend(canvas, x, y):

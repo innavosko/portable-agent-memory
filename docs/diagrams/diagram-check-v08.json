@@ -1,0 +1,14 @@
+{
+  "version": "0.8.3",
+  "format": "editable_svg",
+  "font_sizes": [
+    24,
+    18
+  ],
+  "text_elements": 284,
+  "width": "3560",
+  "height": "2260",
+  "embedded_raster": false,
+  "same_svg_in_user_folder": true,
+  "skill_archives_unchanged_by_diagram_update": true
+}

@@ -1,0 +1,132 @@
+{
+  "version": "0.8.3",
+  "test_type": "independent_model_forward_pass_on_synthetic_inputs",
+  "synthetic": true,
+  "real_user_profile_read": false,
+  "live_account_operations": false,
+  "profile_files_created": false,
+  "native_memory_written": false,
+  "common_store_created": false,
+  "semantic_review_receipt_created": false,
+  "projection_created": false,
+  "scope": "Apply the exporter instructions to fictional sources A–F; propose atomic candidates and show adaptation before final files. This report is not an approved production projection.",
+  "source_date_note": "The exercise supplies November 12/24 without a year or time. Candidate dates retain that partial form; no full timestamp is invented.",
+  "candidate_status": "proposed_for_common_profile_review; ready means proposed target disposition only, not a completed approval or native import",
+  "candidates": [
+    {
+      "source_clauses": ["A.cycling"],
+      "kind": "stable_user_habit",
+      "proposed_disposition": "ready",
+      "record": {
+        "name": "cycling-frequency",
+        "memory_type": "user",
+        "description": "Регулярные поездки пользователя на велосипеде",
+        "priority": "medium",
+        "observed_at": "24 ноября",
+        "evidence": "Синтетический источник A: пользователь подтвердил 24 ноября устойчивую привычку ездить на велосипеде дважды в неделю.",
+        "content": "Пользователь регулярно ездит на велосипеде дважды в неделю. Привычка подтверждена пользователем 24 ноября."
+      },
+      "reason": "The confirmed recurring habit is independently useful; the adjacent unestablished yoga wish does not invalidate it."
+    },
+    {
+      "source_clauses": ["B.free-period"],
+      "kind": "scoped_project_decision",
+      "proposed_disposition": "ready",
+      "record": {
+        "name": "atlas-free-period",
+        "memory_type": "project",
+        "description": "Длительность бесплатного периода проекта Atlas",
+        "priority": "high",
+        "observed_at": "неизвестно",
+        "evidence": "Синтетический источник B: пользователь подтвердил продуктовое решение для Atlas о бесплатном периоде длительностью три месяца.",
+        "content": "Для проекта Atlas принято решение предусмотреть бесплатный период длительностью три месяца."
+      },
+      "reason": "Preserve the business decision and its project scope. The source does not establish a special name for this period or a ban on the word trial."
+    },
+    {
+      "source_clauses": ["C.future-role"],
+      "kind": "confirmed_future_work_preference",
+      "proposed_disposition": "ready",
+      "record": {
+        "name": "future-work-role",
+        "memory_type": "user",
+        "description": "Предпочтения пользователя при выборе будущей работы",
+        "priority": "medium",
+        "observed_at": "24 ноября",
+        "evidence": "Синтетический источник C: предпочтение продуктовых ролей, а не консалтинга, подтверждено как актуальное 24 ноября.",
+        "content": "При выборе будущей работы пользователь предпочитает продуктовые роли, а не консалтинг. Актуальность предпочтения подтверждена 24 ноября."
+      },
+      "reason": "A preference about future work is distinct from whether a job search was active on November 12. Neither implies the other."
+    },
+    {
+      "source_clauses": ["D.output-fields"],
+      "kind": "user_confirmed_project_output_rule",
+      "proposed_disposition": "ready",
+      "record": {
+        "name": "atlas-registry-output-fields",
+        "memory_type": "project",
+        "description": "Обязательные поля реестра в проекте Atlas",
+        "priority": "high",
+        "observed_at": "неизвестно",
+        "evidence": "Синтетический источник D: явно подтверждённое пользователем правило вывода проекта Atlas — show status, owner, next step.",
+        "content": "При представлении реестра проекта Atlas указывай статус, ответственного и следующий шаг."
+      },
+      "reason": "This is one coherent project output schema, not the skill code or the procedure that collects the registry. It must first be represented as an evidenced common-profile fact."
+    },
+    {
+      "source_clauses": ["D.integration-verification"],
+      "kind": "user_confirmed_project_evidence_rule",
+      "proposed_disposition": "ready",
+      "record": {
+        "name": "atlas-integration-status-evidence",
+        "memory_type": "project",
+        "description": "Подтверждение рабочего состояния интеграций Atlas",
+        "priority": "high",
+        "observed_at": "неизвестно",
+        "evidence": "Синтетический источник D: явно подтверждённое пользователем правило проекта — never state integration live without check.",
+        "content": "В проекте Atlas не утверждай, что интеграция работает, без фактической проверки её состояния."
+      },
+      "reason": "Preserve the explicit project rule independently of the output schema and executable skill. Do not broaden it into an inferred global preference."
+    }
+  ],
+  "proposed_ready_counts": {"user": 2, "feedback": 0, "project": 3, "reference": 0},
+  "clause_coverage": [
+    {"clause": "A.cycling", "outcome": "candidate cycling-frequency", "preserved_qualifications": "confirmed recurring habit, twice per week, November 24"},
+    {"clause": "A.yoga-wish", "kind": "unestablished_future_wish", "proposed_disposition": "reserve", "outcome": "Not ready memory: 'someday would like yoga' does not establish a current habit or durable goal.", "actual_preservation": "Synthetic source A in this task; no separate backup has been created.", "question_required_now": false},
+    {"clause": "B.free-period", "outcome": "candidate atlas-free-period", "preserved_qualifications": "Atlas only; three months; user-confirmed decision", "no_inference": "No naming convention or global prohibition on trial is invented; trial remains usable where accurate."},
+    {"clause": "C.no-job-search", "kind": "dated_current_status", "proposed_disposition": "temporary", "outcome": "Not ready memory: the user was not job-seeking on November 12; current job-search status on November 24 is not given.", "actual_preservation": "Synthetic source C in this task; no separate backup has been created."},
+    {"clause": "C.future-role", "outcome": "candidate future-work-role", "preserved_qualifications": "future-work selection preference; product roles over consulting; reconfirmed November 24"},
+    {"clause": "D.self-authored-selected-skill", "kind": "selected_skill_inventory", "proposed_disposition": "reserve", "outcome": "Retain the reported provenance and selection in the export inventory. Do not infer a general coding habit or treat a copied skill as installed.", "actual_preservation": "The task contains only the synthetic description of this skill; no actual original skill file or verified backup path was supplied."},
+    {"clause": "D.registry-code", "kind": "executable_skill_procedure", "proposed_disposition": "reserve", "outcome": "The registry-collection code remains outside ordinary GigaAgent's ready memory and upload files. It is not reclassified as knowledge or project instructions to bypass the limitation.", "actual_preservation": "Only the synthetic description is available here. The original code must be preserved separately if provided; no such copy is claimed."},
+    {"clause": "D.output-fields", "outcome": "candidate atlas-registry-output-fields", "preserved_qualifications": "explicit user confirmation; Atlas registry output; all three fields retained"},
+    {"clause": "D.integration-verification", "outcome": "candidate atlas-integration-status-evidence", "preserved_qualifications": "explicit user confirmation; Atlas scope; actual verification before claiming a working integration"},
+    {"clause": "D.weekly-automation", "kind": "unapproved_execution_request_or_setup_state", "proposed_disposition": "temporary", "outcome": "No weekly execution is started or authorized by importing the output rules. The absent authorization is not converted into a permanent prohibition or preference.", "actual_preservation": "Synthetic task context D; no automation or setup file was created."},
+    {"clause": "E.additional-blog-rules", "kind": "missing_source_rules", "proposed_disposition": "clarify", "outcome": "The reported note is inaccessible. Additional blog rules are unknown, not absent.", "actual_preservation": "The task references the unavailable note but provides no actual path or contents.", "next_question": "Пришлите заметку с правилами блога или скажите, что её можно пока не включать в этот экспорт."},
+    {"clause": "E.short-paragraphs", "kind": "artifact_observation_not_confirmed_preference", "proposed_disposition": "reserve", "outcome": "The provided posts show short paragraphs, but this does not establish a user-authored global writing preference. No feedback fact is fabricated.", "actual_preservation": "Synthetic source E describes the supplied posts; no new artifact file or backup is claimed."},
+    {"clause": "F.private-account-exclusion", "kind": "export_scope_instruction", "coverage_action": "apply_user_exclusion", "outcome": "Private account details are omitted without reproducing them; this export-specific choice is not promoted to a universal memory rule."},
+    {"clause": "F.source-boundary", "kind": "coverage_constraint", "coverage_action": "state_scope_and_unavailability", "outcome": "Only supplied A–E are assessed. Mailbox history and the full blog note were not read; no account-wide completeness claim is made."}
+  ],
+  "user_facing_preview_ru": "Это предварительный обзор по предоставленным синтетическим материалам A–E. Файлы экспорта ещё не созданы.\n\n**Предлагаю включить в память — 5 записей:**\n- Привычку ездить на велосипеде дважды в неделю, подтверждённую 24 ноября — user.\n- Решение проекта Atlas о бесплатном периоде в три месяца — project. Название периода и запрет слова trial не добавляю: их нет в источнике.\n- Подтверждённое 24 ноября предпочтение продуктовых ролей, а не консалтинга, при выборе будущей работы — user. Это не утверждение о текущем поиске работы.\n- Правило реестра Atlas: показывать статус, ответственного и следующий шаг — project.\n- Правило Atlas: не заявлять, что интеграция работает, без проверки — project.\n\n**Не попадёт в раздел «Готово к импорту»:**\n- Желание когда-нибудь заняться йогой: пока это желание, а не установленная привычка или подтверждённая долгосрочная цель. Оно остаётся в исходном материале A.\n- Статус «не ищу работу» от 12 ноября: он описывает состояние на ту дату. Источник C сохраняется; актуальное предпочтение будущей работы вынесено отдельно.\n- Код навыка Atlas и еженедельный запуск: обычный ГигаАгент не принимает навыки, а разрешения на запуск нет. Полезные подтверждённые правила проекта извлечены отдельно. В этой проверке есть только описание навыка; копия кода не создана.\n- Короткие абзацы в примерах постов: это наблюдение по материалам E, а не подтверждённое общее правило пользователя.\n- Частные данные аккаунтов — по вашему указанию; их содержание не воспроизвожу.\n\n**Не хватает:**\n- Заметки с дополнительными правилами блога. Правила не восстановлены по догадке. Пришлите заметку или скажите, что её можно пока не включать в этот экспорт.\n- Истории почты: доступа к ней нет, и она не входит в оценённые источники.\n\nИсходные синтетические описания остаются в этом задании. Отдельные резервные файлы пока не созданы. Уже подтверждённые привычку, предпочтение и правила не нужно подтверждать заново.",
+  "next_steps": [
+    "Resolve the focused missing-blog-note question or record the user's actual explicit deferral; do not fabricate that decision.",
+    "Represent extracted atomic facts, including the two project rules from D, in the common-profile review. Do not use a skill-type inventory record as an already-approved memory fact.",
+    "Perform actual semantic verification over each included and excluded clause and the union; this forward-test does not fabricate the production quality receipt.",
+    "Create and display the current three-part preview from the reviewed projection before final files; refresh it if new evidence or decisions change content.",
+    "Only then produce the compliant consolidated profile and import instruction; run the available structural checks honestly."
+  ],
+  "conditional_completed_handoff": {
+    "precondition": "Actual reviewed files have been created, checked, and are retrievable. That has not occurred in this forward-test.",
+    "separate_attachments": ["client-memory-export.md", "import-instruction.md"],
+    "delivery": "Attach each actual file separately in the final reply, or give one verified direct download link per file when the host represents attachments as links. Do not invent links or substitute a folder/ZIP/NEXT_STEPS.",
+    "same_reply_user_instruction": "Прикрепите оба файла в ГигаАгент и отправьте сообщение ниже.",
+    "same_reply_import_message": "Импортируй сведения обо мне в долгосрочную память. Полностью прочитай import-instruction.md и client-memory-export.md. Первый файл — инструкция импорта, второй — данные обо мне. Выполни инструкцию: сравни раздел «Готово к импорту» с текущей памятью, проверь дубли и противоречия, сохрани подходящие записи доступными инструментами и проверь их чтением. Не ограничивайся пересказом. Если инструментов памяти нет, скажи, что импорт не выполнен. Начинай.",
+    "not_for_gigaagent_upload": ["NEXT_STEPS.md", "preview JSON", "technical reports", "skill installers", "archives", "code backups"]
+  },
+  "limits": [
+    "Only the supplied synthetic descriptions were used. No real personal data, source archive, skill code, blog note or mailbox history was accessed.",
+    "This is a proposed semantic adaptation and user-facing preview, not a production common-profile approval, completed export or native memory write.",
+    "The exercise does not provide a full date/time for source confirmations; those values were not invented.",
+    "No working integration, weekly automation, backup file or actual attachment is asserted to exist.",
+    "The absence of a full source note remains an explicit coverage gap; it does not erase eligible facts from the other sources."
+  ]
+}

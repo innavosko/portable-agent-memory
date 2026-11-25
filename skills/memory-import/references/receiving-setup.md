@@ -2,6 +2,8 @@
 
 The outcome is a usable receiving agent for the user's chosen scope. Preparing a portable workspace is one step. Use current host capabilities and existing user authorization to complete the supported parts, and identify the remaining actions precisely.
 
+Select the receiving profile in [recipient-profiles.md](recipient-profiles.md) before this generic setup flow. **GigaAgent** accepts only its import instruction and compliant profile Markdown through its native `memory_list`/`memory_read`/`memory_save` route. Archives and skills are unsupported; do not upload a portable ZIP, installer, `setup` file, user guide or technical report. The generic package setup below does not apply to it. Apply its category, capacity, version and readback rules; do not falsely mark a portable-state gate as passed when that route was never run. **GigaAgent Pro (ex-Ouroboros)** accepts varied input files, but memory writes, skill installation and connections still need actual supported operations. The continuation-state instructions below apply only when the portable route created that state.
+
 ## Establish only the next necessary choice
 
 Read the package, review report, known choices and available receiving tools. Reuse the selected destination and working connections. Do not ask for every account and preference again. If a material conflict or missing choice blocks one operation, ask one focused question and continue independent work.

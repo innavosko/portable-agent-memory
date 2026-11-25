@@ -71,7 +71,8 @@ def _confirmed(observation):
 
 def _normalize_observation(value):
     _require(isinstance(value, dict), "Each observation must be an object")
-    _require(set(value) == OBSERVATION_FIELDS, "Observation fields must be id, label, kind, identity, identity_evidence, surface, selected, input")
+    _require(OBSERVATION_FIELDS <= set(value) and not set(value) - OBSERVATION_FIELDS - {"locations"},
+             "Observation requires id, label, kind, identity, identity_evidence, surface, selected, input; locations is optional")
     observation = {key: _text(value.get(key), key) for key in ("id", "label", "kind")}
     observation["identity"] = _identity(value.get("identity"))
     evidence = value.get("identity_evidence")
@@ -107,6 +108,22 @@ def _normalize_observation(value):
             normalized_input["include"] = sorted(set(paths))
         candidate = normalized_input
     observation["input"] = candidate
+    if "locations" in value:
+        locations = value["locations"]
+        _require(isinstance(locations, list) and bool(locations), "locations must be a nonempty list")
+        normalized = {}
+        for location in locations:
+            _require(isinstance(location, dict) and {"kind", "label", "access"} <= set(location)
+                     and not set(location) - {"kind", "label", "access", "evidence"}, "Invalid source location")
+            _require(location["kind"] in {"account", "cloud", "local", "unknown"}, "Invalid location kind")
+            _text(location["label"], "location.label")
+            _require(location["access"] in {"unknown", "available", "unavailable"}, "Invalid source access")
+            if location["access"] != "unknown":
+                _text(location.get("evidence"), "Observed access evidence")
+            elif "evidence" in location:
+                _text(location["evidence"], "location.evidence")
+            normalized[_canonical(location)] = copy.deepcopy(location)
+        observation["locations"] = [normalized[key] for key in sorted(normalized)]
     return observation
 
 
@@ -156,7 +173,7 @@ def _make_source(observations, identity):
         blockers.append("input_missing")
     elif input_status == "choice_required":
         blockers.append("input_choice_required")
-    return {
+    result = {
         "id": source_id, "kind": kind, "label": labels[0], "labels": labels,
         "identity": copy.deepcopy(identity), "identity_status": "verified" if identity is not None else "unresolved",
         "identity_evidence": [evidence[key] for key in sorted(evidence)],
@@ -168,6 +185,10 @@ def _make_source(observations, identity):
         "input_status": input_status, "collection_ready": not blockers,
         "collection_blockers": blockers,
     }
+    locations = {_canonical(location): location for item in observations for location in item.get("locations", [])}
+    if locations:
+        result["locations"] = [copy.deepcopy(locations[key]) for key in sorted(locations)]
+    return result
 
 
 def normalize_sources(observations: list) -> list:

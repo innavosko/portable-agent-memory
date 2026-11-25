@@ -21,9 +21,77 @@ from .setup import apply_setup_event, render_setup_view, setup_view
 from .storage import provider_catalog
 
 
+def handoff_assets(target, *, import_skill=None, instruction=None):
+    """Find the same assets in a source checkout or either standalone skill."""
+    roots = [Path(__file__).resolve().parents[2] / "assets",
+             Path(__file__).resolve().parents[1] / "skills" / "memory-export" / "assets"]
+    def asset(name):
+        return next((root / name for root in roots if (root / name).is_file()), roots[-1] / name)
+    return {"import_skill": import_skill or (asset("memory-import.zip") if target in {"chatgpt", "claude"} else None),
+            "instruction": instruction or (asset("import-instruction.md") if target == "gigaagent" else None)}
+
+
+def export_handoff_options(args, target, *other_outputs):
+    from .completion import RESERVED, preflight_handoff
+    from .package import safe_name
+    output = Path(args.out).resolve()
+    safe_name(output.name)
+    extension = ".md" if target == "gigaagent" else ".zip"
+    if output.suffix.lower() != extension:
+        raise ValidationError(f"Export output must have the {extension} extension")
+    if output.name.casefold() in RESERVED:
+        raise ValidationError("Choose a data filename distinct from the installer and import instructions")
+    destination = Path(args.handoff_out).resolve() if args.handoff_out else output.with_name(output.stem + "-import")
+    outputs = (output, *(Path(value).resolve() for value in other_outputs))
+    for candidate in outputs:
+        safe_name(candidate.name)
+        if candidate.exists() or candidate.is_symlink():
+            raise ValidationError(f"Output already exists: {candidate}")
+        parent = candidate.parent
+        while not parent.exists() and parent != parent.parent:
+            parent = parent.parent
+        if not parent.is_dir():
+            raise ValidationError("Export output has a parent that is not a directory")
+        if candidate == destination or destination in candidate.parents or candidate in destination.parents:
+            raise ValidationError("Export files and report must be outside the new import handoff directory")
+        if any(other != candidate and (other in candidate.parents or candidate in other.parents) for other in outputs):
+            raise ValidationError("Export data and report must be independent file paths")
+    options = handoff_assets(target, import_skill=getattr(args, "import_skill", None))
+    preflight_handoff(target, destination, **options)
+    return destination, options
+
+
 def parser():
     root = argparse.ArgumentParser(description="Portable memory: export, review and import without network calls")
     sub = root.add_subparsers(dest="command", required=True)
+    sub.add_parser("recipient-options", help="List recipient formats, not verified native capabilities")
+    p = sub.add_parser("handoff-prepare", help="Copy actual exported files with recipient-specific next steps and required installer/instruction")
+    p.add_argument("--target", required=True); p.add_argument("--files", nargs="+", required=True)
+    p.add_argument("--out", required=True); p.add_argument("--import-skill"); p.add_argument("--instruction")
+    p = sub.add_parser("journey-view", help="Show role, proactive offers and one unanswered export choice")
+    p.add_argument("--store", required=True); p.add_argument("--actor")
+    p.add_argument("--format", choices=["json", "markdown"], default="json")
+    for name in ("giga-template", "giga-preview", "giga-export"):
+        p = sub.add_parser(name, help="Prepare reviewed Markdown for GigaAgent's bounded native memory")
+        p.add_argument("--memory", required=True); p.add_argument("--common-store", required=True)
+        p.add_argument("--out", required=True)
+        if name in {"giga-preview", "giga-export"}:
+            p.add_argument("--projection", required=True)
+        if name == "giga-export":
+            p.add_argument("--report", required=True)
+            p.add_argument("--preview", help="Required current giga-preview JSON; show its Markdown to the user before final export")
+            p.add_argument("--handoff-out", help="New folder for actual profile files, import instruction and next steps")
+    p = sub.add_parser("giga-quality-template", help="Prepare the unapproved target-projection review")
+    p.add_argument("--projection", required=True); p.add_argument("--out", required=True)
+    p = sub.add_parser("giga-plan", help="Plan GigaAgent native writes from Markdown and current memory, without applying them")
+    p.add_argument("--document", required=True); p.add_argument("--snapshot", required=True)
+    p.add_argument("--comparisons"); p.add_argument("--out", required=True)
+    p = sub.add_parser("giga-comparison-template", help="Prepare an unapproved comparison against actual native memory")
+    p.add_argument("--document", required=True); p.add_argument("--snapshot", required=True); p.add_argument("--out", required=True)
+    p = sub.add_parser("giga-comparison-quality-template", help="Prepare the unapproved second semantic pass for native import")
+    p.add_argument("--comparisons", required=True); p.add_argument("--out", required=True)
+    p = sub.add_parser("giga-readback", help="Check supplied actual memory_read results; never call native tools")
+    p.add_argument("--plan", required=True); p.add_argument("--observed", required=True); p.add_argument("--out", required=True)
     p = sub.add_parser("common-create", help="Create the single coordinator's common-profile store")
     p.add_argument("--store", required=True); p.add_argument("--coordinator", required=True)
     p.add_argument("--previous"); p.add_argument("--allow-partial", action="store_true"); p.add_argument("--scope-note")
@@ -73,6 +141,9 @@ def parser():
     p = sub.add_parser("export", help="Build a verified portable package")
     p.add_argument("memory"); p.add_argument("--out", required=True); p.add_argument("--assets")
     p.add_argument("--common-store", required=True)
+    p.add_argument("--target", default="other", help="Receiving product; GigaAgent requires giga-export instead")
+    p.add_argument("--handoff-out", help="New folder for actual export files and recipient-specific next steps")
+    p.add_argument("--import-skill", help="Explicit receiving skill installer; otherwise use the bundled copy")
     p = sub.add_parser("inspect", help="Verify all package files and report coverage")
     p.add_argument("package")
     p = sub.add_parser("plan", help="Prepare a merge plan, without writing host memory")
@@ -146,6 +217,71 @@ def parser():
 
 def run(args):
     command = args.command
+    if command == "handoff-prepare":
+        from .completion import prepare_handoff
+        return prepare_handoff(args.target, args.files, args.out,
+                               **handoff_assets(args.target, import_skill=args.import_skill, instruction=args.instruction))
+    if command == "journey-view":
+        from .guidance import journey_view, render_journey_view
+        view = journey_view(MigrationStore(args.store).load(), args.actor)
+        return render_journey_view(view) if args.format == "markdown" else view
+    if command == "recipient-options" or command.startswith("giga-"):
+        from .recipients import (recipient_catalog, giga_projection_template, giga_projection_quality_template,
+                                 build_giga_export, parse_giga_export, plan_giga_import,
+                                 giga_comparison_template, giga_comparison_quality_template, verify_giga_readback,
+                                 build_giga_preview, validate_giga_preview)
+        if command == "recipient-options":
+            return recipient_catalog()
+        if command == "giga-quality-template":
+            write_new(args.out, json_bytes(giga_projection_quality_template(load_json(args.projection))))
+            return {"output": args.out, "semantic_review_required": True}
+        if command == "giga-comparison-quality-template":
+            write_new(args.out, json_bytes(giga_comparison_quality_template(load_json(args.comparisons))))
+            return {"output": args.out, "semantic_review_required": True}
+        if command == "giga-readback":
+            result = verify_giga_readback(load_json(args.plan), load_json(args.observed))
+            write_new(args.out, json_bytes(result))
+            return result
+        if command == "giga-comparison-template":
+            document = parse_giga_export(Path(args.document).read_text(encoding="utf-8-sig"))
+            result = giga_comparison_template(document, load_json(args.snapshot))
+            write_new(args.out, json_bytes(result))
+            return {"output": args.out, "semantic_review_required": True, "native_memory_applied": False}
+        if command == "giga-plan":
+            document = parse_giga_export(Path(args.document).read_text(encoding="utf-8-sig"))
+            plan = plan_giga_import(document, load_json(args.snapshot),
+                                    load_json(args.comparisons) if args.comparisons else None)
+            write_new(args.out, json_bytes(plan))
+            return {"output": args.out, "native_memory_applied": False}
+        from .common_profile import CommonStore
+        from .model import digest
+        memory = load_json(args.memory)
+        checked = CommonStore(args.common_store).export_review()
+        if digest(memory) != digest(checked["memory"]):
+            raise ValidationError("GigaAgent projection requires the current common-review result")
+        if command == "giga-template":
+            result = giga_projection_template(memory, checked["review"])
+            write_new(args.out, json_bytes(result))
+            return {"output": args.out, "projection_review_required": True}
+        if command == "giga-preview":
+            preview = build_giga_preview(memory, checked["review"], load_json(args.projection))
+            write_new(args.out, json_bytes(preview))
+            return {"output": args.out, "preview": preview, "native_memory_applied": False}
+        if Path(args.out).resolve() == Path(args.report).resolve() or Path(args.out).exists() or Path(args.report).exists():
+            raise ValidationError("Choose two distinct new paths for GigaAgent Markdown and report")
+        projection = load_json(args.projection)
+        result = build_giga_export(memory, checked["review"], projection)
+        if not args.preview:
+            raise ValidationError("Prepare giga-preview, show its Markdown to the user, then supply the current preview JSON with --preview")
+        validate_giga_preview(load_json(args.preview), memory, checked["review"], projection)
+        if not parse_giga_export(result["markdown"])["records"]:
+            raise ValidationError("No reviewed GigaAgent facts are ready to import; resolve the profile review first")
+        destination, options = export_handoff_options(args, "gigaagent", args.report)
+        write_new(args.out, result["markdown"])
+        write_new(args.report, json_bytes(result["report"]))
+        from .completion import prepare_handoff
+        handoff = prepare_handoff("gigaagent", [args.out], destination, **options)
+        return {"output": args.out, "report": args.report, "handoff": handoff, "native_memory_applied": False}
     if command.startswith("common-"):
         from .common_profile import (CommonStore, add_source, common_event, common_input, common_template,
                                      common_view, create_common, review_common)
@@ -350,7 +486,13 @@ def run(args):
         return {"output": args.out, "records": len(data["records"])}
     if command == "export":
         from .common_profile import CommonStore
-        return CommonStore(args.common_store).export_package(load_json(args.memory), args.out, assets=args.assets)
+        from .completion import prepare_handoff
+        if args.target == "gigaagent":
+            raise ValidationError("GigaAgent requires reviewed Markdown: use giga-template and giga-export, not portable ZIP")
+        destination, options = export_handoff_options(args, args.target)
+        result = CommonStore(args.common_store).export_package(load_json(args.memory), args.out, assets=args.assets)
+        result["handoff"] = prepare_handoff(args.target, [args.out], destination, **options)
+        return result
     if command == "inspect":
         data = read_package(args.package)
         return {"valid": True, "sha256": data["sha256"], "manifest": data["manifest"]}

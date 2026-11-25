@@ -1,0 +1,136 @@
+{
+  "format": "portable-memory-skill-forward-test",
+  "version": "0.8.0",
+  "date": "2026-11-24",
+  "evaluation": "independent_model_dialogue_trial",
+  "scope": "First two or three assistant turns under the revised skill instructions; no live installation or native write.",
+  "synthetic_data_only": true,
+  "live_platform_actions": [],
+  "native_success_claims": false,
+  "tested_entrypoints": ["skills/memory-export/SKILL.md", "skills/memory-import/SKILL.md"],
+  "passed": true,
+  "cases": [
+    {
+      "id": "A_single_source_gigaagent_no_python",
+      "request": "Хочу перенести всё полезное из этого Claude в ГигаАгент.",
+      "fixture": {
+        "available": ["current synthetic conversation"],
+        "unavailable": ["account history", "Python", "file creation", "cloud connections"],
+        "visible_user_statement": "Каждую пятницу я готовлю отчёт для команды проекта Север. В отчётах этого проекта сначала показывай итоги недели, затем риски и следующие действия.",
+        "observed_at": "неизвестно"
+      },
+      "turns": [
+        {
+          "assistant": "Начну подготовку переноса в ГигаАгент. Я соберу данные из этого источника и покажу их вам на проверку. Сейчас мне доступен только этот разговор; остальную историю Claude я не вижу. Для ГигаАгента подготовлю Markdown с подходящими записями памяти. Также могу выделить полезные работы из доступных бесед и предложить навыки. Здесь уже виден кандидат: подготовка еженедельного отчёта проекта Север. Его можно сохранить отдельно как повторяемый процесс; установка навыков в ГигаАгенте не предполагается. Сохранить этот процесс отдельно от профиля?",
+          "actions": ["Set intended receiver to GigaAgent from the request.", "State single-source role and actual coverage.", "Identify one evidence-backed work candidate without claiming full account discovery.", "Offer skill packaging without drafting or installing a skill."],
+          "synthetic_user_reply": "Да, процесс сохраним отдельно. Файлы хочу скачать здесь и потом положить в папку Перенос памяти."
+        },
+        {
+          "assistant": "Подготовлю два материала: client-memory-export.md для памяти ГигаАгента и отдельное описание процесса отчёта. Создавать файлы и запускать Python здесь нельзя, поэтому дам содержимое в чате; его можно сохранить в выбранную папку. Пользуетесь Obsidian? Для отдельного процесса могу предложить структуру заметок со связями или оставить обычный Markdown.",
+          "actions": ["Reuse the user's destination choice.", "Separate recipient-compatible memory from process materials.", "Disclose unavailable execution and file creation.", "Ask the still-unknown Obsidian choice once."],
+          "synthetic_user_reply": "Obsidian не использую. Правила отчёта актуальны."
+        },
+        {
+          "assistant": "Оставлю обычные Markdown-документы. В память ГигаАгента включу подтверждённое правило только для проекта Север: в его отчётах сначала итоги недели, затем риски и следующие действия. Полный процесс отчёта останется отдельным материалом, а не записью knowledge. В готовом документе укажу доступный источник и неизвестную дату исходного сообщения. Программная проверка не выполнялась. Для полноценного навыка ещё нужно определить входные данные отчёта: откуда брать итоги недели?",
+          "actions": ["Retain the declined Obsidian option without repeating it.", "Keep project scope and unknown source date.", "Use the clarification only for a missing process input.", "Do not present the candidate as a tested or installed skill."],
+          "prepared_record": {
+            "name": "sever-report-order",
+            "memory_type": "project",
+            "description": "Порядок разделов отчёта проекта Север",
+            "priority": "high",
+            "observed_at": "неизвестно",
+            "evidence": "В текущем синтетическом разговоре пользователь задал порядок разделов отчёта проекта Север и подтвердил его актуальность.",
+            "content": "В отчётах проекта Север пользователь просит сначала показывать итоги недели, затем риски и следующие действия."
+          }
+        }
+      ],
+      "outcome": "passed_model_trial",
+      "observed": ["Explicit start and source role", "Proactive evidence-backed work/skill offer", "Target-specific Markdown route without Python", "Explicit destination and Obsidian choices", "No hidden-history or native-import claims"],
+      "not_completed": ["Full export document", "Finished skill draft", "Program validation", "GigaAgent import"]
+    },
+    {
+      "id": "B_multiple_sources_gigaagent_pro",
+      "request": "У меня ChatGPT веб и десктоп с одной историей, рабочий Codex и личный Claude; перенесём в ГигаАгент Про.",
+      "fixture": {"input_files": [], "known_same_dataset": "ChatGPT web and desktop share history", "other_source_details": "not yet supplied"},
+      "turns": [
+        {
+          "assistant": "Начну перенос в ГигаАгент Про (ex-Ouroboros). Предлагаю мне быть ведущим агентом: я сведу материалы и проверю смысловые повторы и противоречия. На карте три группы: одна общая история ChatGPT, рабочие материалы Codex и личный Claude. Для ChatGPT второй архив из десктопа не нужен. Могу сохранить профиль и правила, важные работы, существующие навыки и предложить новые навыки из полезных бесед. Какой объём переносим: только профиль; профиль с работами и навыками; или также исходную историю?",
+          "actions": ["Reuse the receiving product and explicit same-history statement.", "Announce a proposed main coordinator.", "Keep Codex project/account identity provisional.", "Offer useful-work packaging while asking one scope question."],
+          "synthetic_user_reply": "Профиль, работы и навыки, без полной истории. Из Codex нужен только проект Север."
+        },
+        {
+          "assistant": "Учту профиль, работы и навыки; полную историю в итоговый комплект не включу. Из Codex берём проект Север. Для ГигаАгента Про подготовлю проверенный пакет и выбранные оригиналы; приём файлов сам по себе ещё не означает настройку памяти или установку навыков. Предлагаю сохранить комплект в папку «Перенос памяти». Где удобнее: на компьютере, в вашем облаке или файлом здесь?",
+          "actions": ["Preserve the selected scope and single Codex project.", "Explain file intake versus native setup.", "Ask the missing storage destination rather than assume Google or Yandex."],
+          "synthetic_user_reply": "В Google Диске, папка Перенос памяти. Obsidian у меня есть; хочу ещё заметки туда."
+        },
+        {
+          "assistant": "Зафиксировала Google Диск → «Перенос памяти» и дополнительную подборку Markdown для вашего Obsidian. Повторно спрашивать про Obsidian не буду. Доступ на запись в эту папку ещё нужно проверить; пока материалы можно подготовить здесь. Передайте доступные выгрузки ChatGPT и Claude и выбранные файлы проекта Север. Начну с тех материалов, которые поступят первыми, а перед общим экспортом проверю их вместе. Устанавливать экспортный навык в каждый источник необязательно.",
+          "actions": ["Capture unsolicited storage and Obsidian answers together.", "Do not claim that a named cloud is connected.", "Offer a concrete source-arrival step without repeating history identity.", "Retain one final coordinating review despite parallel arrival."]
+        }
+      ],
+      "outcome": "passed_model_trial",
+      "observed": ["Visible coordinator", "ChatGPT surfaces not double-counted", "One question at a time", "No re-asking known Obsidian or destination choices", "Pro input flexibility distinguished from native execution"],
+      "not_completed": ["Source access verification", "Actual collection", "Common-profile check", "Cloud upload", "Pro installation"]
+    },
+    {
+      "id": "C_gigaagent_import_conflict_without_memory_tools",
+      "request": "Импортируй этот Markdown в память ГигаАгента.",
+      "fixture": {
+        "ready_record": {"name": "user-city", "memory_type": "user", "description": "Город проживания пользователя", "priority": "medium", "observed_at": "неизвестно", "evidence": "Пользователь сообщил город в синтетическом исходном разговоре.", "content": "Пользователь живёт в Москве."},
+        "reserve": "Процедура: собрать данные отчёта, сгруппировать итоги и составить сводку.",
+        "supplied_previous_memory_snapshot": {"name": "user-city", "memory_type": "user", "content": "Пользователь живёт в Казани."},
+        "native_tools_available": []
+      },
+      "turns": [
+        {
+          "assistant": "Я принимающий агент: проверю сведения перед сохранением. В разделе «Готово к импорту» один факт о Москве; в предоставленном снимке прежней памяти указан город Казань. Процедуру из резерва автоматически не переношу. Здесь нет memory_list, memory_read и memory_save, поэтому проверить текущую память и записать изменения я не могу — импорт пока не выполнен. Какой город сейчас актуален?",
+          "actions": ["Read only the ready section as an import candidate.", "Treat supplied previous memory as a snapshot, not an actual live read.", "Defer the conflict and ask one content question.", "Do not demand ZIP or Python.", "Perform no fabricated native calls."],
+          "synthetic_user_reply": "Сейчас Москва, Казань — старое место."
+        },
+        {
+          "assistant": "Уточнение принято: для будущего импорта актуальна Москва. Добавлено записей: 0; обновлено: 0. Одна запись подготовлена к повторному сопоставлению, но не сохранена. Процедура осталась в резерве. В среде с инструментами памяти нужно заново прочитать текущую запись и её версию, проверить место в категории, сохранить согласованное изменение и прочитать результат обратно. Проверка чтением сейчас не выполнена.",
+          "actions": ["Reuse the explicit correction without assuming it already changed native memory.", "Keep retry dependent on fresh native inventory/version checks.", "Report zero writes and no readback."],
+          "report": {"added": 0, "updated": 0, "skipped_as_duplicates": 0, "deferred": ["user-city"], "native_readback": "not_performed"}
+        }
+      ],
+      "outcome": "passed_model_trial",
+      "observed": ["No fabricated native tool result", "Conflict not resolved by import date", "Reserve procedure not imported", "No generic ZIP gate", "Explicit non-completion of native import"]
+    },
+    {
+      "id": "D_resume_profile_only_no_repeated_interview",
+      "request": "Продолжим с того места, где остановились.",
+      "fixture": {
+        "known_role": "single-source exporter",
+        "recipient": "gigaagent",
+        "scope": ["profile"],
+        "obsidian": {"choice": "skip"},
+        "skill_packaging": "decline",
+        "save_format": "markdown",
+        "destination": {"kind": "folder", "label": "C:/Synthetic/MemoryTransfer"},
+        "confirmed_record": "Пользователь просит давать краткие ответы по рабочим вопросам.",
+        "pending_fact": "В исторической записи пользователь назван руководителем проекта Север; актуальность роли неизвестна."
+      },
+      "turns": [
+        {
+          "assistant": "Продолжу согласованный профиль для ГигаАгента. Подтверждённое правило кратких ответов сохранено в плане; повторно согласовывать его не нужно. Осталось уточнить один факт: вы сейчас руководите проектом Север или эта роль уже в прошлом?",
+          "actions": ["Reuse recipient, role, scope, destination, output format and declined options.", "Ask only about an actually unresolved fact.", "Do not propose works, skills, Obsidian or a new storage choice."],
+          "synthetic_user_reply": "Уже в прошлом, в текущий профиль не включай."
+        },
+        {
+          "assistant": "Исключу прежнюю роль из текущего профиля. Для экспорта остаётся подтверждённое правило кратких ответов. Подготовлю client-memory-export.md для выбранной папки C:/Synthetic/MemoryTransfer; навыки и Obsidian в этот перенос не входят. Сохранение в папку и импорт в ГигаАгент — отдельные действия, их выполнение ещё не подтверждено.",
+          "actions": ["Record the new exclusion only for the changed fact.", "Retain the previous confirmation for unchanged content.", "Use the known exact destination without asking again.", "Do not claim a file write or native import that this model-only trial did not execute."]
+        }
+      ],
+      "outcome": "passed_model_trial",
+      "observed": ["No repeated scope, role, skills, Obsidian or destination questions", "Focused relevance question", "Unchanged confirmation retained", "No fictitious write completion"]
+    }
+  ],
+  "defects_found": [],
+  "limitations": [
+    "These are model dialogue trials on synthetic fixtures, not real Claude, ChatGPT, GigaAgent or GigaAgent Pro sessions.",
+    "The report records concrete response trajectories; it does not prove that every model or host will follow the skill consistently.",
+    "Only early and resumed conversational behavior was exercised. Full export, native memory writes, cloud delivery and skill installation were not performed.",
+    "Recipient adapter API and CLI correctness are covered separately by executable tests; unfinished adapter files were not evaluated here.",
+    "No skill installation can autonomously start a new chat or create a background notification without a host trigger."
+  ]
+}

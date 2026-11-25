@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "portable-agent-memory"
-version = "0.7.0"
+version = "0.8.3"
 description = "Reviewable portable memory export and import for agent skills"
 requires-python = ">=3.10"
 dependencies = []

@@ -1,0 +1,10 @@
+{
+  "version": "0.8.3",
+  "default_user_artifacts": [
+    "memory-export.zip",
+    "memory-import.zip"
+  ],
+  "standalone_entrypoints_passed": true,
+  "embedded_importer_matches_standalone": true,
+  "importer_has_no_recursive_installer": true
+}

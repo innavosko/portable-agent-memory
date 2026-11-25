@@ -1,0 +1,149 @@
+{
+  "version": "0.8.1",
+  "review_date": "2026-11-24",
+  "timezone": "Europe/Moscow",
+  "review_type": "independent_agent_code_and_document_review_with_focused_local_probes",
+  "native_memory_import_performed": false,
+  "live_account_operations": false,
+  "unit_test_results": "Not reported by this reviewer; see the separate test report.",
+  "scope": "Recipient-specific export completion, actual deliverable files, two skill roles, receiving instructions, CLI preflight and target selection.",
+  "scenarios": [
+    {
+      "id": "chatgpt_web_without_skill_installation",
+      "result": "passed_document_review",
+      "observed": "No claim that attaching a ZIP installs a skill. Manual fallback supplies the full memory-import.zip, referenced files and bundled tools plus separate actual data; native memory still depends on host tools."
+    },
+    {
+      "id": "claude_installable_skill",
+      "result": "passed_document_review",
+      "observed": "Separate installer and actual data; available Skills channel and code execution prerequisite; explicit import request and result verification."
+    },
+    {
+      "id": "gigaagent_pro_menu",
+      "result": "passed_document_review",
+      "observed": "Menu route names Amberkeep carry memory as user-provided, without claiming a live test. CLI example uses canonical gigaagent_pro."
+    },
+    {
+      "id": "gigaagent_multiple_profiles",
+      "result": "passed_document_review",
+      "observed": "All profile Markdown is read together. Only Ready sections are eligible. Reserve, clarification and temporary sections are excluded. Joint duplicate/conflict/capacity checks and current archived-inclusive memory precede save and readback."
+    }
+  ],
+  "resolved_findings": [
+    {
+      "id": "manual-installer-completeness",
+      "verification": "Read final generated guide: full importer ZIP and referenced files replace SKILL.md-only fallback."
+    },
+    {
+      "id": "recipient-id",
+      "verification": "Read matching catalog ID, CLI target propagation, guide branch and documentation example: gigaagent_pro."
+    },
+    {
+      "id": "predictable-output-errors",
+      "verification": "CLI now checks required extensions, absent output paths, both ancestor directions, output/report parent directories and handoff assets before export writes."
+    },
+    {
+      "id": "zero-ready-giga-profile",
+      "verification": "Read giga-export branch: parsed Ready records must be nonempty before output/report writes; no import-ready completion is produced for an all-deferred profile."
+    },
+    {
+      "id": "portable-archive-budget",
+      "verification": "Read final completion.py: portable ZIP read limit matches read_package archive limit, handoff assets have separate bounds, Pro dispatches portable ZIPs to read_package before opaque ZIP bounds."
+    },
+    {
+      "id": "original-zip-path-validation",
+      "verification": "Read final ZIP validation: orig_filename is validated before any member use, so normalized NUL-truncated names do not bypass safe_name."
+    },
+    {
+      "id": "prepared-versus-delivered",
+      "verification": "EXPORT_COMPLETION.md now says completed export and preparation for transfer, without implying actual cloud delivery or receiving-agent memory writes."
+    }
+  ],
+  "focused_local_observations": [
+    {
+      "case": "portable-output-with-md-extension",
+      "result": "ValidationError before output write",
+      "source_created": false
+    },
+    {
+      "case": "handoff-under-export-file-path",
+      "result": "ValidationError before output write",
+      "source_created": false
+    },
+    {
+      "case": "report-parent-is-an-existing-file",
+      "result": "ValidationError in preflight",
+      "source_created": false,
+      "existing_file_unchanged": true
+    }
+  ],
+  "original_import_instruction": {
+    "unchanged_in_both_skill_references": true,
+    "sha256": "c2bc08efc6f2163fe9cb20dc55c0af02178ea4fd7521dbce37bc09758a3a4742"
+  },
+  "delivered_instruction_copies_identical": true,
+  "boundaries": [
+    "This review is not a live installation or native-memory import test.",
+    "Code validates supplied structure, hashes and review evidence; the host model performs semantic comparisons.",
+    "Recipient menu availability, account permissions and native write/readback require receiving-host verification.",
+    "Preflight handles predictable input/path errors; it is not a cross-file transaction against external races or disk failures."
+  ],
+  "reviewed_files": [
+    {
+      "path": "portable_memory/completion.py",
+      "sha256": "f591ee1dd0f73c4e23fd08e7b2a794f0366696045c2085cc6650d0a1bcdfe43b"
+    },
+    {
+      "path": "portable_memory/cli.py",
+      "sha256": "73c5b9c02096d3039761887985007f2c7839c31d951d715f2a3a33e6ed842548"
+    },
+    {
+      "path": "skills/memory-export/SKILL.md",
+      "sha256": "4821112ff3e0aed18342bb0c1df553dc5115f6d27e2a8e296ab84eb4250a559a"
+    },
+    {
+      "path": "skills/memory-import/SKILL.md",
+      "sha256": "7bdc8799a62ff76edae8823276624aedaf87ae484eaabf4ff87cbdd98bf030b9"
+    },
+    {
+      "path": "skills/memory-export/references/completion.md",
+      "sha256": "21ce84b24062e20286406639455f413747ff9d019e2a286859bbd1ee03d4afd4"
+    },
+    {
+      "path": "skills/memory-export/references/recipient-profiles.md",
+      "sha256": "579ec634927e966d97ba9604b8b97f312ac73769383be28eb442c58cafe4a7e7"
+    },
+    {
+      "path": "skills/memory-import/references/recipient-profiles.md",
+      "sha256": "579ec634927e966d97ba9604b8b97f312ac73769383be28eb442c58cafe4a7e7"
+    },
+    {
+      "path": "skills/memory-export/assets/import-instruction.md",
+      "sha256": "eac6b965ab081fc638e10d0fa76d784352f7e98072b523422f894f256981bd2b"
+    },
+    {
+      "path": "skills/memory-import/assets/import-instruction.md",
+      "sha256": "eac6b965ab081fc638e10d0fa76d784352f7e98072b523422f894f256981bd2b"
+    },
+    {
+      "path": "docs/EXPORT_COMPLETION.md",
+      "sha256": "c2416e0660224277c4a58b8ed4bbd7b3e334b4ae95067a64080e4549d69d22b3"
+    },
+    {
+      "path": "docs/WEB_SETUP.md",
+      "sha256": "04e8f29bf5ce9d6d0d5f6b0a9b1c95b81ee0a6158bad5b679bfd3fc3b7abc904"
+    },
+    {
+      "path": "../00_ЧТО_КОПИРОВАТЬ.md",
+      "sha256": "e2eb074239b7ab9afd189f59fe80fbf631ac758042c38b9c7ff100f7c3790add"
+    },
+    {
+      "path": "../01_Запуск/Экспорт/ИНСТРУКЦИЯ.md",
+      "sha256": "9a5e8bfe5f3c292004f4e08c80a7019f9c504f5093fbe3c0ec28a0991090d397"
+    },
+    {
+      "path": "../01_Запуск/Импорт/ИНСТРУКЦИЯ.md",
+      "sha256": "7ebd68e147945e27385b3a835a82294531a56006255a01cc31997dcea78147e2"
+    }
+  ]
+}

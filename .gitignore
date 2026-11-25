@@ -15,3 +15,4 @@ work/
 *.sqlite-*
 *.zip
 !tests/fixtures/*.zip
+!skills/memory-export/assets/memory-import.zip

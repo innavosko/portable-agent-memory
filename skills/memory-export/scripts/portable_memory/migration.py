@@ -16,7 +16,7 @@ from .sources import normalize_sources, resolve_identity, validate_source
 
 STATUSES = {"needs_identity", "needs_input", "needs_choice", "ready", "running",
             "waiting", "deferred", "collected", "failed"}
-ANSWER_KEYS = {"scope", "destination", "delivery"}
+ANSWER_KEYS = {"scope", "destination", "delivery", "recipient", "skill_packaging", "obsidian", "save_format"}
 
 
 def _text(value, label):
@@ -34,6 +34,19 @@ def _answers(answers):
         _text(route.get("label"), "destination.label")
     if "delivery" in answers:
         require(answers["delivery"] in {"as_ready", "together"}, "Invalid delivery choice")
+    if "recipient" in answers:
+        require(answers["recipient"] in {"gigaagent", "gigaagent_pro", "chatgpt", "claude", "dots",
+                "duet", "codex", "claude_code", "other"}, "Invalid recipient")
+    if "skill_packaging" in answers:
+        require(answers["skill_packaging"] in {"accept", "decline", "later"}, "Invalid skill packaging choice")
+    if "obsidian" in answers:
+        choice = answers["obsidian"]
+        require(isinstance(choice, dict) and not set(choice) - {"choice", "location"} and
+                choice.get("choice") in {"existing", "create", "skip", "later"}, "Invalid Obsidian choice")
+        if "location" in choice:
+            _text(choice["location"], "obsidian.location")
+    if "save_format" in answers:
+        require(answers["save_format"] in {"portable_bundle", "markdown", "obsidian_vault"}, "Invalid save format")
     check_no_secret_fields(answers)
 
 
@@ -196,7 +209,7 @@ def apply_migration_event(state, event, *, expected_revision):
     require(type(expected_revision) is int and expected_revision == state["revision"], "Stale migration; reload the current store")
     updated = copy.deepcopy(state)
     actor, kind, data = event["actor"], event["type"], event["data"]
-    if kind in {"answer", "register_sources", "resolve_identity", "choose_input", "provide_input", "select_source", "question_shown"}:
+    if kind in {"answer", "register_sources", "resolve_identity", "choose_input", "provide_input", "select_source", "question_shown", "journey_shown"}:
         require(actor == state["coordinator"], "The coordinator records client choices and the shared inventory")
     if kind == "answer":
         require(data.get("key") in ANSWER_KEYS and "value" in data, "Invalid answer")
@@ -300,6 +313,15 @@ def apply_migration_event(state, event, *, expected_revision):
             if not job.get("input_chosen"):
                 job["input"] = _input(source["inputs"][0]) if len(source["inputs"]) == 1 else None
             _reset(job, "ready" if job["input"] and source["identity_status"] == "verified" else _initial_status(source))
+    elif kind == "journey_shown":
+        from .guidance import journey_view
+        view = journey_view(state)
+        items = list(view["notices"])
+        if view["question"]:
+            items.append(view["question"])
+        item_id = data.get("item_id")
+        require(any(item["id"] == item_id for item in items), "Journey item is stale or already shown")
+        updated["shown_questions"].append(item_id)
     elif kind == "question_shown":
         question = migration_view(state)["question"]
         require(question is not None and data.get("question_id") == question["id"], "Question is stale or already shown")

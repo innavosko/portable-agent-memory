@@ -42,16 +42,20 @@ for (const [slideIndex, scene] of scenes.entries()) {
   slide.speakerNotes.text = slideIndex === 0
     ? 'Целевой пользовательский путь по исходному запросу и текущему локальному репозиторию. Цвет кромки показывает исполнителя: код файлового пути, модель/пользователь или инструменты выбранного сервиса. Схема не подтверждает живой доступ ко всем перечисленным сервисам. Нативный импорт и облачные действия проверяются отдельно.'
     : 'Состав переносимого контекста Dots/Duet задан пользователем. Это требование к полноте данных, а не утверждение о наличии универсального API. Исходные инструкции сохраняются вместе с источником и областью действия. Подтверждение внешних действий требует фактического результата инструмента.';
-  for (const [index, p] of scene.primitives.entries()) {
+  const scale = Math.min(width / scene.width, height / scene.height);
+  for (const [index, source] of scene.primitives.entries()) {
+    const p = { ...source };
+    for (const key of ['x', 'y', 'w', 'h', 'radius', 'width']) if (typeof p[key] === 'number') p[key] *= scale;
+    if (p.points) p.points = p.points.map(([x,y]) => [x*scale,y*scale]);
     const name = `${scene.stem}/${p.group || 'page'}/${p.type}-${index}`;
     if (p.type === 'text') {
       if (![18, 24].includes(p.size)) throw new Error('Only the two requested font sizes are allowed');
       const shape = slide.shapes.add({ geometry: 'textbox', name,
-        position: { left: p.x, top: p.y-3, width: p.w+20, height: p.size+14 },
+        position: { left: p.x, top: p.y-3*scale, width: p.w+20*scale, height: (p.size+14)*scale },
         fill: 'none', line: { fill: 'none', width: 0 },
       });
       shape.text = p.text;
-      shape.text.style = { typeface: 'Segoe UI', fontSize: p.size, bold: p.size === 24,
+      shape.text.style = { typeface: 'Segoe UI', fontSize: p.size*scale, bold: p.size === 24,
         color: p.color, alignment: 'left', verticalAlignment: 'top',
         autoFit: 'none', wrap: 'none', insets: 0 };
     } else if (p.type === 'rect') {
@@ -113,5 +117,11 @@ for (const [index, slide] of finalPresentation.slides.items.entries()) {
   await fs.writeFile(path.join(workspaceDir, outputNames[index]), bytes);
 }
 await fs.copyFile(validated, outputDeck);
+const deliveryDir = path.join(workspaceDir, '..', '03_Описание_и_схема');
+if (await fs.stat(deliveryDir).then(s=>s.isDirectory()).catch(()=>false)) {
+  await fs.copyFile(outputDeck,path.join(deliveryDir,'Путь переноса памяти.pptx'));
+  await fs.copyFile(path.join(workspaceDir,'docs/diagrams/user-journey.svg'),path.join(deliveryDir,'Путь пользователя.svg'));
+  await fs.copyFile(path.join(workspaceDir,'docs/diagrams/user-journey.png'),path.join(deliveryDir,'Путь пользователя.png'));
+}
 console.log(JSON.stringify({ pptx: outputDeck, previews: outputNames.map(name => path.join(workspaceDir,name)),
   validation: path.join(privateDir,'validation.json'), native_editable: true, slides: 2, font_sizes_px: [24,18] }));
