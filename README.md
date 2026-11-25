@@ -49,7 +49,7 @@
 
 [![Путь пользователя: экспорт, передача и импорт](docs/diagrams/user-journey.png)](docs/diagrams/user-journey.svg)
 
-[Редактируемый SVG](docs/diagrams/user-journey.svg) · [Скачать SVG](https://github.com/innavosko/portable-agent-memory/releases/latest/download/user-journey.svg)
+[Редактируемый SVG](docs/diagrams/user-journey.svg) · [Скачать SVG](https://github.com/innavosko/portable-agent-memory/releases/latest/download/user-journey.svg?updated=20261125)
 
 ## Что важно учитывать
 
